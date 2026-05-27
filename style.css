@@ -1501,8 +1501,15 @@ h3 {
   inset: 0;
   background-image: url('Obrazky/o-skole/skola-3.jpeg');
   background-size: cover;
-  background-position: center 70px;
-  background-attachment: fixed;
+  background-position: center center;
+  background-attachment: scroll;
+}
+
+@media (min-width:1101px) {
+  .cta-bg {
+    background-attachment: fixed;
+    background-position: center 70px;
+  }
 }
 
 .cta-overlay {
@@ -2158,16 +2165,41 @@ h3 {
     white-space: nowrap;
   }
 
-  /* fixed background nefunguje spolehlivě na tabletu a mobilu */
-  .cta-bg {
-    background-attachment: scroll;
-    background-position: center center;
+  .footer-mid {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem 0;
+  }
+
+  .footer-social {
+    order: 0;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .footer-mid-legal {
+    order: 1;
+    width: auto;
+    text-align: left;
+    padding-top: 0;
+  }
+
+  .footer-mid-zprac {
+    order: 2;
+    text-align: right;
+  }
+
+  .manifesto {
+    background-position: center, 72% center;
   }
 
   .reference-leaf {
     background-attachment: scroll;
     background-size: auto 80%;
-    background-position: right center;
+    background-position: 60% center;
   }
 }
 
