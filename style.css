@@ -2157,6 +2157,18 @@ h3 {
   .footer-col-center .btn {
     white-space: nowrap;
   }
+
+  /* fixed background nefunguje spolehlivě na tabletu a mobilu */
+  .cta-bg {
+    background-attachment: scroll;
+    background-position: center center;
+  }
+
+  .reference-leaf {
+    background-attachment: scroll;
+    background-size: auto 80%;
+    background-position: right center;
+  }
 }
 
 @media (max-width:768px) {
