@@ -1513,7 +1513,7 @@ h3 {
 }
 
 /* Dotykové zařízení (tablet + mobil, portrait i landscape) — fixed nefunguje spolehlivě */
-@media (hover: none) {
+@media (hover: none), (pointer: coarse) {
   .cta-bg {
     background-attachment: scroll;
     background-position: center center;
