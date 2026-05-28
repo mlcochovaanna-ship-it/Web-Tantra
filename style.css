@@ -1764,15 +1764,18 @@ h3 {
   font-size: .74rem;
   color: rgba(247, 243, 236, .48);
   line-height: 1.65;
-  width: 100%;
-  text-align: center;
-  order: 3;
-  padding-top: .25rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.footer-mid-legal p {
+  margin: 0;
 }
 
 .footer-social {
   display: flex;
-  justify-content: center;
   gap: 1.25rem;
 }
 
@@ -2136,7 +2139,7 @@ h3 {
     left: 0;
     right: 50%;
     background-size: 55% auto;
-    background-position: 50% 5%;
+    background-position: 50% 30%;
   }
 
   .footer-col-center {
@@ -2166,39 +2169,18 @@ h3 {
   }
 
   .footer-mid {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
     gap: .5rem 0;
   }
 
-  .footer-social {
-    order: 0;
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-
-  .footer-mid-legal {
-    order: 1;
-    width: auto;
-    text-align: left;
-    padding-top: 0;
-  }
-
-  .footer-mid-zprac {
-    order: 2;
-    text-align: right;
-  }
-
   .manifesto {
+    background-attachment: scroll;
     background-position: center, 72% center;
   }
 
   .reference-leaf {
     background-attachment: scroll;
-    background-size: auto 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: 60% center;
   }
 }
@@ -2292,6 +2274,15 @@ h3 {
   }
 
   .footer-mid-zprac {
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .footer-mid-legal {
     text-align: center;
   }
 
