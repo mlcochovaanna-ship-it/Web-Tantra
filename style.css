@@ -61,9 +61,9 @@
   --gold-mid: #C69B45;
   --gold-lt: #E7CD80;
 
-  --m1: linear-gradient(135deg, #081514 0%, #1A3530 54%, #274F48 100%);
-  --m2: linear-gradient(135deg, #17090B 0%, #38151C 54%, #5A2230 100%);
-  --m3: linear-gradient(135deg, #120D17 0%, #2C1D38 54%, #43294F 100%);
+  --m1: linear-gradient(135deg, #1e0b0e 0%, #4e2432 54%, #8f3f5a 100%);
+  --m2: linear-gradient(135deg, #120303 0%, #4a0c0c 54%, #7a1818 100%);
+  --m3: linear-gradient(135deg, #120D17 0%, #322040 54%, #4e2f5e 100%);
   --m4: linear-gradient(135deg, #080E16 0%, #141C2E 54%, #1F3350 100%);
 
   --ff-accent: 'Corinthia', cursive;
@@ -282,7 +282,7 @@ h3 {
 }
 
 .site-header.scrolled {
-  background: rgba(13, 26, 28, .76);
+  background: rgba(30, 11, 14, .76);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
@@ -422,7 +422,7 @@ h3 {
   top: var(--header-h, 5.5rem);
   left: 0;
   min-width: 200px;
-  background: rgba(13, 26, 28, .76);
+  background: rgba(30, 11, 14, .76);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   padding: 1rem 0 1.2rem;
@@ -512,7 +512,7 @@ h3 {
   left: 0;
   right: 0;
   z-index: 99;
-  background: rgba(13, 26, 28, .76);
+  background: rgba(30, 11, 14, .76);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   padding: 1.5rem 0 2rem;
@@ -658,7 +658,7 @@ h3 {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(8, 28, 39, .68);
+  background: radial-gradient(ellipse at center, rgba(30, 11, 14, .82) 0%, rgba(30, 11, 14, .48) 65%, rgba(30, 11, 14, .18) 100%);
 }
 
 .hero-body {
@@ -666,6 +666,10 @@ h3 {
   z-index: 2;
   padding: 9rem 1rem 6rem;
   max-width: 1000px;
+}
+
+.hero-logo-mob {
+  display: none;
 }
 
 .hero-eyebrow {
@@ -768,11 +772,20 @@ h3 {
 /* ── MANIFESTO – nalaďovací sekce ───────────── */
 .manifesto {
   background:
-    linear-gradient(135deg, rgba(8, 28, 39, 1) 0%, rgba(23, 45, 58, .72) 100%),
-    url('Obrazky/grafika/bg-anjali-leaf.png') center/cover no-repeat fixed;
+    linear-gradient(135deg, #1e0b0e 0%, #4e2432 54%, rgba(143, 63, 90, 0) 100%),
+    url('Obrazky/grafika/bg-anjali-rose-right.jpg') 75% center / auto 100vh no-repeat fixed;
   padding: var(--pad) 0;
   position: relative;
   overflow: hidden;
+}
+
+.manifesto::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 3, 3, 0.25);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .manifesto::after {
@@ -897,7 +910,7 @@ h3 {
 /* ── RECOGNITION ──────────────────────────────── */
 .recognition {
   padding: var(--pad) 0;
-  background: var(--cream);
+  background: #fff;
 }
 
 .recognition-grid {
@@ -1025,7 +1038,7 @@ h3 {
 /* ── O ŠKOLE ──────────────────────────────────── */
 .o-skole {
   padding: var(--pad) 0;
-  background: linear-gradient(180deg, #EEE8DC 0%, #F7F3EC 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, var(--cream) 80px, var(--cream) calc(100% - 80px), #ffffff 100%);
   position: relative;
   overflow: hidden;
 }
@@ -1055,13 +1068,13 @@ h3 {
 /* ── MODULY HEADER ────────────────────────────── */
 .moduly-header {
   padding: var(--pad) 0 3rem;
-  background: var(--cream);
+  background: #fff;
   text-align: center;
 }
 
 /* ── MODULY GRID + CARDS ──────────────────────── */
 .moduly-section {
-  background: var(--cream);
+  background: #fff;
   padding-bottom: var(--pad);
 }
 
@@ -1168,7 +1181,7 @@ h3 {
 /* ── ANJALI ───────────────────────────────────── */
 .anjali {
   padding: var(--pad) 0;
-  background: var(--dark);
+  background: linear-gradient(to bottom, #ffffff 0%, var(--cream) 80px);
 }
 
 .anjali-grid {
@@ -1213,7 +1226,7 @@ h3 {
   font-family: var(--ff-serif);
   font-style: italic;
   font-size: 1.05rem;
-  color: rgba(247, 243, 236, .93);
+  color: var(--text);
   line-height: 1.75;
   border-left: 2px solid var(--gold-mid);
   padding-left: 1.25rem;
@@ -1222,7 +1235,7 @@ h3 {
 
 .anjali-content p {
   font-size: 1rem;
-  color: rgba(247, 243, 236, .78);
+  color: #4A4A4A;
   margin-bottom: 1rem;
   line-height: 1.88;
 }
@@ -1239,9 +1252,9 @@ h3 {
 .reference-leaf {
   position: absolute;
   inset: 0;
-  background-image: url('Obrazky/grafika/bg-anjali-rose-right.jpg');
+  background-image: url('Obrazky/grafika/bg-anjali-rose-left.jpg');
   background-size: auto 100vh;
-  background-position: 85% center;
+  background-position: 15% center;
   background-attachment: fixed;
   opacity: 1;
   pointer-events: none;
@@ -1251,8 +1264,8 @@ h3 {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to top, rgba(247, 243, 236, 1) 0%, rgba(247, 243, 236, 0) 20%),
-    linear-gradient(to right, rgba(247, 243, 236, 1) 30%, rgba(247, 243, 236, .82) 60%, rgba(247, 243, 236, .2) 100%);
+    linear-gradient(to top, rgba(247, 243, 236, 1) 0%, rgba(247, 243, 236, 0) 18%),
+    linear-gradient(to bottom, rgba(247, 243, 236, 1) 0%, rgba(247, 243, 236, 0) 18%);
   pointer-events: none;
 }
 
@@ -1391,7 +1404,7 @@ h3 {
   position: fixed;
   inset: 0;
   z-index: 9000;
-  background: rgba(8, 14, 20, .94);
+  background: rgba(30, 11, 14, .94);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   align-items: center;
@@ -1531,7 +1544,7 @@ h3 {
 .cta-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(8, 18, 20, .92) 0%, rgba(8, 18, 20, .55) 70%, rgba(8, 18, 20, .22) 100%);
+  background: radial-gradient(ellipse at center, rgba(30, 11, 14, .92) 0%, rgba(30, 11, 14, .55) 70%, rgba(30, 11, 14, .22) 100%);
 }
 
 .cta-body {
@@ -1605,7 +1618,7 @@ h3 {
 
 /* ── FOOTER ───────────────────────────────────── */
 .site-footer {
-  background: var(--dark-deep);
+  background: #1e0b0e;
   padding: 3rem 0 0;
 }
 
@@ -1617,7 +1630,7 @@ h3 {
   right: 2rem;
   width: 2.8rem;
   height: 2.8rem;
-  background: rgba(8, 18, 20, .50);
+  background: rgba(30, 11, 14, .50);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: none;
@@ -1667,11 +1680,11 @@ h3 {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 33.33%;
-  right: 33.33%;
+  left: 18%;
+  right: 18%;
   background: url('Obrazky/LOGO-zenska-mystika.png') center / contain no-repeat;
   filter: brightness(0) invert(1);
-  opacity: .06;
+  opacity: .11;
   pointer-events: none;
 }
 
@@ -1724,6 +1737,14 @@ h3 {
   justify-content: center;
   text-align: center;
   gap: .5rem;
+}
+
+.footer-logo-img {
+  width: 130px;
+  height: auto;
+  display: block;
+  filter: brightness(0) invert(77%) sepia(36%) saturate(400%) hue-rotate(358deg) brightness(104%);
+  margin-bottom: .25rem;
 }
 
 .footer-statement-title {
@@ -1958,6 +1979,7 @@ h3 {
   .nav-bar {
     grid-template-columns: 1fr auto auto;
     padding: .9rem 1rem;
+    position: relative;
   }
 
   .nav-left,
@@ -1979,6 +2001,21 @@ h3 {
 }
 
 @media (min-width:769px) and (max-width:1300px) {
+  .nav-bar {
+    min-height: calc(72px + 1.8rem);
+  }
+
+  .nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+  }
+
+  .site-header.scrolled .logo-wrap .logo-img {
+    height: 72px;
+  }
+
   .nav-mobile {
     position: fixed;
     top: var(--header-h, 5.5rem);
@@ -2152,9 +2189,9 @@ h3 {
   }
 
   .footer-cols::before {
-    left: 0;
-    right: 50%;
-    background-size: 55% auto;
+    left: 10%;
+    right: 10%;
+    background-size: 70% auto;
     background-position: 50% 30%;
   }
 
@@ -2206,6 +2243,10 @@ h3 {
     --pad: clamp(56px, 10vw, 72px);
   }
 
+  .nav-center {
+    display: none;
+  }
+
   .gallery-more {
     padding-top: var(--pad);
   }
@@ -2250,7 +2291,7 @@ h3 {
   .footer-cols::before {
     left: 0;
     right: 0;
-    background-size: 55% auto;
+    background-size: 72% auto;
     background-position: 50% 3%;
   }
 
@@ -2364,8 +2405,14 @@ h3 {
 
   /* Hero */
   .hero-body {
-    padding: 6rem 1.25rem 3.5rem;
+    padding: 1rem 1.25rem 3.5rem;
   }
+
+  .hero-bg {
+    background-image: url('Obrazky/o-skole/skola-6.jpg');
+    background-position: center 60%;
+  }
+
 
   .hero-script {
     font-size: clamp(2.6rem, 7vw, 3.5rem);
@@ -2378,6 +2425,14 @@ h3 {
   .hero-text {
     font-size: 1rem;
     margin: 1.5rem auto 2rem;
+  }
+
+  .hero-logo-mob {
+    display: block;
+    width: 72px;
+    height: auto;
+    margin: 0 auto 3.5rem;
+    filter: brightness(0) invert(77%) sepia(36%) saturate(400%) hue-rotate(358deg) brightness(104%);
   }
 
   .hero-eyebrow {
@@ -2467,7 +2522,7 @@ h3 {
 .vstup-hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(8, 18, 20, .92) 0%, rgba(8, 18, 20, .55) 70%, rgba(8, 18, 20, .22) 100%);
+  background: radial-gradient(ellipse at center, rgba(30, 11, 14, .92) 0%, rgba(30, 11, 14, .55) 70%, rgba(30, 11, 14, .22) 100%);
 }
 
 .vstup-hero-body {
