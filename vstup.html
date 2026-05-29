@@ -95,11 +95,6 @@
   <main class="vstup-main" id="formular" aria-label="Formulář vstupu do školy">
     <div class="wrap">
 
-      <!-- Dekorativní mandala nad formulářem -->
-      <div class="vstup-mandala-wrap rv" aria-hidden="true">
-        <img src="Obrazky/anjali-symbol-mandala-gold-100.png" alt="" class="vstup-mandala" loading="lazy">
-      </div>
-
       <div class="vstup-grid">
 
         <!-- ── Levý sloupec: formulář ─────────────────── -->
@@ -111,15 +106,11 @@
               <span class="hc-s">Tvůj první krok na cestě</span>
             </h2>
             <p class="vstup-form-lead">Vyplň formulář níže. Záleží mi na každé ženě, proto tě prosím o upřímnost
-              a&nbsp;otevřenost – odpovím ti osobně a&nbsp;s péčí.</p>
+              a&nbsp;otevřenost. Odpovím ti osobně, co nejdříve.</p>
           </div>
 
           <!-- !! PŘED SPUŠTĚNÍM: Nahraď FORMSPREE_ENDPOINT_ZDE svým endpointem z formspree.io, např. https://formspree.io/f/XXXXXXXX !! -->
-          <form class="vstup-form rv rv-1"
-            action="FORMSPREE_ENDPOINT_ZDE"
-            method="POST"
-            novalidate
-            id="vstup-form"
+          <form class="vstup-form rv rv-1" action="FORMSPREE_ENDPOINT_ZDE" method="POST" novalidate id="vstup-form"
             aria-label="Přihláška do Mysterijní školy ženství">
 
             <!-- Formspree konfigurace -->
@@ -138,8 +129,8 @@
               <label class="form-label" for="f-jmeno">
                 Jméno a příjmení <span class="form-req" aria-label="povinné pole">*</span>
               </label>
-              <input class="form-input" type="text" id="f-jmeno" name="jmeno"
-                required autocomplete="name" placeholder="Tvé celé jméno">
+              <input class="form-input" type="text" id="f-jmeno" name="jmeno" required autocomplete="name"
+                placeholder="Tvé celé jméno">
             </div>
 
             <!-- E-mail -->
@@ -147,8 +138,8 @@
               <label class="form-label" for="f-email">
                 E-mail <span class="form-req" aria-label="povinné pole">*</span>
               </label>
-              <input class="form-input" type="email" id="f-email" name="email"
-                required autocomplete="email" placeholder="tvuj@email.cz">
+              <input class="form-input" type="email" id="f-email" name="email" required autocomplete="email"
+                placeholder="tvuj@email.cz">
             </div>
 
             <!-- Telefon -->
@@ -156,14 +147,14 @@
               <label class="form-label" for="f-telefon">
                 Telefon <span class="form-req" aria-label="povinné pole">*</span>
               </label>
-              <input class="form-input" type="tel" id="f-telefon" name="telefon"
-                required autocomplete="tel" placeholder="+420 XXX XXX XXX">
+              <input class="form-input" type="tel" id="f-telefon" name="telefon" required autocomplete="tel"
+                placeholder="+420 XXX XXX XXX">
             </div>
 
             <!-- Záměr -->
             <div class="form-group" role="group" aria-labelledby="zamer-label">
               <span class="form-label" id="zamer-label">
-                Záměr zprávy <span class="form-req" aria-label="povinné pole">*</span>
+                Záměr <span class="form-req" aria-label="povinné pole">*</span>
               </span>
               <div class="form-radios">
                 <label class="form-radio">
@@ -185,8 +176,7 @@
               <label class="form-label" for="f-zprava">
                 Zpráva <span class="form-req" aria-label="povinné pole">*</span>
               </label>
-              <textarea class="form-input form-textarea" id="f-zprava" name="zprava"
-                required rows="7"
+              <textarea class="form-input form-textarea" id="f-zprava" name="zprava" required rows="7"
                 placeholder="Napiš svůj dotaz, nebo několik slov o tom, proč tě tato cesta volá…"></textarea>
             </div>
 
@@ -197,7 +187,8 @@
                 <span class="form-checkbox-mark" aria-hidden="true"></span>
                 <span class="form-checkbox-text">
                   Souhlasím se <a href="/zpracovani-osobnich-udaju" class="form-link" target="_blank"
-                    rel="noopener">zpracováním osobních údajů</a>.<span class="form-req" aria-label="povinné pole"> *</span>
+                    rel="noopener">zpracováním osobních údajů</a>.<span class="form-req" aria-label="povinné pole">
+                    *</span>
                 </span>
               </label>
             </div>
@@ -205,7 +196,7 @@
             <!-- Odeslat -->
             <div class="form-actions">
               <button type="submit" class="btn btn-gold form-submit-btn">
-                Odeslat přihlášku
+                Odeslat zprávu
               </button>
               <p class="form-actions-note">
                 Pole označená <span class="form-req">*</span> jsou povinná.
@@ -247,6 +238,10 @@
                 <span class="vstup-price-label" role="cell">Celkem za celou školu</span>
                 <span class="vstup-price-val" role="cell">39&nbsp;960&nbsp;Kč</span>
               </div>
+              <div class="vstup-price-note">
+                <span>+ náklady na ubytování a stravu</span>
+                <span>4&nbsp;×&nbsp;5&nbsp;500&nbsp;Kč</span>
+              </div>
             </div>
 
             <p>Jednotlivé moduly se hradí postupně před každým modulem zvlášť. Po potvrzení účasti ti přijdou
@@ -260,7 +255,7 @@
           </div>
 
           <div class="vstup-sidebar-deco rv rv-2" aria-hidden="true">
-            <img src="Obrazky/grafika/gold-flower-one-1.png" alt="" loading="lazy">
+            <img src="Obrazky/grafika/gold-flowers-3.png" alt="" loading="lazy">
           </div>
 
         </aside>
@@ -301,8 +296,7 @@
 
         <div class="footer-col footer-col-center">
           <h2 class="footer-statement-title">Mysterijní škola ženství</h2>
-          <a href="/vstup" class="btn btn-ghost-lt"
-            style="font-size:.76rem; padding:.7rem 1.8rem">Vstoupit do školy</a>
+          <a href="/vstup" class="btn btn-ghost-lt" style="font-size:.76rem; padding:.7rem 1.8rem">Vstoupit do školy</a>
         </div>
 
         <div class="footer-col footer-col-right">
@@ -375,7 +369,6 @@
     };
     window.addEventListener('scroll', () => {
       hdr.classList.toggle('scrolled', scrollY > 60);
-      setHeaderH();
       scrollTopBtn.classList.toggle('visible', scrollY > 300);
       if (scrollY > 40) closeMenu();
     }, { passive: true });
@@ -459,7 +452,7 @@
         if (!zamerOk) {
           e.preventDefault();
           radios[0].focus();
-          radios[0].setCustomValidity('Prosím vyber záměr zprávy.');
+          radios[0].setCustomValidity('Prosím vyber záměr.');
           radios[0].reportValidity();
           return;
         } else {

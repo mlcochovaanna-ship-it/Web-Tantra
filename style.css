@@ -53,7 +53,7 @@
   --cream: #F7F3EC;
   --cream-light: #FDFAF5;
   --text: #2C2C2C;
-  --text-muted: #6B6B6B;
+  --text-muted: #4A4A4A;
 
   --gold-main: linear-gradient(90deg, #8A652A 0%, #B88A3A 24%, #F5E7B2 48%, #E7CD80 62%, #C69B45 78%, #8A652A 100%);
   --gold-outline: linear-gradient(90deg, #9A6D2B 0%, #D7B85F 52%, #9A6D2B 100%);
@@ -180,7 +180,7 @@ h3 {
 }
 
 .eyebrow-lt {
-  color: rgba(247, 243, 236, 0.5);
+  color: rgba(247, 243, 236, .78);
   font-weight: 400;
 }
 
@@ -674,7 +674,7 @@ h3 {
   font-weight: 500;
   letter-spacing: .26em;
   text-transform: uppercase;
-  color: rgba(225, 210, 190, .82);
+  color: rgba(247, 243, 236, .78);
   display: block;
   margin-bottom: 1.5rem;
 }
@@ -890,7 +890,7 @@ h3 {
 
 .pillar p {
   font-size: .95rem;
-  color: rgba(247, 243, 236, .6);
+  color: rgba(247, 243, 236, .78);
   line-height: 1.88;
 }
 
@@ -1014,12 +1014,12 @@ h3 {
 
 .recognition-content p {
   font-size: 1rem;
-  color: #7A7A7A;
+  color: #4A4A4A;
   margin-bottom: 1rem;
   line-height: 1.88;
 }
 .recognition-content .eyebrow {
-  color: #A0A0A0;
+  color: #4A4A4A;
 }
 
 /* ── O ŠKOLE ──────────────────────────────────── */
@@ -1119,7 +1119,7 @@ h3 {
 .module-card.m4 .module-card-img img { object-position: center 60%; }
 
 .module-num {
-  color: rgba(247, 243, 236, 0.75);
+  color: rgba(247, 243, 236, .78);
   margin-bottom: .5rem;
 }
 
@@ -1140,7 +1140,7 @@ h3 {
 
 .module-card-content p {
   font-size: 1rem;
-  color: rgba(247, 243, 236, .88);
+  color: rgba(247, 243, 236, .78);
   line-height: 1.82;
   margin-bottom: .85rem;
 }
@@ -1222,7 +1222,7 @@ h3 {
 
 .anjali-content p {
   font-size: 1rem;
-  color: rgba(247, 243, 236, .88);
+  color: rgba(247, 243, 236, .78);
   margin-bottom: 1rem;
   line-height: 1.88;
 }
@@ -1303,7 +1303,7 @@ h3 {
   font-weight: 600;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: #A07C40;
+  color: #7A5C20;
   display: block;
   margin-bottom: 1rem;
 }
@@ -1344,7 +1344,7 @@ h3 {
 }
 
 .gallery-head p {
-  color: rgba(60, 50, 40, .55);
+  color: #4A4A4A;
   font-size: .95rem;
 }
 
@@ -1570,7 +1570,7 @@ h3 {
 }
 
 .cta-body .eyebrow-lt {
-  color: rgba(225, 210, 190, .82);
+  color: rgba(247, 243, 236, .78);
   font-weight: 500;
   letter-spacing: .26em;
 }
@@ -2435,13 +2435,24 @@ h3 {
 /* ── VSTUP – hero ─────────────────────────────── */
 .vstup-hero {
   position: relative;
-  min-height: 68vh;
+  min-height: 72vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   text-align: center;
   overflow: hidden;
+  padding-top: var(--header-h);
+}
+
+@media (min-width:769px) and (max-width:1100px) {
+  .hero-script {
+    font-size: clamp(4.5rem, 8vw, 6rem);
+  }
+
+  .hero-caps {
+    font-size: clamp(2.8rem, 6vw, 4rem);
+  }
 }
 
 .vstup-hero-bg {
@@ -2449,32 +2460,46 @@ h3 {
   inset: 0;
   background-image: url('Obrazky/o-skole/skola-5.jpg');
   background-size: cover;
-  background-position: center 35%;
+  background-position: center 45%;
   will-change: transform;
 }
 
 .vstup-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(8, 28, 39, .38) 0%,
-    rgba(8, 28, 39, .68) 60%,
-    rgba(8, 28, 39, .91) 100%
-  );
+  background: radial-gradient(ellipse at center, rgba(8, 18, 20, .92) 0%, rgba(8, 18, 20, .55) 70%, rgba(8, 18, 20, .22) 100%);
 }
 
 .vstup-hero-body {
   position: relative;
   z-index: 2;
-  padding: 9rem 1rem 5.5rem;
+  padding: 4.5rem 1rem 4.5rem;
   max-width: 800px;
   width: 100%;
 }
 
+.vstup-hero .hero-eyebrow {
+  font-size: .9rem;
+  margin-bottom: 1.1rem;
+}
+
+.vstup-hero .hero-script {
+  font-size: clamp(2.4rem, 4.4vw, 5rem);
+}
+
+.vstup-hero .hero-caps {
+  font-size: clamp(1.3rem, 3vw, 3rem);
+}
+
+.vstup-hero .hero-text {
+  font-size: 1.05rem;
+  max-width: 640px;
+  margin: 1.25rem auto 1.75rem;
+}
+
 /* ── VSTUP – hlavní sekce ──────────────────────── */
 .vstup-main {
-  padding: var(--pad) 0 calc(var(--pad) * 1.5);
+  padding: var(--pad) 0;
   background: var(--cream-light);
   position: relative;
 }
@@ -2562,10 +2587,10 @@ h3 {
   font-size: 1rem;
   font-weight: 400;
   color: var(--text);
-  background: transparent;
+  background: rgba(255, 255, 255, 0.55);
   border: none;
   border-bottom: 1px solid rgba(44, 44, 44, .18);
-  padding: .72rem 0;
+  padding: .72rem .75rem;
   transition: border-color var(--ease);
   outline: none;
   appearance: none;
@@ -2723,7 +2748,7 @@ h3 {
 
 .form-checkbox-text {
   font-size: .9rem;
-  color: #5A5A5A;
+  color: #4A4A4A;
   line-height: 1.65;
 }
 
@@ -2741,8 +2766,6 @@ h3 {
 /* ── Odeslat ──────────────────────────────────── */
 .form-actions {
   margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(44, 44, 44, .08);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -2751,22 +2774,27 @@ h3 {
 
 .form-submit-btn {
   flex-shrink: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 1.2rem 2.2rem 1.1rem;
 }
 
 .form-actions-note {
   font-size: .8rem;
-  color: rgba(44, 44, 44, .45);
+  color: #4A4A4A;
   line-height: 1.5;
 }
 
 /* ── Poznámka po formuláři ───────────────────── */
 .form-after-note {
-  margin-top: 2.5rem;
-  padding-top: 2rem;
+  margin-top: .75rem;
+  padding-top: .6rem;
 }
 
 .form-after-note .gline {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.9rem;
+  width: min(600px, 100%);
+  background: linear-gradient(to right, #C69B45, #E7CD80, transparent);
 }
 
 .form-after-note p {
@@ -2786,7 +2814,7 @@ h3 {
   background: rgba(255, 255, 255, .75);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  padding: 2.25rem 2rem;
+  padding: 2.25rem 2rem 1.5rem;
   margin-bottom: 2rem;
   position: relative;
 }
@@ -2810,13 +2838,17 @@ h3 {
 }
 
 .vstup-info-card .eyebrow {
-  color: #A07C40;
+  background: var(--gold-outline);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
   margin-bottom: 1.1rem;
 }
 
 .vstup-info-card > p {
   font-size: .92rem;
-  color: #5A5A5A;
+  color: #4A4A4A;
   line-height: 1.85;
   margin-bottom: 1.1rem;
 }
@@ -2841,8 +2873,8 @@ h3 {
 }
 
 .vstup-price-label {
-  font-size: .83rem;
-  color: #808080;
+  font-size: .92rem;
+  color: #4A4A4A;
   letter-spacing: .03em;
 }
 
@@ -2855,22 +2887,29 @@ h3 {
 
 .vstup-price-row--total {
   border-top: 1px solid rgba(198, 155, 69, .14);
-  margin-top: .3rem;
-  padding-top: .7rem;
+  margin-top: .8rem;
+  padding-top: .9rem;
 }
 
 .vstup-price-row--total .vstup-price-label {
-  font-size: .88rem;
+  font-size: .97rem;
   font-weight: 600;
   color: var(--text);
 }
 
 .vstup-price-row--total .vstup-price-val {
-  font-size: 1rem;
-  background: var(--gold-outline);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: 1.15rem;
+  color: #A8821E;
+}
+
+.vstup-price-note {
+  display: flex;
+  justify-content: space-between;
+  font-size: .82rem;
+  color: #4A4A4A;
+  opacity: .72;
+  margin-top: .35rem;
+  margin-bottom: 0;
 }
 
 /* Odkaz pod kartou */
@@ -2879,7 +2918,7 @@ h3 {
 }
 
 .vstup-sidebar-link p {
-  font-size: .9rem;
+  font-size: .95rem;
   color: var(--text-muted);
   line-height: 1.85;
   margin-bottom: 1.25rem;
@@ -2892,10 +2931,10 @@ h3 {
 }
 
 .vstup-sidebar-deco img {
-  width: 110px;
+  width: 310px;
   height: auto;
   margin: 0 auto;
-  opacity: .45;
+  opacity: 1;
 }
 
 /* ── VSTUP – responzivita ─────────────────────── */
@@ -2927,13 +2966,39 @@ h3 {
   }
 }
 
+@media (min-width:769px) and (max-width:1100px) {
+  .vstup-hero .hero-script {
+    font-size: clamp(3rem, 5.5vw, 4.2rem);
+  }
+
+  .vstup-hero .hero-caps {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+  }
+}
+
 @media (max-width:768px) {
   .vstup-hero {
-    min-height: 56vh;
+    min-height: 58vh;
   }
 
   .vstup-hero-body {
-    padding: 7rem 1.25rem 4rem;
+    padding: 5rem 1.25rem 2.5rem;
+  }
+
+  .vstup-hero .hero-script {
+    font-size: clamp(2.4rem, 7vw, 3.2rem);
+  }
+
+  .vstup-hero .hero-caps {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .vstup-hero .hero-eyebrow {
+    font-size: .9rem;
+  }
+
+  .vstup-hero .hero-text {
+    font-size: 1.05rem;
   }
 
   .vstup-mandala {
@@ -2958,6 +3023,10 @@ h3 {
     gap: .85rem;
   }
 
+  .form-actions-note {
+    order: -1;
+  }
+
   .form-submit-btn {
     width: 100%;
     justify-content: center;
@@ -2970,7 +3039,7 @@ h3 {
 
 @media (max-width:480px) {
   .vstup-hero-body {
-    padding: 6rem 1rem 3rem;
+    padding: 4rem 1rem 2rem;
   }
 
   .vstup-info-card {
