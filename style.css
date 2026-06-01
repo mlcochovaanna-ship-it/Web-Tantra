@@ -62,7 +62,7 @@
   --gold-lt: #E7CD80;
 
   --m1: linear-gradient(135deg, #1e0b0e 0%, #4e2432 54%, #8f3f5a 100%);
-  --m2: linear-gradient(135deg, #120303 0%, #4a0c0c 54%, #7a1818 100%);
+  --m2: linear-gradient(135deg, #130004 0%, #450110 54%, #7d011d 100%);
   --m3: linear-gradient(135deg, #120D17 0%, #322040 54%, #4e2f5e 100%);
   --m4: linear-gradient(135deg, #080E16 0%, #141C2E 54%, #1F3350 100%);
 
@@ -282,7 +282,7 @@ h3 {
 }
 
 .site-header.scrolled {
-  background: rgba(30, 11, 14, .76);
+  background: rgba(19, 0, 4, .76);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
@@ -422,7 +422,7 @@ h3 {
   top: var(--header-h, 5.5rem);
   left: 0;
   min-width: 200px;
-  background: rgba(30, 11, 14, .76);
+  background: rgba(19, 0, 4, .76);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   padding: 1rem 0 1.2rem;
@@ -512,7 +512,7 @@ h3 {
   left: 0;
   right: 0;
   z-index: 99;
-  background: rgba(30, 11, 14, .76);
+  background: rgba(19, 0, 4, .76);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   padding: 1.5rem 0 2rem;
@@ -658,7 +658,7 @@ h3 {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(30, 11, 14, .82) 0%, rgba(30, 11, 14, .48) 65%, rgba(30, 11, 14, .18) 100%);
+  background: radial-gradient(ellipse at center, rgba(19, 0, 4, .82) 0%, rgba(19, 0, 4, .48) 65%, rgba(19, 0, 4, .18) 100%);
 }
 
 .hero-body {
@@ -772,8 +772,8 @@ h3 {
 /* ── MANIFESTO – nalaďovací sekce ───────────── */
 .manifesto {
   background:
-    linear-gradient(135deg, #1e0b0e 0%, #4e2432 54%, rgba(143, 63, 90, 0) 100%),
-    url('Obrazky/grafika/bg-anjali-rose-right.jpg') 75% center / auto 100vh no-repeat fixed;
+    linear-gradient(135deg, #130004 0%, #450110 54%, rgba(125, 1, 29, 0) 100%),
+    url('Obrazky/grafika/bg-anjali-rose-right.jpg') center center / cover no-repeat fixed;
   padding: var(--pad) 0;
   position: relative;
   overflow: hidden;
@@ -783,7 +783,7 @@ h3 {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(18, 3, 3, 0.25);
+  background: rgba(19, 0, 4, 0.25);
   pointer-events: none;
   z-index: 0;
 }
@@ -826,8 +826,8 @@ h3 {
   font-family: var(--ff-serif);
   font-size: clamp(1.15rem, 2.1vw, 2rem);
   font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0;
+  font-style: italic;
+  letter-spacing: 0.03em;
   line-height: 1.7;
   display: block;
   margin-top: .5rem;
@@ -917,7 +917,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4.5rem;
-  align-items: center;
+  align-items: stretch;
 }
 
 /* Gold frame – gradient border lines */
@@ -929,8 +929,8 @@ h3 {
 .img-frame::before {
   content: '';
   position: absolute;
-  top: 16px;
-  left: 16px;
+  top: -16px;
+  left: -16px;
   width: 35%;
   height: 35%;
   z-index: 3;
@@ -943,8 +943,8 @@ h3 {
 .img-frame::after {
   content: '';
   position: absolute;
-  bottom: 16px;
-  right: 16px;
+  bottom: -16px;
+  right: -16px;
   width: 35%;
   height: 35%;
   z-index: 3;
@@ -1001,24 +1001,25 @@ h3 {
 
 /* Zrcadlový rámeček – rožky nahoře vpravo a dole vlevo */
 .img-frame-mirror::before {
-  top: 16px;
+  top: -16px;
   left: auto;
-  right: 16px;
+  right: -16px;
   background:
     linear-gradient(90deg, transparent, #C69B45, #F5E7B2, #E7CD80, #8A652A) top / 100% 1px no-repeat,
     linear-gradient(180deg, #8A652A, #E7CD80, #F5E7B2, #C69B45, transparent) right / 1px 100% no-repeat;
 }
 .img-frame-mirror::after {
-  bottom: 16px;
+  bottom: -16px;
   right: auto;
-  left: 16px;
+  left: -16px;
   background:
     linear-gradient(90deg, #8A652A, #E7CD80, #F5E7B2, #C69B45, transparent) bottom / 100% 1px no-repeat,
     linear-gradient(180deg, transparent, #C69B45, #F5E7B2, #E7CD80, #8A652A) left / 1px 100% no-repeat;
 }
 
 .recognition-img {
-  height: 500px;
+  height: 100%;
+  min-height: 500px;
 }
 
 .recognition-img .main-img {
@@ -1035,12 +1036,81 @@ h3 {
   color: #4A4A4A;
 }
 
+/* Zlaté květiny v textových sloupcích */
+.recognition-content,
+.o-skole-content,
+.recognition-content > *:not(.gf-text),
+.o-skole-content > *:not(.gf-text),
+.anjali-content > *:not(.gf-text) {
+  position: relative;
+  z-index: 1;
+}
+.gf-text {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.35;
+  width: 300px;
+  height: auto;
+  z-index: 0;
+}
+.gf-text-r {
+  bottom: -40px;
+  right: -30px;
+}
+@media (max-width: 1100px) {
+  .gf-text { display: none; }
+}
+.recognition-content .rec-verse {
+  font-style: italic;
+  font-weight: 600;
+  color: #7A5C20;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  margin-top: 0.25rem;
+  margin-bottom: 1.25rem;
+}
+.recognition-content .rec-key {
+  font-weight: 600;
+  color: #4A4A4A;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* ── ŽENA JE LÁSKA ───────────────────────────── */
+.zena-laska {
+  padding: 6rem 0;
+  background: var(--m2);
+  text-align: center;
+}
+
+.zena-laska-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.zl-heading {
+  margin: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.zl-playfair span {
+  font-family: var(--ff-serif);
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(1rem, 2.4vw, 2.2rem);
+  letter-spacing: 0.03em;
+  display: block;
+}
+
 /* ── O ŠKOLE ──────────────────────────────────── */
 .o-skole {
   padding: var(--pad) 0;
   background: linear-gradient(to bottom, #ffffff 0%, var(--cream) 80px, var(--cream) calc(100% - 80px), #ffffff 100%);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .o-skole-grid {
@@ -1058,7 +1128,7 @@ h3 {
 }
 
 .o-skole-img {
-  height: 560px;
+  height: 680px;
 }
 
 .o-skole-img .main-img {
@@ -1128,8 +1198,8 @@ h3 {
 .module-card.m4 { flex-direction: row-reverse; }
 
 .module-card.m2 .module-card-img img { object-position: center 20%; }
-.module-card.m3 .module-card-img img { object-position: 35% center; }
-.module-card.m4 .module-card-img img { object-position: center 60%; }
+.module-card.m3 .module-card-img img { object-position: center center; }
+.module-card.m4 .module-card-img img { object-position: center center; }
 
 .module-num {
   color: rgba(247, 243, 236, .78);
@@ -1205,7 +1275,7 @@ h3 {
 }
 
 
-.anjali-content>* {
+.anjali-content > *:not(.gf-text) {
   position: relative;
 }
 
@@ -1253,8 +1323,8 @@ h3 {
   position: absolute;
   inset: 0;
   background-image: url('Obrazky/grafika/bg-anjali-rose-left.jpg');
-  background-size: auto 100vh;
-  background-position: 15% center;
+  background-size: cover;
+  background-position: center center;
   background-attachment: fixed;
   opacity: 1;
   pointer-events: none;
@@ -1404,7 +1474,7 @@ h3 {
   position: fixed;
   inset: 0;
   z-index: 9000;
-  background: rgba(30, 11, 14, .94);
+  background: rgba(19, 0, 4, .94);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   align-items: center;
@@ -1512,7 +1582,7 @@ h3 {
 .cta-bg {
   position: absolute;
   inset: 0;
-  background-image: url('Obrazky/o-skole/skola-3.jpeg');
+  background-image: url('Obrazky/ilustracni/prostor-2.jpeg');
   background-size: cover;
   background-position: center center;
   background-attachment: scroll;
@@ -1523,6 +1593,7 @@ h3 {
     background-attachment: fixed;
     background-position: center 70px;
   }
+
 }
 
 /* Dotykové zařízení (tablet + mobil, portrait i landscape) — fixed nefunguje spolehlivě */
@@ -1544,7 +1615,7 @@ h3 {
 .cta-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(30, 11, 14, .92) 0%, rgba(30, 11, 14, .55) 70%, rgba(30, 11, 14, .22) 100%);
+  background: radial-gradient(ellipse at center, rgba(19, 0, 4, .92) 0%, rgba(19, 0, 4, .55) 70%, rgba(19, 0, 4, .22) 100%);
 }
 
 .cta-body {
@@ -1618,7 +1689,7 @@ h3 {
 
 /* ── FOOTER ───────────────────────────────────── */
 .site-footer {
-  background: #1e0b0e;
+  background: #130004;
   padding: 3rem 0 0;
 }
 
@@ -1630,7 +1701,7 @@ h3 {
   right: 2rem;
   width: 2.8rem;
   height: 2.8rem;
-  background: rgba(30, 11, 14, .50);
+  background: rgba(19, 0, 4, .50);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: none;
@@ -2059,6 +2130,15 @@ h3 {
     font-size: clamp(2.8rem, 5vw, 3.8rem);
   }
 
+  .zl-playfair span {
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  }
+
+  .zl-heading {
+    white-space: normal;
+    line-height: 1.3;
+  }
+
   .eyebrow,
   .eyebrow-lt,
   .module-num {
@@ -2108,26 +2188,26 @@ h3 {
   .o-skole-img::after,
   .anjali-img::after,
   .img-frame-mirror::after {
-    top: 16px;
-    bottom: auto;
-    right: 16px;
-    left: auto;
+    top: auto;
+    bottom: -16px;
+    right: auto;
+    left: -16px;
     background:
-      linear-gradient(90deg, transparent, #C69B45, #F5E7B2, #E7CD80, #8A652A) top / 100% 1px no-repeat,
-      linear-gradient(180deg, #8A652A, #E7CD80, #F5E7B2, #C69B45, transparent) right / 1px 100% no-repeat;
+      linear-gradient(90deg, transparent, #C69B45, #F5E7B2, #E7CD80, #8A652A) bottom / 100% 1px no-repeat,
+      linear-gradient(180deg, transparent, #C69B45, #F5E7B2, #E7CD80, #8A652A) left / 1px 100% no-repeat;
   }
 
   .recognition-img::before,
   .o-skole-img::before,
   .anjali-img::before,
   .img-frame-mirror::before {
-    top: auto;
-    bottom: 16px;
-    left: 16px;
-    right: auto;
+    top: -16px;
+    bottom: auto;
+    left: auto;
+    right: -16px;
     background:
-      linear-gradient(90deg, #8A652A, #E7CD80, #F5E7B2, #C69B45, transparent) bottom / 100% 1px no-repeat,
-      linear-gradient(180deg, transparent, #C69B45, #F5E7B2, #E7CD80, #8A652A) left / 1px 100% no-repeat;
+      linear-gradient(90deg, transparent, #C69B45, #F5E7B2, #E7CD80, #8A652A) top / 100% 1px no-repeat,
+      linear-gradient(180deg, #8A652A, #E7CD80, #F5E7B2, #C69B45, transparent) right / 1px 100% no-repeat;
   }
 
   .module-card,
@@ -2189,10 +2269,10 @@ h3 {
   }
 
   .footer-cols::before {
-    left: 10%;
-    right: 10%;
-    background-size: 70% auto;
-    background-position: 50% 30%;
+    left: 0;
+    right: 50%;
+    background-size: 80% auto;
+    background-position: center 15%;
   }
 
   .footer-col-center {
@@ -2255,6 +2335,11 @@ h3 {
     font-size: clamp(2.8rem, 7vw, 3.5rem);
   }
 
+  .zl-playfair span {
+    font-size: clamp(1.4rem, 5vw, 1.9rem);
+    line-height: 1.3;
+  }
+
   .gallery-fw {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 200px;
@@ -2291,8 +2376,8 @@ h3 {
   .footer-cols::before {
     left: 0;
     right: 0;
-    background-size: 72% auto;
-    background-position: 50% 3%;
+    background-size: 50% auto;
+    background-position: 50% 5%;
   }
 
   .footer-col-center {
@@ -2522,7 +2607,7 @@ h3 {
 .vstup-hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(30, 11, 14, .92) 0%, rgba(30, 11, 14, .55) 70%, rgba(30, 11, 14, .22) 100%);
+  background: radial-gradient(ellipse at center, rgba(19, 0, 4, .92) 0%, rgba(19, 0, 4, .55) 70%, rgba(19, 0, 4, .22) 100%);
 }
 
 .vstup-hero-body {

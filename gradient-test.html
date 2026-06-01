@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gradient Test</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     @font-face { font-family:'Corinthia'; src:url('Fonty/Corinthia-Regular.ttf') format('truetype'); font-weight:400; }
     @font-face { font-family:'Corinthia'; src:url('Fonty/Corinthia-Bold.ttf') format('truetype'); font-weight:700; }
@@ -18,7 +19,7 @@
       --ff-sans:   'Montserrat', sans-serif;
       --ff-body:   'Playfair Display', serif;
       --m1: linear-gradient(135deg, #1e0b0e 0%, #4e2432 54%, #8f3f5a 100%);
-      --m2: linear-gradient(135deg, #120303 0%, #4a0c0c 54%, #7a1818 100%);
+      --m2: linear-gradient(135deg, #130004 0%, #450110 54%, #7d011d 100%);
       --m3: linear-gradient(135deg, #120D17 0%, #322040 54%, #4e2f5e 100%);
       --m4: linear-gradient(135deg, #080E16 0%, #141C2E 54%, #1F3350 100%);
     }
@@ -358,6 +359,68 @@
       line-height: 1.5;
     }
 
+    .test-extra { background: linear-gradient(135deg, #130004 0%, #450110 54%, #7d011d 100%); }
+
+    /* ── CVIČNÉ: nové stylování obrázků ── */
+
+    /* Textový sloupec – kontext pro absolutní pozicování květin */
+    .recognition-content,
+    .o-skole-content {
+      position: relative;
+      overflow: visible;
+    }
+
+    /* Veškerý obsah v textovém sloupci nad květinou */
+    .recognition-content > *:not(.gf-text),
+    .o-skole-content > *:not(.gf-text) {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Společný základ – přebarveno na béžovou filtrem */
+    .gf-text {
+      position: absolute;
+      pointer-events: none;
+      opacity: 0.4;
+      width: 340px;
+      height: auto;
+      z-index: 0;
+    }
+
+    /* Pravá strana textového sloupce, trochu níže */
+    .gf-text-r {
+      bottom: -40px;
+      right: -30px;
+    }
+
+    /* Rohy nesmí být ořezány */
+    .recognition,
+    .o-skole {
+      overflow: visible;
+    }
+
+    @media (max-width: 1100px) {
+      .gf-text {
+        width: 220px;
+      }
+      .gf-text-r {
+        right: 0;
+        bottom: -30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gf-text {
+        display: none;
+      }
+    }
+
+    /* Rohy vně fotky – obrácené znaménko oproti originálu */
+    .img-frame::before           { top: -16px; left: -16px; }
+    .img-frame::after            { bottom: -16px; right: -16px; }
+    .img-frame-mirror::before    { top: -16px; right: -16px; left: auto; }
+    .img-frame-mirror::after     { bottom: -16px; left: -16px; right: auto; }
+
     hr {
       border: none;
       border-top: 1px solid #ddd8d0;
@@ -383,7 +446,7 @@
     <div class="swatch m2"></div>
     <div class="card-info">
       <div class="card-title">M2 — Posvátná sexualita</div>
-      <div class="card-hex">#17090B → #38151C → #5A2230<br>tmavě vínová / bordó</div>
+      <div class="card-hex">#130004 → #450110 → #7d011d<br>tmavě karmínová / granátová</div>
     </div>
   </div>
   <div class="card">
@@ -450,65 +513,6 @@
     </div>
   </div>
 
-</div>
-
-<hr>
-
-<!-- ── MANIFESTO ── -->
-<p class="section-label">Manifesto sekce — gradient</p>
-<div class="grid">
-  <div class="card">
-    <div class="swatch manifesto-swatch"></div>
-    <div class="card-info">
-      <div class="card-title">Manifesto — aktuální</div>
-      <div class="card-hex">rgba(91,14,14,1) → rgba(91,14,14,0) | 135deg<br>#5b0e0e + bg-anjali-leaf + mix-blend color</div>
-    </div>
-  </div>
-</div>
-
-<p class="section-label" style="margin-top:2rem">Manifesto — full preview s textem</p>
-<div class="preview manifesto-full">
-  <div class="preview-inner">
-    <span class="preview-sub">Mysterijní škola ženství</span>
-    <p class="preview-text">„Každá žena v sobě nese pradávnou moudrost."</p>
-    <span class="preview-sub">Ma Prem Anjali</span>
-  </div>
-</div>
-
-<hr>
-
-<!-- ── ŽIVÝ EDITOR ── -->
-<p class="section-label">Živý editor — vylad gradient pro manifesto nebo moduly</p>
-<div class="editor">
-  <h3>Upravuj gradient v reálném čase</h3>
-
-  <div class="field-row">
-    <label>Hlavní barva</label>
-    <input type="color" id="gc" value="#5b0e0e" oninput="updateGradient()">
-    <span id="gcVal">#5b0e0e</span>
-  </div>
-  <div class="field-row">
-    <label>Úhel</label>
-    <input type="range" id="gAngle" min="0" max="360" value="135" oninput="updateGradient()">
-    <span id="gAngleVal">135°</span>
-  </div>
-  <div class="field-row">
-    <label>Střed %</label>
-    <input type="range" id="gMid" min="0" max="100" value="0" oninput="updateGradient()">
-    <span id="gMidVal">0%</span>
-  </div>
-  <div class="field-row">
-    <label>Tmavost rohu</label>
-    <input type="range" id="gDark" min="0" max="100" value="5" oninput="updateGradient()">
-    <span id="gDarkVal">5%</span>
-  </div>
-  <div class="field-row">
-    <label>S listy</label>
-    <input type="checkbox" id="gLeaf" checked oninput="updateGradient()">
-  </div>
-
-  <div class="live-preview" id="livePreview"></div>
-  <div class="live-code" id="liveCode"></div>
 </div>
 
 <!-- ── PATIČKA SIMULACE ── -->
@@ -631,42 +635,7 @@
   .ft-bottom a { color: rgba(199, 155, 69, .75); text-decoration: none; }
 </style>
 
-<footer class="ft-sim" style="background:#1e0b0e; margin-bottom: 2rem;">
-  <p style="text-align:center; padding: .6rem 0 0; font-size:.7rem; letter-spacing:.15em; text-transform:uppercase; color:rgba(247,243,236,.4); font-family:var(--ff-sans);">Varianta A — #1e0b0e (nejtmavší růžová)</p>
-  <div class="ft-wrap">
-    <div class="ft-cols">
-      <div>
-        <p class="ft-name">Martina Anjali Výborná</p>
-        <p class="ft-addr">Křižíkova 1873/16<br>430&nbsp;01 Chomutov</p>
-        <a href="#" class="ft-link-gold">anjali@martinavyborna.cz</a>
-        <a href="#" class="ft-link-gold" style="margin-top:-.42rem">+420&nbsp;603&nbsp;529&nbsp;357</a>
-        <div class="ft-social">
-          <a href="#" aria-label="Facebook"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-        </div>
-      </div>
-      <div class="ft-center">
-        <h2 class="ft-title">Mysterijní škola ženství</h2>
-        <a href="#" class="btn-ghost-lt" style="font-size:.76rem; padding:.7rem 1.8rem">Vstoupit do školy</a>
-      </div>
-      <div class="ft-right">
-        <ul class="ft-nav">
-          <li><a href="#">Úvod</a></li><li><a href="#">O škole</a></li><li><a href="#">O mně</a></li>
-          <li><a href="#">Reference</a></li><li><a href="#">Galerie</a></li><li><a href="#">Vstup do školy</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="ft-mid">
-      <div class="ft-legal"><p>Fyzická osoba podnikající dle živnostenského zákona</p><p>IČO:&nbsp;68427212</p></div>
-      <div class="ft-zprac"><p><a href="#">Zpracování osobních údajů</a></p><p><a href="#">Cookies</a></p></div>
-    </div>
-    <div class="ft-bottom"><p>Copyright © 2026 Mysterijní škola ženství. Všechna práva vyhrazena. Webdesign <a href="#">harmonickyweb.cz</a></p></div>
-  </div>
-</footer>
-
-<p class="section-label">—</p>
-
-<footer class="ft-sim" style="background:#120303">
+<footer class="ft-sim" style="background:#130004">
   <p style="text-align:center; padding: .6rem 0 0; font-size:.7rem; letter-spacing:.15em; text-transform:uppercase; color:rgba(247,243,236,.4); font-family:var(--ff-sans);">Varianta B — #120303 (nejtmavší červená)</p>
   <div class="ft-wrap">
 
@@ -720,6 +689,69 @@
 
   </div>
 </footer>
+
+<hr style="margin-top:3rem">
+<p class="section-label" style="margin-bottom:0">Stylování obrázků — cvičné sekce</p>
+
+<!-- ══ RECOGNITION – fotka vlevo ═══════════════════════ -->
+<section class="recognition" aria-labelledby="rec-h2-t">
+  <div class="wrap">
+    <div class="recognition-grid">
+      <div class="img-frame recognition-img rv in">
+        <img src="Obrazky/o-skole/o-skole-5.jpeg" alt="Žena v meditaci"
+          class="main-img" width="600" height="500">
+      </div>
+      <div class="recognition-content">
+        <img src="Obrazky/grafika/gold-flowers-3.png" class="gf-text gf-text-r" alt="" aria-hidden="true">
+        <span class="eyebrow">Možná i&nbsp;ty cítíš…</span>
+        <h2 id="rec-h2-t" class="hc rec-h2 rv in">
+          <span class="hc-s">... že je čas vrátit se sama k&nbsp;sobě</span>
+        </h2>
+        <p class="rv in">Každá žena v&nbsp;hloubi své bytosti touží být milovaná a&nbsp;hluboce milovat. Touží
+          porozumět posvátné alchymii svého ženství a&nbsp;v&nbsp;plném přijetí rozvinout všechny své přirozené dary.
+          Krásu, něhu, sílu, tvořivost, vášeň, smyslnost, jemnost i&nbsp;divokost. Touží se odevzdat Lásce, která je
+          její podstatou.</p>
+        <p class="rv in">Možná i&nbsp;ty cítíš volání znovu se propojit se svým tělem, srdcem a&nbsp;duší.
+          Objevit intimní a&nbsp;pravdivý vztah sama se sebou, otevřít své vědomí, důvěru v&nbsp;intuici
+          a&nbsp;moudrost srdce, která v&nbsp;tobě odjakživa přebývá. Uvolnění je klíč k&nbsp;ženské kráse.</p>
+        <div class="rv in" style="margin-top:2rem">
+          <a href="#" class="btn btn-ghost">Vstoupit do školy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ O ŠKOLE – fotka vpravo ════════════════════════════ -->
+<section class="o-skole" aria-labelledby="oskole-h2-t">
+  <div class="wrap">
+    <div class="o-skole-grid">
+      <div class="o-skole-content">
+        <img src="Obrazky/grafika/gold-flowers-3.png" class="gf-text gf-text-r" alt="" aria-hidden="true">
+        <span class="eyebrow rv in">O škole</span>
+        <h2 id="oskole-h2-t" class="hc rv in">
+          <span class="hc-s">Hluboká iniciační cesta ženy</span>
+        </h2>
+        <p class="rv in">Mysterijní škola ženství je dvouletou cestou hluboké
+          ženské transformace, návratu k&nbsp;přirozenosti a&nbsp;probuzení vědomého ženství skrze tantrickou cestu
+          lásky, prožitku a&nbsp;vnitřního poznání.</p>
+        <p class="rv in">Během čtyř navazujících modulů budeš postupně vstupovat
+          hlouběji do svého těla, cítění, intuice, sexuality, životní energie i&nbsp;duchovního vědomí. Každé setkání
+          otevírá další bránu ženské duše.</p>
+        <p class="rv in">Celá cesta probíhá v&nbsp;intimním kruhu žen,
+          v&nbsp;bezpečném prostoru hlubokého sdílení, prožitku, meditace, ženských rituálů a&nbsp;vědomé práce
+          s&nbsp;tělem i&nbsp;energií.</p>
+        <div class="rv in" style="margin-top:2rem">
+          <a href="#" class="btn btn-ghost">Více o&nbsp;škole</a>
+        </div>
+      </div>
+      <div class="img-frame img-frame-mirror o-skole-img rv in">
+        <img src="Obrazky/ilustracni/prostor-5.jpeg" alt="Oltář a meditační prostor"
+          class="main-img" width="600" height="560" style="object-position: top">
+      </div>
+    </div>
+  </div>
+</section>
 
 <script>
   function hexToRgb(hex) {
