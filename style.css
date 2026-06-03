@@ -61,7 +61,7 @@
   --gold-mid: #C69B45;
   --gold-lt: #E7CD80;
 
-  --m1: linear-gradient(135deg, #1e0b0e 0%, #4e2432 54%, #8f3f5a 100%);
+  --m1: linear-gradient(135deg, #3d0b26 0%, #6b164f 54%, #9d2968 100%);
   --m2: linear-gradient(135deg, #130004 0%, #450110 54%, #7d011d 100%);
   --m3: linear-gradient(135deg, #120D17 0%, #322040 54%, #4e2f5e 100%);
   --m4: linear-gradient(135deg, #080E16 0%, #141C2E 54%, #1F3350 100%);
@@ -115,6 +115,21 @@ h2,
 h3 {
   text-wrap: pretty;
 }
+
+/* ── WAVE DIVIDERS ───────────────────────────── */
+.wave-bottom,
+.wave-top {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.wave-bottom { bottom: 0; }
+.wave-top    { top: 0; transform: scaleY(-1); }
+.wave-flip   { transform: scaleX(-1); }
 
 /* ── UTILS ───────────────────────────────────── */
 .wrap {
@@ -282,7 +297,7 @@ h3 {
 }
 
 .site-header.scrolled {
-  background: rgba(19, 0, 4, .76);
+  background: rgba(34, 7, 24, .76);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
@@ -299,6 +314,10 @@ h3 {
 .site-header.scrolled .nav-cta-fixed {
   padding-top: .6rem;
   padding-bottom: .6rem;
+}
+
+.nav-wave-bottom {
+  display: none;
 }
 
 .nav-bar {
@@ -422,7 +441,7 @@ h3 {
   top: var(--header-h, 5.5rem);
   left: 0;
   min-width: 200px;
-  background: rgba(19, 0, 4, .76);
+  background: rgba(34, 7, 24, .76);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   padding: 1rem 0 1.2rem;
@@ -512,7 +531,7 @@ h3 {
   left: 0;
   right: 0;
   z-index: 99;
-  background: rgba(19, 0, 4, .76);
+  background: rgba(34, 7, 24, .76);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   padding: 1.5rem 0 2rem;
@@ -658,7 +677,7 @@ h3 {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(19, 0, 4, .82) 0%, rgba(19, 0, 4, .48) 65%, rgba(19, 0, 4, .18) 100%);
+  background: radial-gradient(ellipse at center, rgba(34, 7, 24, .82) 0%, rgba(34, 7, 24, .48) 65%, rgba(34, 7, 24, .18) 100%);
 }
 
 .hero-body {
@@ -735,10 +754,8 @@ h3 {
 }
 
 .hero-scroll {
-  position: absolute;
-  bottom: 2.5rem;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  margin: 3rem auto 0;
   z-index: 2;
   cursor: pointer;
   display: flex;
@@ -748,6 +765,7 @@ h3 {
   animation: arrowBounce 2.5s ease-in-out infinite;
   background: none;
   border: none;
+  padding: 0;
 }
 
 .hero-scroll span {
@@ -761,29 +779,31 @@ h3 {
 
   0%,
   100% {
-    transform: translateX(-50%) translateY(0)
+    transform: translateY(0)
   }
 
   50% {
-    transform: translateX(-50%) translateY(6px)
+    transform: translateY(6px)
   }
 }
 
 /* ── MANIFESTO – nalaďovací sekce ───────────── */
 .manifesto {
   background:
-    linear-gradient(135deg, #130004 0%, #450110 54%, rgba(125, 1, 29, 0) 100%),
+    linear-gradient(135deg, #3d0b26 0%, #6b164f 54%, rgba(157, 41, 104, 0) 100%),
     url('Obrazky/grafika/bg-anjali-rose-right.jpg') center center / cover no-repeat fixed;
-  padding: var(--pad) 0;
+  padding: calc(var(--pad) + 80px) 0 calc(var(--pad) + 4rem);
+  margin-top: -80px;
   position: relative;
   overflow: hidden;
+  clip-path: url(#manifesto-clip);
 }
 
 .manifesto::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(19, 0, 4, 0.25);
+  background: rgba(34, 7, 24, 0.25);
   pointer-events: none;
   z-index: 0;
 }
@@ -909,8 +929,10 @@ h3 {
 
 /* ── RECOGNITION ──────────────────────────────── */
 .recognition {
-  padding: var(--pad) 0;
-  background: #fff;
+  padding: var(--pad) 0 calc(var(--pad) + 5rem);
+  background: #ffffff;
+  position: relative;
+  z-index: 0;
 }
 
 .recognition-grid {
@@ -1078,9 +1100,15 @@ h3 {
 
 /* ── ŽENA JE LÁSKA ───────────────────────────── */
 .zena-laska {
-  padding: 6rem 0;
-  background: var(--m2);
+  padding: calc(6rem + 40px) 0 calc(6rem + 40px);
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, #3d0b26 0%, #6b164f 54%, #9d2968 100%);
   text-align: center;
+  width: 100%;
+  margin-top: -75px;
+  clip-path: url(#zena-laska-clip);
 }
 
 .zena-laska-inner {
@@ -1092,7 +1120,7 @@ h3 {
 
 .zl-heading {
   margin: 0;
-  line-height: 1.2;
+  line-height: 2;
   white-space: nowrap;
 }
 
@@ -1107,10 +1135,10 @@ h3 {
 
 /* ── O ŠKOLE ──────────────────────────────────── */
 .o-skole {
-  padding: var(--pad) 0;
-  background: linear-gradient(to bottom, #ffffff 0%, var(--cream) 80px, var(--cream) calc(100% - 80px), #ffffff 100%);
+  padding: var(--pad) 0 calc(var(--pad) + 5rem);
+  background: var(--cream);
   position: relative;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .o-skole-grid {
@@ -1136,16 +1164,22 @@ h3 {
 }
 
 /* ── MODULY HEADER ────────────────────────────── */
+.moduly-wrapper {
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
 .moduly-header {
   padding: var(--pad) 0 3rem;
-  background: #fff;
+  background: transparent;
   text-align: center;
 }
 
 /* ── MODULY GRID + CARDS ──────────────────────── */
 .moduly-section {
-  background: #fff;
-  padding-bottom: var(--pad);
+  background: transparent;
+  padding-bottom: calc(var(--pad) + 5rem);
 }
 
 .moduly-grid {
@@ -1187,12 +1221,27 @@ h3 {
   flex-direction: column;
   justify-content: flex-start;
   padding: clamp(2.5rem, 4vw, 4rem) clamp(2rem, 4vw, 4rem) clamp(3rem, 4vw, 5rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.module-chakra {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 130px;
+  height: 130px;
+  opacity: 0.15;
+  pointer-events: none;
+  filter: brightness(0) invert(1) sepia(1) saturate(2.5) hue-rotate(5deg) brightness(0.9);
 }
 
 .module-card.m1 .module-card-content { background: var(--m1); }
 .module-card.m2 .module-card-content { background: var(--m2); }
 .module-card.m3 .module-card-content { background: var(--m3); }
 .module-card.m4 .module-card-content { background: var(--m4); }
+
+.module-card.m3 .module-chakra { width: 160px; height: 160px; top: 0; }
 
 .module-card.m2,
 .module-card.m4 { flex-direction: row-reverse; }
@@ -1250,8 +1299,10 @@ h3 {
 
 /* ── ANJALI ───────────────────────────────────── */
 .anjali {
-  padding: var(--pad) 0;
-  background: linear-gradient(to bottom, #ffffff 0%, var(--cream) 80px);
+  padding: var(--pad) 0 calc(var(--pad) + 5rem);
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
 }
 
 .anjali-grid {
@@ -1312,11 +1363,13 @@ h3 {
 
 /* ── REFERENCE ────────────────────────────────── */
 .reference {
-  padding: var(--pad) 0;
+  padding: calc(var(--pad) + 75px) 0 calc(var(--pad) + 5rem);
   position: relative;
   overflow: hidden;
   background: var(--cream);
   margin-bottom: -2px;
+  margin-top: -75px;
+  clip-path: url(#reference-clip);
 }
 
 .reference-leaf {
@@ -1331,12 +1384,7 @@ h3 {
 }
 
 .reference-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to top, rgba(247, 243, 236, 1) 0%, rgba(247, 243, 236, 0) 18%),
-    linear-gradient(to bottom, rgba(247, 243, 236, 1) 0%, rgba(247, 243, 236, 0) 18%);
-  pointer-events: none;
+  display: none;
 }
 
 .reference-inner {
@@ -1417,8 +1465,11 @@ h3 {
 
 /* ── GALLERY – tmavá sekce ────────────────────── */
 .gallery-section {
-  padding: var(--pad) 0 0;
+  padding: var(--pad) 0 5rem;
   background: var(--cream);
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
 }
 
 .gallery-head {
@@ -1474,7 +1525,7 @@ h3 {
   position: fixed;
   inset: 0;
   z-index: 9000;
-  background: rgba(19, 0, 4, .94);
+  background: rgba(34, 7, 24, .94);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   align-items: center;
@@ -1565,18 +1616,24 @@ h3 {
 .gallery-more {
   text-align: center;
   padding: 4rem 0 var(--pad);
-  background: var(--cream);
+  background: transparent;
 }
 
 /* ── CTA ──────────────────────────────────────── */
 .cta-section {
   position: relative;
+  z-index: 0;
   overflow: hidden;
-  min-height: 540px;
+  min-height: calc(540px + 75px);
+  padding-top: 75px;
+  padding-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-top: -75px;
+  margin-bottom: -2px;
+  clip-path: url(#cta-clip);
 }
 
 .cta-bg {
@@ -1615,7 +1672,7 @@ h3 {
 .cta-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(19, 0, 4, .92) 0%, rgba(19, 0, 4, .55) 70%, rgba(19, 0, 4, .22) 100%);
+  background: radial-gradient(ellipse at center, rgba(34, 7, 24, .92) 0%, rgba(34, 7, 24, .55) 70%, rgba(34, 7, 24, .22) 100%);
 }
 
 .cta-body {
@@ -1689,7 +1746,7 @@ h3 {
 
 /* ── FOOTER ───────────────────────────────────── */
 .site-footer {
-  background: #130004;
+  background: #220718;
   padding: 3rem 0 0;
 }
 
@@ -1701,7 +1758,7 @@ h3 {
   right: 2rem;
   width: 2.8rem;
   height: 2.8rem;
-  background: rgba(19, 0, 4, .50);
+  background: rgba(34, 7, 24, .50);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: none;
@@ -2323,6 +2380,33 @@ h3 {
     --pad: clamp(56px, 10vw, 72px);
   }
 
+  .manifesto {
+    clip-path: none;
+    margin-top: 0;
+    padding-top: var(--pad);
+  }
+
+  .zena-laska {
+    clip-path: none;
+    margin-top: 0;
+    padding-top: calc(6rem + 40px);
+    padding-bottom: calc(6rem + 40px);
+  }
+
+  .reference {
+    clip-path: none;
+    margin-top: 0;
+    padding-top: var(--pad);
+  }
+
+  .cta-section {
+    clip-path: none;
+    margin-top: 0;
+    min-height: 540px;
+    padding-top: 0;
+    margin-bottom: -2px;
+  }
+
   .nav-center {
     display: none;
   }
@@ -2360,6 +2444,19 @@ h3 {
 
   .module-card-content {
     padding: 2rem 1.75rem 2.5rem;
+  }
+
+  .module-chakra {
+    width: 65px;
+    height: 65px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .module-card.m3 .module-chakra {
+    width: 85px;
+    height: 85px;
+    top: 5px;
   }
 
   .ref-cards {
@@ -2607,7 +2704,7 @@ h3 {
 .vstup-hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(19, 0, 4, .92) 0%, rgba(19, 0, 4, .55) 70%, rgba(19, 0, 4, .22) 100%);
+  background: radial-gradient(ellipse at center, rgba(34, 7, 24, .92) 0%, rgba(34, 7, 24, .55) 70%, rgba(34, 7, 24, .22) 100%);
 }
 
 .vstup-hero-body {

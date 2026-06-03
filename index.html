@@ -49,6 +49,9 @@
       </ul>
       <a href="/vstup" class="nav-cta-fixed desktop-only">Vstoupit do školy</a>
     </nav>
+    <svg class="nav-wave-bottom" viewBox="0 0 1440 12" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M0,6 C360,12 720,0 1080,6 C1260,9 1440,6 1440,6 L1440,0 L0,0 Z" fill="rgba(34,7,24,0.76)"/>
+    </svg>
   </header>
 
   <div class="nav-dropdown" id="nav-dropdown-desk">
@@ -92,18 +95,25 @@
       <div class="hero-btns">
         <a href="#obsah" class="btn btn-gold">Vstoupit</a>
       </div>
+      <button class="hero-scroll" onclick="document.getElementById('obsah').scrollIntoView({behavior:'smooth'})"
+        aria-label="Posunout dolů">
+        <span></span>
+        <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M1 1L7 7L13 1" stroke="rgba(198,155,69,0.6)" stroke-width="1.5" />
+        </svg>
+      </button>
     </div>
-    <button class="hero-scroll" onclick="document.getElementById('obsah').scrollIntoView({behavior:'smooth'})"
-      aria-label="Posunout dolů">
-      <span></span>
-      <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M1 1L7 7L13 1" stroke="rgba(198,155,69,0.6)" stroke-width="1.5" />
-      </svg>
-    </button>
   </section>
 
   <!-- ══ MANIFESTO – nalaďovací sekce ══════════════════ -->
   <section class="manifesto" id="obsah" aria-labelledby="manifesto-quote">
+    <svg width="0" height="0" aria-hidden="true" style="position:absolute;overflow:hidden">
+      <defs>
+        <clipPath id="manifesto-clip" clipPathUnits="objectBoundingBox">
+          <path d="M0,0.014 C0.069,0.071 0.278,0.093 0.5,0.064 C0.722,0.036 0.931,0.071 1,0.014 L1,1 L0,1 Z"/>
+        </clipPath>
+      </defs>
+    </svg>
     <div class="wrap">
 
       <p class="manifesto-quote rv rv-1" id="manifesto-quote">
@@ -139,6 +149,7 @@
       </div>
 
     </div>
+    <svg class="wave-bottom wave-flip" viewBox="0 0 1440 75" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0,10 C100,50 400,65 720,45 C1040,25 1340,50 1440,10 L1440,75 L0,75 Z" fill="#ffffff"/></svg>
   </section>
 
   <!-- ══ RECOGNITION ════════════════════════════════════ -->
@@ -173,6 +184,13 @@
 
   <!-- ══ ŽENA JE LÁSKA ══════════════════════════════════ -->
   <section class="zena-laska" aria-label="Žena je Láska">
+    <svg width="0" height="0" aria-hidden="true" style="position:absolute;overflow:hidden">
+      <defs>
+        <clipPath id="zena-laska-clip" clipPathUnits="objectBoundingBox">
+          <path d="M0,0.014 C0.069,0.071 0.278,0.093 0.5,0.064 C0.722,0.036 0.931,0.071 1,0.014 L1,1 L0,1 Z"/>
+        </clipPath>
+      </defs>
+    </svg>
     <div class="wrap">
       <div class="zena-laska-inner rv">
         <h2 class="zl-heading zl-playfair">
@@ -180,6 +198,7 @@
         </h2>
       </div>
     </div>
+    <svg class="wave-bottom wave-flip" viewBox="0 0 1440 75" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0,10 C100,50 400,65 720,45 C1040,25 1340,50 1440,10 L1440,75 L0,75 Z" fill="#F7F3EC"/></svg>
   </section>
 
   <!-- ══ O ŠKOLE ════════════════════════════════════════ -->
@@ -215,9 +234,12 @@
         </div>
       </div>
     </div>
+    <svg class="wave-bottom" viewBox="0 0 1440 75" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0,10 C100,50 400,65 720,45 C1040,25 1340,50 1440,10 L1440,75 L0,75 Z" fill="#ffffff"/></svg>
   </section>
 
-  <!-- ══ MODULY HEADER ══════════════════════════════════ -->
+  <!-- ══ MODULY ═══════════════════════════════════════ -->
+  <div class="moduly-wrapper">
+
   <div class="moduly-header">
     <div class="wrap">
       <span class="eyebrow rv">Čtyři brány ženství</span>
@@ -239,6 +261,7 @@
             height="533">
         </div>
         <div class="module-card-content">
+          <img src="Obrazky/chakra/chakra-heart.png" class="module-chakra" alt="" aria-hidden="true">
           <div class="module-num rv">I. iniciační modul</div>
           <h3 class="hc module-h3 rv rv-1">
             <span class="hc-s hc-s-dk">Odhalení krásy ženství</span>
@@ -266,6 +289,7 @@
             height="533">
         </div>
         <div class="module-card-content">
+          <img src="Obrazky/chakra/chakra-second.png" class="module-chakra" alt="" aria-hidden="true">
           <div class="module-num rv">II. iniciační modul</div>
           <h3 class="hc module-h3 rv rv-1">
             <span class="hc-s hc-s-dk">Posvátný Erós</span>
@@ -293,6 +317,7 @@
             width="800" height="533">
         </div>
         <div class="module-card-content">
+          <img src="Obrazky/chakra/chakra-third-eye.png" class="module-chakra" alt="" aria-hidden="true">
           <div class="module-num rv">III. iniciační modul</div>
           <h3 class="hc module-h3 rv rv-1">
             <span class="hc-s hc-s-dk">Probuzená ženská intuice</span>
@@ -318,6 +343,7 @@
             height="533">
         </div>
         <div class="module-card-content">
+          <img src="Obrazky/chakra/chakra-crown.png" class="module-chakra" alt="" aria-hidden="true">
           <div class="module-num rv">IV. iniciační modul</div>
           <h3 class="hc module-h3 rv rv-1">
             <span class="hc-s hc-s-dk">Kosmické vědomí ženy</span>
@@ -339,6 +365,9 @@
 
     </div>
   </section>
+
+    <svg class="wave-bottom wave-flip" viewBox="0 0 1440 75" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0,10 C100,50 400,65 720,45 C1040,25 1340,50 1440,10 L1440,75 L0,75 Z" fill="#F7F3EC"/></svg>
+  </div><!-- /.moduly-wrapper -->
 
   <!-- ══ ANJALI ═════════════════════════════════════════ -->
   <section class="anjali" aria-labelledby="anjali-h2">
@@ -375,6 +404,13 @@
 
   <!-- ══ REFERENCE ══════════════════════════════════════ -->
   <section class="reference" aria-labelledby="ref-h2">
+    <svg width="0" height="0" aria-hidden="true" style="position:absolute;overflow:hidden">
+      <defs>
+        <clipPath id="reference-clip" clipPathUnits="objectBoundingBox">
+          <path d="M0,0.014 C0.069,0.071 0.278,0.093 0.5,0.064 C0.722,0.036 0.931,0.071 1,0.014 L1,1 L0,1 Z"/>
+        </clipPath>
+      </defs>
+    </svg>
     <div class="reference-leaf" aria-hidden="true"></div>
     <div class="reference-overlay" aria-hidden="true"></div>
     <div class="wrap reference-inner">
@@ -410,6 +446,7 @@
         <a href="/reference" class="btn btn-ghost">Další příběhy</a>
       </div>
     </div>
+    <svg class="wave-bottom wave-flip" viewBox="0 0 1440 75" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0,10 C100,50 400,65 720,45 C1040,25 1340,50 1440,10 L1440,75 L0,75 Z" fill="#F7F3EC"/></svg>
   </section>
 
   <!-- ══ GALLERY – tmavá sekce ══════════════════════════ -->
@@ -456,6 +493,13 @@
 
   <!-- ══ CTA ════════════════════════════════════════════ -->
   <section class="cta-section" aria-labelledby="cta-h">
+    <svg width="0" height="0" aria-hidden="true" style="position:absolute;overflow:hidden">
+      <defs>
+        <clipPath id="cta-clip" clipPathUnits="objectBoundingBox">
+          <path d="M0,0.014 C0.069,0.071 0.278,0.093 0.5,0.064 C0.722,0.036 0.931,0.071 1,0.014 L1,1 L0,1 Z"/>
+        </clipPath>
+      </defs>
+    </svg>
     <div class="cta-bg" id="cta-bg" role="img" aria-label="Atmosféra ženského rituálu v Mysterijní škole ženství"></div>
     <div class="cta-overlay"></div>
     <div class="cta-body">
@@ -475,6 +519,7 @@
         <a href="/vstup" class="btn btn-gold">Vstoupit do školy</a>
       </div>
     </div>
+    <svg class="wave-bottom wave-flip" viewBox="0 0 1440 75" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0,10 C100,50 400,65 720,45 C1040,25 1340,50 1440,10 L1440,75 L0,75 Z" fill="#220718"/></svg>
   </section>
 
   <!-- ══ FOOTER ═════════════════════════════════════════ -->
