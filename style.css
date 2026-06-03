@@ -2663,12 +2663,32 @@ h3 {
   }
 
 
+  .hero-overlay {
+    background: radial-gradient(ellipse at center, rgba(34, 7, 24, .45) 0%, rgba(34, 7, 24, .25) 65%, rgba(34, 7, 24, .10) 100%);
+  }
+
   .hero-script {
-    font-size: clamp(2.6rem, 7vw, 3.5rem);
+    font-size: clamp(3.9rem, 10.5vw, 5.25rem);
+    filter: drop-shadow(0 2px 12px rgba(34, 7, 24, .85));
+    background: var(--gold-cta);
+    -webkit-background-clip: text;
+    background-clip: text;
   }
 
   .hero-caps {
-    font-size: clamp(1.7rem, 5.5vw, 2.2rem);
+    font-size: clamp(2.55rem, 8.25vw, 3.3rem);
+    filter: drop-shadow(0 2px 12px rgba(34, 7, 24, .85));
+    background: var(--gold-cta);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .hero-eyebrow {
+    text-shadow: 0 1px 4px rgba(34, 7, 24, .85);
+  }
+
+  .hero-text {
+    text-shadow: 0 1px 4px rgba(34, 7, 24, .85);
   }
 
   .hero-text {
