@@ -689,7 +689,7 @@ h3 {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(34, 7, 24, .82) 0%, rgba(34, 7, 24, .48) 65%, rgba(34, 7, 24, .18) 100%);
+  background: radial-gradient(ellipse 50% 60% at center, rgba(34, 7, 24, .82) 0%, rgba(34, 7, 24, .40) 55%, rgba(34, 7, 24, 0) 100%);
 }
 
 .hero-body {
@@ -2427,11 +2427,12 @@ h3 {
   .manifesto {
     clip-path: none;
     margin-top: 0;
-    padding-top: var(--pad);
-    padding-bottom: calc(var(--pad) + 2rem);
+    padding-top: calc(var(--pad) + 2rem);
+    padding-bottom: calc(var(--pad) + 3rem);
   }
 
   .recognition {
+    padding-top: calc(var(--pad) + 3rem);
     padding-bottom: calc(var(--pad) + 1.5rem);
   }
 
@@ -2442,15 +2443,23 @@ h3 {
     padding-bottom: calc(6rem + 40px);
   }
 
+  .moduly-header {
+    padding-top: calc(var(--pad) + 2rem);
+    padding-bottom: 1.5rem;
+  }
+
   .o-skole {
-    padding-bottom: calc(var(--pad) + 1.5rem);
+    padding-top: calc(var(--pad) + 3rem);
+    padding-bottom: calc(var(--pad) + 3rem);
   }
 
   .moduly-section {
-    padding-bottom: calc(var(--pad) + 1.5rem);
+    padding-top: 0;
+    padding-bottom: calc(var(--pad) + 3rem);
   }
 
   .anjali {
+    padding-top: calc(var(--pad) + 3rem);
     padding-bottom: calc(var(--pad) + 1.5rem);
   }
 
@@ -2458,11 +2467,12 @@ h3 {
     clip-path: none;
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: var(--pad);
+    padding-top: calc(var(--pad) + 3rem);
     padding-bottom: calc(var(--pad) + 1.5rem);
   }
 
   .gallery-section {
+    padding-top: calc(var(--pad) + 2rem);
     padding-bottom: var(--pad);
   }
 
@@ -2471,7 +2481,44 @@ h3 {
     margin-top: 0;
     min-height: 540px;
     padding-top: var(--pad);
+    padding-bottom: calc(var(--pad) + 2rem);
     margin-bottom: -5px;
+  }
+
+  .cta-overlay {
+    background: rgba(42, 0, 8, .55);
+  }
+
+  .cta-bg {
+    background-position: 45% center;
+  }
+
+  .img-frame::before {
+    top: -6px;
+    left: -6px;
+  }
+
+  .img-frame::after {
+    bottom: -6px;
+    right: -6px;
+  }
+
+  .recognition-img::after,
+  .o-skole-img::after,
+  .anjali-img::after,
+  .img-frame-mirror::after {
+    bottom: -6px;
+    left: -6px;
+    right: auto;
+  }
+
+  .recognition-img::before,
+  .o-skole-img::before,
+  .anjali-img::before,
+  .img-frame-mirror::before {
+    top: -6px;
+    right: -6px;
+    left: auto;
   }
 
   .nav-center {
@@ -2665,7 +2712,7 @@ h3 {
 
 
   .hero-overlay {
-    background: radial-gradient(ellipse at center, rgba(34, 7, 24, .25) 0%, rgba(34, 7, 24, .08) 65%, transparent 100%);
+    background: radial-gradient(ellipse 50% 60% at center, rgba(34, 7, 24, .82) 0%, rgba(34, 7, 24, .40) 55%, rgba(34, 7, 24, 0) 100%);
   }
 
   .hero-script {
