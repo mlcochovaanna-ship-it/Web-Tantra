@@ -2664,7 +2664,7 @@ h3 {
 
 
   .hero-overlay {
-    background: radial-gradient(ellipse at center, rgba(34, 7, 24, .45) 0%, rgba(34, 7, 24, .25) 65%, rgba(34, 7, 24, .10) 100%);
+    background: radial-gradient(ellipse at center, rgba(34, 7, 24, .25) 0%, rgba(34, 7, 24, .08) 65%, transparent 100%);
   }
 
   .hero-script {
@@ -2684,10 +2684,14 @@ h3 {
   }
 
   .hero-eyebrow {
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
     text-shadow: 0 1px 4px rgba(34, 7, 24, .85);
   }
 
   .hero-text {
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
     text-shadow: 0 1px 4px rgba(34, 7, 24, .85);
   }
 
