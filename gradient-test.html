@@ -18,7 +18,7 @@
       --ff-accent: 'Corinthia', cursive;
       --ff-sans:   'Montserrat', sans-serif;
       --ff-body:   'Playfair Display', serif;
-      --m1: linear-gradient(135deg, #1e0b0e 0%, #4e2432 54%, #8f3f5a 100%);
+      --m1: linear-gradient(135deg, #3d0b26 0%, #6b164f 54%, #9d2968 100%);
       --m2: linear-gradient(135deg, #130004 0%, #450110 54%, #7d011d 100%);
       --m3: linear-gradient(135deg, #120D17 0%, #322040 54%, #4e2f5e 100%);
       --m4: linear-gradient(135deg, #080E16 0%, #141C2E 54%, #1F3350 100%);
@@ -54,24 +54,19 @@
       font-family: var(--ff-sans);
     }
 
-    /* ── GRID ── */
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1.5rem;
     }
 
-    /* ── SWATCH CARDS ── */
     .card {
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 2px 12px rgba(0,0,0,.1);
     }
 
-    .swatch {
-      height: 300px;
-      width: 100%;
-    }
+    .swatch { height: 300px; width: 100%; }
 
     .card-info {
       background: #fff;
@@ -94,13 +89,7 @@
       line-height: 1.7;
     }
 
-    /* ── MODULY ── */
-    .m1 { background: var(--m1); }
-    .m2 { background: var(--m2); }
-    .m3 { background: var(--m3); }
-    .m4 { background: var(--m4); }
-
-    /* ── MODULE CARD PREVIEW — přesně jako web ── */
+    /* Module card preview */
     .mod-preview {
       border-radius: 8px;
       overflow: hidden;
@@ -123,7 +112,6 @@
     .mod-preview-inner.m3 { background: var(--m3); }
     .mod-preview-inner.m4 { background: var(--m4); }
 
-    /* eyebrow / module-num */
     .module-num {
       display: block;
       font-family: var(--ff-sans);
@@ -135,7 +123,6 @@
       color: rgba(247, 243, 236, .78);
     }
 
-    /* heading */
     .hc { display: flex; flex-direction: column; margin-bottom: .75rem; }
     .hc-s {
       font-family: var(--ff-accent);
@@ -155,7 +142,6 @@
       background-clip: text;
     }
 
-    /* datum */
     .module-date {
       font-family: var(--ff-sans);
       font-size: .95rem;
@@ -168,7 +154,6 @@
       background: rgba(198, 155, 69, .05);
     }
 
-    /* tělo textu */
     .mod-p {
       font-family: var(--ff-body);
       font-size: 1rem;
@@ -177,7 +162,6 @@
       margin-bottom: .85rem;
     }
 
-    /* tagy */
     .module-tags { margin-bottom: 1.5rem; }
     .module-tags span {
       font-family: var(--ff-sans);
@@ -195,7 +179,6 @@
       margin: 0 .5rem;
     }
 
-    /* tlačítko */
     .btn-ghost-lt {
       display: inline-block;
       font-family: var(--ff-sans);
@@ -225,206 +208,112 @@
       opacity: .6;
     }
 
-    /* ── MANIFESTO ── */
-    .manifesto-swatch {
-      background:
-        linear-gradient(135deg, rgba(91, 14, 14, 1) 0%, rgba(91, 14, 14, 0) 100%),
-        url('Obrazky/grafika/bg-anjali-leaf.png') center/cover no-repeat;
-    }
-
-    .preview {
-      border-radius: 8px;
-      overflow: hidden;
-      margin-top: 1.5rem;
-      box-shadow: 0 2px 12px rgba(0,0,0,.12);
-    }
-
-    .preview-inner {
-      padding: 3.5rem 2rem;
-      position: relative;
-      min-height: 240px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 1rem;
-      text-align: center;
-    }
-
-    .preview-inner::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(91, 14, 14, 0.65);
-      mix-blend-mode: color;
-      pointer-events: none;
-    }
-
-    .manifesto-full {
-      background:
-        linear-gradient(135deg, rgba(91, 14, 14, 1) 0%, rgba(91, 14, 14, 0) 100%),
-        url('Obrazky/grafika/bg-anjali-leaf.png') center/cover no-repeat;
-    }
-
-    .preview-text {
-      position: relative;
-      z-index: 1;
-      font-family: var(--ff-body);
-      font-size: 1.35rem;
-      color: rgba(247, 243, 236, .92);
-      font-style: italic;
-    }
-
-    .preview-sub {
-      position: relative;
-      z-index: 1;
-      font-family: var(--ff-sans);
-      font-size: .72rem;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      color: rgba(198, 155, 69, .9);
-    }
-
-    /* ── EDITOR PANEL ── */
-    .editor {
-      background: #fff;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-top: 1.5rem;
-      box-shadow: 0 2px 12px rgba(0,0,0,.08);
-    }
-
-    .editor h3 {
-      font-family: var(--ff-sans);
-      font-size: .78rem;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-      color: #7A5C20;
-      margin-bottom: 1.2rem;
-    }
-
-    .field-row {
-      display: flex;
-      align-items: center;
-      gap: .8rem;
-      margin-bottom: .8rem;
-    }
-
-    .field-row label {
-      font-family: var(--ff-sans);
-      font-size: .75rem;
-      color: #888;
-      width: 90px;
-      flex-shrink: 0;
-    }
-
-    .field-row input[type="color"] {
-      width: 40px;
-      height: 32px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      cursor: pointer;
-      padding: 0;
-    }
-
-    .field-row input[type="range"] {
-      flex: 1;
-      accent-color: #7A5C20;
-    }
-
-    .field-row span {
-      font-size: .75rem;
-      color: #666;
-      width: 40px;
-      text-align: right;
-      font-family: monospace;
-    }
-
-    .live-preview {
-      height: 120px;
-      border-radius: 6px;
-      margin-top: 1rem;
-      transition: background .15s;
-    }
-
-    .live-code {
-      margin-top: .8rem;
-      font-size: .68rem;
-      font-family: monospace;
-      color: #666;
-      background: #f5f2ed;
-      padding: .7rem .9rem;
-      border-radius: 4px;
-      word-break: break-all;
-      line-height: 1.5;
-    }
-
-    .test-extra { background: linear-gradient(135deg, #130004 0%, #450110 54%, #7d011d 100%); }
-
-    /* ── CVIČNÉ: nové stylování obrázků ── */
-
-    /* Textový sloupec – kontext pro absolutní pozicování květin */
-    .recognition-content,
-    .o-skole-content {
-      position: relative;
-      overflow: visible;
-    }
-
-    /* Veškerý obsah v textovém sloupci nad květinou */
-    .recognition-content > *:not(.gf-text),
-    .o-skole-content > *:not(.gf-text) {
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Společný základ – přebarveno na béžovou filtrem */
-    .gf-text {
-      position: absolute;
-      pointer-events: none;
-      opacity: 0.4;
-      width: 340px;
-      height: auto;
-      z-index: 0;
-    }
-
-    /* Pravá strana textového sloupce, trochu níže */
-    .gf-text-r {
-      bottom: -40px;
-      right: -30px;
-    }
-
-    /* Rohy nesmí být ořezány */
-    .recognition,
-    .o-skole {
-      overflow: visible;
-    }
-
-    @media (max-width: 1100px) {
-      .gf-text {
-        width: 220px;
-      }
-      .gf-text-r {
-        right: 0;
-        bottom: -30px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .gf-text {
-        display: none;
-      }
-    }
-
-    /* Rohy vně fotky – obrácené znaménko oproti originálu */
-    .img-frame::before           { top: -16px; left: -16px; }
-    .img-frame::after            { bottom: -16px; right: -16px; }
-    .img-frame-mirror::before    { top: -16px; right: -16px; left: auto; }
-    .img-frame-mirror::after     { bottom: -16px; left: -16px; right: auto; }
-
     hr {
       border: none;
       border-top: 1px solid #ddd8d0;
       margin: 2.5rem 0;
+    }
+
+    /* ── PATIČKA ── */
+    .ft-sim {
+      padding: 3rem 0 0;
+      margin-top: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+      font-family: var(--ff-sans);
+      position: relative;
+    }
+
+    .ft-wrap { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+    .ft-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem 3rem;
+      padding: 2.5rem 0;
+      position: relative;
+    }
+
+    .ft-cols::before {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0; left: 18%; right: 18%;
+      background: url('Obrazky/LOGO-zenska-mystika.png') center / contain no-repeat;
+      filter: brightness(0) invert(1);
+      opacity: .11;
+      pointer-events: none;
+    }
+
+    .ft-name { font-size: .9rem; font-weight: 600; color: rgba(247,243,236,.88); margin-bottom: .9rem; }
+    .ft-addr { font-size: .84rem; color: rgba(247,243,236,.62); line-height: 1.9; }
+    .ft-link-gold { display: block; font-size: .9rem; font-weight: 600; color: rgba(199,155,69,.88); text-decoration: none; margin-top: .9rem; }
+    .ft-social { display: flex; gap: 1.25rem; margin-top: .9rem; }
+    .ft-social a { color: rgba(199,155,69,.7); line-height: 0; }
+    .ft-center { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: .5rem; }
+    .ft-title { font-family: var(--ff-accent); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 400; line-height: 1.2; display: inline-block; padding: .08em .25em; background: var(--gold-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: .4rem; }
+    .ft-right { display: flex; justify-content: flex-end; }
+    .ft-nav { list-style: none; display: flex; flex-direction: column; gap: .5rem; text-align: right; }
+    .ft-nav a { font-size: .76rem; color: rgba(247,243,236,.75); text-decoration: none; text-transform: uppercase; letter-spacing: .1em; }
+    .ft-mid { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem 2rem; padding: 1.5rem 0; justify-content: space-between; border-top: 1px solid rgba(198,155,69,.12); }
+    .ft-legal, .ft-zprac { font-size: .74rem; color: rgba(247,243,236,.48); line-height: 1.65; }
+    .ft-zprac { text-align: right; }
+    .ft-zprac a { color: rgba(247,243,236,.55); text-decoration: none; }
+    .ft-bottom { border-top: 1px solid rgba(198,155,69,.06); padding: 1.25rem 0; text-align: center; font-size: .74rem; color: rgba(247,243,236,.45); }
+    .ft-bottom a { color: rgba(199,155,69,.75); text-decoration: none; }
+
+    /* ── TEXT GRADIENT TEST BLOKY ── */
+    .tg-block {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,.15);
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .tg-label {
+      font-family: var(--ff-sans);
+      font-size: .68rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: rgba(247,243,236,.45);
+      margin-bottom: .25rem;
+    }
+
+    .tg-script {
+      font-family: var(--ff-accent);
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 400;
+      line-height: 1.1;
+      display: block;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .tg-caps {
+      font-family: var(--ff-body);
+      font-size: clamp(1.6rem, 3vw, 2.6rem);
+      font-weight: 400;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      line-height: 1.1;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .tg-eyebrow {
+      font-family: var(--ff-sans);
+      font-size: .78rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      display: block;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
   </style>
 </head>
@@ -432,110 +321,8 @@
 
 <h1>Gradient Test — Ženská Mystika</h1>
 
-<!-- ── M1 NÁVRHY – tmavé magenty ── -->
-<p class="section-label">M1 — návrhy tmavé magenty</p>
-<div class="grid" style="grid-template-columns: 1fr 1fr 1fr;">
-
-  <div class="card">
-    <div class="swatch" style="background: linear-gradient(135deg, #1A0220 0%, #4A0640 54%, #7A0E60 100%);"></div>
-    <div class="card-info">
-      <div class="card-title">Varianta A — nejtmavší</div>
-      <div class="card-hex">#1A0220 → #4A0640 → #7A0E60<br>skoro černá → tmavá magenta</div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="swatch" style="background: linear-gradient(135deg, #3A0535 0%, #7A1065 54%, #A81880 100%);"></div>
-    <div class="card-info">
-      <div class="card-title">Varianta B — střední</div>
-      <div class="card-hex">#3A0535 → #7A1065 → #A81880<br>tmavá magenta → střední</div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="swatch" style="background: linear-gradient(135deg, #550848 0%, #960D78 54%, #C82898 100%);"></div>
-    <div class="card-info">
-      <div class="card-title">Varianta C — nejsvětlejší</div>
-      <div class="card-hex">#550848 → #960D78 → #C82898<br>střední → živá magenta</div>
-    </div>
-  </div>
-
-</div>
-
-<!-- ── M1 NÁVRHY s textem ── -->
-<p class="section-label" style="margin-top:2.5rem">M1 — návrhy s textem modulu</p>
-<div class="grid" style="grid-template-columns: 1fr 1fr 1fr;">
-
-  <div class="mod-preview">
-    <div class="mod-preview-inner" style="background: linear-gradient(135deg, #1A0220 0%, #4A0640 54%, #7A0E60 100%);">
-      <div class="module-num">I. iniciační modul</div>
-      <h3 class="hc"><span class="hc-s hc-s-dk">Odhalení krásy ženství</span></h3>
-      <div class="module-date">22.&nbsp;4.&nbsp;–&nbsp;26.&nbsp;4.&nbsp;2026 • Centrum Buchov</div>
-      <p class="mod-p">Společně vstoupíme do vibrace srdce a&nbsp;duše, ze které se rodí skutečné ženství.</p>
-      <div class="module-tags"><span>ženskost</span><span>srdce</span><span>jemnost</span></div>
-      <a href="#" class="btn-ghost-lt">Více o modulu</a>
-    </div>
-  </div>
-
-  <div class="mod-preview">
-    <div class="mod-preview-inner" style="background: linear-gradient(135deg, #3A0535 0%, #7A1065 54%, #A81880 100%);">
-      <div class="module-num">I. iniciační modul</div>
-      <h3 class="hc"><span class="hc-s hc-s-dk">Odhalení krásy ženství</span></h3>
-      <div class="module-date">22.&nbsp;4.&nbsp;–&nbsp;26.&nbsp;4.&nbsp;2026 • Centrum Buchov</div>
-      <p class="mod-p">Společně vstoupíme do vibrace srdce a&nbsp;duše, ze které se rodí skutečné ženství.</p>
-      <div class="module-tags"><span>ženskost</span><span>srdce</span><span>jemnost</span></div>
-      <a href="#" class="btn-ghost-lt">Více o modulu</a>
-    </div>
-  </div>
-
-  <div class="mod-preview">
-    <div class="mod-preview-inner" style="background: linear-gradient(135deg, #550848 0%, #960D78 54%, #C82898 100%);">
-      <div class="module-num">I. iniciační modul</div>
-      <h3 class="hc"><span class="hc-s hc-s-dk">Odhalení krásy ženství</span></h3>
-      <div class="module-date">22.&nbsp;4.&nbsp;–&nbsp;26.&nbsp;4.&nbsp;2026 • Centrum Buchov</div>
-      <p class="mod-p">Společně vstoupíme do vibrace srdce a&nbsp;duše, ze které se rodí skutečné ženství.</p>
-      <div class="module-tags"><span>ženskost</span><span>srdce</span><span>jemnost</span></div>
-      <a href="#" class="btn-ghost-lt">Více o modulu</a>
-    </div>
-  </div>
-
-</div>
-
-<!-- ── MODULY – přehled ── -->
-<p class="section-label">Moduly — gradienty karet (samotné swatche)</p>
-<div class="grid">
-  <div class="card">
-    <div class="swatch m1"></div>
-    <div class="card-info">
-      <div class="card-title">M1 — Odhalení krásy ženství</div>
-      <div class="card-hex">#081514 → #1A3530 → #274F48<br>tmavě zelená / lesní ⚠ původní "Odhalení bohyně"</div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="swatch m2"></div>
-    <div class="card-info">
-      <div class="card-title">M2 — Posvátná sexualita</div>
-      <div class="card-hex">#130004 → #450110 → #7d011d<br>tmavě karmínová / granátová</div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="swatch m3"></div>
-    <div class="card-info">
-      <div class="card-title">M3 — Žena jako léčitelka</div>
-      <div class="card-hex">#120D17 → #2C1D38 → #43294F<br>tmavě fialová / švestková</div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="swatch m4"></div>
-    <div class="card-info">
-      <div class="card-title">M4 — Kosmické vědomí ženy</div>
-      <div class="card-hex">#080E16 → #141C2E → #1F3350<br>tmavě modrá / noční</div>
-    </div>
-  </div>
-</div>
-
 <!-- ── MODULY – ukázka s textem ── -->
-<p class="section-label" style="margin-top:2.5rem">Moduly — ukázka s textem (přesně jako web)</p>
+<p class="section-label">Moduly — ukázka s textem (schválené)</p>
 <div class="grid">
 
   <div class="mod-preview">
@@ -584,275 +371,42 @@
 
 </div>
 
-<!-- ── PALETA ZADAVATELKY ── -->
+<!-- ── PATIČKA A MENU – tmavší varianty ── -->
 <hr>
-<p class="section-label">Paleta zadavatelky — přehled barev</p>
-<div class="grid" style="grid-template-columns: repeat(5, 1fr); margin-bottom:1.5rem;">
-  <div class="card"><div class="swatch" style="background:#3d0b26; height:120px; display:flex; align-items:center; justify-content:center;"><span style="color:rgba(247,243,236,.7); font-family:monospace; font-size:.7rem;">#3d0b26</span></div></div>
-  <div class="card"><div class="swatch" style="background:#6b164f; height:120px; display:flex; align-items:center; justify-content:center;"><span style="color:rgba(247,243,236,.7); font-family:monospace; font-size:.7rem;">#6b164f</span></div></div>
-  <div class="card"><div class="swatch" style="background:#791458; height:120px; display:flex; align-items:center; justify-content:center;"><span style="color:rgba(247,243,236,.7); font-family:monospace; font-size:.7rem;">#791458</span></div></div>
-  <div class="card"><div class="swatch" style="background:#8c206e; height:120px; display:flex; align-items:center; justify-content:center;"><span style="color:rgba(247,243,236,.7); font-family:monospace; font-size:.7rem;">#8c206e</span></div></div>
-  <div class="card"><div class="swatch" style="background:#9d2968; height:120px; display:flex; align-items:center; justify-content:center;"><span style="color:rgba(247,243,236,.7); font-family:monospace; font-size:.7rem;">#9d2968</span></div></div>
+<p class="section-label">Patička &amp; menu — tmavší varianty (aktuální: #3A000C)</p>
+
+<div class="grid" style="grid-template-columns: repeat(4, 1fr); margin-bottom: 1.5rem;">
+  <div class="card"><div class="swatch" style="background:#3A000C; height:80px; display:flex; align-items:center; justify-content:center;"><span style="color:rgba(247,243,236,.6); font-family:monospace; font-size:.7rem;">#3A000C — aktuální</span></div></div>
+  <div class="card"><div class="swatch" style="background:#2A0008; height:80px; display:flex; align-items:center; justify-content:center;"><span style="color:rgba(247,243,236,.6); font-family:monospace; font-size:.7rem;">#2A0008</span></div></div>
+  <div class="card"><div class="swatch" style="background:#1E0006; height:80px; display:flex; align-items:center; justify-content:center;"><span style="color:rgba(247,243,236,.6); font-family:monospace; font-size:.7rem;">#1E0006</span></div></div>
+  <div class="card"><div class="swatch" style="background:#140004; height:80px; display:flex; align-items:center; justify-content:center;"><span style="color:rgba(247,243,236,.6); font-family:monospace; font-size:.7rem;">#140004</span></div></div>
 </div>
 
-<p class="section-label">Návrhy přechodů z palety</p>
-<div class="grid" style="grid-template-columns: 1fr 1fr 1fr; margin-bottom:1.5rem;">
-  <div class="card">
-    <div class="swatch" style="background: linear-gradient(135deg, #3d0b26 0%, #6b164f 54%, #9d2968 100%);"></div>
-    <div class="card-info">
-      <div class="card-title">Varianta A</div>
-      <div class="card-hex">#3d0b26 → #6b164f → #9d2968</div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="swatch" style="background: linear-gradient(135deg, #3d0b26 0%, #791458 54%, #8c206e 100%);"></div>
-    <div class="card-info">
-      <div class="card-title">Varianta B</div>
-      <div class="card-hex">#3d0b26 → #791458 → #8c206e</div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="swatch" style="background: linear-gradient(135deg, #3d0b26 0%, #8c206e 54%, #9d2968 100%);"></div>
-    <div class="card-info">
-      <div class="card-title">Varianta C — světlejší konec</div>
-      <div class="card-hex">#3d0b26 → #8c206e → #9d2968</div>
-    </div>
-  </div>
-</div>
-
-<p class="section-label">Návrhy — s textem modulu</p>
-<div class="grid" style="grid-template-columns: 1fr 1fr 1fr; margin-bottom:1.5rem;">
-  <div class="mod-preview">
-    <div class="mod-preview-inner" style="background: linear-gradient(135deg, #3d0b26 0%, #6b164f 54%, #9d2968 100%);">
-      <div class="module-num">I. iniciační modul</div>
-      <h3 class="hc"><span class="hc-s hc-s-dk">Odhalení krásy ženství</span></h3>
-      <div class="module-date">22.&nbsp;4.&nbsp;–&nbsp;26.&nbsp;4.&nbsp;2026 • Centrum Buchov</div>
-      <p class="mod-p">Společně vstoupíme do vibrace srdce a&nbsp;duše, ze které se rodí skutečné ženství.</p>
-      <div class="module-tags"><span>ženskost</span><span>srdce</span><span>jemnost</span></div>
-      <a href="#" class="btn-ghost-lt">Více o modulu</a>
-    </div>
-  </div>
-  <div class="mod-preview">
-    <div class="mod-preview-inner" style="background: linear-gradient(135deg, #3d0b26 0%, #791458 54%, #8c206e 100%);">
-      <div class="module-num">I. iniciační modul</div>
-      <h3 class="hc"><span class="hc-s hc-s-dk">Odhalení krásy ženství</span></h3>
-      <div class="module-date">22.&nbsp;4.&nbsp;–&nbsp;26.&nbsp;4.&nbsp;2026 • Centrum Buchov</div>
-      <p class="mod-p">Společně vstoupíme do vibrace srdce a&nbsp;duše, ze které se rodí skutečné ženství.</p>
-      <div class="module-tags"><span>ženskost</span><span>srdce</span><span>jemnost</span></div>
-      <a href="#" class="btn-ghost-lt">Více o modulu</a>
-    </div>
-  </div>
-  <div class="mod-preview">
-    <div class="mod-preview-inner" style="background: linear-gradient(135deg, #3d0b26 0%, #8c206e 54%, #9d2968 100%);">
-      <div class="module-num">I. iniciační modul</div>
-      <h3 class="hc"><span class="hc-s hc-s-dk">Odhalení krásy ženství</span></h3>
-      <div class="module-date">22.&nbsp;4.&nbsp;–&nbsp;26.&nbsp;4.&nbsp;2026 • Centrum Buchov</div>
-      <p class="mod-p">Společně vstoupíme do vibrace srdce a&nbsp;duše, ze které se rodí skutečné ženství.</p>
-      <div class="module-tags"><span>ženskost</span><span>srdce</span><span>jemnost</span></div>
-      <a href="#" class="btn-ghost-lt">Více o modulu</a>
-    </div>
-  </div>
-</div>
-
-<p class="section-label">Patička & menu — z palety zadavatelky</p>
-<div class="grid" style="grid-template-columns: 1fr 1fr; margin-bottom:1rem;">
-  <div class="card">
-    <div class="swatch" style="background:#3d0b26; height:120px; display:flex; align-items:center; justify-content:center;"><span style="color:rgba(247,243,236,.7); font-family:monospace; font-size:.8rem;">#3d0b26 — patička</span></div>
-    <div class="card-info"><div class="card-title">Přirozená tmavá základna z palety</div></div>
-  </div>
-  <div class="card">
-    <div class="swatch" style="background:#6b164f; height:120px; display:flex; align-items:center; justify-content:center;"><span style="color:rgba(247,243,236,.7); font-family:monospace; font-size:.8rem;">#6b164f — alternativa</span></div>
-    <div class="card-info"><div class="card-title">O stupeň světlejší základ</div></div>
-  </div>
-</div>
+<p class="section-label">Simulace menu baru</p>
 <div style="display:flex; flex-direction:column; gap:.8rem; margin-bottom:2rem;">
-  <div style="background: rgba(61,11,38,.82); backdrop-filter:blur(12px); padding:1rem 2rem; border-radius:6px; display:flex; justify-content:space-between; align-items:center;">
-    <span style="color:rgba(247,243,236,.8); font-family:var(--ff-sans); font-size:.8rem; letter-spacing:.12em;">Menu A — rgba(61, 11, 38, .82) z #3d0b26</span>
+  <div style="background: rgba(58,0,12,.76); backdrop-filter:blur(18px); padding:1rem 2rem; border-radius:6px; display:flex; justify-content:space-between; align-items:center;">
+    <span style="color:rgba(247,243,236,.8); font-family:var(--ff-sans); font-size:.8rem; letter-spacing:.12em;">#3A000C — aktuální</span>
     <a href="#" style="color:rgba(199,155,69,.9); font-family:var(--ff-sans); font-size:.76rem; letter-spacing:.14em; text-decoration:none; border:1px solid rgba(199,155,69,.4); padding:.4rem 1rem; border-radius:2px;">Vstoupit do školy</a>
   </div>
-  <div style="background: rgba(107,22,79,.82); backdrop-filter:blur(12px); padding:1rem 2rem; border-radius:6px; display:flex; justify-content:space-between; align-items:center;">
-    <span style="color:rgba(247,243,236,.8); font-family:var(--ff-sans); font-size:.8rem; letter-spacing:.12em;">Menu B — rgba(107, 22, 79, .82) z #6b164f</span>
+  <div style="background: rgba(42,0,8,.82); backdrop-filter:blur(18px); padding:1rem 2rem; border-radius:6px; display:flex; justify-content:space-between; align-items:center;">
+    <span style="color:rgba(247,243,236,.8); font-family:var(--ff-sans); font-size:.8rem; letter-spacing:.12em;">#2A0008</span>
+    <a href="#" style="color:rgba(199,155,69,.9); font-family:var(--ff-sans); font-size:.76rem; letter-spacing:.14em; text-decoration:none; border:1px solid rgba(199,155,69,.4); padding:.4rem 1rem; border-radius:2px;">Vstoupit do školy</a>
+  </div>
+  <div style="background: rgba(30,0,6,.82); backdrop-filter:blur(18px); padding:1rem 2rem; border-radius:6px; display:flex; justify-content:space-between; align-items:center;">
+    <span style="color:rgba(247,243,236,.8); font-family:var(--ff-sans); font-size:.8rem; letter-spacing:.12em;">#1E0006</span>
+    <a href="#" style="color:rgba(199,155,69,.9); font-family:var(--ff-sans); font-size:.76rem; letter-spacing:.14em; text-decoration:none; border:1px solid rgba(199,155,69,.4); padding:.4rem 1rem; border-radius:2px;">Vstoupit do školy</a>
+  </div>
+  <div style="background: rgba(20,0,4,.85); backdrop-filter:blur(18px); padding:1rem 2rem; border-radius:6px; display:flex; justify-content:space-between; align-items:center;">
+    <span style="color:rgba(247,243,236,.8); font-family:var(--ff-sans); font-size:.8rem; letter-spacing:.12em;">#140004</span>
     <a href="#" style="color:rgba(199,155,69,.9); font-family:var(--ff-sans); font-size:.76rem; letter-spacing:.14em; text-decoration:none; border:1px solid rgba(199,155,69,.4); padding:.4rem 1rem; border-radius:2px;">Vstoupit do školy</a>
   </div>
 </div>
 
-<!-- ── PATIČKA + MENU – návrhy magentové základní barvy ── -->
+<!-- ── PATIČKA ── -->
 <hr>
-<p class="section-label">Patička & menu — návrhy tmavé základní barvy (nová magenta)</p>
+<p class="section-label">Patička — ukázka (schválená)</p>
 
-<div class="grid" style="grid-template-columns: 1fr 1fr 1fr; margin-bottom: 1.5rem;">
-
-  <div class="card">
-    <div class="swatch" style="background: #1E0218; display:flex; align-items:center; justify-content:center;">
-      <span style="color:rgba(247,243,236,.6); font-size:.75rem; letter-spacing:.1em; font-family:monospace;">#1E0218</span>
-    </div>
-    <div class="card-info">
-      <div class="card-title">Varianta A — nejtmavší</div>
-      <div class="card-hex">Skoro černá, teplá magenta<br>Nav overlay: rgba(30, 2, 24, .76)</div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="swatch" style="background: #280320; display:flex; align-items:center; justify-content:center;">
-      <span style="color:rgba(247,243,236,.6); font-size:.75rem; letter-spacing:.1em; font-family:monospace;">#280320</span>
-    </div>
-    <div class="card-info">
-      <div class="card-title">Varianta B — střední</div>
-      <div class="card-hex">Tmavá teplá magenta<br>Nav overlay: rgba(40, 3, 32, .76)</div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="swatch" style="background: #350428; display:flex; align-items:center; justify-content:center;">
-      <span style="color:rgba(247,243,236,.6); font-size:.75rem; letter-spacing:.1em; font-family:monospace;">#350428</span>
-    </div>
-    <div class="card-info">
-      <div class="card-title">Varianta C — výraznější</div>
-      <div class="card-hex">Sytější teplá magenta<br>Nav overlay: rgba(53, 4, 40, .76)</div>
-    </div>
-  </div>
-
-</div>
-
-<!-- simulace menu baru -->
-<p class="section-label">Návrhy — simulace menu baru</p>
-<div style="display:flex; flex-direction:column; gap:.8rem; margin-bottom:2rem;">
-  <div style="background: rgba(30,2,24,.76); backdrop-filter:blur(12px); padding:1rem 2rem; border-radius:6px; display:flex; justify-content:space-between; align-items:center;">
-    <span style="color:rgba(247,243,236,.8); font-family:var(--ff-sans); font-size:.8rem; letter-spacing:.12em;">A — rgba(30, 2, 24, .76)</span>
-    <a href="#" style="color:rgba(199,155,69,.9); font-family:var(--ff-sans); font-size:.76rem; letter-spacing:.14em; text-decoration:none; border:1px solid rgba(199,155,69,.4); padding:.4rem 1rem; border-radius:2px;">Vstoupit do školy</a>
-  </div>
-  <div style="background: rgba(40,3,32,.76); backdrop-filter:blur(12px); padding:1rem 2rem; border-radius:6px; display:flex; justify-content:space-between; align-items:center;">
-    <span style="color:rgba(247,243,236,.8); font-family:var(--ff-sans); font-size:.8rem; letter-spacing:.12em;">B — rgba(40, 3, 32, .76)</span>
-    <a href="#" style="color:rgba(199,155,69,.9); font-family:var(--ff-sans); font-size:.76rem; letter-spacing:.14em; text-decoration:none; border:1px solid rgba(199,155,69,.4); padding:.4rem 1rem; border-radius:2px;">Vstoupit do školy</a>
-  </div>
-  <div style="background: rgba(53,4,40,.76); backdrop-filter:blur(12px); padding:1rem 2rem; border-radius:6px; display:flex; justify-content:space-between; align-items:center;">
-    <span style="color:rgba(247,243,236,.8); font-family:var(--ff-sans); font-size:.8rem; letter-spacing:.12em;">C — rgba(53, 4, 40, .76)</span>
-    <a href="#" style="color:rgba(199,155,69,.9); font-family:var(--ff-sans); font-size:.76rem; letter-spacing:.14em; text-decoration:none; border:1px solid rgba(199,155,69,.4); padding:.4rem 1rem; border-radius:2px;">Vstoupit do školy</a>
-  </div>
-</div>
-
-<!-- ── PATIČKA SIMULACE ── -->
-<hr>
-<p class="section-label">Patička — simulace s nejtmavší růžovou (M1 gradient)</p>
-
-<style>
-  .ft-sim {
-    background: #1e0b0e;
-    padding: 3rem 0 0;
-    margin-top: 1rem;
-    border-radius: 8px;
-    overflow: hidden;
-    font-family: var(--ff-sans);
-    position: relative;
-  }
-
-  .ft-wrap { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
-
-  .ft-cols {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem 3rem;
-    padding: 2.5rem 0;
-    position: relative;
-  }
-
-  .ft-cols::before {
-    content: '';
-    position: absolute;
-    top: 0; bottom: 0; left: 18%; right: 18%;
-    background: url('Obrazky/LOGO-zenska-mystika.png') center / contain no-repeat;
-    filter: brightness(0) invert(1);
-    opacity: .11;
-    pointer-events: none;
-  }
-
-  .ft-name {
-    font-size: .9rem; font-weight: 600;
-    color: rgba(247, 243, 236, .88);
-    margin-bottom: .9rem;
-  }
-
-  .ft-addr {
-    font-size: .84rem;
-    color: rgba(247, 243, 236, .62);
-    line-height: 1.9;
-  }
-
-  .ft-link-gold {
-    display: block;
-    font-size: .9rem; font-weight: 600;
-    color: rgba(199, 155, 69, .88);
-    text-decoration: none;
-    margin-top: .9rem;
-  }
-
-  .ft-social { display: flex; gap: 1.25rem; margin-top: .9rem; }
-  .ft-social a { color: rgba(199, 155, 69, .7); line-height: 0; }
-
-  .ft-center {
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    text-align: center; gap: .5rem;
-  }
-
-  .ft-title {
-    font-family: var(--ff-accent);
-    font-size: clamp(2rem, 3.5vw, 3rem);
-    font-weight: 400; line-height: 1.2;
-    display: inline-block;
-    padding: .08em .25em;
-    background: var(--gold-main);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: .4rem;
-  }
-
-  .ft-right { display: flex; justify-content: flex-end; }
-
-  .ft-nav {
-    list-style: none; display: flex;
-    flex-direction: column; gap: .5rem; text-align: right;
-  }
-
-  .ft-nav a {
-    font-size: .76rem;
-    color: rgba(247, 243, 236, .75);
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-  }
-
-  .ft-mid {
-    display: flex; align-items: center;
-    flex-wrap: wrap; gap: .5rem 2rem;
-    padding: 1.5rem 0;
-    justify-content: space-between;
-    border-top: 1px solid rgba(198, 155, 69, .12);
-  }
-
-  .ft-legal, .ft-zprac {
-    font-size: .74rem;
-    color: rgba(247, 243, 236, .48);
-    line-height: 1.65;
-  }
-
-  .ft-zprac { text-align: right; }
-  .ft-zprac a { color: rgba(247, 243, 236, .55); text-decoration: none; }
-
-  .ft-bottom {
-    border-top: 1px solid rgba(198, 155, 69, .06);
-    padding: 1.25rem 0;
-    text-align: center;
-    font-size: .74rem;
-    color: rgba(247, 243, 236, .45);
-  }
-
-  .ft-bottom a { color: rgba(199, 155, 69, .75); text-decoration: none; }
-</style>
-
-<footer class="ft-sim" style="background:#130004">
-  <p style="text-align:center; padding: .6rem 0 0; font-size:.7rem; letter-spacing:.15em; text-transform:uppercase; color:rgba(247,243,236,.4); font-family:var(--ff-sans);">Varianta B — #120303 (nejtmavší červená)</p>
+<footer class="ft-sim" style="background:#3A000C">
   <div class="ft-wrap">
 
     <div class="ft-cols">
@@ -906,245 +460,193 @@
   </div>
 </footer>
 
-<hr style="margin-top:3rem">
-<p class="section-label" style="margin-bottom:0">Stylování obrázků — cvičné sekce</p>
+<!-- ── TEXT GRADIENTY – červená ── -->
+<hr>
+<p class="section-label">Text gradienty — červená (návrhy)</p>
+<div class="grid" style="grid-template-columns: 1fr 1fr 1fr;">
 
-<!-- ══ RECOGNITION – fotka vlevo ═══════════════════════ -->
-<section class="recognition" aria-labelledby="rec-h2-t">
-  <div class="wrap">
-    <div class="recognition-grid">
-      <div class="img-frame recognition-img rv in">
-        <img src="Obrazky/o-skole/o-skole-5.jpeg" alt="Žena v meditaci"
-          class="main-img" width="600" height="500">
-      </div>
-      <div class="recognition-content">
-        <img src="Obrazky/grafika/gold-flowers-3.png" class="gf-text gf-text-r" alt="" aria-hidden="true">
-        <span class="eyebrow">Možná i&nbsp;ty cítíš…</span>
-        <h2 id="rec-h2-t" class="hc rec-h2 rv in">
-          <span class="hc-s">... že je čas vrátit se sama k&nbsp;sobě</span>
-        </h2>
-        <p class="rv in">Každá žena v&nbsp;hloubi své bytosti touží být milovaná a&nbsp;hluboce milovat. Touží
-          porozumět posvátné alchymii svého ženství a&nbsp;v&nbsp;plném přijetí rozvinout všechny své přirozené dary.
-          Krásu, něhu, sílu, tvořivost, vášeň, smyslnost, jemnost i&nbsp;divokost. Touží se odevzdat Lásce, která je
-          její podstatou.</p>
-        <p class="rv in">Možná i&nbsp;ty cítíš volání znovu se propojit se svým tělem, srdcem a&nbsp;duší.
-          Objevit intimní a&nbsp;pravdivý vztah sama se sebou, otevřít své vědomí, důvěru v&nbsp;intuici
-          a&nbsp;moudrost srdce, která v&nbsp;tobě odjakživa přebývá. Uvolnění je klíč k&nbsp;ženské kráse.</p>
-        <div class="rv in" style="margin-top:2rem">
-          <a href="#" class="btn btn-ghost">Vstoupit do školy</a>
-        </div>
-      </div>
+  <!-- A: Tmavá karmínová -->
+  <div class="tg-block" style="background: var(--m2);">
+    <span class="tg-label">A — tmavá karmínová</span>
+    <span class="tg-eyebrow" style="background: linear-gradient(90deg, #7A1A1A 0%, #C43030 50%, #7A1A1A 100%);">Mysterijní škola</span>
+    <span class="tg-script" style="background: linear-gradient(90deg, #8B1A1A 0%, #CC3333 30%, #FF8080 55%, #CC3333 75%, #8B1A1A 100%);">Odhalení krásy ženství</span>
+    <span class="tg-caps" style="background: linear-gradient(90deg, #8B1A1A 0%, #CC3333 30%, #FF8080 55%, #CC3333 75%, #8B1A1A 100%);">Posvátná cesta</span>
+    <span class="tg-label" style="margin-top:.5rem">#8B1A1A → #CC3333 → #FF8080</span>
+  </div>
+
+  <!-- B: Rubínová s růžovým středem -->
+  <div class="tg-block" style="background: var(--m2);">
+    <span class="tg-label">B — rubínová / růžový střed</span>
+    <span class="tg-eyebrow" style="background: linear-gradient(90deg, #7D0A2A 0%, #C41A4A 50%, #7D0A2A 100%);">Mysterijní škola</span>
+    <span class="tg-script" style="background: linear-gradient(90deg, #7D0A2A 0%, #C41A4A 28%, #FF7090 52%, #E8305A 72%, #7D0A2A 100%);">Odhalení krásy ženství</span>
+    <span class="tg-caps" style="background: linear-gradient(90deg, #7D0A2A 0%, #C41A4A 28%, #FF7090 52%, #E8305A 72%, #7D0A2A 100%);">Posvátná cesta</span>
+    <span class="tg-label" style="margin-top:.5rem">#7D0A2A → #C41A4A → #FF7090</span>
+  </div>
+
+  <!-- C: Teplá červená s oranžovým nádechem -->
+  <div class="tg-block" style="background: var(--m2);">
+    <span class="tg-label">C — teplá červená / oranžový nádech</span>
+    <span class="tg-eyebrow" style="background: linear-gradient(90deg, #7A1500 0%, #C43010 50%, #7A1500 100%);">Mysterijní škola</span>
+    <span class="tg-script" style="background: linear-gradient(90deg, #7A1500 0%, #C43010 28%, #FF8050 52%, #D84020 72%, #7A1500 100%);">Odhalení krásy ženství</span>
+    <span class="tg-caps" style="background: linear-gradient(90deg, #7A1500 0%, #C43010 28%, #FF8050 52%, #D84020 72%, #7A1500 100%);">Posvátná cesta</span>
+    <span class="tg-label" style="margin-top:.5rem">#7A1500 → #C43010 → #FF8050</span>
+  </div>
+
+</div>
+
+<!-- Na světlém pozadí -->
+<p class="section-label" style="margin-top:2.5rem">Text gradienty — červená na světlém pozadí</p>
+<div class="grid" style="grid-template-columns: 1fr 1fr 1fr;">
+
+  <div class="tg-block" style="background: #F7F3EC; box-shadow: 0 2px 12px rgba(0,0,0,.08);">
+    <span class="tg-label" style="color:#aaa;">A — tmavá karmínová</span>
+    <span class="tg-eyebrow" style="background: linear-gradient(90deg, #8B1A1A 0%, #CC3333 50%, #8B1A1A 100%);">Mysterijní škola</span>
+    <span class="tg-script" style="background: linear-gradient(90deg, #8B1A1A 0%, #CC3333 30%, #FF8080 55%, #CC3333 75%, #8B1A1A 100%);">Odhalení krásy ženství</span>
+    <span class="tg-caps" style="background: linear-gradient(90deg, #8B1A1A 0%, #CC3333 30%, #FF8080 55%, #CC3333 75%, #8B1A1A 100%);">Posvátná cesta</span>
+  </div>
+
+  <div class="tg-block" style="background: #F7F3EC; box-shadow: 0 2px 12px rgba(0,0,0,.08);">
+    <span class="tg-label" style="color:#aaa;">B — rubínová / růžový střed</span>
+    <span class="tg-eyebrow" style="background: linear-gradient(90deg, #7D0A2A 0%, #C41A4A 50%, #7D0A2A 100%);">Mysterijní škola</span>
+    <span class="tg-script" style="background: linear-gradient(90deg, #7D0A2A 0%, #C41A4A 28%, #FF7090 52%, #E8305A 72%, #7D0A2A 100%);">Odhalení krásy ženství</span>
+    <span class="tg-caps" style="background: linear-gradient(90deg, #7D0A2A 0%, #C41A4A 28%, #FF7090 52%, #E8305A 72%, #7D0A2A 100%);">Posvátná cesta</span>
+  </div>
+
+  <div class="tg-block" style="background: #F7F3EC; box-shadow: 0 2px 12px rgba(0,0,0,.08);">
+    <span class="tg-label" style="color:#aaa;">C — teplá červená / oranžový nádech</span>
+    <span class="tg-eyebrow" style="background: linear-gradient(90deg, #7A1500 0%, #C43010 50%, #7A1500 100%);">Mysterijní škola</span>
+    <span class="tg-script" style="background: linear-gradient(90deg, #7A1500 0%, #C43010 28%, #FF8050 52%, #D84020 72%, #7A1500 100%);">Odhalení krásy ženství</span>
+    <span class="tg-caps" style="background: linear-gradient(90deg, #7A1500 0%, #C43010 28%, #FF8050 52%, #D84020 72%, #7A1500 100%);">Posvátná cesta</span>
+  </div>
+
+</div>
+
+<!-- ── TEXT GRADIENTY – nová paleta červené ── -->
+<hr>
+<p class="section-label">Text gradienty — nová paleta červené (#550c1f, #731b31, #440516, #671227, #560b1f)</p>
+
+<!-- Swatche barev -->
+<div class="grid" style="grid-template-columns: repeat(5, 1fr); margin-bottom: 1.5rem;">
+  <div class="card"><div class="swatch" style="background:#550c1f; height:80px; display:flex; align-items:center; justify-content:center;"><span style="color:rgba(247,243,236,.7); font-family:monospace; font-size:.7rem;">#550c1f</span></div></div>
+  <div class="card"><div class="swatch" style="background:#731b31; height:80px; display:flex; align-items:center; justify-content:center;"><span style="color:rgba(247,243,236,.7); font-family:monospace; font-size:.7rem;">#731b31</span></div></div>
+  <div class="card"><div class="swatch" style="background:#440516; height:80px; display:flex; align-items:center; justify-content:center;"><span style="color:rgba(247,243,236,.7); font-family:monospace; font-size:.7rem;">#440516</span></div></div>
+  <div class="card"><div class="swatch" style="background:#671227; height:80px; display:flex; align-items:center; justify-content:center;"><span style="color:rgba(247,243,236,.7); font-family:monospace; font-size:.7rem;">#671227</span></div></div>
+  <div class="card"><div class="swatch" style="background:#560b1f; height:80px; display:flex; align-items:center; justify-content:center;"><span style="color:rgba(247,243,236,.7); font-family:monospace; font-size:.7rem;">#560b1f</span></div></div>
+</div>
+
+<!-- Gradienty pozadí z nové palety -->
+<p class="section-label">Gradienty pozadí — kombinace z nové palety</p>
+<div class="grid" style="grid-template-columns: 1fr 1fr 1fr; margin-bottom: 1.5rem;">
+
+  <div class="card">
+    <div class="swatch" style="background: linear-gradient(135deg, #440516 0%, #671227 54%, #731b31 100%);"></div>
+    <div class="card-info">
+      <div class="card-title">Varianta A</div>
+      <div class="card-hex">#440516 → #671227 → #731b31</div>
     </div>
   </div>
-</section>
 
-<!-- ══ O ŠKOLE – fotka vpravo ════════════════════════════ -->
-<section class="o-skole" aria-labelledby="oskole-h2-t">
-  <div class="wrap">
-    <div class="o-skole-grid">
-      <div class="o-skole-content">
-        <img src="Obrazky/grafika/gold-flowers-3.png" class="gf-text gf-text-r" alt="" aria-hidden="true">
-        <span class="eyebrow rv in">O škole</span>
-        <h2 id="oskole-h2-t" class="hc rv in">
-          <span class="hc-s">Hluboká iniciační cesta ženy</span>
-        </h2>
-        <p class="rv in">Mysterijní škola ženství je dvouletou cestou hluboké
-          ženské transformace, návratu k&nbsp;přirozenosti a&nbsp;probuzení vědomého ženství skrze tantrickou cestu
-          lásky, prožitku a&nbsp;vnitřního poznání.</p>
-        <p class="rv in">Během čtyř navazujících modulů budeš postupně vstupovat
-          hlouběji do svého těla, cítění, intuice, sexuality, životní energie i&nbsp;duchovního vědomí. Každé setkání
-          otevírá další bránu ženské duše.</p>
-        <p class="rv in">Celá cesta probíhá v&nbsp;intimním kruhu žen,
-          v&nbsp;bezpečném prostoru hlubokého sdílení, prožitku, meditace, ženských rituálů a&nbsp;vědomé práce
-          s&nbsp;tělem i&nbsp;energií.</p>
-        <div class="rv in" style="margin-top:2rem">
-          <a href="#" class="btn btn-ghost">Více o&nbsp;škole</a>
-        </div>
-      </div>
-      <div class="img-frame img-frame-mirror o-skole-img rv in">
-        <img src="Obrazky/ilustracni/prostor-5.jpeg" alt="Oltář a meditační prostor"
-          class="main-img" width="600" height="560" style="object-position: top">
-      </div>
+  <div class="card">
+    <div class="swatch" style="background: linear-gradient(135deg, #440516 0%, #550c1f 54%, #731b31 100%);"></div>
+    <div class="card-info">
+      <div class="card-title">Varianta B</div>
+      <div class="card-hex">#440516 → #550c1f → #731b31</div>
     </div>
   </div>
-</section>
 
-<script>
-  function hexToRgb(hex) {
-    const r = parseInt(hex.slice(1,3),16);
-    const g = parseInt(hex.slice(3,5),16);
-    const b = parseInt(hex.slice(5,7),16);
-    return {r,g,b};
-  }
-
-  function darken(rgb, pct) {
-    const f = pct / 100;
-    return {
-      r: Math.round(rgb.r * f),
-      g: Math.round(rgb.g * f),
-      b: Math.round(rgb.b * f)
-    };
-  }
-
-  function updateGradient() {
-    const color = document.getElementById('gc').value;
-    const angle = document.getElementById('gAngle').value;
-    const mid   = document.getElementById('gMid').value;
-    const dark  = document.getElementById('gDark').value;
-    const leaf  = document.getElementById('gLeaf').checked;
-
-    document.getElementById('gcVal').textContent     = color;
-    document.getElementById('gAngleVal').textContent = angle + '°';
-    document.getElementById('gMidVal').textContent   = mid + '%';
-    document.getElementById('gDarkVal').textContent  = dark + '%';
-
-    const rgb  = hexToRgb(color);
-    const dRgb = darken(rgb, dark);
-
-    let gradient;
-    if (parseInt(mid) > 0) {
-      gradient = `linear-gradient(${angle}deg, rgba(${dRgb.r},${dRgb.g},${dRgb.b},1) 0%, rgba(${rgb.r},${rgb.g},${rgb.b},1) ${mid}%, rgba(${rgb.r},${rgb.g},${rgb.b},0) 100%)`;
-    } else {
-      gradient = `linear-gradient(${angle}deg, rgba(${dRgb.r},${dRgb.g},${dRgb.b},1) 0%, rgba(${rgb.r},${rgb.g},${rgb.b},0) 100%)`;
-    }
-
-    const bg = leaf
-      ? gradient + `, url('Obrazky/grafika/bg-anjali-leaf.png') center/cover no-repeat`
-      : gradient;
-
-    document.getElementById('livePreview').style.background = bg;
-    document.getElementById('liveCode').textContent = gradient;
-  }
-
-  updateGradient();
-</script>
-
-<!-- ══ WAVE DIVIDER PROPOSALS ══════════════════════════════ -->
-<style>
-  .wave-section { margin: 0; }
-  .wave-dark {
-    background: linear-gradient(135deg, #3d0b26 0%, #6b164f 54%, #9d2968 100%);
-    padding: 3rem 0 0;
-    text-align: center;
-    color: rgba(247,243,236,.7);
-    font-family: var(--ff-sans);
-    font-size: .75rem;
-    letter-spacing: .15em;
-    text-transform: uppercase;
-  }
-  .wave-dark span { display: block; margin-bottom: 2rem; }
-  .wave-light {
-    background: #ffffff;
-    padding: 2rem 0 3rem;
-    text-align: center;
-    color: #9a9a9a;
-    font-family: var(--ff-sans);
-    font-size: .75rem;
-    letter-spacing: .15em;
-    text-transform: uppercase;
-  }
-  .wave-separator { display: block; width: 100%; }
-  .proposal-label {
-    text-align: center;
-    font-family: var(--ff-sans);
-    font-size: .7rem;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    color: #888;
-    padding: 2rem 0 .5rem;
-    border-top: 1px solid #ddd;
-    margin-top: 1rem;
-  }
-</style>
-
-<h1 style="margin: 3rem 0 1rem; border-top: 2px solid #ddd; padding-top: 2rem;">Návrhy vlny — zakončení sekce</h1>
-
-<!-- A: Jemná vlna, konce rovné -->
-<p class="proposal-label">A — Jemná vlna (konce rovné)</p>
-<div class="wave-section">
-  <div class="wave-dark"><span>tmavá sekce</span>
-    <svg class="wave-separator" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,25 C360,55 1080,0 1440,25 L1440,60 L0,60 Z" fill="#ffffff"/>
-    </svg>
+  <div class="card">
+    <div class="swatch" style="background: linear-gradient(135deg, #560b1f 0%, #671227 54%, #731b31 100%);"></div>
+    <div class="card-info">
+      <div class="card-title">Varianta C</div>
+      <div class="card-hex">#560b1f → #671227 → #731b31</div>
+    </div>
   </div>
-  <div class="wave-light">světlá sekce</div>
+
 </div>
 
-<!-- B: Výrazná vlna, konce rovné -->
-<p class="proposal-label">B — Výrazná vlna (konce rovné)</p>
-<div class="wave-section">
-  <div class="wave-dark"><span>tmavá sekce</span>
-    <svg class="wave-separator" viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,45 C360,95 1080,0 1440,45 L1440,100 L0,100 Z" fill="#ffffff"/>
-    </svg>
+<!-- Gradienty tmavá → světlá z nové palety + #7d011d -->
+<p class="section-label" style="margin-top:2.5rem">Gradienty — tmavá → světlá (#7d011d jako světlý konec)</p>
+<div class="grid" style="grid-template-columns: 1fr 1fr 1fr;">
+
+  <div class="card">
+    <div class="swatch" style="background: linear-gradient(135deg, #480010 0%, #780020 54%, #9A0030 100%);"></div>
+    <div class="card-info">
+      <div class="card-title">Varianta A</div>
+      <div class="card-hex">#480010 → #780020 → #9A0030</div>
+    </div>
   </div>
-  <div class="wave-light">světlá sekce</div>
+
+  <div class="card">
+    <div class="swatch" style="background: linear-gradient(135deg, #580018 0%, #820025 54%, #A00030 100%);"></div>
+    <div class="card-info">
+      <div class="card-title">Varianta B</div>
+      <div class="card-hex">#580018 → #820025 → #A00030</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="swatch" style="background: linear-gradient(135deg, #480010 0%, #6A001C 54%, #920028 100%);"></div>
+    <div class="card-info">
+      <div class="card-title">Varianta C</div>
+      <div class="card-hex">#480010 → #6A001C → #920028</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="swatch" style="background: linear-gradient(135deg, #3A000C 0%, #700020 54%, #9A0030 100%);"></div>
+    <div class="card-info">
+      <div class="card-title">Varianta D</div>
+      <div class="card-hex">#3A000C → #700020 → #9A0030</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="swatch" style="background: linear-gradient(135deg, #3A000C 0%, #820025 54%, #A00030 100%);"></div>
+    <div class="card-info">
+      <div class="card-title">Varianta E</div>
+      <div class="card-hex">#3A000C → #820025 → #A00030</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="swatch" style="background: linear-gradient(135deg, #580018 0%, #780020 54%, #920028 100%);"></div>
+    <div class="card-info">
+      <div class="card-title">Varianta F</div>
+      <div class="card-hex">#580018 → #780020 → #920028</div>
+    </div>
+  </div>
+
 </div>
 
-<!-- C: Jemná vlna, konce zahnuté nahoru -->
-<p class="proposal-label">C — Jemná vlna, konce zahnuté nahoru</p>
-<div class="wave-section">
-  <div class="wave-dark"><span>tmavá sekce</span>
-    <svg class="wave-separator" viewBox="0 0 1440 75" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,10 C100,50 400,65 720,45 C1040,25 1340,50 1440,10 L1440,75 L0,75 Z" fill="#ffffff"/>
-    </svg>
-  </div>
-  <div class="wave-light">světlá sekce</div>
-</div>
+<!-- Porovnání M2 původní vs. Varianta A -->
+<hr>
+<p class="section-label">Porovnání — M2 původní vs. Varianta A</p>
+<div class="grid">
 
-<!-- D: Výrazná vlna, konce zahnuté nahoru -->
-<p class="proposal-label">D — Výrazná vlna, konce zahnuté nahoru</p>
-<div class="wave-section">
-  <div class="wave-dark"><span>tmavá sekce</span>
-    <svg class="wave-separator" viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,5 C150,70 450,95 720,60 C990,25 1290,70 1440,5 L1440,100 L0,100 Z" fill="#ffffff"/>
-    </svg>
+  <div class="mod-preview">
+    <div class="mod-preview-inner m2">
+      <span class="module-num">II. iniciační modul — původní</span>
+      <h3 class="hc"><span class="hc-s hc-s-dk">Posvátná sexualita</span></h3>
+      <div class="module-date">16.&nbsp;9.&nbsp;–&nbsp;20.&nbsp;9.&nbsp;2026 • Centrum Buchov</div>
+      <p class="mod-p">Otevřeme se emočnímu plynutí, smyslnosti a&nbsp;životní síle ženy. Skrze práci s&nbsp;energií lůna a&nbsp;emocemi se budeme navracet k&nbsp;přirozené vášni.</p>
+      <div class="module-tags"><span>sexualita</span><span>emoce</span><span>vášeň</span><span>shakti</span></div>
+      <a href="#" class="btn-ghost-lt">Více o modulu</a>
+      <span class="tg-label" style="margin-top:auto; padding-top:1rem;">#130004 → #450110 → #7d011d</span>
+    </div>
   </div>
-  <div class="wave-light">světlá sekce</div>
-</div>
 
-<!-- E: Dvě periody, konce rovné -->
-<p class="proposal-label">E — Dvě periody (konce rovné)</p>
-<div class="wave-section">
-  <div class="wave-dark"><span>tmavá sekce</span>
-    <svg class="wave-separator" viewBox="0 0 1440 65" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,28 C180,58 360,5 540,28 C720,52 900,5 1080,28 C1260,52 1380,35 1440,28 L1440,65 L0,65 Z" fill="#ffffff"/>
-    </svg>
+  <div class="mod-preview">
+    <div class="mod-preview-inner" style="background: linear-gradient(135deg, #480010 0%, #780020 54%, #9A0030 100%);">
+      <span class="module-num">II. iniciační modul — Varianta A</span>
+      <h3 class="hc"><span class="hc-s hc-s-dk">Posvátná sexualita</span></h3>
+      <div class="module-date">16.&nbsp;9.&nbsp;–&nbsp;20.&nbsp;9.&nbsp;2026 • Centrum Buchov</div>
+      <p class="mod-p">Otevřeme se emočnímu plynutí, smyslnosti a&nbsp;životní síle ženy. Skrze práci s&nbsp;energií lůna a&nbsp;emocemi se budeme navracet k&nbsp;přirozené vášni.</p>
+      <div class="module-tags"><span>sexualita</span><span>emoce</span><span>vášeň</span><span>shakti</span></div>
+      <a href="#" class="btn-ghost-lt">Více o modulu</a>
+      <span class="tg-label" style="margin-top:auto; padding-top:1rem;">#480010 → #780020 → #9A0030</span>
+    </div>
   </div>
-  <div class="wave-light">světlá sekce</div>
-</div>
 
-<!-- F: Dvě periody, konce zahnuté nahoru -->
-<p class="proposal-label">F — Dvě periody, konce zahnuté nahoru</p>
-<div class="wave-section">
-  <div class="wave-dark"><span>tmavá sekce</span>
-    <svg class="wave-separator" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,8 C120,55 300,65 480,38 C660,12 780,62 960,52 C1140,42 1320,60 1440,8 L1440,80 L0,80 Z" fill="#ffffff"/>
-    </svg>
-  </div>
-  <div class="wave-light">světlá sekce</div>
-</div>
-
-<!-- G: Velmi jemná vlna -->
-<p class="proposal-label">G — Velmi jemná vlna</p>
-<div class="wave-section">
-  <div class="wave-dark"><span>tmavá sekce</span>
-    <svg class="wave-separator" viewBox="0 0 1440 35" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,15 C360,35 1080,0 1440,15 L1440,35 L0,35 Z" fill="#ffffff"/>
-    </svg>
-  </div>
-  <div class="wave-light">světlá sekce</div>
-</div>
-
-<!-- H: Konkávní oblouk, oba konce zahnuté nahoru -->
-<p class="proposal-label">H — Konkávní oblouk (konce zahnuté nahoru)</p>
-<div class="wave-section">
-  <div class="wave-dark"><span>tmavá sekce</span>
-    <svg class="wave-separator" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,5 C200,5 400,75 720,75 C1040,75 1240,5 1440,5 L1440,80 L0,80 Z" fill="#ffffff"/>
-    </svg>
-  </div>
-  <div class="wave-light">světlá sekce</div>
 </div>
 
 </body>
