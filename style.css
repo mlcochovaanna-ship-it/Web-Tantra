@@ -1127,7 +1127,7 @@ h3 {
 }
 
 .citat-sekce {
-  padding: calc(3rem + 75px) 0 calc(3rem + 75px);
+  padding: calc(5rem + 75px) 0 calc(5rem + 75px);
   position: relative;
   z-index: 0;
   overflow: hidden;
