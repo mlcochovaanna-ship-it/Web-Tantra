@@ -93,9 +93,14 @@ body {
   font-size: 1rem;
   line-height: 1.75;
   color: var(--text);
-  background: var(--cream);
+  background-color: #E4D9C0;
+  background-position: 0 100svh;
+  background-size: 100% calc(100% - 100svh);
+  background-repeat: no-repeat;
   overflow-x: hidden;
+  position: relative;
 }
+
 
 img {
   display: block;
@@ -148,6 +153,7 @@ h3 {
   width: var(--c);
   margin-inline: auto;
 }
+
 
 .gt {
   background: var(--gold-outline);
@@ -237,6 +243,7 @@ h3 {
   padding: 0.9rem 1.9rem 0.8rem;
   border: none;
   cursor: pointer;
+  border-radius: 10px;
   transition: opacity var(--ease), transform var(--ease);
 }
 
@@ -269,6 +276,7 @@ h3 {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
+  border-radius: 10px;
 }
 .btn-ghost:hover { opacity: .75; transform: translateY(-2px); }
 
@@ -292,6 +300,7 @@ h3 {
   mask-composite: exclude;
   pointer-events: none;
   opacity: .6;
+  border-radius: 10px;
 }
 .btn-ghost-lt:hover { opacity: .75; transform: translateY(-2px); }
 
@@ -377,6 +386,7 @@ h3 {
   padding: .82rem 1.7rem;
   background: var(--gold-cta);
   color: #0C1B1D !important;
+  border-radius: 10px;
   transition: opacity var(--ease), transform var(--ease);
   white-space: nowrap;
 }
@@ -584,6 +594,7 @@ h3 {
   font-weight: 700;
   letter-spacing: .12em;
   text-transform: uppercase;
+  border-radius: 10px;
 }
 
 .nav-mobile-parent {
@@ -665,31 +676,89 @@ h3 {
   padding-bottom: .8rem;
 }
 
+/* ── SOFT WAVE – patička (uvnitř CTA sekce) ─── */
+.soft-wave--footer {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 112px;
+  z-index: 5;
+  pointer-events: none;
+  line-height: 0;
+}
+
+.soft-wave--footer svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.soft-wave--top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 112px;
+  z-index: 5;
+  pointer-events: none;
+  line-height: 0;
+}
+
+.soft-wave--top svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* ── SOFT WAVE – přechod pod hero sekcí ─── */
+.soft-wave {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 112px;
+  z-index: 5;
+  pointer-events: none;
+  line-height: 0;
+}
+
+.soft-wave svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 /* ── HERO ─────────────────────────────────────── */
 .hero {
   position: relative;
+  z-index: 0;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow: hidden;
 }
 
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('Obrazky/o-skole/skola-1.jpg');
+  background-image: url('Obrazky/o-skole/skola-uvod.jpg');
   background-size: cover;
   background-position: center 30%;
-  will-change: transform;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 50% 60% at center, rgba(34, 7, 24, .82) 0%, rgba(34, 7, 24, .40) 55%, rgba(34, 7, 24, 0) 100%);
+  background-color: rgba(34, 7, 24, .25);
+  background-image:
+    radial-gradient(ellipse 22% 28% at center, rgba(34, 7, 24, 1) 0%, transparent 100%),
+    radial-gradient(ellipse 50% 60% at center, rgba(34, 7, 24, .82) 0%, rgba(34, 7, 24, .40) 55%, rgba(34, 7, 24, 0) 100%);
 }
 
 .hero-body {
@@ -729,7 +798,7 @@ h3 {
   padding-bottom: 0.05em;
   position: relative;
   z-index: 2;
-  background: var(--gold-main);
+  background: var(--gold-cta);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -743,7 +812,7 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0;
   line-height: 1.05;
-  background: var(--gold-main);
+  background: var(--gold-cta);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -799,42 +868,95 @@ h3 {
   }
 }
 
+
+/* ── GRADIENT BRIDGE hero → zena-laska ──────── */
+.gradient-bridge {
+  background: linear-gradient(to bottom, #E4D9C0 0%, #EDE6D2 50%, #E4D9C0 100%);
+  overflow: hidden;
+}
+
+.gradient-bridge-2 {
+  background: linear-gradient(to bottom, #E4D9C0 0%, #EDE6D2 50%, #E4D9C0 100%);
+  overflow: hidden;
+}
+
+.gradient-bridge-3 {
+  background: linear-gradient(to bottom, #E4D9C0 0%, #EDE6D2 50%, #E4D9C0 100%);
+  overflow: hidden;
+}
+
 /* ── MANIFESTO – nalaďovací sekce ───────────── */
 .manifesto {
-  background:
-    linear-gradient(135deg, #2A0008 0%, #780020 54%, rgba(154, 0, 48, 0) 100%),
-    url('Obrazky/grafika/bg-anjali-rose-right.jpg') center center / cover no-repeat fixed;
-  padding: calc(var(--pad) + 80px) 0 calc(var(--pad) + 4rem);
-  margin-top: -80px;
+  background: transparent;
+  padding: var(--pad) 0;
+  margin-bottom: 2.5rem;
   position: relative;
-  overflow: hidden;
-  clip-path: url(#manifesto-clip);
+  overflow: visible;
 }
 
-.manifesto::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(72, 0, 16, 0.25);
-  pointer-events: none;
-  z-index: 0;
+.manifesto .wrap {
+  position: relative;
+  z-index: 1;
+  background:
+    linear-gradient(135deg, #2A0008 0%, #780020 54%, #9A0030 100%) padding-box,
+    linear-gradient(90deg, #9A6D2B 0%, #D7B85F 52%, #9A6D2B 100%) border-box;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  box-shadow: 0 8px 40px rgba(42, 0, 8, .25), 0 2px 12px rgba(0, 0, 0, .15);
+  padding: 4.5rem 3rem 4.5rem;
 }
 
-.manifesto::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-  background-size: 180px;
-  opacity: .07;
+.section-divider {
+  display: block;
+  height: auto;
+  margin: 0 auto;
   pointer-events: none;
-  z-index: 0;
+  filter: drop-shadow(0 2px 8px rgba(100, 50, 20, .2));
 }
+.section-divider--top {
+  width: clamp(220px, 55%, 520px);
+}
+.section-divider--between {
+  width: clamp(200px, 42%, 400px);
+  display: block;
+  margin: 0.5rem auto 8rem;
+}
+
+.section-divider--between.after-zena {
+  margin-top: 9rem;
+  margin-bottom: 8rem;
+}
+.section-divider--between.before-anjali {
+  margin-bottom: 6rem;
+}
+.section-divider--between.before-reference {
+  margin-bottom: calc(8rem - var(--pad));
+}
+.section-divider--between.before-gallery {
+  margin-bottom: 2rem;
+}
+.section-divider--bottom {
+  width: clamp(160px, 38%, 360px);
+  margin-top: 60px;
+}
+
+.fili-corner {
+  position: absolute;
+  width: 140px;
+  height: auto;
+  pointer-events: none;
+  z-index: 10;
+}
+.fili-lh { top: -9px; left: -9px; }
+.fili-ph { top: -9px; right: -9px; }
+.fili-ld { bottom: -9px; left: -9px; }
+.fili-pd { bottom: -9px; right: -9px; }
+
 
 .manifesto-quote {
   display: block;
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 3.5rem;
   position: relative;
   z-index: 1;
 }
@@ -888,6 +1010,8 @@ h3 {
   background: rgba(255, 255, 255, .04);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .18);
 }
 
 .pillar::before {
@@ -901,6 +1025,7 @@ h3 {
   mask-composite: exclude;
   pointer-events: none;
   opacity: .28;
+  border-radius: 14px;
   transition: opacity var(--ease);
 }
 
@@ -941,11 +1066,14 @@ h3 {
 
 /* ── RECOGNITION ──────────────────────────────── */
 .recognition {
-  padding: var(--pad) 0 calc(var(--pad) + 5rem);
-  background: #ffffff;
+  padding: 1px 0 var(--pad);
+  margin-bottom: 0;
+  background: transparent;
   position: relative;
   z-index: 0;
 }
+
+
 
 .recognition-grid {
   display: grid;
@@ -954,44 +1082,36 @@ h3 {
   align-items: stretch;
 }
 
-/* Gold frame – gradient border lines */
+/* Photo frame – full gradient border */
 .img-frame {
   position: relative;
   display: block;
+  background: conic-gradient(
+    #F5E7B2 0deg,
+    #9A6D2B 45deg,
+    #F5E7B2 90deg,
+    #9A6D2B 135deg,
+    #F5E7B2 180deg,
+    #9A6D2B 225deg,
+    #F5E7B2 270deg,
+    #9A6D2B 315deg,
+    #F5E7B2 360deg
+  ) border-box;
+  border: 1px solid transparent;
+  border-radius: 10px;
 }
 
-.img-frame::before {
-  content: '';
-  position: absolute;
-  top: -16px;
-  left: -16px;
-  width: 35%;
-  height: 35%;
-  z-index: 3;
-  pointer-events: none;
-  background:
-    linear-gradient(90deg, #8A652A, #E7CD80, #F5E7B2, #C69B45, transparent) top / 100% 1px no-repeat,
-    linear-gradient(180deg, #8A652A, #E7CD80, #F5E7B2, #C69B45, transparent) left / 1px 100% no-repeat;
-}
-
+.img-frame::before,
 .img-frame::after {
-  content: '';
-  position: absolute;
-  bottom: -16px;
-  right: -16px;
-  width: 35%;
-  height: 35%;
-  z-index: 3;
-  pointer-events: none;
-  background:
-    linear-gradient(90deg, transparent, #C69B45, #F5E7B2, #E7CD80, #8A652A) bottom / 100% 1px no-repeat,
-    linear-gradient(180deg, transparent, #C69B45, #F5E7B2, #E7CD80, #8A652A) right / 1px 100% no-repeat;
+  display: none;
 }
 
 .img-frame img.main-img {
   width: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, .22);
 }
 
 /* Gold flower dekorace – přímé img elementy */
@@ -1033,22 +1153,10 @@ h3 {
 /* Flower swap: desktop vs tablet/mobil */
 .gf-mob { display: none; }
 
-/* Zrcadlový rámeček – rožky nahoře vpravo a dole vlevo */
-.img-frame-mirror::before {
-  top: -16px;
-  left: auto;
-  right: -16px;
-  background:
-    linear-gradient(90deg, transparent, #C69B45, #F5E7B2, #E7CD80, #8A652A) top / 100% 1px no-repeat,
-    linear-gradient(180deg, #8A652A, #E7CD80, #F5E7B2, #C69B45, transparent) right / 1px 100% no-repeat;
-}
+/* Zrcadlový rámeček – rohy odstraněny */
+.img-frame-mirror::before,
 .img-frame-mirror::after {
-  bottom: -16px;
-  right: auto;
-  left: -16px;
-  background:
-    linear-gradient(90deg, #8A652A, #E7CD80, #F5E7B2, #C69B45, transparent) bottom / 100% 1px no-repeat,
-    linear-gradient(180deg, transparent, #C69B45, #F5E7B2, #E7CD80, #8A652A) left / 1px 100% no-repeat;
+  display: none;
 }
 
 .recognition-img {
@@ -1058,6 +1166,11 @@ h3 {
 
 .recognition-img .main-img {
   height: 100%;
+}
+
+.recognition-content {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .recognition-content p {
@@ -1113,32 +1226,102 @@ h3 {
 
 /* ── ŽENA JE LÁSKA ───────────────────────────── */
 .zena-laska {
-  padding: calc(3rem + 75px) 0 calc(3rem + 75px);
+  padding: 12rem 0 12rem;
   position: relative;
   z-index: 0;
-  overflow: hidden;
   background:
-    linear-gradient(135deg, rgba(42, 0, 8, .85) 0%, rgba(120, 0, 32, .70) 54%, rgba(154, 0, 48, .50) 100%),
-    url('Obrazky/ilustracni/samet.png') center center / cover no-repeat fixed;
+    linear-gradient(135deg,
+      rgba(42, 0, 8, .83)   0%,
+      rgba(62, 0, 14, .80) 12%,
+      rgba(82, 0, 20, .77) 24%,
+      rgba(100, 0, 26, .74) 36%,
+      rgba(120, 0, 32, .68) 54%,
+      rgba(136, 0, 38, .60) 70%,
+      rgba(145, 0, 43, .54) 84%,
+      rgba(154, 0, 48, .48) 100%),
+    url('Obrazky/grafika/bg-anjali-rose-right.jpg') center / cover no-repeat fixed;
   text-align: center;
   width: 100%;
-  margin-top: -75px;
-  clip-path: url(#zena-laska-clip);
 }
 
+.zl-fili {
+  position: absolute;
+  width: 190px;
+  height: auto;
+  pointer-events: none;
+  z-index: 6;
+}
+.zl-fili-lh { top: 50%; left: -100px; transform: translateY(-50%) scale(-1,-1); }
+.zl-fili-pd { top: 50%; right: -100px; transform: translateY(-50%); }
+
+.zl-wave-top,
+.zl-wave-bot {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 112px;
+  z-index: 5;
+  pointer-events: none;
+  line-height: 0;
+}
+.zl-wave-top { top: 0; }
+.zl-wave-bot { bottom: -2px; }
+
+.zl-wave-top svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.zl-wave-bot svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.anjali-wave-before,
+.anjali-wave-after {
+  display: block;
+  position: relative;
+  height: 110px;
+  line-height: 0;
+  margin: 0;
+  pointer-events: none;
+}
+.anjali-wave-before svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.anjali-wave-after svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+
 .citat-sekce {
-  padding: calc(5rem + 75px) 0 calc(5rem + 75px);
+  padding: 12rem 0 12rem;
   position: relative;
   z-index: 0;
-  overflow: hidden;
   background:
-    linear-gradient(135deg, rgba(42, 0, 8, .85) 0%, rgba(120, 0, 32, .70) 54%, rgba(154, 0, 48, .50) 100%),
-    url('Obrazky/ilustracni/samet.png') center center / cover no-repeat fixed;
+    linear-gradient(135deg,
+      rgba(42, 0, 8, .83)   0%,
+      rgba(62, 0, 14, .80) 12%,
+      rgba(82, 0, 20, .77) 24%,
+      rgba(100, 0, 26, .74) 36%,
+      rgba(120, 0, 32, .68) 54%,
+      rgba(136, 0, 38, .60) 70%,
+      rgba(145, 0, 43, .54) 84%,
+      rgba(154, 0, 48, .48) 100%),
+    url('Obrazky/grafika/bg-anjali-rose-right.jpg') center / cover no-repeat fixed;
   text-align: center;
   width: 100%;
-  margin-top: -75px;
-  clip-path: url(#citat-clip);
 }
+
 
 .citat {
   font-family: var(--ff-accent);
@@ -1160,6 +1343,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+  position: relative;
 }
 
 .zl-heading {
@@ -1183,17 +1367,22 @@ h3 {
 
 /* ── O ŠKOLE ──────────────────────────────────── */
 .o-skole {
-  padding: var(--pad) 0 calc(var(--pad) + 5rem);
-  background: var(--cream);
+  padding: 1px 0 var(--pad);
+  background: transparent;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .o-skole-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: center;
+  gap: 4.5rem;
+  align-items: stretch;
+}
+
+.o-skole-content {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .o-skole-content p {
@@ -1204,22 +1393,30 @@ h3 {
 }
 
 .o-skole-img {
-  height: 680px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  filter: drop-shadow(0 8px 32px rgba(0, 0, 0, .22));
 }
 
 .o-skole-img .main-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 /* ── MODULY HEADER ────────────────────────────── */
 .moduly-wrapper {
-  background: #ffffff;
+  background: transparent;
   position: relative;
   overflow: hidden;
 }
 
 .moduly-header {
-  padding: var(--pad) 0 3rem;
+  padding: 3rem 0 3rem;
   background: transparent;
   text-align: center;
 }
@@ -1227,20 +1424,29 @@ h3 {
 /* ── MODULY GRID + CARDS ──────────────────────── */
 .moduly-section {
   background: transparent;
-  padding-bottom: calc(var(--pad) + 5rem);
+  padding-bottom: var(--pad);
 }
 
 .moduly-grid {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 3rem;
   width: var(--c);
   margin-inline: auto;
+}
+
+.module-card-frame {
+  position: relative;
 }
 
 .module-card {
   display: flex;
   flex-direction: row;
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #9A6D2B 0%, #D7B85F 52%, #9A6D2B 100%) border-box;
+  border: 1px solid transparent;
+  box-shadow: 0 8px 40px rgba(42, 0, 8, .25), 0 2px 12px rgba(0, 0, 0, .15);
 }
 
 .module-card-img {
@@ -1275,13 +1481,13 @@ h3 {
 
 .module-chakra {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 130px;
-  height: 130px;
-  opacity: 0.15;
+  top: clamp(2.5rem, 4vw, 4rem);
+  right: clamp(2rem, 4vw, 4rem);
+  width: 128px;
+  height: auto;
+  opacity: 1;
   pointer-events: none;
-  filter: brightness(0) invert(1) sepia(1) saturate(2.5) hue-rotate(5deg) brightness(0.9);
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, .5)) drop-shadow(0 0 8px rgba(198, 155, 69, .3));
 }
 
 .module-card.m1 .module-card-content { background: var(--m1); }
@@ -1289,7 +1495,7 @@ h3 {
 .module-card.m3 .module-card-content { background: var(--m3); }
 .module-card.m4 .module-card-content { background: var(--m4); }
 
-.module-card.m3 .module-chakra { width: 160px; height: 160px; top: 0; }
+.module-card.m3 .module-chakra { width: 144px; height: auto; }
 
 .module-card.m2,
 .module-card.m4 { flex-direction: row-reverse; }
@@ -1308,6 +1514,7 @@ h3 {
 }
 
 .module-date {
+  align-self: flex-start;
   font-size: .95rem;
   font-weight: 500;
   color: rgba(231, 205, 128, .92);
@@ -1347,10 +1554,8 @@ h3 {
 
 /* ── ANJALI ───────────────────────────────────── */
 .anjali {
-  padding: var(--pad) 0 calc(var(--pad) + 5rem);
-  background: var(--cream);
+  padding: 3rem 0 var(--pad);
   position: relative;
-  overflow: hidden;
 }
 
 .anjali-grid {
@@ -1366,11 +1571,11 @@ h3 {
 
 .anjali-img .main-img {
   height: 100%;
-  transform: scaleX(-1);
 }
 
 .anjali-content {
   position: relative;
+  overflow: hidden;
 }
 
 
@@ -1409,26 +1614,56 @@ h3 {
   line-height: 1.88;
 }
 
+/* ── FLOWER BG – strana obrázku ─────────────── */
+/* plná výška sekce (auto 100%) = stejná velikost; transform posouvá střed na střed fotky */
+.recognition::before,
+.o-skole::before,
+.anjali::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  transform: translateY(calc(var(--pad) / -2));
+}
+
+.recognition::before {
+  background-image: url('Obrazky/grafika/bg-kvetiny-left.png');
+  background-position: left center;
+}
+
+.o-skole::before {
+  background-image: url('Obrazky/grafika/bg-kvetiny-right.png');
+  background-position: right center;
+}
+
+.anjali::before {
+  background-image: url('Obrazky/grafika/bg-kvetiny-left.png');
+  background-position: left center;
+}
+
+.recognition-grid,
+.o-skole-grid,
+.anjali-grid {
+  position: relative;
+  z-index: 1;
+}
+
 /* ── REFERENCE ────────────────────────────────── */
 .reference {
-  padding: calc(var(--pad) + 75px) 0 calc(var(--pad) + 5rem);
+  padding: var(--pad) 0 calc(var(--pad) + 2rem);
   position: relative;
-  overflow: hidden;
-  background: var(--cream);
-  margin-bottom: -2px;
-  margin-top: -75px;
-  clip-path: url(#reference-clip);
+  overflow: visible;
+  background: transparent;
 }
 
 .reference-leaf {
-  position: absolute;
-  inset: 0;
-  background-image: url('Obrazky/grafika/bg-anjali-rose-left.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  opacity: 1;
-  pointer-events: none;
+  display: none;
 }
 
 .reference-overlay {
@@ -1438,8 +1673,33 @@ h3 {
 .reference-inner {
   position: relative;
   z-index: 1;
+  background:
+    linear-gradient(135deg, #5C2035 0%, #8E3A55 54%, #B05572 100%) padding-box,
+    linear-gradient(90deg, #9A6D2B 0%, #D7B85F 52%, #9A6D2B 100%) border-box;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  box-shadow: 0 8px 40px rgba(48, 9, 26, .28), 0 2px 12px rgba(0, 0, 0, .15);
+  padding: 4.5rem 3rem;
 }
 
+
+.reference-inner .hc-s {
+  background: var(--gold-cta);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.reference-inner .btn-ghost {
+  background: var(--gold-cta);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.reference-inner .btn-ghost::before {
+  background: var(--gold-cta);
+}
 
 .ref-header {
   text-align: center;
@@ -1453,11 +1713,12 @@ h3 {
 }
 
 .ref-card {
-  background: rgba(255, 255, 255, .55);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, .05);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   padding: 2.5rem 2rem;
   position: relative;
+  border-radius: 14px;
   transition: transform var(--ease);
 }
 
@@ -1472,6 +1733,7 @@ h3 {
   mask-composite: exclude;
   pointer-events: none;
   opacity: .28;
+  border-radius: 14px;
   transition: opacity var(--ease);
 }
 
@@ -1483,7 +1745,10 @@ h3 {
   font-weight: 600;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: #7A5C20;
+  background: var(--gold-cta);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   display: block;
   margin-bottom: 1rem;
 }
@@ -1492,7 +1757,7 @@ h3 {
   font-family: var(--ff-serif);
   font-style: italic;
   font-size: .95rem;
-  color: #333;
+  color: rgba(247, 243, 236, .78);
   line-height: 1.8;
   quotes: none;
 }
@@ -1502,7 +1767,7 @@ h3 {
   font-weight: 700;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--gold-mid);
+  color: #E7CD80;
   display: block;
   margin-top: 1.25rem;
 }
@@ -1512,10 +1777,16 @@ h3 {
   margin-top: 3rem;
 }
 
+.ref-cta-text {
+  color: rgba(247, 243, 236, .78);
+  font-size: .9rem;
+  margin-bottom: 1.5rem;
+}
+
 /* ── GALLERY – tmavá sekce ────────────────────── */
 .gallery-section {
-  padding: var(--pad) 0 5rem;
-  background: var(--cream);
+  padding: var(--pad) 0 3rem;
+  background: transparent;
   position: relative;
   z-index: 0;
   overflow: hidden;
@@ -1530,6 +1801,7 @@ h3 {
   color: #4A4A4A;
   font-size: .95rem;
 }
+
 
 .gallery-fw {
   display: grid;
@@ -1555,6 +1827,7 @@ h3 {
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  border-radius: 14px;
 }
 
 .gallery-fw .g-item img {
@@ -1589,6 +1862,7 @@ h3 {
   object-fit: contain;
   display: block;
   border: 1px solid rgba(198, 155, 69, .2);
+  border-radius: 14px;
 }
 
 .lb-btn {
@@ -1664,7 +1938,7 @@ h3 {
 
 .gallery-more {
   text-align: center;
-  padding: 4rem 0 var(--pad);
+  padding: 4rem 0 4rem;
   background: transparent;
 }
 
@@ -1672,18 +1946,14 @@ h3 {
 .cta-section {
   position: relative;
   z-index: 0;
-  overflow: hidden;
   background-color: #2A0008;
-  min-height: calc(540px + 75px);
-  padding-top: 75px;
-  padding-bottom: 10px;
+  min-height: 540px;
+  padding-top: calc(var(--pad) + 4rem);
+  padding-bottom: calc(var(--pad) + 4rem);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: -75px;
-  margin-bottom: -5px;
-  clip-path: url(#cta-clip);
 }
 
 .cta-bg {
@@ -1695,6 +1965,11 @@ h3 {
   background-attachment: scroll;
 }
 
+@media (min-width: 1450px) {
+  .zl-fili-lh { left: -200px; }
+  .zl-fili-pd { right: -200px; }
+}
+
 @media (min-width:1101px) {
   .cta-bg {
     background-attachment: fixed;
@@ -1703,7 +1978,7 @@ h3 {
 
 }
 
-/* Dotykové zařízení (tablet + mobil, portrait i landscape) — fixed nefunguje spolehlivě */
+/* Dotykové zařízení (tablet + mobil) — fixed nefunguje spolehlivě */
 @media (hover: none), (pointer: coarse) {
   .cta-bg {
     background-attachment: scroll;
@@ -1726,17 +2001,21 @@ h3 {
 }
 
 .cta-overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 55% 65% at center, rgba(58, 0, 12, .60) 0%, rgba(58, 0, 12, .25) 55%, rgba(58, 0, 12, 0) 100%);
+  display: none;
 }
 
 .cta-body {
   position: relative;
   z-index: 2;
-  padding: var(--pad) 1rem;
-  max-width: 700px;
+  padding: 4rem 3.5rem;
+  max-width: 860px;
   width: 100%;
+  background: rgba(42, 0, 8, .40);
+  border: 1.5px solid rgba(215, 184, 95, .60);
+  border-radius: 16px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 40px rgba(42, 0, 8, .35), 0 2px 12px rgba(0, 0, 0, .2);
 }
 
 .cta-script {
@@ -1767,14 +2046,14 @@ h3 {
 }
 
 .cta-body .eyebrow-lt {
-  color: rgba(247, 243, 236, .78);
+  color: rgba(247, 243, 236, .95);
   font-weight: 500;
   letter-spacing: .26em;
 }
 
 .cta-body p {
   font-size: 1rem;
-  color: rgba(247, 243, 236, .72);
+  color: rgba(247, 243, 236, .95);
   margin-bottom: 1rem;
   line-height: 1.85;
 }
@@ -1804,7 +2083,7 @@ h3 {
 .site-footer {
   background: #2A0008;
   padding: 3rem 0 0;
-  margin-top: -5px;
+  position: relative;
 }
 
 /* ── SCROLL TO TOP ───────────────────────────────── */
@@ -1824,6 +2103,7 @@ h3 {
   justify-content: center;
   cursor: pointer;
   z-index: 200;
+  border-radius: 50%;
   transition: opacity var(--ease), transform var(--ease);
   padding: 0;
 }
@@ -2266,6 +2546,12 @@ h3 {
     gap: 4.5rem;
   }
 
+  .recognition::before,
+  .o-skole::before,
+  .anjali::before {
+    display: none;
+  }
+
   .recognition-grid .img-frame,
   .o-skole-img {
     order: -1;
@@ -2295,33 +2581,6 @@ h3 {
   .gf-tr,
   .gf-tl {
     display: none;
-  }
-
-  /* Rohy: pravý horní + levý spodní (flower je vpravo dole) */
-  .recognition-img::after,
-  .o-skole-img::after,
-  .anjali-img::after,
-  .img-frame-mirror::after {
-    top: auto;
-    bottom: -16px;
-    right: auto;
-    left: -16px;
-    background:
-      linear-gradient(90deg, transparent, #C69B45, #F5E7B2, #E7CD80, #8A652A) bottom / 100% 1px no-repeat,
-      linear-gradient(180deg, transparent, #C69B45, #F5E7B2, #E7CD80, #8A652A) left / 1px 100% no-repeat;
-  }
-
-  .recognition-img::before,
-  .o-skole-img::before,
-  .anjali-img::before,
-  .img-frame-mirror::before {
-    top: -16px;
-    bottom: auto;
-    left: auto;
-    right: -16px;
-    background:
-      linear-gradient(90deg, transparent, #C69B45, #F5E7B2, #E7CD80, #8A652A) top / 100% 1px no-repeat,
-      linear-gradient(180deg, #8A652A, #E7CD80, #F5E7B2, #C69B45, transparent) right / 1px 100% no-repeat;
   }
 
   .module-card,
@@ -2419,11 +2678,6 @@ h3 {
     gap: .5rem 0;
   }
 
-  .manifesto {
-    background-attachment: scroll;
-    background-position: center, 72% center;
-  }
-
   .reference-leaf {
     background-attachment: scroll;
     background-size: cover;
@@ -2454,8 +2708,6 @@ h3 {
   }
 
   .manifesto {
-    clip-path: none;
-    margin-top: 0;
     padding-top: calc(var(--pad) + 2rem);
     padding-bottom: calc(var(--pad) + 3rem);
   }
@@ -2466,10 +2718,13 @@ h3 {
   }
 
   .zena-laska {
-    clip-path: none;
-    margin-top: 0;
-    padding-top: calc(6rem + 40px);
-    padding-bottom: calc(6rem + 40px);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-attachment: scroll;
+  }
+
+  .zl-fili {
+    display: none;
   }
 
   .moduly-header {
@@ -2493,11 +2748,12 @@ h3 {
   }
 
   .reference {
-    clip-path: none;
-    margin-top: 0;
-    margin-bottom: 0;
     padding-top: calc(var(--pad) + 3rem);
     padding-bottom: calc(var(--pad) + 1.5rem);
+  }
+
+  .reference-inner {
+    padding: 3rem 1.5rem;
   }
 
   .gallery-section {
@@ -2506,56 +2762,27 @@ h3 {
   }
 
   .citat-sekce {
-    clip-path: none;
-    margin-top: 0;
-    padding-top: calc(var(--pad) + 2rem);
-    padding-bottom: calc(var(--pad) + 2rem);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     background-attachment: scroll;
   }
 
   .cta-section {
-    clip-path: none;
-    margin-top: 0;
     min-height: 540px;
     padding-top: var(--pad);
     padding-bottom: calc(var(--pad) + 2rem);
-    margin-bottom: -5px;
   }
 
   .cta-overlay {
-    background: rgba(42, 0, 8, .55);
+    display: none;
+  }
+
+  .cta-body {
+    padding: 3rem 2rem;
   }
 
   .cta-bg {
     background-position: 45% center;
-  }
-
-  .img-frame::before {
-    top: -6px;
-    left: -6px;
-  }
-
-  .img-frame::after {
-    bottom: -6px;
-    right: -6px;
-  }
-
-  .recognition-img::after,
-  .o-skole-img::after,
-  .anjali-img::after,
-  .img-frame-mirror::after {
-    bottom: -6px;
-    left: -6px;
-    right: auto;
-  }
-
-  .recognition-img::before,
-  .o-skole-img::before,
-  .anjali-img::before,
-  .img-frame-mirror::before {
-    top: -6px;
-    right: -6px;
-    left: auto;
   }
 
   .nav-center {
@@ -2749,7 +2976,10 @@ h3 {
 
 
   .hero-overlay {
-    background: radial-gradient(ellipse 50% 60% at center, rgba(34, 7, 24, .82) 0%, rgba(34, 7, 24, .40) 55%, rgba(34, 7, 24, 0) 100%);
+    background:
+      rgba(34, 7, 24, .40),
+      radial-gradient(ellipse 22% 28% at center, rgba(34, 7, 24, 1) 0%, transparent 100%),
+      radial-gradient(ellipse 50% 60% at center, rgba(34, 7, 24, .82) 0%, rgba(34, 7, 24, .40) 55%, rgba(34, 7, 24, 0) 100%);
   }
 
   .hero-script {
