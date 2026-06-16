@@ -169,6 +169,7 @@
     <section class="recognition" aria-labelledby="rec-h2">
       <div class="wrap">
         <div class="recognition-grid">
+          <img src="Obrazky/grafika/bg-kvetiny-left.png" class="grid-flower grid-flower-left" alt="" aria-hidden="true" loading="lazy">
           <div class="img-frame recognition-img rv">
             <img src="Obrazky/o-skole/o-skole-5.jpeg" alt="Žena v meditaci, hluboký vnitřní prožitek v ženském kruhu"
               class="main-img" loading="lazy" width="600" height="500">
@@ -248,6 +249,7 @@
     <section class="o-skole" aria-labelledby="oskole-h2">
       <div class="wrap">
         <div class="o-skole-grid">
+          <img src="Obrazky/grafika/bg-kvetiny-right.png" class="grid-flower grid-flower-right" alt="" aria-hidden="true" loading="lazy">
           <div class="o-skole-content">
             <span class="eyebrow rv">O škole</span>
             <h2 id="oskole-h2" class="hc rv rv-1">
@@ -441,6 +443,7 @@
     <section class="anjali" aria-labelledby="anjali-h2">
       <div class="wrap">
         <div class="anjali-grid">
+          <img src="Obrazky/grafika/bg-kvetiny-left.png" class="grid-flower grid-flower-left" alt="" aria-hidden="true" loading="lazy">
           <div class="img-frame anjali-img rv">
             <img src="Obrazky/anjali/anjali-10.jpg"
               alt="Portrét Martiny Výborné – Ma Prem Anjali, zakladatelky Mysterijní školy ženství" class="main-img"
@@ -806,6 +809,7 @@
         deskLi.classList.add('nav-drop-active');
         const r = deskTrigger.getBoundingClientRect();
         const w = deskDrop.offsetWidth;
+        deskDrop.style.top = Math.ceil(r.bottom + 24) + 'px';
         deskDrop.style.left = Math.max(0, Math.round(r.left + r.width / 2 - w / 2)) + 'px';
       };
       const closeDeskDrop = () => {

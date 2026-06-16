@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O škole | Mysterijní škola ženství</title>
+  <meta name="description"
+    content="Mysterijní škola ženství je roční iniciační cesta pro ženy skrze tantrické umění lásky, tělo, srdce a ženskou duši. Zjisti vše o filozofii, průběhu, ceně a praktických informacích.">
+  <link rel="canonical" href="https://zenskamystika.cz/o-skole">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zenskamystika.cz/o-skole">
+  <meta property="og:title" content="O škole | Mysterijní škola ženství">
+  <meta property="og:description"
+    content="Roční iniciační cesta pro ženy skrze tantrické umění lásky, tělo, srdce a ženskou duši. Čtyři moduly, Centrum Buchov.">
+  <meta property="og:image" content="https://zenskamystika.cz/Obrazky/o-skole/skola-1.jpg">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='none' stroke='%23C69B45' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%23C69B45' stroke-width='1'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23C69B45'/%3E%3Cline x1='32' y1='4' x2='32' y2='14' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='32' y1='50' x2='32' y2='60' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='4' y1='32' x2='14' y2='32' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='50' y1='32' x2='60' y2='32' stroke='%23C69B45' stroke-width='1.5'/%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── O ŠKOLE – stránkové styly ────────────────────────────────── */
+
+    /* Citát sekce – pearl místo růže */
+    .citat-sekce {
+      background:
+        linear-gradient(135deg,
+          rgba(42, 0, 8, .83)   0%,
+          rgba(62, 0, 14, .80) 12%,
+          rgba(82, 0, 20, .77) 24%,
+          rgba(100, 0, 26, .74) 36%,
+          rgba(120, 0, 32, .68) 54%,
+          rgba(136, 0, 38, .60) 70%,
+          rgba(145, 0, 43, .54) 84%,
+          rgba(154, 0, 48, .48) 100%),
+        url('Obrazky/grafika/bg-anjali-pearl.png') center / cover no-repeat fixed;
+    }
+
+    /* Hero pozadí */
+    .oskole-hero-bg {
+      background-image: linear-gradient(155deg, #1A000C 0%, #520014 52%, #6E0018 100%);
+    }
+    .oskole-hero-bg + .vstup-hero-overlay {
+      display: none;
+    }
+
+    /* Filosofie – první sekce po hero, shodný prostor jako manifesto na homepage */
+    .recognition {
+      padding-top: var(--pad);
+    }
+
+    .recognition-img .main-img {
+      object-position: 65% center;
+    }
+
+
+    /* ── BEZPEČÍ – tmavá sekce ───────────────────────────────────── */
+    .bezpeci-section {
+      position: relative;
+      background: linear-gradient(155deg, #1A000C 0%, #520014 52%, #6E0018 100%);
+      padding: 11rem 0 14rem;
+      overflow: hidden;
+    }
+
+    .bezpeci-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .bezpeci-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .bezpeci-item {
+      text-align: center;
+      padding: 2.5rem 2rem;
+      position: relative;
+      background: rgba(255, 255, 255, .04);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .18);
+    }
+
+    .bezpeci-item::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 14px;
+      background: var(--gold-main);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      padding: 1px;
+      opacity: .28;
+      pointer-events: none;
+      transition: opacity var(--ease);
+    }
+
+    .bezpeci-item:hover::before {
+      opacity: .55;
+    }
+
+    .bezpeci-item-title {
+      font-family: var(--ff-serif);
+      font-size: clamp(1rem, 1.3vw, 1.2rem);
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      line-height: 1.4;
+      background: var(--gold-main);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1.75rem;
+    }
+
+    .bezpeci-item p {
+      font-size: .95rem;
+      color: rgba(247, 243, 236, .78);
+      line-height: 1.88;
+    }
+
+    .bezpeci-item .fili-lh { top: -5px; left: -5px; }
+    .bezpeci-item .fili-pd { bottom: -5px; right: -5px; }
+
+    /* ── MÍSTO KONÁNÍ ─────────────────────────────────────────────── */
+    .misto-section {
+      padding: 1px 0 var(--pad);
+      background: transparent;
+      position: relative;
+    }
+
+
+    .misto-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4.5rem;
+      align-items: stretch;
+      position: relative;
+      z-index: 1;
+    }
+
+    .misto-content p {
+      font-size: 1rem;
+      color: #4A4A4A;
+      line-height: 1.88;
+      margin-bottom: 1rem;
+    }
+
+    .misto-img-frame {
+      height: 100%;
+      min-height: 420px;
+    }
+
+    .misto-img-frame .main-img {
+      height: 100%;
+      object-position: 40% center;
+    }
+
+    /* ── PRAKTICKÉ INFORMACE ─────────────────────────────────────── */
+    .prakticke-section {
+      padding: 1px 0 var(--pad);
+      background: transparent;
+    }
+
+    .prakticke-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .prakticke-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 3.5rem 3rem;
+    }
+
+    .prakticke-card:nth-child(1) { grid-column: 1 / 3; }
+    .prakticke-card:nth-child(2) { grid-column: 3 / 5; }
+    .prakticke-card:nth-child(3) { grid-column: 5 / 7; }
+    .prakticke-card:nth-child(4) { grid-column: 2 / 4; }
+    .prakticke-card:nth-child(5) { grid-column: 4 / 6; }
+
+    .prakticke-card {
+      text-align: center;
+      padding: 0;
+      position: relative;
+      background: transparent;
+    }
+
+    .prakticke-flower-wrap {
+      position: relative;
+      width: fit-content;
+      margin: 0 auto 1.5rem;
+    }
+
+    .prakticke-flower {
+      height: 110px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .prakticke-num {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: var(--ff-serif);
+      font-style: italic;
+      font-size: clamp(2.2rem, 3vw, 3.2rem);
+      font-weight: 600;
+      color: var(--gold-mid);
+      line-height: 1;
+    }
+
+    .prakticke-card-title {
+      font-family: var(--ff-sans);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      background: var(--gold-outline);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: .75rem;
+    }
+
+    .prakticke-card p {
+      font-size: .95rem;
+      color: #4A4A4A;
+      line-height: 1.82;
+    }
+
+    /* ── CENA ────────────────────────────────────────────────────── */
+    .cena-section {
+      padding: 1px 0 var(--pad);
+      position: relative;
+      min-height: min(56vw, 800px);
+    }
+
+    .cena-flower {
+      position: absolute;
+      top: calc(50% - var(--pad) / 2);
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      height: auto;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .cena-card {
+      background: linear-gradient(135deg, #5C2035 0%, #8E3A55 54%, #B05572 100%);
+      border-radius: 14px;
+      padding: clamp(2.5rem, 5vw, 4rem) clamp(2rem, 5vw, 5rem);
+      position: relative;
+      box-shadow: 0 8px 40px rgba(42, 0, 8, .28);
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .cena-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 14px;
+      background: var(--gold-main);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      padding: 1px;
+      opacity: .42;
+      pointer-events: none;
+    }
+
+    .cena-card .eyebrow {
+      color: rgba(247, 243, 236, .78);
+    }
+
+    .cena-card p {
+      color: rgba(247, 243, 236, .78);
+      font-size: .97rem;
+      line-height: 1.88;
+      margin-bottom: 1rem;
+    }
+
+    .cena-card .fili-corner {
+      width: 110px;
+    }
+
+    .cena-card .fili-lh { top: -7px; left: -7px; }
+    .cena-card .fili-ph { top: -7px; right: -7px; }
+    .cena-card .fili-ld { bottom: -7px; left: -7px; }
+    .cena-card .fili-pd { bottom: -7px; right: -7px; }
+
+    /* Price table – barvy přizpůsobeny tmavému růžovému pozadí */
+    .cena-card .vstup-price-table {
+      border-top: none;
+      border-bottom-color: rgba(198, 155, 69, .22);
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1.6rem;
+    }
+
+    .cena-card .vstup-price-label {
+      color: rgba(247, 243, 236, .78);
+    }
+
+    .cena-card .vstup-price-row--total {
+      border-top-color: rgba(198, 155, 69, .22);
+    }
+
+    .cena-card .vstup-price-row--total .vstup-price-label {
+      color: rgba(247, 243, 236, .92);
+    }
+
+    .cena-card .vstup-price-val {
+      color: rgba(247, 243, 236, .88);
+    }
+
+    .cena-card .vstup-price-row--total .vstup-price-val {
+      color: #E7CD80;
+    }
+
+    .cena-card .vstup-price-note {
+      color: rgba(247, 243, 236, .8);
+    }
+
+    /* ── FAQ ──────────────────────────────────────────────────────── */
+    .faq-section {
+      padding: 1px 0 var(--pad);
+      background: transparent;
+    }
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 3rem;
+      align-items: start;
+    }
+
+    .faq-item {
+      background-color: rgba(255, 250, 240, 0.55);
+      border-radius: 10px;
+      padding: 0 1.25rem;
+      margin-bottom: .6rem;
+      position: relative;
+      box-shadow: 0 2px 12px rgba(100, 50, 20, .07);
+    }
+
+    .faq-item:first-child,
+    .faq-item:nth-child(2) {
+      border-top: none;
+    }
+
+    .faq-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 10px;
+      background: var(--gold-outline);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      padding: 1px;
+      pointer-events: none;
+      opacity: .38;
+    }
+
+    details[open].faq-item::after {
+      background: var(--gold-cta);
+      opacity: 1;
+    }
+
+    .faq-summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      cursor: pointer;
+      list-style: none;
+      font-family: var(--ff-sans);
+      font-size: .97rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.5;
+      user-select: none;
+    }
+
+    .faq-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-icon {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      margin-top: .3rem;
+      transition: transform var(--ease);
+    }
+
+    .faq-icon path {
+      stroke: #C69B45;
+    }
+
+    details[open] .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      padding: 0 1rem 1.4rem 0;
+      font-size: .96rem;
+      color: #4A4A4A;
+      line-height: 1.85;
+    }
+
+    /* ── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 960px) {
+      /* Sekce pod dividery – přidat top padding aby byl rozestup symetrický */
+      .misto-section,
+      .prakticke-section,
+      .cena-section,
+      .faq-section {
+        padding-top: var(--pad);
+      }
+
+      .bezpeci-grid {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+      }
+
+      .misto-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .misto-img-frame {
+        min-height: 360px;
+        order: -1;
+      }
+
+      @media (max-width: 768px) {
+        .misto-img-frame {
+          min-height: 0;
+        }
+      }
+
+      .prakticke-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .prakticke-card:nth-child(n) { grid-column: auto; }
+
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .faq-item:nth-child(2) {
+        border-top: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .prakticke-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .prakticke-card:nth-child(n) { grid-column: auto; }
+
+      /* Bezpečí – menší padding */
+      .bezpeci-section {
+        padding: 5rem 0 6rem;
+      }
+
+      /* Místo grid – srovnat gap s ostatními sekcemi */
+      .misto-grid {
+        gap: 1.5rem;
+      }
+
+      /* Galerie Buchov – zmenšit mezeru nad galerií */
+      .misto-section .gallery-fw {
+        margin-top: 2.5rem !important;
+      }
+
+      /* Cena karta – menší filigranové rohy */
+      .cena-card .fili-corner {
+        width: 60px;
+      }
+
+      /* Cena karta – zarovnání celého ceníku vlevo */
+      .cena-card .vstup-price-table {
+        text-align: left;
+      }
+
+      /* Cena karta – min-height pryč na mobilu */
+      .cena-section {
+        min-height: 0;
+      }
+
+      /* Postranní květiny – skrýt na mobilu */
+      .cena-flower {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ══ NAVIGACE ════════════════════════════════════════ -->
+  <header class="site-header" id="hdr" role="banner">
+    <nav class="nav-bar" aria-label="Hlavní navigace">
+      <ul class="nav-left" role="list">
+        <li><a href="/">Úvod</a></li>
+        <li><a href="/o-skole" aria-current="page">O&nbsp;škole</a></li>
+        <li class="nav-has-dropdown">
+          <a href="/moduly" class="nav-drop-trigger">Moduly <span class="nav-chevron-desk"></span></a>
+        </li>
+        <li><a href="/special">Speciál</a></li>
+      </ul>
+      <div class="nav-center">
+        <a href="/" aria-label="Mysterijní škola ženství – domů">
+          <div class="logo-wrap">
+            <img src="Obrazky/LOGO-zenska-mystika.png" alt="Logo Ženská Mystika" class="logo-img">
+          </div>
+        </a>
+      </div>
+      <ul class="nav-right" role="list">
+        <li class="desktop-only"><a href="/o-mne">O&nbsp;mně</a></li>
+        <li class="desktop-only"><a href="/reference">Reference</a></li>
+        <li class="desktop-only"><a href="/galerie">Galerie</a></li>
+        <li><button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-mob" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button></li>
+      </ul>
+      <a href="vstup.html" class="nav-cta-fixed desktop-only">Vstoupit do školy</a>
+    </nav>
+  </header>
+
+  <div class="nav-dropdown" id="nav-dropdown-desk">
+    <span class="nav-drop-item">Odhalení krásy ženství</span>
+    <span class="nav-drop-item">Posvátný Erós</span>
+    <span class="nav-drop-item">Probuzená ženská intuice</span>
+    <span class="nav-drop-item">Kosmické vědomí ženy</span>
+  </div>
+
+  <nav class="nav-mobile" id="nav-mob" aria-label="Mobilní navigace">
+    <a href="/">Úvod</a>
+    <a href="/o-skole" aria-current="page">O&nbsp;škole</a>
+    <button class="nav-mobile-parent" id="nav-moduly-toggle" aria-expanded="false">Moduly <span
+        class="nav-chevron"></span></button>
+    <div class="nav-submenu" id="nav-submenu-moduly">
+      <span class="nav-sub-item">Odhalení krásy ženství</span>
+      <span class="nav-sub-item">Posvátný Erós</span>
+      <span class="nav-sub-item">Probuzená ženská intuice</span>
+      <span class="nav-sub-item">Kosmické vědomí ženy</span>
+    </div>
+    <a href="/o-mne">O&nbsp;mně</a>
+    <a href="/reference">Reference</a>
+    <a href="/galerie">Galerie</a>
+    <a href="vstup.html" class="nav-mobile-cta">Vstoupit do školy</a>
+  </nav>
+
+  <!-- ══ HERO ═══════════════════════════════════════════ -->
+  <section class="vstup-hero" aria-label="O Mysterijní škole ženství">
+    <div class="vstup-hero-bg oskole-hero-bg" role="img"
+      aria-label="Ženy v meditačním kruhu při Mysterijní škole ženství"></div>
+    <div class="vstup-hero-overlay"></div>
+    <div class="vstup-hero-body">
+      <span class="hero-eyebrow">O&nbsp;škole</span>
+      <h1 class="hero-h1">
+        <span class="hero-script">Tantrická cesta</span>
+        <span class="hero-caps">probuzení vědomého ženství</span>
+      </h1>
+      <p class="hero-text">Mysterijní škola ženství je roční iniciační cestou pro&nbsp;ženy, které touží hlouběji
+        poznat svou ženskou podstatu skrze tantrické umění lásky, spojení s&nbsp;tělem, srdcem a&nbsp;ženskou duší.</p>
+    </div>
+    <div class="soft-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;">
+        <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+      </svg>
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:90px;">
+        <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+      </svg>
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:70px;">
+        <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+      </svg>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- ══ BÉŽOVÁ OBLAST 1 ════════════════════════════════ -->
+    <div class="gradient-bridge">
+
+      <!-- ══ FILOSOFIE ══════════════════════════════════════ -->
+      <section class="recognition" aria-labelledby="filosofie-h2">
+        <div class="wrap">
+          <div class="recognition-grid">
+            <img src="Obrazky/grafika/bg-kvetiny-right.png" class="grid-flower grid-flower-right" alt="" aria-hidden="true" loading="lazy">
+
+            <div class="recognition-content">
+              <span class="eyebrow rv">Filosofie školy</span>
+              <h2 id="filosofie-h2" class="hc rv rv-1">
+                <span class="hc-s">Mysterijní škola &nbsp;jako&nbsp;návrat k&nbsp;sobě</span>
+              </h2>
+              <p class="rv rv-2">Mysterijní škola ženství je prostorem návratu k&nbsp;ženské podstatě skrze tantrické
+                umění lásky, vědomí a&nbsp;vnitřního poznání.</p>
+              <p class="rv rv-3">Tantra je učením skutečné lásky a&nbsp;svobody. Posvátným spojením těla, duše
+                a&nbsp;Božského vědomí, které vede skrze prožitek, vnitřní transformaci a&nbsp;návrat k&nbsp;duchovním
+                principům ženství.</p>
+              <p class="rv rv-4">Tato cesta tě vede k&nbsp;otevření intimního hlubokého vztahu sama k&nbsp;sobě.
+                Ke&nbsp;vstupu do prostoru srdce, spojení se svým lůnem a&nbsp;naslouchání vnitřnímu hlasu intuice.
+                Postupně můžeš probudit svou životní energii, otevřít se větší harmonii, lásce a&nbsp;stát se vědomou
+                tvůrkyní vlastního života.</p>
+              <div class="rv rv-5" style="margin-top:2rem">
+                <a href="vstup.html" class="btn btn-ghost">Vstoupit do&nbsp;školy</a>
+              </div>
+            </div>
+
+            <div class="img-frame recognition-img rv">
+              <img src="Obrazky/o-skole/o-skole-2.jpeg"
+                alt="Žena v hlubokém meditativním propojení se sebou samou při Mysterijní škole ženství"
+                class="main-img" loading="lazy" width="600" height="500">
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <img src="Obrazky/grafika/filigran/filigran-divider-2.png"
+        class="section-divider section-divider--between" alt="" aria-hidden="true" loading="lazy">
+
+      <!-- ══ JAK PROBÍHÁ ══════════════════════════════════ -->
+      <section class="o-skole" aria-labelledby="jak-probiha-h2">
+        <div class="wrap">
+          <div class="o-skole-grid">
+            <img src="Obrazky/grafika/bg-kvetiny-left.png" class="grid-flower grid-flower-left" alt="" aria-hidden="true" loading="lazy">
+
+            <div class="img-frame img-frame-mirror o-skole-img rv rv-2">
+              <img src="Obrazky/ilustracni/prostor-9.jpg"
+                alt="Ženy při vědomé praxi a sdílení v bezpečném prostoru Mysterijní školy ženství"
+                class="main-img" loading="lazy" width="600" height="560">
+            </div>
+
+            <div class="o-skole-content">
+              <span class="eyebrow rv">Jak probíhá roční cesta</span>
+              <h2 id="jak-probiha-h2" class="hc rv rv-1">
+                <span class="hc-s">Postupné otevírání vrstev&nbsp;ženství</span>
+              </h2>
+              <p class="rv rv-2">Každý ze čtyř modulů školy je prostoupen vědomě vytvořenou praxí, která je jemně
+                naladěna na téma daného modulu. Jednotlivé techniky na sebe navazují v&nbsp;harmonickém toku tak, aby ses
+                mohla postupně otevírat hlubšímu vnímání svého těla, emocí, vědomí i&nbsp;duchovní podstaty.</p>
+              <p class="rv rv-3">Skrze meditaci, dech, vědomý pohyb, tantrické techniky, ženské rituály, sdílení
+                i&nbsp;práci s&nbsp;energií se učíš spočívat ve větší přítomnosti, citlivosti a&nbsp;důvěře sama
+                v&nbsp;sebe.</p>
+              <p class="rv rv-4">Každý modul obsahuje pětidenní osobní setkání a&nbsp;navazující online podporu, která
+                umožňuje integraci celé zkušenosti do každodenního života.</p>
+              <div class="rv rv-5" style="margin-top:2rem">
+                <a href="/moduly" class="btn btn-ghost">Přehled modulů</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <img src="Obrazky/grafika/filigran/filigran-divider-3.png"
+        class="section-divider section-divider--between" alt="" aria-hidden="true" loading="lazy">
+
+    </div><!-- /.gradient-bridge -->
+
+    <!-- ══ BEZPEČÍ – tmavá sekce ═══════════════════════════ -->
+    <section class="bezpeci-section" aria-labelledby="bezpeci-h2">
+
+      <div class="zl-wave-top" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:110px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:90px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:70px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+        </svg>
+      </div>
+
+      <div class="wrap">
+        <div class="bezpeci-header">
+          <span class="eyebrow eyebrow-lt rv">Bezpečí a&nbsp;ženský kruh</span>
+          <h2 id="bezpeci-h2" class="hc rv rv-1" style="align-items:center">
+            <span class="hc-s hc-s-dk">Prostor důvěry, citlivosti a&nbsp;respektu</span>
+          </h2>
+        </div>
+
+        <div class="bezpeci-grid">
+
+          <div class="bezpeci-item rv">
+            <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" style="width:80px" alt="" aria-hidden="true" loading="lazy">
+            <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" style="width:80px" alt="" aria-hidden="true" loading="lazy">
+            <h3 class="bezpeci-item-title">Jemný a vědomý prostor</h3>
+            <p>Vstupuješ do posvátného kruhu, kde postupně odložíš napětí, stud, vnitřní obrany i&nbsp;staré
+              příběhy spojené s&nbsp;tělem, ženstvím a&nbsp;intimitou. Vše je vedeno s&nbsp;hlubokou úctou
+              k&nbsp;ženské citlivosti, přirozenosti a&nbsp;jedinečnosti každé ženy.</p>
+          </div>
+
+          <div class="bezpeci-item rv rv-1">
+            <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" style="width:80px" alt="" aria-hidden="true" loading="lazy">
+            <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" style="width:80px" alt="" aria-hidden="true" loading="lazy">
+            <h3 class="bezpeci-item-title">Návrat do těla a důvěry</h3>
+            <p>Tantrické a&nbsp;vědomé praxe jsou pozváním k&nbsp;návratu do těla jako chrámu vědomí, k&nbsp;hlubšímu
+              vnímání sebe, své energie, emocí i&nbsp;schopnosti otevřít se důvěře, jemnosti a&nbsp;pravdivosti. Tělo se
+              stává místem bezpečí, nikoli výkonu.</p>
+          </div>
+
+          <div class="bezpeci-item rv rv-2">
+            <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" style="width:80px" alt="" aria-hidden="true" loading="lazy">
+            <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" style="width:80px" alt="" aria-hidden="true" loading="lazy">
+            <h3 class="bezpeci-item-title">Respekt k hranicím</h3>
+            <p>Každá žena si sama volí, do čeho chce vstoupit, a&nbsp;její hranice jsou plně respektovány. Vědomá
+              komunikace a&nbsp;možnost říci „ano", „ne" či „teď ještě ne" je přirozenou součástí celé cesty.
+              Vše je prostoupeno energií ženské podpory a&nbsp;vzájemného respektu.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="zl-wave-bot" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:90px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:70px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+        </svg>
+      </div>
+
+    </section>
+
+    <!-- ══ BÉŽOVÁ OBLAST 2 ════════════════════════════════ -->
+    <div class="gradient-bridge-2">
+
+      <img src="Obrazky/grafika/filigran/filigran-divider-2.png"
+        class="section-divider section-divider--between after-zena" alt="" aria-hidden="true" loading="lazy">
+
+      <!-- ══ MÍSTO KONÁNÍ ════════════════════════════════ -->
+      <section class="misto-section" aria-labelledby="misto-h2">
+        <div class="wrap">
+          <div class="misto-grid">
+            <img src="Obrazky/grafika/bg-kvetiny-right.png" class="grid-flower grid-flower-right" alt="" aria-hidden="true" loading="lazy">
+
+            <div class="recognition-content">
+              <span class="eyebrow rv">Místo konání</span>
+              <h2 id="misto-h2" class="hc rv rv-1">
+                <span class="hc-s">Centrum Buchov</span>
+              </h2>
+              <p class="rv rv-2">Škola probíhá v&nbsp;centru Buchov, v&nbsp;prostoru obklopeném romantickou přírodou
+                středočeské krajiny na&nbsp;dohled od&nbsp;bájné hory Blaník. Okolní louky, lesy a&nbsp;hluboký klid
+                přírody přirozeně podporují ztišení, vnitřní ponoření i&nbsp;jemné otevření ženského vnímání.</p>
+              <p class="rv rv-3">Atmosféra Buchova podporuje hlubší propojení se&nbsp;sebou samou, s&nbsp;rytmy přírody
+                i&nbsp;s&nbsp;přirozeným plynutím celé iniciační cesty. Součástí prostoru jsou sály pro&nbsp;společnou
+                praxi, ubytování, zahrady, venkovní místa pro&nbsp;odpočinek i&nbsp;možnost spočinout v&nbsp;tichu
+                a&nbsp;jednoduchosti okolní krajiny.</p>
+              <div class="rv rv-4" style="margin-top:2rem">
+                <a href="https://www.centrum-buchov.cz/" class="btn btn-ghost" target="_blank"
+                  rel="noopener">Nahlédnout do&nbsp;prostoru</a>
+              </div>
+            </div>
+
+            <div class="img-frame misto-img-frame rv rv-2">
+              <img src="Obrazky/centrum-buchov/centrum-buchov-1.jpeg"
+                alt="Centrum Buchov – místo konání Mysterijní školy ženství obklopené přírodou středočeské krajiny"
+                class="main-img" loading="lazy" width="700" height="480">
+            </div>
+
+          </div>
+        </div>
+
+        <div class="gallery-fw rv" style="margin-top:6rem" aria-label="Fotogalerie Centra Buchov">
+          <div class="g-item g-tall">
+            <img src="Obrazky/centrum-buchov/centrum-buchov-2.jpeg" alt="Centrum Buchov – interiér a prostory školy" loading="lazy" width="500" height="700">
+          </div>
+          <div class="g-item">
+            <img src="Obrazky/centrum-buchov/centrum-buchov-3.jpeg" alt="Centrum Buchov – zahrada a okolní příroda" loading="lazy" width="500" height="350">
+          </div>
+          <div class="g-item">
+            <img src="Obrazky/centrum-buchov/centrum-buchov-4.jpeg" alt="Centrum Buchov – prostory pro společnou praxi" loading="lazy" width="500" height="350">
+          </div>
+          <div class="g-item g-tall">
+            <img src="Obrazky/centrum-buchov/centrum-buchov-6.jpeg" alt="Centrum Buchov – přírodní rybníček a okolí" loading="lazy" width="500" height="700">
+          </div>
+          <div class="g-item">
+            <img src="Obrazky/centrum-buchov/centrum-buchov-1.jpeg" alt="Centrum Buchov – pohled na žlutý dům a zahradu" loading="lazy" width="500" height="350">
+          </div>
+          <div class="g-item">
+            <img src="Obrazky/centrum-buchov/centrum-buchov-5.jpeg" alt="Centrum Buchov – moderní dřevěná budova" loading="lazy" width="500" height="350">
+          </div>
+        </div>
+
+      </section>
+
+      <img src="Obrazky/grafika/filigran/filigran-divider-3.png"
+        class="section-divider section-divider--between" alt="" aria-hidden="true" loading="lazy">
+
+      <!-- ══ PRAKTICKÉ INFORMACE ═══════════════════════════ -->
+      <section class="prakticke-section" aria-labelledby="prakticke-h2">
+        <div class="wrap">
+
+          <div class="prakticke-header">
+            <span class="eyebrow rv">Praktické informace</span>
+            <h2 id="prakticke-h2" class="hc rv rv-1" style="align-items:center">
+              <span class="hc-s">Co potřebuješ vědět o&nbsp;průběhu školy</span>
+            </h2>
+          </div>
+
+          <div class="prakticke-grid">
+
+            <div class="prakticke-card rv">
+              <div class="prakticke-flower-wrap">
+                <img src="Obrazky/grafika/kvetina-ruze-1.png" class="prakticke-flower" alt="" aria-hidden="true" loading="lazy">
+                <span class="prakticke-num">01</span>
+              </div>
+              <p class="prakticke-card-title">Iniciační cesta</p>
+              <p>Mysterijní škola ženství je roční iniciační cesta. Tvoří ji čtyři navazující pětidenní moduly, každý zaměřený na jiné téma a&nbsp;jinou vrstvu ženské duše.</p>
+            </div>
+
+            <div class="prakticke-card rv rv-1">
+              <div class="prakticke-flower-wrap">
+                <img src="Obrazky/grafika/kvetina-lotos-2.png" class="prakticke-flower" alt="" aria-hidden="true" loading="lazy">
+                <span class="prakticke-num">02</span>
+              </div>
+              <p class="prakticke-card-title">Transformace</p>
+              <p>Jednotlivé moduly na sebe navazují a&nbsp;společně vytváří postupnou cestu ženské transformace,
+                ve které každý krok připravuje půdu pro ten následující.</p>
+            </div>
+
+            <div class="prakticke-card rv rv-2">
+              <div class="prakticke-flower-wrap">
+                <img src="Obrazky/grafika/kvetina-lilie-3.png" class="prakticke-flower" alt="" aria-hidden="true" loading="lazy">
+                <span class="prakticke-num">03</span>
+              </div>
+              <p class="prakticke-card-title">Vědomá praxe</p>
+              <p>Součástí každého modulu jsou meditace, ženské rituály, vědomá práce s&nbsp;tělem, dech, tantrické
+                techniky, sdílení i&nbsp;prostor pro integraci celé zkušenosti.</p>
+            </div>
+
+            <div class="prakticke-card rv">
+              <div class="prakticke-flower-wrap">
+                <img src="Obrazky/grafika/kvetina-lilie-3.png" class="prakticke-flower" alt="" aria-hidden="true" loading="lazy">
+                <span class="prakticke-num">04</span>
+              </div>
+              <p class="prakticke-card-title">Online podpora</p>
+              <p>Mezi jednotlivými moduly probíhá navazující online podpora a&nbsp;prohlubování celé cesty, aby
+                integrace zkušeností mohla pokračovat i&nbsp;v&nbsp;každodenním životě.</p>
+            </div>
+
+            <div class="prakticke-card rv rv-1">
+              <div class="prakticke-flower-wrap">
+                <img src="Obrazky/grafika/kvetina-lotos-2.png" class="prakticke-flower" alt="" aria-hidden="true" loading="lazy">
+                <span class="prakticke-num">05</span>
+              </div>
+              <p class="prakticke-card-title">Ženský kruh</p>
+              <p>Škola probíhá v&nbsp;uzavřeném ženském kruhu v&nbsp;komorním počtu přibližně 20 účastnic. Vzniká tak
+                prostor pro hluboké sdílení, důvěru a&nbsp;individuálnější vedení celé cesty.</p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <img src="Obrazky/grafika/filigran/filigran-divider-2.png"
+        class="section-divider section-divider--between" alt="" aria-hidden="true" loading="lazy">
+
+      <!-- ══ CENA ══════════════════════════════════════════ -->
+      <section class="cena-section" aria-labelledby="cena-h2">
+        <img src="Obrazky/grafika/bg-kvetiny-obe.png" class="cena-flower" alt="" aria-hidden="true" loading="lazy">
+        <div class="wrap">
+          <div class="cena-card rv">
+
+            <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt="" aria-hidden="true" loading="lazy">
+            <img src="Obrazky/grafika/filigran/filigran-corner-PH.png" class="fili-corner fili-ph" alt="" aria-hidden="true" loading="lazy">
+            <img src="Obrazky/grafika/filigran/filigran-corner-LD.png" class="fili-corner fili-ld" alt="" aria-hidden="true" loading="lazy">
+            <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt="" aria-hidden="true" loading="lazy">
+
+            <span class="eyebrow rv">Cena a&nbsp;platby</span>
+            <h2 id="cena-h2" class="hc rv rv-1">
+              <span class="hc-s hc-s-dk">Jak probíhá úhrada školy</span>
+            </h2>
+
+            <div class="vstup-price-table rv rv-2" role="table" aria-label="Ceník školy">
+              <div class="vstup-price-row" role="row">
+                <span class="vstup-price-label" role="cell">Jeden modul</span>
+                <span class="vstup-price-val" role="cell">9&nbsp;990&nbsp;Kč</span>
+              </div>
+              <div class="vstup-price-row" role="row">
+                <span class="vstup-price-label" role="cell">Ubytování a&nbsp;strava</span>
+                <span class="vstup-price-val" role="cell">5&nbsp;500&nbsp;Kč</span>
+              </div>
+              <div class="vstup-price-row vstup-price-row--total" role="row">
+                <span class="vstup-price-label" role="cell">Celkem za celou školu</span>
+                <span class="vstup-price-val" role="cell">39&nbsp;960&nbsp;Kč</span>
+              </div>
+              <div class="vstup-price-note">
+                <span>+ náklady na&nbsp;ubytování a&nbsp;stravu</span>
+                <span>4&nbsp;×&nbsp;5&nbsp;500&nbsp;Kč</span>
+              </div>
+            </div>
+
+            <p class="rv rv-3">Jednotlivé moduly se hradí postupně před každým modulem zvlášť. Po potvrzení účasti uhradíš první modul, kterým je rezervováno tvé místo ve&nbsp;škole.</p>
+            <p class="rv rv-4">Vstupem do školy se zároveň zavazuješ k&nbsp;účasti na&nbsp;celé roční škole
+              a&nbsp;úhradě všech čtyř modulů.</p>
+
+            <div class="rv rv-5" style="margin-top:2.5rem">
+              <a href="vstup.html" class="btn btn-ghost-lt">Vstoupit do&nbsp;školy</a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <img src="Obrazky/grafika/filigran/filigran-divider-3.png"
+        class="section-divider section-divider--between" alt="" aria-hidden="true" loading="lazy">
+
+    </div><!-- /.gradient-bridge-2 -->
+
+    <!-- ══ CITÁT ══════════════════════════════════════════ -->
+    <section class="citat-sekce">
+      <div class="zl-wave-top" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:90px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:70px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+        </svg>
+      </div>
+      <div class="wrap">
+        <div class="zena-laska-inner rv">
+          <img src="Obrazky/grafika/flower-corner.png" class="zl-fili zl-fili-lh" alt="" aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/flower-corner.png" class="zl-fili zl-fili-pd" alt="" aria-hidden="true" loading="lazy">
+          <p class="citat">Tantrická cesta ženy je prožitkem přinášejícím celistvost<br>a&nbsp;hluboké porozumění ženskému principu.</p>
+        </div>
+      </div>
+      <div class="zl-wave-bot" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:90px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:70px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+        </svg>
+      </div>
+    </section>
+
+    <div class="gradient-bridge-3">
+
+      <img src="Obrazky/grafika/filigran/filigran-divider-2.png"
+        class="section-divider section-divider--between after-zena" alt="" aria-hidden="true" loading="lazy">
+
+      <!-- ══ FAQ ═══════════════════════════════════════════ -->
+      <section class="faq-section" aria-labelledby="faq-h2">
+        <div class="wrap">
+
+          <div class="faq-header">
+            <span class="eyebrow rv">Otázky a&nbsp;odpovědi</span>
+            <h2 id="faq-h2" class="hc rv rv-1" style="align-items:center">
+              <span class="hc-s">Na co se ženy nejčastěji ptají</span>
+            </h2>
+          </div>
+
+          <div class="faq-grid">
+
+            <details class="faq-item rv">
+              <summary class="faq-summary">
+                <span>Je tato cesta vhodná i&nbsp;pro citlivé nebo introvertní ženy?</span>
+                <svg class="faq-icon" width="14" height="14" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1 1L7 7L13 1" stroke="#C69B45" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </summary>
+              <p class="faq-answer">Ano. Celá škola je vedena velmi jemně, citlivě a&nbsp;s&nbsp;respektem
+                k&nbsp;individuálnímu tempu každé ženy. Není zde tlak na výkon, sdílení ani překračování vlastních
+                hranic. Můžeš si postupně dovolit otevřít se přesně tak, jak sama cítíš.</p>
+            </details>
+
+            <details class="faq-item rv">
+              <summary class="faq-summary">
+                <span>Jak vypadá běžný den během modulu?</span>
+                <svg class="faq-icon" width="14" height="14" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1 1L7 7L13 1" stroke="#C69B45" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </summary>
+              <p class="faq-answer">Každý modul je veden jako vědomě vytvořený celek, ve kterém na sebe jednotlivé
+                praxe přirozeně navazují. Součástí cesty jsou meditace, dechová cvičení, vědomý pohyb, tantrické
+                techniky, ženské rituály, sdílení, práce s&nbsp;energií, relaxace i&nbsp;prostor pro integraci
+                a&nbsp;odpočinek.</p>
+            </details>
+
+            <details class="faq-item rv rv-1">
+              <summary class="faq-summary">
+                <span>Je tantra pouze o&nbsp;sexualitě?</span>
+                <svg class="faq-icon" width="14" height="14" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1 1L7 7L13 1" stroke="#C69B45" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </summary>
+              <p class="faq-answer">Ne. Tantra je uměním vědomého života, které propojuje tělo, lásku, krásu, vědomí
+                a&nbsp;spiritualitu. Sexualita je její přirozenou součástí, zároveň je však mnohem širší cestou hluboké
+                přítomnosti, meditace, vnitřní transformace a&nbsp;otevření se životu v&nbsp;jeho celistvosti.</p>
+            </details>
+
+            <details class="faq-item rv rv-1">
+              <summary class="faq-summary">
+                <span>Co ženy po této cestě nejčastěji prožívají?</span>
+                <svg class="faq-icon" width="14" height="14" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1 1L7 7L13 1" stroke="#C69B45" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </summary>
+              <p class="faq-answer">Ženy často mluví o&nbsp;hlubším pocitu bezpečí samy v&nbsp;sobě, větší lásce
+                k&nbsp;vlastnímu tělu, otevření intuice, uvolnění starých strachů, větší citlivosti, důvěře
+                a&nbsp;návratu k&nbsp;vlastní ženské podstatě. Mnohé ženy popisují, že poprvé skutečně prožily hlubší
+                pocit přijetí, vnitřního klidu a&nbsp;spojení samy se&nbsp;sebou.</p>
+            </details>
+
+            <details class="faq-item rv rv-2">
+              <summary class="faq-summary">
+                <span>Pracuje se ve škole s&nbsp;nahotou a&nbsp;intimitou?</span>
+                <svg class="faq-icon" width="14" height="14" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1 1L7 7L13 1" stroke="#C69B45" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </summary>
+              <p class="faq-answer">Nahota je v&nbsp;Mysterijní škole ženství vnímána jako přirozený návrat k&nbsp;čistotě
+                bytí, svobodě a&nbsp;hlubokému přijetí sebe sama. Celý prostor je veden s&nbsp;hlubokou úctou, citlivostí
+                a&nbsp;respektem k&nbsp;ženské jedinečnosti. Veškeré intimní a&nbsp;tantrické praxe jsou dobrovolné
+                a&nbsp;každá žena si sama volí, do čeho chce vstoupit.</p>
+            </details>
+
+            <details class="faq-item rv rv-2">
+              <summary class="faq-summary">
+                <span>Mohu se zúčastnit pouze jednoho modulu?</span>
+                <svg class="faq-icon" width="14" height="14" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1 1L7 7L13 1" stroke="#C69B45" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </summary>
+              <p class="faq-answer">Mysterijní škola ženství je vytvořena jako ucelená roční iniciační cesta,
+                ve&nbsp;které jednotlivé moduly na sebe navazují a&nbsp;společně tvoří hlubší proces ženské transformace.
+                Z&nbsp;tohoto důvodu je podmínkou účast na&nbsp;všech čtyřech modulech. Platba probíhá postupně před
+                každým modulem.</p>
+            </details>
+
+            <details class="faq-item rv rv-3">
+              <summary class="faq-summary">
+                <span>Jsou součástí školy vědomý dotek a&nbsp;masáže?</span>
+                <svg class="faq-icon" width="14" height="14" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1 1L7 7L13 1" stroke="#C69B45" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </summary>
+              <p class="faq-answer">Ano. Vědomý dotek a&nbsp;masáže probíhají v&nbsp;energii laskavosti, jemnosti
+                a&nbsp;posvátnosti. Dotek se stává prostorem důvěry, uvolnění a&nbsp;hlubšího propojení se sebou samou.
+                Nic není vynucováno a&nbsp;každá žena může kdykoliv vyjádřit své hranice a&nbsp;říci „ne".</p>
+            </details>
+
+            <details class="faq-item rv rv-3">
+              <summary class="faq-summary">
+                <span>Mohu se školy zúčastnit i&nbsp;s&nbsp;dcerou?</span>
+                <svg class="faq-icon" width="14" height="14" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1 1L7 7L13 1" stroke="#C69B45" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </summary>
+              <p class="faq-answer">Mysterijní škola ženství je určena ženám od&nbsp;18&nbsp;let. Pokud cítíš volání
+                sdílet tuto cestu se&nbsp;svou dcerou, může do školy vstoupit po&nbsp;dosažení plnoletosti.</p>
+            </details>
+
+            <details class="faq-item rv rv-4">
+              <summary class="faq-summary">
+                <span>Musím mít zkušenost s&nbsp;tantrou, meditací nebo ženskými kruhy?</span>
+                <svg class="faq-icon" width="14" height="14" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1 1L7 7L13 1" stroke="#C69B45" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </summary>
+              <p class="faq-answer">Ne. Škola je otevřená ženám začátečnicím i&nbsp;pokročilým. Důležitá je otevřenost,
+                citlivost k&nbsp;sobě samé a&nbsp;vnitřní volání vydat se hlouběji na&nbsp;cestu sebepoznání.</p>
+            </details>
+
+            <details class="faq-item rv rv-4">
+              <summary class="faq-summary">
+                <span>Mohu se školy zúčastnit, pokud procházím psychicky náročnějším obdobím?</span>
+                <svg class="faq-icon" width="14" height="14" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1 1L7 7L13 1" stroke="#C69B45" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </summary>
+              <p class="faq-answer">Mysterijní škola ženství je zaměřena na osobní a&nbsp;duchovní rozvoj skrze vědomou
+                ženskou praxi. Nenahrazuje psychoterapii, psychiatrickou péči ani odbornou léčbu. Pokud procházíš
+                náročnějším obdobím nebo máš psychická či zdravotní omezení, je možné vše předem citlivě probrat
+                v&nbsp;individuálním online rozhovoru.</p>
+            </details>
+
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /.gradient-bridge-3 -->
+
+    <!-- ══ CTA SEKCE ═════════════════════════════════════ -->
+    <section class="cta-section" aria-labelledby="cta-h">
+      <div class="cta-bg" role="img" aria-label="Atmosféra ženského rituálu a sdílení v Mysterijní škole ženství"></div>
+      <div class="cta-overlay"></div>
+      <div class="soft-wave--top" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:110px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:90px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:70px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+        </svg>
+      </div>
+      <div class="cta-body">
+        <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt=""
+          aria-hidden="true" loading="lazy">
+        <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt=""
+          aria-hidden="true" loading="lazy">
+        <span class="eyebrow eyebrow-lt rv">Stačí jen tvé vnitřní ANO</span>
+        <span class="cta-script rv rv-1">Dovol si vstoupit</span>
+        <span id="cta-h" class="cta-caps rv rv-1">na cestu hlubšího poznání sebe sama</span>
+        <p class="rv rv-2">Pokud cítíš, že tě tato cesta volá, můžeš vstoupit do prostoru Mysterijní školy ženství
+          a&nbsp;otevřít se hlubší proměně svého ženství, vědomí i&nbsp;vztahu sama k&nbsp;sobě.</p>
+        <div class="cta-deco rv rv-2" aria-hidden="true">
+          <span></span>
+          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L7 7L13 1" stroke="rgba(198,155,69,0.5)" stroke-width="1.5" />
+          </svg>
+        </div>
+        <div class="rv rv-3">
+          <a href="vstup.html" class="btn btn-gold">Vstoupit do školy</a>
+        </div>
+      </div>
+      <div class="soft-wave soft-wave--footer" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(42,0,8,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:90px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(42,0,8,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:70px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#2A0008" />
+        </svg>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ PATIČKA ════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+
+      <div class="footer-cols">
+
+        <div class="footer-col footer-col-left">
+          <p class="footer-col-name">Martina Anjali Výborná</p>
+          <p class="footer-col-addr">Křižíkova 1873/16<br>430&nbsp;01 Chomutov</p>
+          <a href="mailto:anjali@martinavyborna.cz" class="footer-col-link footer-col-link--gold"
+            style="margin-top:.9rem">anjali@martinavyborna.cz</a>
+          <a href="tel:+420603529357" class="footer-col-link footer-col-link--gold"
+            style="margin-top:-.42rem">+420&nbsp;603&nbsp;529&nbsp;357</a>
+          <div class="footer-social" style="margin-top:.9rem">
+            <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col footer-col-center">
+          <h2 class="footer-statement-title">Mysterijní škola ženství</h2>
+          <a href="vstup.html" class="btn btn-ghost-lt" style="font-size:.76rem; padding:.7rem 1.8rem">Vstoupit do
+            školy</a>
+        </div>
+
+        <div class="footer-col footer-col-right">
+          <ul class="footer-col-links">
+            <li><a href="/">Úvod</a></li>
+            <li><a href="/o-skole" aria-current="page">O&nbsp;škole</a></li>
+            <li><a href="/special">Speciál</a></li>
+            <li><a href="/o-mne">O&nbsp;mně</a></li>
+            <li><a href="/reference">Reference</a></li>
+            <li><a href="/galerie">Galerie</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-mid">
+        <div class="footer-mid-legal">
+          <p>Fyzická osoba podnikající dle živnostenského zákona</p>
+          <p>IČO:&nbsp;68427212</p>
+        </div>
+        <div class="footer-mid-zprac">
+          <p><a href="/zpracovani-osobnich-udaju">Zpracování osobních údajů</a></p>
+          <p><a href="/cookies">Cookies</a></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2026 Mysterijní škola ženství. Všechna práva vyhrazena. Webdesign <a
+            href="https://harmonickyweb.cz" target="_blank" rel="noopener">harmonickyweb.cz</a></p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ══ LIGHTBOX ══════════════════════════════════════ -->
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Prohlížeč fotografií">
+    <div class="lb-inner">
+      <button class="lb-btn lb-prev" id="lb-prev" aria-label="Předchozí fotografie">&#8592;</button>
+      <img class="lb-img" id="lb-img" src="" alt="">
+      <button class="lb-btn lb-next" id="lb-next" aria-label="Následující fotografie">&#8594;</button>
+    </div>
+    <button class="lb-close" id="lb-close" aria-label="Zavřít">&times;</button>
+    <span class="lb-counter" id="lb-counter"></span>
+  </div>
+
+  <!-- ══ COOKIE ════════════════════════════════════════ -->
+  <div class="cookie" id="cookie" role="dialog" aria-labelledby="ck-label">
+    <div class="wrap">
+      <div class="cookie-inner">
+        <p>
+          <span id="ck-label"
+            style="font-weight:600; color:rgba(247,243,236,.65); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; display:block; margin-bottom:.25rem">Soubory
+            cookie</span>
+          Tento web používá technické cookies nezbytné pro správné fungování stránek.
+          <a href="/zpracovani-osobnich-udaju">Více informací</a>
+        </p>
+        <div class="cookie-btns">
+          <button class="cookie-no" id="ck-no">Odmítnout</button>
+          <button class="cookie-ok" id="ck-ok">Přijmout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Zpět nahoru"><span>&#8593;</span></button>
+
+  <script>
+    /* ── Navigace ────────────────────────────────────── */
+    const hdr = document.getElementById('hdr');
+    const scrollTopBtn = document.getElementById('scroll-top-btn');
+    const setHeaderH = () => {
+      document.documentElement.style.setProperty('--header-h', Math.ceil(hdr.getBoundingClientRect().bottom) + 'px');
+    };
+    setHeaderH();
+    window.addEventListener('resize', setHeaderH, { passive: true });
+
+    const closeMenu = () => {
+      mob.classList.remove('open');
+      hbtn.classList.remove('open');
+      hbtn.setAttribute('aria-expanded', false);
+    };
+    window.addEventListener('scroll', () => {
+      hdr.classList.toggle('scrolled', scrollY > 60);
+      scrollTopBtn.classList.toggle('visible', scrollY > 300);
+      if (scrollY > 40) closeMenu();
+    }, { passive: true });
+    scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    const hbtn = document.getElementById('hamburger');
+    const mob = document.getElementById('nav-mob');
+    hbtn.addEventListener('click', () => {
+      const o = hbtn.classList.toggle('open');
+      mob.classList.toggle('open', o);
+      hbtn.setAttribute('aria-expanded', o);
+    });
+
+    const deskDrop = document.getElementById('nav-dropdown-desk');
+    const deskTrigger = document.querySelector('.nav-drop-trigger');
+    const deskLi = document.querySelector('.nav-has-dropdown');
+    if (deskDrop && deskTrigger && deskLi) {
+      let deskCloseTimer;
+      const openDeskDrop = () => {
+        clearTimeout(deskCloseTimer);
+        deskDrop.classList.add('open');
+        deskLi.classList.add('nav-drop-active');
+        const r = deskTrigger.getBoundingClientRect();
+        const w = deskDrop.offsetWidth;
+        deskDrop.style.top = Math.ceil(r.bottom + 24) + 'px';
+        deskDrop.style.left = Math.max(0, Math.round(r.left + r.width / 2 - w / 2)) + 'px';
+      };
+      const closeDeskDrop = () => {
+        deskCloseTimer = setTimeout(() => {
+          deskDrop.classList.remove('open');
+          deskLi.classList.remove('nav-drop-active');
+        }, 120);
+      };
+      deskLi.addEventListener('mouseenter', openDeskDrop);
+      deskLi.addEventListener('mouseleave', closeDeskDrop);
+      deskDrop.addEventListener('mouseenter', () => clearTimeout(deskCloseTimer));
+      deskDrop.addEventListener('mouseleave', closeDeskDrop);
+    }
+
+    const modulyToggle = document.getElementById('nav-moduly-toggle');
+    const modulySubmenu = document.getElementById('nav-submenu-moduly');
+    modulyToggle.addEventListener('click', () => {
+      const o = modulyToggle.classList.toggle('open');
+      modulySubmenu.classList.toggle('open', o);
+      modulyToggle.setAttribute('aria-expanded', o);
+    });
+
+    /* ── Scroll reveal ───────────────────────────────── */
+    const rv = document.querySelectorAll('.rv');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: .08 });
+    rv.forEach(el => io.observe(el));
+
+    /* ── Lightbox – galerie Centrum Buchov ──────────── */
+    const lb = document.getElementById('lb');
+    const lbImg = document.getElementById('lb-img');
+    const lbCounter = document.getElementById('lb-counter');
+    const galleryItems = [...document.querySelectorAll('.gallery-fw .g-item')];
+    const imgs = galleryItems.map(el => ({ src: el.querySelector('img').src, alt: el.querySelector('img').alt }));
+    let current = 0;
+
+    function lbShow(i) {
+      current = (i + imgs.length) % imgs.length;
+      lbImg.src = imgs[current].src;
+      lbImg.alt = imgs[current].alt;
+      lbCounter.textContent = `${current + 1} / ${imgs.length}`;
+      lb.classList.add('open');
+    }
+
+    function lbClose() { lb.classList.remove('open'); }
+
+    galleryItems.forEach((el, i) => el.addEventListener('click', () => lbShow(i)));
+    document.getElementById('lb-prev').addEventListener('click', e => { e.stopPropagation(); lbShow(current - 1); });
+    document.getElementById('lb-next').addEventListener('click', e => { e.stopPropagation(); lbShow(current + 1); });
+    document.getElementById('lb-close').addEventListener('click', lbClose);
+    lb.addEventListener('click', e => { if (e.target === lb) lbClose(); });
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'ArrowLeft') lbShow(current - 1);
+      if (e.key === 'ArrowRight') lbShow(current + 1);
+      if (e.key === 'Escape') lbClose();
+    });
+
+    /* ── Cookie ──────────────────────────────────────── */
+    const ck = document.getElementById('cookie');
+    if (!localStorage.getItem('ck')) setTimeout(() => ck.classList.add('on'), 800);
+    document.getElementById('ck-ok').addEventListener('click', () => { localStorage.setItem('ck', 'ok'); ck.classList.remove('on'); });
+    document.getElementById('ck-no').addEventListener('click', () => { localStorage.setItem('ck', 'no'); ck.classList.remove('on'); });
+  </script>
+</body>
+
+</html>

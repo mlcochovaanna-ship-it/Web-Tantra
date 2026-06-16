@@ -18,6 +18,15 @@
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='none' stroke='%23C69B45' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%23C69B45' stroke-width='1'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23C69B45'/%3E%3Cline x1='32' y1='4' x2='32' y2='14' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='32' y1='50' x2='32' y2='60' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='4' y1='32' x2='14' y2='32' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='50' y1='32' x2='60' y2='32' stroke='%23C69B45' stroke-width='1.5'/%3E%3C/svg%3E">
 
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .vstup-page-hero-bg {
+      background-image: linear-gradient(155deg, #1A000C 0%, #520014 52%, #6E0018 100%);
+    }
+    .vstup-page-hero-bg + .vstup-hero-overlay {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -78,7 +87,7 @@
 
   <!-- ══ HERO ═══════════════════════════════════════════ -->
   <section class="vstup-hero" aria-label="Vstup do Mysterijní školy ženství">
-    <div class="vstup-hero-bg" id="vstup-hbg" role="img"
+    <div class="vstup-hero-bg vstup-page-hero-bg" id="vstup-hbg" role="img"
       aria-label="Ženy ve sdílení a vzájemném propojení při Mysterijní škole ženství"></div>
     <div class="vstup-hero-overlay"></div>
     <div class="vstup-hero-body">
@@ -421,6 +430,7 @@
         deskLi.classList.add('nav-drop-active');
         const r = deskTrigger.getBoundingClientRect();
         const w = deskDrop.offsetWidth;
+        deskDrop.style.top = Math.ceil(r.bottom + 24) + 'px';
         deskDrop.style.left = Math.max(0, Math.round(r.left + r.width / 2 - w / 2)) + 'px';
       };
       const closeDeskDrop = () => {
