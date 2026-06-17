@@ -578,7 +578,7 @@ h3 {
   display: flex;
 }
 
-.nav-mobile a:not(.nav-mobile-cta) {
+.nav-mobile a:not(.nav-mobile-cta):not(.nav-sub-item) {
   font-family: var(--ff-sans);
   font-size: .88rem;
   font-weight: 500;
@@ -2146,7 +2146,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem 3rem;
-  padding: 2.5rem 0 2.5rem;
+  padding: 2.5rem 0 0.75rem;
   position: relative;
 }
 
@@ -2266,9 +2266,8 @@ h3 {
 .footer-mid {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   gap: .5rem 2rem;
-  padding: 1.5rem 0;
+  padding: 0.5rem 0 1.5rem;
   justify-content: space-between;
 }
 
@@ -2499,7 +2498,7 @@ h3 {
     border-radius: 0 0 0 6px;
   }
 
-  .nav-mobile a:not(.nav-mobile-cta) {
+  .nav-mobile a:not(.nav-mobile-cta):not(.nav-sub-item) {
     margin-inline: 0;
     padding: 1.1rem 3rem;
   }
@@ -3258,18 +3257,11 @@ h3 {
   cursor: default;
 }
 
-.footer-col-links a[aria-current="page"] {
-  background: var(--gold-outline);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  opacity: .8;
-}
 
 /* ── VSTUP – hero ─────────────────────────────── */
 .vstup-hero {
   position: relative;
-  min-height: 52vh;
+  min-height: 68vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3277,7 +3269,7 @@ h3 {
   text-align: center;
   overflow: hidden;
   padding-top: var(--header-h);
-  padding-bottom: var(--header-h);
+  padding-bottom: 112px;
 }
 
 @media (min-width:769px) and (max-width:1100px) {
@@ -3838,7 +3830,7 @@ h3 {
 
 @media (max-width:768px) {
   .vstup-hero {
-    min-height: 58vh;
+    min-height: 62vh;
   }
 
   .vstup-hero-body {

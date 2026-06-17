@@ -30,7 +30,7 @@
         <li><a href="index.html">Úvod</a></li>
         <li><a href="o-skole.html">O škole</a></li>
         <li class="nav-has-dropdown">
-          <a href="#" class="nav-drop-trigger">Moduly <span class="nav-chevron-desk"></span></a>
+          <a href="moduly.html" class="nav-drop-trigger">Moduly <span class="nav-chevron-desk"></span></a>
         </li>
         <li><a href="#">Speciál</a></li>
       </ul>
@@ -55,9 +55,9 @@
 
   <div class="nav-dropdown" id="nav-dropdown-desk">
     <a href="odhaleni-krasy-zenstvi.html" class="nav-drop-item">Odhalení krásy ženství</a>
-    <span class="nav-drop-item">Posvátný Erós</span>
-    <span class="nav-drop-item">Probuzená ženská intuice</span>
-    <span class="nav-drop-item">Kosmické vědomí ženy</span>
+    <a href="posvatny-eros.html" class="nav-drop-item">Posvátný Erós</a>
+    <a href="probuzena-zenska-intuice.html" class="nav-drop-item">Probuzená ženská intuice</a>
+    <a href="kosmicke-vedomi-zeny.html" class="nav-drop-item">Kosmické vědomí ženy</a>
   </div>
 
   <nav class="nav-mobile" id="nav-mob" aria-label="Mobilní navigace">
@@ -67,9 +67,9 @@
         class="nav-chevron"></span></button>
     <div class="nav-submenu" id="nav-submenu-moduly">
       <a href="odhaleni-krasy-zenstvi.html" class="nav-sub-item">Odhalení krásy ženství</a>
-      <span class="nav-sub-item">Posvátný Erós</span>
-      <span class="nav-sub-item">Probuzená ženská intuice</span>
-      <span class="nav-sub-item">Kosmické vědomí ženy</span>
+      <a href="posvatny-eros.html" class="nav-sub-item">Posvátný Erós</a>
+      <a href="probuzena-zenska-intuice.html" class="nav-sub-item">Probuzená ženská intuice</a>
+      <a href="kosmicke-vedomi-zeny.html" class="nav-sub-item">Kosmické vědomí ženy</a>
     </div>
     <a href="#">O mně</a>
     <a href="#">Reference</a>
@@ -332,6 +332,7 @@
           <ul class="footer-col-links">
             <li><a href="index.html">Úvod</a></li>
             <li><a href="o-skole.html">O škole</a></li>
+            <li><a href="moduly.html">Moduly</a></li>
             <li><a href="#">Speciál</a></li>
             <li><a href="#">O mně</a></li>
             <li><a href="#">Reference</a></li>
@@ -385,11 +386,17 @@
     /* ── Navigation ─────────────────────────────── */
     const hdr = document.getElementById('hdr');
     const scrollTopBtn = document.getElementById('scroll-top-btn');
+    const hbtn = document.getElementById('hamburger');
+    const mob = document.getElementById('nav-mob');
+
     const setHeaderH = () => {
       document.documentElement.style.setProperty('--header-h', Math.ceil(hdr.getBoundingClientRect().bottom) + 'px');
     };
     setHeaderH();
     window.addEventListener('resize', setHeaderH, { passive: true });
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', setHeaderH);
+    }
 
     const closeMenu = () => {
       mob.classList.remove('open');
@@ -398,13 +405,12 @@
     };
     window.addEventListener('scroll', () => {
       hdr.classList.toggle('scrolled', scrollY > 60);
+      setHeaderH();
       scrollTopBtn.classList.toggle('visible', scrollY > 300);
-      if (scrollY > 40) closeMenu();
+      if (scrollY > 40 && !mob.classList.contains('open')) closeMenu();
     }, { passive: true });
     scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-    const hbtn = document.getElementById('hamburger');
-    const mob = document.getElementById('nav-mob');
     hbtn.addEventListener('click', () => {
       const o = hbtn.classList.toggle('open');
       mob.classList.toggle('open', o);

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moduly školy | Mysterijní škola ženství</title>
+  <meta name="description"
+    content="Čtyři iniciační moduly Mysterijní školy ženství. Odhalení krásy ženství, Posvátný Erós, Probuzená ženská intuice a Kosmické vědomí ženy. Roční iniciační cesta pro ženy.">
+  <link rel="canonical" href="https://zenskamystika.cz/moduly">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zenskamystika.cz/moduly">
+  <meta property="og:title" content="Moduly školy | Mysterijní škola ženství">
+  <meta property="og:description"
+    content="Čtyři iniciační moduly – brány do hluboké ženské transformace. Roční iniciační cesta pro ženy skrze tantrické umění lásky.">
+  <meta property="og:image" content="https://zenskamystika.cz/Obrazky/modul-1/modul-1-7.jpg">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='none' stroke='%23C69B45' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%23C69B45' stroke-width='1'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23C69B45'/%3E%3Cline x1='32' y1='4' x2='32' y2='14' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='32' y1='50' x2='32' y2='60' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='4' y1='32' x2='14' y2='32' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='50' y1='32' x2='60' y2='32' stroke='%23C69B45' stroke-width='1.5'/%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── MODULY – stránkové styly ─────────────────────────────── */
+    .moduly-hero-bg {
+      background-image: url('Obrazky/o-skole/skola-uvod.jpg');
+      background-position: center 40%;
+    }
+
+    /* Moduly sekce – větší padding nahoře */
+    .moduly-page .moduly-wrapper {
+      padding-top: var(--pad);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ══ NAVIGACE ════════════════════════════════════════ -->
+  <header class="site-header" id="hdr" role="banner">
+    <nav class="nav-bar" aria-label="Hlavní navigace">
+      <ul class="nav-left" role="list">
+        <li><a href="index.html">Úvod</a></li>
+        <li><a href="o-skole.html">O&nbsp;škole</a></li>
+        <li class="nav-has-dropdown">
+          <a href="moduly.html" class="nav-drop-trigger" aria-current="page">Moduly <span class="nav-chevron-desk"></span></a>
+        </li>
+        <li><a href="#">Speciál</a></li>
+      </ul>
+      <div class="nav-center">
+        <a href="index.html" aria-label="Mysterijní škola ženství – domů">
+          <div class="logo-wrap">
+            <img src="Obrazky/LOGO-zenska-mystika.png" alt="Logo Ženská Mystika" class="logo-img">
+          </div>
+        </a>
+      </div>
+      <ul class="nav-right" role="list">
+        <li class="desktop-only"><a href="#">O&nbsp;mně</a></li>
+        <li class="desktop-only"><a href="#">Reference</a></li>
+        <li class="desktop-only"><a href="#">Galerie</a></li>
+        <li><button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-mob" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button></li>
+      </ul>
+      <a href="vstup.html" class="nav-cta-fixed desktop-only">Vstoupit do školy</a>
+    </nav>
+  </header>
+
+  <div class="nav-dropdown" id="nav-dropdown-desk">
+    <a href="odhaleni-krasy-zenstvi.html" class="nav-drop-item">Odhalení krásy ženství</a>
+    <a href="posvatny-eros.html" class="nav-drop-item">Posvátný Erós</a>
+    <a href="probuzena-zenska-intuice.html" class="nav-drop-item">Probuzená ženská intuice</a>
+    <a href="kosmicke-vedomi-zeny.html" class="nav-drop-item">Kosmické vědomí ženy</a>
+  </div>
+
+  <nav class="nav-mobile" id="nav-mob" aria-label="Mobilní navigace">
+    <a href="index.html">Úvod</a>
+    <a href="o-skole.html">O&nbsp;škole</a>
+    <button class="nav-mobile-parent" id="nav-moduly-toggle" aria-expanded="false">Moduly <span
+        class="nav-chevron"></span></button>
+    <div class="nav-submenu" id="nav-submenu-moduly">
+      <a href="odhaleni-krasy-zenstvi.html" class="nav-sub-item">Odhalení krásy ženství</a>
+      <a href="posvatny-eros.html" class="nav-sub-item">Posvátný Erós</a>
+      <a href="probuzena-zenska-intuice.html" class="nav-sub-item">Probuzená ženská intuice</a>
+      <a href="kosmicke-vedomi-zeny.html" class="nav-sub-item">Kosmické vědomí ženy</a>
+    </div>
+    <a href="#">O&nbsp;mně</a>
+    <a href="#">Reference</a>
+    <a href="#">Galerie</a>
+    <a href="vstup.html" class="nav-mobile-cta">Vstoupit do školy</a>
+  </nav>
+
+  <!-- ══ HERO ═══════════════════════════════════════════ -->
+  <section class="vstup-hero" aria-label="Moduly Mysterijní školy ženství">
+    <div class="vstup-hero-bg moduly-hero-bg" role="img"
+      aria-label="Ženy v posvátném prostoru Mysterijní školy ženství"></div>
+    <div class="vstup-hero-overlay"></div>
+    <div class="vstup-hero-body">
+      <span class="hero-eyebrow">Čtyři brány ženství</span>
+      <h1 class="hero-h1">
+        <span class="hero-script">Cesta do mystických vod</span>
+        <span class="hero-caps">ženské duše</span>
+      </h1>
+      <p class="hero-text">Čtyři navazující iniciační moduly tě postupně provedou cestou těla, srdce, intuice i&nbsp;vědomého prožívání života v&nbsp;lásce, pravdě a&nbsp;vnitřní harmonii.</p>
+    </div>
+    <div class="soft-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;">
+        <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+      </svg>
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:90px;">
+        <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+      </svg>
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:70px;">
+        <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+      </svg>
+    </div>
+  </section>
+
+  <main>
+
+    <div class="gradient-bridge moduly-page">
+
+      <!-- ══ MODULY ══════════════════════════════════════════ -->
+      <div class="moduly-wrapper">
+
+        <div class="moduly-header">
+          <div class="wrap">
+            <span class="eyebrow rv">Přehled modulů</span>
+            <h2 class="hc rv rv-1" style="align-items:center">
+              <span class="hc-s">Čtyři iniciační setkání</span>
+            </h2>
+          </div>
+        </div>
+
+        <section class="moduly-section" aria-label="Přehled čtyř iniciačních modulů">
+          <div class="moduly-grid">
+
+            <!-- ══ MODUL 1 ════════════════════════════════════════ -->
+            <div class="module-card-frame">
+              <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt=""
+                aria-hidden="true" loading="lazy">
+              <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt=""
+                aria-hidden="true" loading="lazy">
+              <article class="module-card m1">
+                <div class="module-card-img">
+                  <img src="Obrazky/modul-1/modul-1-7.jpg"
+                    alt="Ženy při pohybové praxi a tanci v prvním modulu Odhalení krásy ženství" loading="lazy"
+                    width="800" height="533">
+                </div>
+                <div class="module-card-content">
+                  <img src="Obrazky/chakra/heart.png" class="module-chakra" alt="" aria-hidden="true">
+                  <div class="module-num rv">I. iniciační modul</div>
+                  <h3 class="hc module-h3 rv rv-1">
+                    <span class="hc-s hc-s-dk">Odhalení krásy ženství</span>
+                  </h3>
+                  <div class="module-date rv rv-1">22.&nbsp;4.&nbsp;–&nbsp;26.&nbsp;4.&nbsp;2026 • Centrum Buchov</div>
+                  <p class="rv rv-2">Společně vstoupíme do vibrace srdce a&nbsp;duše, ze&nbsp;které se rodí skutečné ženství. Skrze hluboký kontakt se svým tělem, ženskou esencí a&nbsp;vnitřní krásou začneš znovu objevovat úctu a&nbsp;důvěru k&nbsp;sobě i&nbsp;ke svému ženství.</p>
+                  <div class="module-tags rv rv-2">
+                    <span>ženskost</span><span>srdce</span><span>jemnost</span><span>sebeláska</span><span>otevření</span>
+                  </div>
+                  <div class="rv rv-3">
+                    <a href="odhaleni-krasy-zenstvi.html" class="btn btn-ghost-lt"
+                      aria-label="Více o modulu Odhalení krásy ženství">Více o&nbsp;modulu</a>
+                  </div>
+                </div>
+              </article>
+            </div><!-- /.module-card-frame -->
+
+            <!-- ══ MODUL 2 ════════════════════════════════════════ -->
+            <div class="module-card-frame">
+              <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt=""
+                aria-hidden="true" loading="lazy">
+              <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt=""
+                aria-hidden="true" loading="lazy">
+              <article class="module-card m2">
+                <div class="module-card-img">
+                  <img src="Obrazky/modul-2/modul-2-10.jpg"
+                    alt="Ženy při práci s emocemi a životní energií ve druhém modulu Posvátný Erós" loading="lazy"
+                    width="800" height="533">
+                </div>
+                <div class="module-card-content">
+                  <img src="Obrazky/chakra/second.png" class="module-chakra" alt="" aria-hidden="true">
+                  <div class="module-num rv">II. iniciační modul</div>
+                  <h3 class="hc module-h3 rv rv-1">
+                    <span class="hc-s hc-s-dk">Posvátný Erós</span>
+                  </h3>
+                  <div class="module-date rv rv-1">16.&nbsp;9.&nbsp;–&nbsp;20.&nbsp;9.&nbsp;2026 • Centrum Buchov</div>
+                  <p class="rv rv-2">Otevřeme se posvátnému Erótu, emočnímu plynutí a&nbsp;životní síle ženy. Skrze práci s&nbsp;energií lůna, emocemi a&nbsp;elementem vody budeme prohlubovat přítomnost, objevovat umění milování jako meditace a&nbsp;rozvíjet citlivost i&nbsp;úctu k&nbsp;cykličnosti posvátné brány jóni.</p>
+                  <div class="module-tags rv rv-2">
+                    <span>Shakti</span><span>posvátný Erós</span><span>emoce</span><span>umění milování</span><span>životní energie</span>
+                  </div>
+                  <div class="rv rv-3">
+                    <a href="posvatny-eros.html" class="btn btn-ghost-lt"
+                      aria-label="Více o modulu Posvátný Erós">Více o&nbsp;modulu</a>
+                  </div>
+                </div>
+              </article>
+            </div><!-- /.module-card-frame -->
+
+            <!-- ══ MODUL 3 ════════════════════════════════════════ -->
+            <div class="module-card-frame">
+              <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt=""
+                aria-hidden="true" loading="lazy">
+              <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt=""
+                aria-hidden="true" loading="lazy">
+              <article class="module-card m3">
+                <div class="module-card-img">
+                  <img src="Obrazky/ilustracni/prostor-5-web.jpeg"
+                    alt="Ženy rozvíjejí intuici a jasnozřivost ve třetím modulu Probuzená ženská intuice" loading="lazy"
+                    width="800" height="533">
+                </div>
+                <div class="module-card-content">
+                  <img src="Obrazky/chakra/third-eye.png" class="module-chakra" alt="" aria-hidden="true">
+                  <div class="module-num rv">III. iniciační modul</div>
+                  <h3 class="hc module-h3 rv rv-1">
+                    <span class="hc-s hc-s-dk">Probuzená ženská intuice</span>
+                  </h3>
+                  <div class="module-date rv rv-1">17.&nbsp;3.&nbsp;–&nbsp;21.&nbsp;3.&nbsp;2027 • Centrum Buchov</div>
+                  <p class="rv rv-2">Společně se otevřeme hlubšímu spojení s&nbsp;vyšším Já, intuicí a&nbsp;jemným vnímáním energií. Budeme kultivovat citlivost, smyslovost a&nbsp;důvěru ve vnitřní vedení, které přináší jasnost, moudrost a&nbsp;schopnost nahlížet za oponu viditelného, v&nbsp;souladu s&nbsp;duší i&nbsp;celkem.</p>
+                  <div class="module-tags rv rv-2">
+                    <span>Jasnozřivost</span><span>intuice</span><span>vnímání energií</span><span>vnitřní vedení</span>
+                  </div>
+                  <div class="rv rv-3">
+                    <a href="probuzena-zenska-intuice.html" class="btn btn-ghost-lt"
+                      aria-label="Více o modulu Probuzená ženská intuice">Více o&nbsp;modulu</a>
+                  </div>
+                </div>
+              </article>
+            </div><!-- /.module-card-frame -->
+
+            <!-- ══ MODUL 4 ════════════════════════════════════════ -->
+            <div class="module-card-frame">
+              <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt=""
+                aria-hidden="true" loading="lazy">
+              <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt=""
+                aria-hidden="true" loading="lazy">
+              <article class="module-card m4">
+                <div class="module-card-img">
+                  <img src="Obrazky/modul-4/modul-4-12.jpg"
+                    alt="Ženy při rituálu a vědomém propojení ve čtvrtém modulu Kosmické vědomí ženy" loading="lazy"
+                    width="800" height="533">
+                </div>
+                <div class="module-card-content">
+                  <img src="Obrazky/chakra/crown.png" class="module-chakra" alt="" aria-hidden="true">
+                  <div class="module-num rv">IV. iniciační modul</div>
+                  <h3 class="hc module-h3 rv rv-1">
+                    <span class="hc-s hc-s-dk">Kosmické vědomí ženy</span>
+                  </h3>
+                  <div class="module-date rv rv-1">26.&nbsp;5.&nbsp;–&nbsp;30.&nbsp;5.&nbsp;2027 • Centrum Buchov</div>
+                  <p class="rv rv-2">Naše cesta bude završena hlubokým propojením posvátného Erótu, srdce, intuice a&nbsp;vědomí. Bude oslavou sjednocení vnitřní i&nbsp;kosmické podstaty ženy v&nbsp;rezonanci s&nbsp;Božskou podstatou. Otevřeme se jednotě, vnitřnímu tichu, ve&nbsp;kterém se žena navrací do hlubokého souladu se&nbsp;životem i&nbsp;existencí samotnou.</p>
+                  <div class="module-tags rv rv-2">
+                    <span>Jednota</span><span>vědomí</span><span>transcendence</span><span>propojení</span><span>hloubka</span>
+                  </div>
+                  <div class="rv rv-3">
+                    <a href="kosmicke-vedomi-zeny.html" class="btn btn-ghost-lt"
+                      aria-label="Více o modulu Kosmické vědomí ženy">Více o&nbsp;modulu</a>
+                  </div>
+                </div>
+              </article>
+            </div><!-- /.module-card-frame -->
+
+          </div>
+        </section>
+
+      </div><!-- /.moduly-wrapper -->
+
+    </div><!-- /.gradient-bridge -->
+
+    <!-- ══ CTA SEKCE ═════════════════════════════════════ -->
+    <section class="cta-section" aria-labelledby="cta-h">
+      <div class="cta-bg" role="img" aria-label="Atmosféra ženského rituálu a sdílení v Mysterijní škole ženství"></div>
+      <div class="cta-overlay"></div>
+      <div class="soft-wave--top" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:110px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:90px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:70px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+        </svg>
+      </div>
+      <div class="cta-body">
+        <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt=""
+          aria-hidden="true" loading="lazy">
+        <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt=""
+          aria-hidden="true" loading="lazy">
+        <span class="eyebrow eyebrow-lt rv">Stačí jen tvé vnitřní ANO</span>
+        <span class="cta-script rv rv-1">Připoj se k ženám,</span>
+        <span id="cta-h" class="cta-caps rv rv-1">které vyslyšely volání své duše</span>
+        <p class="rv rv-2">Pokud cítíš, že tě tato cesta volá, zvu tě vstoupit do posvátného prostoru školy a&nbsp;stát se součástí ženského kruhu této iniciační cesty.</p>
+        <div class="cta-deco rv rv-2" aria-hidden="true">
+          <span></span>
+          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L7 7L13 1" stroke="rgba(198,155,69,0.5)" stroke-width="1.5" />
+          </svg>
+        </div>
+        <div class="rv rv-3">
+          <a href="vstup.html" class="btn btn-gold">Vstoupit do školy</a>
+        </div>
+      </div>
+      <div class="soft-wave soft-wave--footer" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(42,0,8,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:90px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(42,0,8,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:70px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#2A0008" />
+        </svg>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ PATIČKA ════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+
+      <div class="footer-cols">
+
+        <div class="footer-col footer-col-left">
+          <p class="footer-col-name">Martina Anjali Výborná</p>
+          <p class="footer-col-addr">Křižíkova 1873/16<br>430&nbsp;01 Chomutov</p>
+          <a href="mailto:anjali@martinavyborna.cz" class="footer-col-link footer-col-link--gold"
+            style="margin-top:.9rem">anjali@martinavyborna.cz</a>
+          <a href="tel:+420603529357" class="footer-col-link footer-col-link--gold"
+            style="margin-top:-.42rem">+420&nbsp;603&nbsp;529&nbsp;357</a>
+          <div class="footer-social" style="margin-top:.9rem">
+            <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col footer-col-center">
+          <h2 class="footer-statement-title">Mysterijní škola ženství</h2>
+          <a href="vstup.html" class="btn btn-ghost-lt" style="font-size:.76rem; padding:.7rem 1.8rem">Vstoupit do
+            školy</a>
+        </div>
+
+        <div class="footer-col footer-col-right">
+          <ul class="footer-col-links">
+            <li><a href="index.html">Úvod</a></li>
+            <li><a href="o-skole.html">O&nbsp;škole</a></li>
+            <li><a href="moduly.html" aria-current="page">Moduly</a></li>
+            <li><a href="#">O&nbsp;mně</a></li>
+            <li><a href="#">Reference</a></li>
+            <li><a href="#">Galerie</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-mid">
+        <div class="footer-mid-legal">
+          <p>Fyzická osoba podnikající dle živnostenského zákona</p>
+          <p>IČO:&nbsp;68427212</p>
+        </div>
+        <div class="footer-mid-zprac">
+          <p><a href="/zpracovani-osobnich-udaju">Zpracování osobních údajů</a></p>
+          <p><a href="/cookies">Cookies</a></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2026 Mysterijní škola ženství. Všechna práva vyhrazena. Webdesign <a
+            href="https://harmonickyweb.cz" target="_blank" rel="noopener">harmonickyweb.cz</a></p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ══ COOKIE ════════════════════════════════════════ -->
+  <div class="cookie" id="cookie" role="dialog" aria-labelledby="ck-label">
+    <div class="wrap">
+      <div class="cookie-inner">
+        <p>
+          <span id="ck-label"
+            style="font-weight:600; color:rgba(247,243,236,.65); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; display:block; margin-bottom:.25rem">Soubory
+            cookie</span>
+          Tento web používá technické cookies nezbytné pro správné fungování stránek.
+          <a href="/zpracovani-osobnich-udaju">Více informací</a>
+        </p>
+        <div class="cookie-btns">
+          <button class="cookie-no" id="ck-no">Odmítnout</button>
+          <button class="cookie-ok" id="ck-ok">Přijmout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Zpět nahoru"><span>&#8593;</span></button>
+
+  <script>
+    /* ── Navigace ────────────────────────────────────── */
+    const hdr = document.getElementById('hdr');
+    const scrollTopBtn = document.getElementById('scroll-top-btn');
+    const hbtn = document.getElementById('hamburger');
+    const mob = document.getElementById('nav-mob');
+
+    const setHeaderH = () => {
+      document.documentElement.style.setProperty('--header-h', Math.ceil(hdr.getBoundingClientRect().bottom) + 'px');
+    };
+    setHeaderH();
+    window.addEventListener('resize', setHeaderH, { passive: true });
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', setHeaderH);
+    }
+
+    const closeMenu = () => {
+      mob.classList.remove('open');
+      hbtn.classList.remove('open');
+      hbtn.setAttribute('aria-expanded', false);
+    };
+    window.addEventListener('scroll', () => {
+      hdr.classList.toggle('scrolled', scrollY > 60);
+      setHeaderH();
+      scrollTopBtn.classList.toggle('visible', scrollY > 300);
+      if (scrollY > 40 && !mob.classList.contains('open')) closeMenu();
+    }, { passive: true });
+    scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    hbtn.addEventListener('click', () => {
+      const o = hbtn.classList.toggle('open');
+      mob.classList.toggle('open', o);
+      hbtn.setAttribute('aria-expanded', o);
+    });
+
+    const deskDrop = document.getElementById('nav-dropdown-desk');
+    const deskTrigger = document.querySelector('.nav-drop-trigger');
+    const deskLi = document.querySelector('.nav-has-dropdown');
+    if (deskDrop && deskTrigger && deskLi) {
+      let deskCloseTimer;
+      const openDeskDrop = () => {
+        clearTimeout(deskCloseTimer);
+        deskDrop.classList.add('open');
+        deskLi.classList.add('nav-drop-active');
+        const r = deskTrigger.getBoundingClientRect();
+        const w = deskDrop.offsetWidth;
+        deskDrop.style.top = Math.ceil(r.bottom + 24) + 'px';
+        deskDrop.style.left = Math.max(0, Math.round(r.left + r.width / 2 - w / 2)) + 'px';
+      };
+      const closeDeskDrop = () => {
+        deskCloseTimer = setTimeout(() => {
+          deskDrop.classList.remove('open');
+          deskLi.classList.remove('nav-drop-active');
+        }, 120);
+      };
+      deskLi.addEventListener('mouseenter', openDeskDrop);
+      deskLi.addEventListener('mouseleave', closeDeskDrop);
+      deskDrop.addEventListener('mouseenter', () => clearTimeout(deskCloseTimer));
+      deskDrop.addEventListener('mouseleave', closeDeskDrop);
+    }
+
+    const modulyToggle = document.getElementById('nav-moduly-toggle');
+    const modulySubmenu = document.getElementById('nav-submenu-moduly');
+    modulyToggle.addEventListener('click', () => {
+      const o = modulyToggle.classList.toggle('open');
+      modulySubmenu.classList.toggle('open', o);
+      modulyToggle.setAttribute('aria-expanded', o);
+    });
+
+    /* ── Scroll reveal ───────────────────────────────── */
+    const rv = document.querySelectorAll('.rv');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: .08 });
+    rv.forEach(el => io.observe(el));
+
+    /* ── Cookie ──────────────────────────────────────── */
+    const ck = document.getElementById('cookie');
+    if (!localStorage.getItem('ck')) setTimeout(() => ck.classList.add('on'), 800);
+    document.getElementById('ck-ok').addEventListener('click', () => { localStorage.setItem('ck', 'ok'); ck.classList.remove('on'); });
+    document.getElementById('ck-no').addEventListener('click', () => { localStorage.setItem('ck', 'no'); ck.classList.remove('on'); });
+  </script>
+</body>
+
+</html>
