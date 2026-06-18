@@ -2113,7 +2113,7 @@ h3 {
   justify-content: center;
   cursor: pointer;
   z-index: 200;
-  border-radius: 50%;
+  border-radius: 10px;
   transition: opacity var(--ease), transform var(--ease);
   padding: 0;
 }
