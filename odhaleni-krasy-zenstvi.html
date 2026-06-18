@@ -30,7 +30,7 @@
 
     /* Hero overlay – M1 tónování (přepisuje globální vstup-hero-overlay) */
     .m1-hero-overlay {
-      background-color: rgba(61, 11, 38, .32) !important;
+      background-color: transparent !important;
       background-image:
         radial-gradient(ellipse 50% 62% at center, rgba(34, 5, 22, .84) 0%, rgba(34, 5, 22, .40) 55%, rgba(34, 5, 22, 0) 100%) !important;
     }
@@ -44,7 +44,8 @@
 
     .m1-chakra-hero img {
       width: 68px;
-      height: auto;
+      height: 68px;
+      object-fit: contain;
       opacity: .88;
       filter: drop-shadow(0 4px 20px rgba(0, 0, 0, .55)) drop-shadow(0 0 12px rgba(198, 155, 69, .45));
     }

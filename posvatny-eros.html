@@ -30,7 +30,7 @@
 
     /* Hero overlay – M2 tónování bordó/vínová */
     .m2-hero-overlay {
-      background-color: rgba(18, 3, 3, .32) !important;
+      background-color: transparent !important;
       background-image:
         radial-gradient(ellipse 50% 62% at center, rgba(18, 3, 3, .84) 0%, rgba(18, 3, 3, .40) 55%, rgba(18, 3, 3, 0) 100%) !important;
     }
@@ -44,7 +44,8 @@
 
     .m2-chakra-hero img {
       width: 68px;
-      height: auto;
+      height: 68px;
+      object-fit: contain;
       opacity: .88;
       filter: drop-shadow(0 4px 20px rgba(0, 0, 0, .55)) drop-shadow(0 0 12px rgba(198, 155, 69, .45));
     }
