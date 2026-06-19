@@ -32,7 +32,7 @@
     .m1-hero-overlay {
       background-color: transparent !important;
       background-image:
-        radial-gradient(ellipse 50% 62% at center, rgba(34, 5, 22, .84) 0%, rgba(34, 5, 22, .40) 55%, rgba(34, 5, 22, 0) 100%) !important;
+        radial-gradient(ellipse 50% 62% at center, rgba(50, 3, 19, .84) 0%, rgba(50, 3, 19, .40) 55%, rgba(50, 3, 19, 0) 100%) !important;
     }
 
     /* Čakra – nad eyebrow */
@@ -48,16 +48,6 @@
       object-fit: contain;
       opacity: .88;
       filter: drop-shadow(0 4px 20px rgba(0, 0, 0, .55)) drop-shadow(0 0 12px rgba(198, 155, 69, .45));
-    }
-
-    /* Zmenšit mezeru mezi H1 a textem */
-    .vstup-hero .hero-text {
-      margin-top: 1rem;
-    }
-
-    /* H1 jako jeden řádek Corinthia */
-    .vstup-hero .hero-h1 .hero-script {
-      white-space: nowrap;
     }
 
     /* Datum – světlejší zlatý tón, mezera před tlačítkem */
@@ -82,11 +72,11 @@
       overflow: hidden;
       background:
         linear-gradient(135deg,
-          rgba(61, 11, 38, .67) 0%,
-          rgba(107, 22, 79, .61) 30%,
-          rgba(157, 41, 104, .55) 54%,
-          rgba(107, 22, 79, .61) 76%,
-          rgba(61, 11, 38, .67) 100%),
+          rgba(90, 6, 32, .67) 0%,
+          rgba(158, 12, 67, .61) 30%,
+          rgba(232, 23, 88, .55) 54%,
+          rgba(158, 12, 67, .61) 76%,
+          rgba(90, 6, 32, .67) 100%),
         url('Obrazky/ritualni-obrazy/1-modul.jpg') center top / cover no-repeat fixed;
     }
 
@@ -159,11 +149,11 @@
     .prozivek-card {
       position: relative;
       background:
-        linear-gradient(135deg, #3d0b26 0%, #6b164f 54%, #9d2968 100%) padding-box,
+        linear-gradient(135deg, #5A0620 0%, #9E0C43 54%, #E81758 100%) padding-box,
         linear-gradient(90deg, #9A6D2B 0%, #D7B85F 52%, #9A6D2B 100%) border-box;
       border: 1px solid transparent;
       border-radius: 14px;
-      box-shadow: 0 8px 40px rgba(42, 0, 8, .25), 0 2px 12px rgba(0, 0, 0, .15);
+      box-shadow: 0 8px 40px rgba(90, 6, 32, .25), 0 2px 12px rgba(0, 0, 0, .15);
       padding: 4.5rem 3rem;
     }
 
@@ -232,14 +222,14 @@
     .m1-citat-sekce {
       background:
         linear-gradient(135deg,
-          rgba(61, 11, 38, .83)   0%,
-          rgba(79, 15, 54, .80)  12%,
-          rgba(97, 19, 68, .77)  24%,
-          rgba(107, 22, 79, .74) 36%,
-          rgba(127, 28, 90, .68) 54%,
-          rgba(142, 34, 97, .60) 70%,
-          rgba(152, 39, 102, .54) 84%,
-          rgba(157, 41, 104, .48) 100%),
+          rgba(90, 6, 32, .83)   0%,
+          rgba(117, 8, 46, .80)  12%,
+          rgba(143, 11, 58, .77)  24%,
+          rgba(158, 12, 67, .74) 36%,
+          rgba(188, 16, 76, .68) 54%,
+          rgba(210, 19, 82, .60) 70%,
+          rgba(225, 22, 86, .54) 84%,
+          rgba(232, 23, 88, .48) 100%),
         url('Obrazky/grafika/bg-anjali-rose-right.jpg') center / cover no-repeat fixed;
     }
 
@@ -354,16 +344,6 @@
     }
 
     @media (max-width: 768px) {
-      /* Hero nadpis větší na mobilu */
-      .vstup-hero .hero-script {
-        font-size: clamp(3rem, 9vw, 4rem);
-      }
-
-      /* Menší mezera nad čakrou */
-      .hero-eyebrow {
-        margin-bottom: .5rem;
-      }
-
       /* Datum menším písmem */
       .m1-hero-datum {
         font-size: .82rem;
@@ -450,7 +430,7 @@
   </nav>
 
   <!-- ══ HERO ═══════════════════════════════════════════ -->
-  <section class="vstup-hero" aria-label="I. iniciační modul – Odhalení krásy ženství">
+  <section class="vstup-hero vstup-hero--modul" aria-label="I. iniciační modul – Odhalení krásy ženství">
     <div class="vstup-hero-bg m1-hero-bg" role="img"
       aria-label="Ženy v posvátném kruhu se svíčkami při prvním iniciačním modulu Odhalení krásy ženství"></div>
     <div class="vstup-hero-overlay m1-hero-overlay"></div>
