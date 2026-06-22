@@ -1450,6 +1450,47 @@ h3 {
   margin-inline: auto;
 }
 
+/* ── PŘEHLED TERMÍNŮ ──────────────────────────── */
+.terminy-section {
+  padding: 1px 0 var(--pad);
+  background: transparent;
+}
+
+.terminy-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  scroll-margin-top: calc(var(--header-h, 5.5rem) + 1rem);
+}
+
+.terminy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.terminy-grid .vstup-info-card {
+  margin-bottom: 0;
+}
+
+.terminy-grid .vstup-price-table {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.terminy-grid .fili-corner {
+  width: 56px;
+}
+
+.terminy-grid .fili-lh { top: -5px; left: -5px; }
+.terminy-grid .fili-pd { bottom: -5px; right: -5px; }
+
+.vstup-price-val--tbd {
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(74, 74, 74, .6);
+}
+
 .module-card-frame {
   position: relative;
 }
@@ -2751,6 +2792,11 @@ h3 {
   .moduly-section {
     padding-top: 0;
     padding-bottom: calc(var(--pad) + 1rem);
+  }
+
+  .terminy-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .anjali {

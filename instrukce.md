@@ -398,25 +398,25 @@ Celá cesta probíhá v intimním kruhu žen, v bezpečném prostoru hlubokého 
 Cesta do mystických vod ženské duše
 Modul 1
 Odhalení Bohyně
-22.4. – 26.4. 2026
+23.4. – 26.4. 2026
 Společně vstoupíme do vibrace srdce, ze kterého se rodí skutečné ženství. Skrze hluboký kontakt se svým tělem, ženskou esencí a vnitřní krásou začneš znovu objevovat úctu sama k sobě i ke svému ženství.
 Ženskost • tělo • jemnost • sebeláska • otevření
 → Více o modulu (tlačítko)
 Modul 2
 Posvátná sexualita
-16.9. – 20.9. 2026
+17.9. – 20.9. 2026
 Otevřeme se emočnímu plynutí, smyslnosti a životní síle ženy. Skrze práci s energií lůna, emocemi a elementem vody se budeme navracet k přirozené vášni, extázi, citlivosti a hlubokému spojení se sebou samou.
 Shakti • sexualita • emoce • vášeň • životní energie
 → Více o modulu (tlačítko)
 Modul 3
 Žena jako léčitelka
-17.3. – 21.3. 2027
+18.3. – 21.3. 2027
 Společně se otevřeme intuici, jasnozřivosti a ženským darům, které v sobě každá žena přirozeně nese. Budeme probouzet hlubší důvěru ve vlastní vnitřní vedení, moudrost a schopnost vidět pod povrch věcí.
 Intuice • jasnozřivost • ženské dary • vnitřní vedení
 → Více o modulu (tlačítko)
 Modul 4
 Kosmické vědomí ženy
-26.5. – 30.5. 2027
+27.5. – 30.5. 2027
 Naše cesta bude završena hlubokým propojením těla, srdce, intuice a vědomí. Otevřeme se jednotě, vnitřnímu tichu a kosmickému vědomí, ve kterém se žena navrací do hlubokého souladu se životem i existencí samotnou.
 Jednota • vědomí • transcendence • propojení • duchovní hloubka
 → Více o modulu (tlačítko)
@@ -462,7 +462,7 @@ I. iniciační modul
 /* H1 */
 Odhalení Bohyně
 /* Datum a místo */
-22.4. – 26.4. 2026 • Centrum Buchov
+23.4. – 26.4. 2026 • Centrum Buchov
 /* Hero text */
 Vstupujeme do vibrace srdce, ze kterého se rodí skutečné ženství. Skrze hluboký kontakt se svým tělem, ženskou esencí a vnitřní krásou začneme znovu objevovat úctu sama k sobě i ke svému ženství.
 /* Tlačítko */
@@ -528,7 +528,7 @@ II. iniciační modul
 /* H1 */
 Posvátná sexualita
 /* Datum a místo */
-16.9. – 20.9. 2026 • Centrum Buchov
+17.9. – 20.9. 2026 • Centrum Buchov
 /* Hero text */
 Otevřeme se emočnímu plynutí, smyslnosti a životní síle ženy. Skrze propojení s energií lůna, emocemi a elementem vody se budeme navracet k přirozené vášni, extázi, citlivosti a hlubokému spojení se sebou samou.
 /* Tlačítko */
@@ -592,7 +592,7 @@ III. iniciační modul
 /* H1 */
 Žena jako léčitelka
 /* Datum a místo */
-17.3. – 21.3. 2027 • Centrum Buchov
+18.3. – 21.3. 2027 • Centrum Buchov
 /* Hero text */
 Otevřeme se intuici, jasnozřivosti a ženským darům, které v sobě každá žena přirozeně nese. Budeme probouzet hlubší důvěru ve vlastní vnitřní vedení, moudrost a schopnost vidět pod povrch věcí.
 /* Tlačítko */
@@ -656,7 +656,7 @@ IV. iniciační modul
 /* H1 */
 Kosmické vědomí ženy
 /* Datum a místo */
-26.5. – 30.5. 2027 • Centrum Buchov
+27.5. – 30.5. 2027 • Centrum Buchov
 /* Hero text */
 Naše ženská cesta skrze lásku, oddanost a soucit je završena hlubokým splynutím těla, duše a vědomí. Otevřeme se jednotě, vnitřnímu tichu a kosmickému vědomí, ve kterém se navracíme do souladu s celou Existencí.
 /* Tlačítko */
