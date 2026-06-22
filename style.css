@@ -3277,10 +3277,6 @@ h3 {
   min-height: clamp(620px, 78vh, 780px);
 }
 
-.vstup-hero--modul .hero-text {
-  margin-top: 1rem;
-}
-
 /* Script řádek H1 nikdy nezalomit – platí pro všechny .vstup-hero stránky */
 .vstup-hero .hero-h1 .hero-script {
   white-space: nowrap;
@@ -3337,6 +3333,11 @@ h3 {
   font-size: 1.05rem;
   max-width: 640px;
   margin: 2.5rem auto 1.75rem;
+}
+
+/* Moduly – menší mezera mezi H1 a textem (musí být až po obecném pravidlu výše) */
+.vstup-hero--modul .hero-text {
+  margin-top: .8rem;
 }
 
 /* ── VSTUP – hlavní sekce ──────────────────────── */
