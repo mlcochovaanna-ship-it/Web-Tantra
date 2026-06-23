@@ -1475,11 +1475,32 @@ h3 {
 
 .terminy-grid .vstup-price-table {
   border-bottom: none;
+  margin-top: .6rem;
   padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .terminy-grid .fili-corner {
   width: 56px;
+}
+
+.terminy-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .75rem;
+  margin-bottom: 0;
+}
+
+.terminy-card-head .eyebrow {
+  margin-bottom: 0;
+}
+
+.terminy-card-tag {
+  font-style: italic;
+  font-weight: 700;
+  font-size: .85rem;
+  color: #4A4A4A;
 }
 
 .terminy-grid .fili-lh { top: -5px; left: -5px; }
@@ -1535,15 +1556,65 @@ h3 {
   overflow: hidden;
 }
 
-.module-chakra {
+.module-chakra-wrap {
   position: absolute;
   top: clamp(2.5rem, 4vw, 4rem);
   right: clamp(2rem, 4vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .6rem;
+  pointer-events: none;
+  text-align: center;
+}
+
+.module-chakra {
+  position: static;
   width: 128px;
   height: auto;
   opacity: 1;
-  pointer-events: none;
   filter: drop-shadow(0 4px 16px rgba(0, 0, 0, .5)) drop-shadow(0 0 8px rgba(198, 155, 69, .3));
+}
+
+.module-chakra-label {
+  font-family: var(--ff-sans);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .03em;
+  line-height: 1.4;
+  max-width: 150px;
+  color: rgba(247, 243, 236, .80);
+}
+
+.module-card.m4 .module-chakra-label { color: rgba(74, 74, 74, .82); }
+
+/* ── Čakrová karta – samostatný řádek nad gridem Témata cesty ─── */
+.temata-card--chakra {
+  width: calc((100% - 3 * 1.5rem) / 4 * 2 + 1.5rem);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+@media (max-width: 960px) {
+  .temata-card--chakra { width: 100%; max-width: 480px; }
+}
+
+.temata-chakra-name {
+  font-family: var(--ff-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  color: #F5E7B2;
+  line-height: 1.4;
+}
+
+.temata-chakra-qualities {
+  font-size: .9rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(247, 243, 236, .90);
 }
 
 .module-card.m1 .module-card-content { background: var(--m1); }
@@ -1559,6 +1630,26 @@ h3 {
 .module-card.m2 .module-card-img img { object-position: center 20%; }
 .module-card.m3 .module-card-img img { object-position: center top; }
 .module-card.m4 .module-card-img img { object-position: center center; }
+
+/* M4 – bílé pozadí karty, text přebarven na tmavou */
+.module-card.m4 .module-num,
+.module-card.m4 .module-date,
+.module-card.m4 .module-card-content p { color: rgba(74, 74, 74, .82); }
+
+.module-card.m4 .module-tags span { color: rgba(138, 101, 42, .95); }
+.module-card.m4 .module-tags span + span::before { color: rgba(138, 101, 42, .5); }
+
+.module-card.m4 .module-chakra {
+  filter: drop-shadow(0 4px 16px rgba(230, 211, 168, .5)) drop-shadow(0 0 8px rgba(198, 155, 69, .3));
+}
+
+.module-card.m4 .btn-ghost-lt {
+  background: var(--gold-outline);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.module-card.m4 .btn-ghost-lt::before { background: var(--gold-outline); }
+.module-card.m4 .btn-ghost-lt:hover { background: var(--gold-outline); }
 
 .module-num {
   color: rgba(247, 243, 236, .78);
@@ -3015,17 +3106,29 @@ h3 {
     width: clamp(120px, 40%, 200px);
   }
 
+  .module-chakra-wrap {
+    top: 10px;
+    right: 10px;
+    gap: .3rem;
+  }
+
   .module-chakra {
     width: 65px;
     height: auto;
-    top: 10px;
-    right: 10px;
+  }
+
+  .module-chakra-label {
+    font-size: .62rem;
+    max-width: 110px;
+  }
+
+  .module-card.m3 .module-chakra-wrap {
+    top: 5px;
   }
 
   .module-card.m3 .module-chakra {
     width: 72px;
     height: auto;
-    top: 5px;
   }
 
   .ref-cards {
@@ -3795,6 +3898,16 @@ h3 {
   font-weight: 600;
   color: var(--gold-mid);
   white-space: nowrap;
+}
+
+.vstup-price-row--sub .vstup-price-label {
+  font-size: .82rem;
+  color: #4A4A4A;
+  opacity: .72;
+}
+
+.vstup-price-row--sub .vstup-price-val {
+  font-size: .82rem;
 }
 
 .vstup-price-row--total {
