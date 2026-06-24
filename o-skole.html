@@ -132,6 +132,132 @@
       right: -5px;
     }
 
+    /* ── PROČ TANTRICKÁ CESTA – tmavá sekce ──────────────────────── */
+    .proc-tantra-section {
+      position: relative;
+      overflow: hidden;
+      background-color: #5C2035;
+      padding: 9rem 0 11rem;
+    }
+
+    .proc-tantra-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background-image: linear-gradient(rgba(92, 32, 53, .1), rgba(92, 32, 53, .1)),
+        url('Obrazky/ilustracni/prostor-3.jpeg');
+      background-size: cover;
+      background-position: center center;
+      background-attachment: scroll;
+    }
+
+    @media (min-width: 1101px) {
+      .proc-tantra-bg {
+        background-attachment: fixed;
+      }
+    }
+
+    @media (hover: none),
+    (pointer: coarse) {
+      .proc-tantra-bg {
+        background-attachment: scroll;
+      }
+    }
+
+    .proc-tantra-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      scroll-margin-top: calc(var(--header-h, 5.5rem) + 1rem);
+    }
+
+    .proc-tantra-grid {
+      max-width: none;
+      margin: 0 auto 3rem;
+      padding: 2.5rem clamp(2rem, 4vw, 3.5rem);
+      position: relative;
+      z-index: 2;
+      background: rgba(42, 0, 8, .40);
+      border: 1.5px solid rgba(215, 184, 95, .60);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 16px;
+      box-shadow: 0 8px 40px rgba(42, 0, 8, .35), 0 2px 12px rgba(0, 0, 0, .2);
+    }
+
+    .proc-tantra-grid .fili-corner {
+      width: 90px;
+    }
+
+    .proc-tantra-grid .fili-lh {
+      top: -7px;
+      left: -7px;
+    }
+
+    .proc-tantra-grid .fili-ph {
+      top: -7px;
+      right: -7px;
+    }
+
+    .proc-tantra-grid .fili-ld {
+      bottom: -7px;
+      left: -7px;
+    }
+
+    .proc-tantra-grid .fili-pd {
+      bottom: -7px;
+      right: -7px;
+    }
+
+    .proc-tantra-text {
+      column-count: 3;
+      column-gap: 2.5rem;
+      column-fill: balance;
+    }
+
+    .proc-tantra-text p {
+      font-size: 1rem;
+      line-height: 1.88;
+      color: rgba(247, 243, 236, .82);
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+
+    .proc-tantra-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 1100px) {
+      .proc-tantra-text {
+        column-count: 2;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .proc-tantra-text {
+        column-count: 1;
+      }
+    }
+
+    .proc-tantra-question {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: rgba(247, 243, 236, .82);
+      text-align: center;
+      max-width: 900px;
+      margin: 2.75rem auto 0;
+    }
+
+    .proc-tantra-question .hc-s {
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .proc-tantra-section {
+        padding: 6rem 0 7rem;
+      }
+    }
+
     /* ── MÍSTO KONÁNÍ ─────────────────────────────────────────────── */
     .misto-section {
       padding: 1px 0 var(--pad);
@@ -779,8 +905,89 @@
         </div>
       </section>
 
-      <img src="Obrazky/grafika/filigran/filigran-divider-2.png" class="section-divider section-divider--between" alt=""
-        aria-hidden="true" loading="lazy">
+    </div><!-- /.gradient-bridge -->
+
+    <img src="Obrazky/grafika/filigran/filigran-divider-3.png" class="section-divider section-divider--between" alt=""
+      aria-hidden="true" loading="lazy">
+
+    <!-- ══ PROČ TANTRICKÁ CESTA ════════════════════════════ -->
+    <section class="proc-tantra-section" aria-labelledby="proc-tantra-h2">
+      <div class="proc-tantra-bg" aria-hidden="true"></div>
+      <div class="zl-wave-top" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:110px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:90px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:70px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+        </svg>
+      </div>
+
+      <div class="wrap">
+        <div class="proc-tantra-grid rv">
+          <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt=""
+            aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/filigran/filigran-corner-PH.png" class="fili-corner fili-ph" alt=""
+            aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/filigran/filigran-corner-LD.png" class="fili-corner fili-ld" alt=""
+            aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt=""
+            aria-hidden="true" loading="lazy">
+
+          <div class="proc-tantra-header" id="proc-tantra-h2">
+            <span class="eyebrow eyebrow-lt rv">Hlubší pohled</span>
+            <h2 class="hc rv rv-1" style="align-items:center">
+              <span class="hc-s hc-s-dk">Co&nbsp;je autentická tantra?</span>
+            </h2>
+          </div>
+
+          <div class="proc-tantra-text">
+            <p>Se&nbsp;slovem tantra se setkáváme stále častěji, přesto kolem něj přetrvává mnoho nepochopení
+              a&nbsp;obav. Na&nbsp;západě bývá spojována především se sexualitou a&nbsp;tělesným potěšením. To je
+              ale jen málo z&nbsp;mnohem hlubší tradice.</p>
+
+            <p>Pro ženu je tantrická cesta pozváním k&nbsp;návratu do vlastní přirozenosti, k&nbsp;rozpomenutí
+              si, kým ve&nbsp;skutečnosti je.
+              K&nbsp;probuzení citlivosti, tvořivosti, magnetismu a&nbsp;síly srdce. A&nbsp;k&nbsp;uvolnění
+              z&nbsp;neustálé kontroly do&nbsp;důvěry a&nbsp;odevzdání.</p>
+
+            <p>V&nbsp;tantrické tradici jsou Shiva a&nbsp;Shakti symbolem dvou doplňujících se principů:
+              vědomí a&nbsp;tvořivé síly. Jejich sjednocením vzniká posvátná harmonie, ve&nbsp;které se
+              mužské a&nbsp;ženské kvality vzájemně probouzejí. Když se žena otevírá své podstatě Shakti, prožívá
+              hlouběji svou smyslnost, intuici i&nbsp;schopnost odevzdání. A&nbsp;ve&nbsp;vztahu s&nbsp;vědomým mužem
+              se to může stát společnou cestou růstu.</p>
+
+            <p>Skutečná tantra je cestou vědomí, otevřeného srdce, posvátnosti života a&nbsp;návratu domů.</p>
+          </div>
+
+          <p class="proc-tantra-question rv">Nejhlubší otázkou, kterou tantra přináší je<br>
+            <span class="hc-s hc-s-dk">Kdo jsem ve&nbsp;své nejhlubší podstatě?</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="zl-wave-bot" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:90px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:70px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+        </svg>
+      </div>
+    </section>
+
+    <div class="gradient-bridge">
+
+      <img src="Obrazky/grafika/filigran/filigran-divider-2.png"
+        class="section-divider section-divider--between after-zena" alt="" aria-hidden="true" loading="lazy">
 
       <!-- ══ JAK PROBÍHÁ ══════════════════════════════════ -->
       <section class="o-skole" aria-labelledby="jak-probiha-h2">
@@ -1094,7 +1301,9 @@
                   </div>
                 </div>
 
-                <p style="font-size:.82rem; line-height:1.25rem; color:rgba(247,243,236,.55); margin-top:1.6rem; margin-bottom:0; font-style:italic; text-align:left;">* Náklady se mohou měnit v&nbsp;závislosti na podmínkách ubytovatele.</p>
+                <p
+                  style="font-size:.82rem; line-height:1.25rem; color:rgba(247,243,236,.55); margin-top:1.6rem; margin-bottom:0; font-style:italic; text-align:left;">
+                  * Náklady se mohou měnit v&nbsp;závislosti na podmínkách ubytovatele.</p>
 
                 <div class="rv rv-4" style="margin-top:3.5rem">
                   <a href="vstup.html" class="btn btn-ghost-lt">Vstoupit do&nbsp;školy</a>

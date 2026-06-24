@@ -1378,6 +1378,30 @@ h3 {
   margin-bottom: -1rem;
 }
 
+.tantra-esence-section {
+  background: linear-gradient(135deg, #2A0008 0%, #780020 54%, #9A0030 100%);
+}
+
+.tantra-esence-section .zena-laska-inner {
+  gap: 0;
+}
+
+.tantra-esence-text {
+  font-size: .97rem;
+  line-height: 1.88;
+  color: rgba(247, 243, 236, .78);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.tantra-esence-text p {
+  margin-bottom: 1.3rem;
+}
+
+.tantra-esence-text p:last-child {
+  margin-bottom: 0;
+}
+
 
 
 /* ── O ŠKOLE ──────────────────────────────────── */
@@ -1556,37 +1580,16 @@ h3 {
   overflow: hidden;
 }
 
-.module-chakra-wrap {
+.module-chakra {
   position: absolute;
   top: clamp(2.5rem, 4vw, 4rem);
   right: clamp(2rem, 4vw, 4rem);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: .6rem;
-  pointer-events: none;
-  text-align: center;
-}
-
-.module-chakra {
-  position: static;
   width: 128px;
   height: auto;
   opacity: 1;
+  pointer-events: none;
   filter: drop-shadow(0 4px 16px rgba(0, 0, 0, .5)) drop-shadow(0 0 8px rgba(198, 155, 69, .3));
 }
-
-.module-chakra-label {
-  font-family: var(--ff-sans);
-  font-size: .72rem;
-  font-weight: 500;
-  letter-spacing: .03em;
-  line-height: 1.4;
-  max-width: 150px;
-  color: rgba(247, 243, 236, .80);
-}
-
-.module-card.m4 .module-chakra-label { color: rgba(74, 74, 74, .82); }
 
 /* ── Čakrová karta – samostatný řádek nad gridem Témata cesty ─── */
 .temata-card--chakra {
@@ -1631,25 +1634,6 @@ h3 {
 .module-card.m3 .module-card-img img { object-position: center top; }
 .module-card.m4 .module-card-img img { object-position: center center; }
 
-/* M4 – bílé pozadí karty, text přebarven na tmavou */
-.module-card.m4 .module-num,
-.module-card.m4 .module-date,
-.module-card.m4 .module-card-content p { color: rgba(74, 74, 74, .82); }
-
-.module-card.m4 .module-tags span { color: rgba(138, 101, 42, .95); }
-.module-card.m4 .module-tags span + span::before { color: rgba(138, 101, 42, .5); }
-
-.module-card.m4 .module-chakra {
-  filter: drop-shadow(0 4px 16px rgba(230, 211, 168, .5)) drop-shadow(0 0 8px rgba(198, 155, 69, .3));
-}
-
-.module-card.m4 .btn-ghost-lt {
-  background: var(--gold-outline);
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-.module-card.m4 .btn-ghost-lt::before { background: var(--gold-outline); }
-.module-card.m4 .btn-ghost-lt:hover { background: var(--gold-outline); }
 
 .module-num {
   color: rgba(247, 243, 236, .78);
@@ -3106,29 +3090,17 @@ h3 {
     width: clamp(120px, 40%, 200px);
   }
 
-  .module-chakra-wrap {
+  .module-chakra {
     top: 10px;
     right: 10px;
-    gap: .3rem;
-  }
-
-  .module-chakra {
     width: 65px;
-    height: auto;
-  }
-
-  .module-chakra-label {
-    font-size: .62rem;
-    max-width: 110px;
-  }
-
-  .module-card.m3 .module-chakra-wrap {
-    top: 5px;
+    height: 65px;
   }
 
   .module-card.m3 .module-chakra {
-    width: 72px;
-    height: auto;
+    top: 5px;
+    width: 85px;
+    height: 85px;
   }
 
   .ref-cards {
