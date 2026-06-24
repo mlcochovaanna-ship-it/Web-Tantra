@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reference | Mysterijní škola ženství</title>
+  <meta name="description"
+    content="Autentické sdílení žen, které prošly Mysterijní školou ženství. Příběhy proměny, otevření srdce a&nbsp;návratu k&nbsp;sobě.">
+  <link rel="canonical" href="https://zenskamystika.cz/reference">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zenskamystika.cz/reference">
+  <meta property="og:title" content="Reference | Mysterijní škola ženství">
+  <meta property="og:description"
+    content="Autentické sdílení žen, které prošly Mysterijní školou ženství. Příběhy proměny, otevření srdce a&nbsp;návratu k&nbsp;sobě.">
+  <meta property="og:image" content="https://zenskamystika.cz/Obrazky/o-skole/skola-6.jpg">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='none' stroke='%23C69B45' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%23C69B45' stroke-width='1'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23C69B45'/%3E%3Cline x1='32' y1='4' x2='32' y2='14' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='32' y1='50' x2='32' y2='60' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='4' y1='32' x2='14' y2='32' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='50' y1='32' x2='60' y2='32' stroke='%23C69B45' stroke-width='1.5'/%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── REFERENCE – stránkové styly ───────────────────────────────── */
+
+    .reference-hero-bg {
+      background-image: url('Obrazky/ilustracni/prostor-2.jpeg');
+      background-position: center center;
+    }
+
+    .reference-hero-overlay {
+      background-color: transparent !important;
+      background-image:
+        radial-gradient(ellipse 50% 62% at center, rgba(42, 0, 8, .84) 0%, rgba(42, 0, 8, .40) 55%, rgba(42, 0, 8, 0) 100%) !important;
+    }
+
+    .ref-page-section {
+      padding: 1px 0 var(--pad);
+    }
+
+    .ref-page-section--first {
+      padding-top: var(--pad);
+    }
+
+    .ref-page-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .ref-page-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .ref-page-list--row {
+      position: relative;
+      max-width: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    @media (max-width: 860px) {
+      .ref-page-list--row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── Karta – obecné ──────────────────────────────────────────── */
+    .ref-page-item {
+      text-align: left;
+      padding: 2.75rem clamp(1.75rem, 4vw, 3rem);
+      border-radius: 14px;
+      position: relative;
+    }
+
+    .ref-page-item .fili-corner {
+      width: 92px;
+    }
+
+    .ref-page-item .fili-lh { top: -6px; left: -6px; }
+    .ref-page-item .fili-ph { top: -6px; right: -6px; }
+    .ref-page-item .fili-ld { bottom: -6px; left: -6px; }
+    .ref-page-item .fili-pd { bottom: -6px; right: -6px; }
+
+    .ref-page-tag {
+      display: block;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .ref-page-quote {
+      margin: 0;
+    }
+
+    .ref-page-quote p {
+      font-size: .95rem;
+      line-height: 1.85;
+      margin-bottom: 1.1rem;
+    }
+
+    .ref-page-quote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .ref-page-author {
+      display: block;
+      margin-top: 1.5rem;
+      font-family: var(--ff-accent);
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2.2rem;
+      background: var(--gold-main);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── Karta – světlá (béžové pozadí) ──────────────────────────── */
+    .ref-page-item--light {
+      background: rgba(255, 250, 240, .55);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      box-shadow: 0 2px 12px rgba(100, 50, 20, .07);
+    }
+
+    .ref-page-item--light::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 14px;
+      background: var(--gold-outline);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      padding: 1px;
+      opacity: .32;
+      pointer-events: none;
+    }
+
+    .ref-page-item--light .ref-page-tag {
+      background: var(--gold-outline);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .ref-page-item--light .ref-page-quote p {
+      color: #4A4A4A;
+    }
+
+
+    /* ── Karta – tmavá (na fotce) ─────────────────────────────────── */
+    .ref-page-item--dark {
+      background: rgba(42, 0, 8, .4);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .ref-page-item--dark::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 14px;
+      background: var(--gold-main);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      padding: 1px;
+      opacity: .3;
+      pointer-events: none;
+    }
+
+    .ref-page-item--dark .ref-page-tag,
+    .ref-page-item--dark .ref-page-author {
+      background: linear-gradient(90deg, #C69B45 0%, #F5E7B2 50%, #E7CD80 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .ref-page-item--dark .ref-page-quote p {
+      color: rgba(247, 243, 236, .85);
+    }
+
+
+    /* ── SDÍLENÍ ŽEN – tmavá sekce, fotka v pozadí (jemný overlay) ── */
+    .ref-dark-section {
+      position: relative;
+      padding: 9rem 0 10rem;
+      overflow: hidden;
+      background: url('Obrazky/o-skole/skola-uvod.jpg') center 50% / cover no-repeat fixed;
+    }
+
+    .ref-cta-bg {
+      background-image: url('Obrazky/ilustracni/prostor-2.jpeg');
+      background-position: center center;
+    }
+
+    /* Dotykové zařízení */
+    @media (hover: none), (pointer: coarse) {
+      .ref-dark-section { background-attachment: scroll; }
+      .ref-cta-bg { background-attachment: scroll; background-position: center center; }
+    }
+
+    @media (max-width: 768px) {
+      .ref-page-item .fili-corner {
+        width: 70px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .ref-page-item {
+        padding: 2.25rem 1.5rem;
+      }
+
+      .ref-dark-section {
+        padding: 6rem 0 7rem;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ══ NAVIGATION ══════════════════════════════════════ -->
+  <header class="site-header" id="hdr" role="banner">
+    <nav class="nav-bar" aria-label="Hlavní navigace">
+      <ul class="nav-left" role="list">
+        <li><a href="index.html">Úvod</a></li>
+        <li><a href="o-skole.html">O škole</a></li>
+        <li class="nav-has-dropdown">
+          <a href="moduly.html" class="nav-drop-trigger">Moduly <span class="nav-chevron-desk"></span></a>
+        </li>
+        <li><a href="#">Speciál</a></li>
+      </ul>
+      <div class="nav-center">
+        <a href="index.html" aria-label="Mysterijní škola ženství – domů">
+          <div class="logo-wrap">
+            <img src="Obrazky/LOGO-zenska-mystika.png" alt="Logo Ženská Mystika" class="logo-img">
+          </div>
+        </a>
+      </div>
+      <ul class="nav-right" role="list">
+        <li class="desktop-only"><a href="#">O mně</a></li>
+        <li class="desktop-only"><a href="reference.html" aria-current="page">Reference</a></li>
+        <li class="desktop-only"><a href="#">Galerie</a></li>
+        <li><button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-mob" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button></li>
+      </ul>
+      <a href="vstup.html" class="nav-cta-fixed desktop-only">Vstoupit do školy</a>
+    </nav>
+  </header>
+
+  <div class="nav-dropdown" id="nav-dropdown-desk">
+    <a href="odhaleni-krasy-zenstvi.html" class="nav-drop-item">Odhalení krásy ženství</a>
+    <a href="posvatny-eros.html" class="nav-drop-item">Posvátný Erós</a>
+    <a href="probuzena-zenska-intuice.html" class="nav-drop-item">Probuzená ženská intuice</a>
+    <a href="kosmicke-vedomi-zeny.html" class="nav-drop-item">Kosmické vědomí ženy</a>
+  </div>
+
+  <nav class="nav-mobile" id="nav-mob" aria-label="Mobilní navigace">
+    <a href="index.html">Úvod</a>
+    <a href="o-skole.html">O škole</a>
+    <button class="nav-mobile-parent" id="nav-moduly-toggle" aria-expanded="false">Moduly <span
+        class="nav-chevron"></span></button>
+    <div class="nav-submenu" id="nav-submenu-moduly">
+      <a href="odhaleni-krasy-zenstvi.html" class="nav-sub-item">Odhalení krásy ženství</a>
+      <a href="posvatny-eros.html" class="nav-sub-item">Posvátný Erós</a>
+      <a href="probuzena-zenska-intuice.html" class="nav-sub-item">Probuzená ženská intuice</a>
+      <a href="kosmicke-vedomi-zeny.html" class="nav-sub-item">Kosmické vědomí ženy</a>
+    </div>
+    <a href="#">O mně</a>
+    <a href="reference.html" aria-current="page">Reference</a>
+    <a href="#">Galerie</a>
+    <a href="vstup.html" class="nav-mobile-cta">Vstoupit do školy</a>
+  </nav>
+
+  <!-- ══ HERO ═══════════════════════════════════════════ -->
+  <section class="vstup-hero" aria-label="Reference – příběhy žen z Mysterijní školy ženství">
+    <div class="vstup-hero-bg reference-hero-bg" role="img"
+      aria-label="Ženy v posvátném kruhu sdílení při Mysterijní škole ženství"></div>
+    <div class="vstup-hero-overlay reference-hero-overlay"></div>
+    <div class="vstup-hero-body">
+      <span class="hero-eyebrow">Autentické sdílení</span>
+      <h1 class="hero-h1">
+        <span class="hero-script">Příběhy žen</span>
+        <span class="hero-caps">z&nbsp;Mysterijní školy ženství</span>
+      </h1>
+      <p class="hero-text">Tato sdílení vznikla z&nbsp;osobních zkušeností žen, které vstoupily do&nbsp;Mysterijní
+        školy ženství a&nbsp;dovolily si otevřít novou kapitolu svého života.</p>
+    </div>
+    <div class="soft-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;">
+        <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+      </svg>
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:90px;">
+        <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+      </svg>
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:70px;">
+        <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+      </svg>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- ══ BÉŽOVÁ OBLAST 1 ════════════════════════════════ -->
+    <div class="gradient-bridge">
+
+      <section class="ref-page-section ref-page-section--first" aria-label="Sdílení žen">
+        <div class="wrap">
+          <div class="ref-page-list ref-page-list--row">
+            <img src="Obrazky/grafika/bg-kvetiny-right.png" class="grid-flower grid-flower-right" alt=""
+              aria-hidden="true" loading="lazy">
+
+            <article class="ref-page-item ref-page-item--light rv">
+              <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt=""
+                aria-hidden="true" loading="lazy">
+              <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt=""
+                aria-hidden="true" loading="lazy">
+              <span class="ref-page-tag">Vědomí • spiritualita • duše</span>
+              <blockquote class="ref-page-quote">
+                <p>Děkuji Anjali a&nbsp;ženám týmu za&nbsp;úžasnou péči, přípravu prostoru, energii, kterou
+                  do&nbsp;všech setkání vnášíte. Cítím se celistvější a&nbsp;vnímám, že jsem se posunula na&nbsp;své
+                  cestě o&nbsp;další úroveň.</p>
+                <p>Moc děkuji za&nbsp;posvátnou intimitu a&nbsp;také rituál posvátné geometrie, kde jsem získala
+                  zkušenost setkání s&nbsp;mou duší a&nbsp;Božskou energií Ducha. Objevila jsem, že v&nbsp;jednoduchosti
+                  je síla Božství. Nelpět, nesnažit se příliš a&nbsp;umět odpouštět v&nbsp;pokoře a&nbsp;odevzdání.</p>
+                <p>Dostala jsem se do&nbsp;vnitřních světů duše, kam jsem se v&nbsp;minulosti chtěla dostat
+                  a&nbsp;nešlo to. Odnáším si uvědomění, že tantra není jen o&nbsp;sexualitě, ale umění rozšiřovat
+                  své vědomí v&nbsp;meditaci, józe a&nbsp;vnímání sebe jako Božské bytosti v&nbsp;ženském těle.</p>
+                <p>Velká vděčnost, ženy milované. Děkuji za&nbsp;tuto úžasnou zkušenost a&nbsp;přesah, který stále
+                  integruji.</p>
+              </blockquote>
+              <span class="ref-page-author">— Lucie</span>
+            </article>
+
+            <article class="ref-page-item ref-page-item--light rv">
+              <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt=""
+                aria-hidden="true" loading="lazy">
+              <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt=""
+                aria-hidden="true" loading="lazy">
+              <span class="ref-page-tag">Transformace • prožitek • vědomí</span>
+              <blockquote class="ref-page-quote">
+                <p>Když jsem nastoupila do&nbsp;této školy, neměla jsem ani nejmenší tušení, jak práce „na&nbsp;sobě"
+                  vlastně může vypadat. Lépe řečeno by to mělo být „v&nbsp;sobě". Konečně chápu všechny ty knihy
+                  a&nbsp;praxe, o&nbsp;kterých jsem četla. To, že vše je uvnitř nás samotných. Že všechno, co
+                  zažívám, je mou vlastní reflexí a&nbsp;postojem, který odráží mou vlastní realitu.</p>
+                <p>Na&nbsp;každém modulu jsem si uvědomovala, že je jedno, kolik toho vím v&nbsp;hlavě, ale že to
+                  nejdůležitější pro skutečnou transformaci je prožitek a&nbsp;práce s&nbsp;tělem, energií
+                  a&nbsp;myslí. A&nbsp;já to teď zažívám na vlastní kůži. A&nbsp;žiju.</p>
+                <p>Ne jenom tento moment, ale věřím, že s&nbsp;technikami, které mám ze školy, si tuto vůli udržím.
+                  Děkuji za&nbsp;tantru. Děkuji za&nbsp;vás, lásky, které se nebojíte toto prastaré učení vnášet
+                  do&nbsp;nevědomí světa.</p>
+              </blockquote>
+              <span class="ref-page-author">— Ála</span>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <img src="Obrazky/grafika/filigran/filigran-divider-3.png" class="section-divider section-divider--between"
+        alt="" aria-hidden="true" loading="lazy">
+
+    </div><!-- /.gradient-bridge -->
+
+    <!-- ══ SDÍLENÍ ŽEN – tmavá sekce, jemný overlay ═══════════ -->
+    <section class="ref-dark-section" aria-label="Sdílení ženy Marie">
+
+      <div class="zl-wave-top" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:110px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:90px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:70px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+        </svg>
+      </div>
+
+      <div class="wrap">
+        <div class="ref-page-list">
+          <article class="ref-page-item ref-page-item--dark rv">
+            <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt=""
+              aria-hidden="true" loading="lazy">
+            <img src="Obrazky/grafika/filigran/filigran-corner-PH.png" class="fili-corner fili-ph" alt=""
+              aria-hidden="true" loading="lazy">
+            <img src="Obrazky/grafika/filigran/filigran-corner-LD.png" class="fili-corner fili-ld" alt=""
+              aria-hidden="true" loading="lazy">
+            <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt=""
+              aria-hidden="true" loading="lazy">
+            <span class="ref-page-tag">Srdce • smyslnost • autenticita</span>
+            <blockquote class="ref-page-quote">
+              <p>Hluboce se mě dotklo téma spojení ženské orgasmicity, posvátnosti jóni a&nbsp;Božské lásky
+                v&nbsp;ženském srdci. Uvědomila jsem si, kolikrát jsem dovolila svému partnerovi pouhý sex namísto
+                skutečného milování ze srdce a&nbsp;z&nbsp;lásky.</p>
+              <p>Konečně nejen chápu rozdíl, ale cítím v&nbsp;těle, jak mi tantrický přístup k&nbsp;milování
+                otevřel oči. Zažila jsem tolik posvátnosti a&nbsp;úcty ke svému tělu, dokonce obdivu
+                od&nbsp;ostatních žen, že mě to velmi dojalo.</p>
+              <p>Vím, že potřebuji zjemnit a&nbsp;uvolnit se z&nbsp;kontroly a&nbsp;vstupovat do&nbsp;milování
+                z&nbsp;prostoru klidu a&nbsp;lásky, a&nbsp;ne z&nbsp;touhy po&nbsp;uvolnění.</p>
+              <p>Odnáším si velmi silný celotělový prožitek, kdy mi Anjali pomohla v&nbsp;jógové kundaliní praxi
+                otevřít srdce a&nbsp;mé srdce se zalilo proudy světla. Otevřelo se mi vědomí toho, jak sebe samu
+                umenšuju a&nbsp;kde ztrácím autenticitu.</p>
+              <p>Cítím hlubokou vděčnost, že ženy předáváte tantrickou cestu tímto způsobem, do&nbsp;hloubky, která
+                mi dává smysl.</p>
+            </blockquote>
+            <span class="ref-page-author">— Marie</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="zl-wave-bot" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:90px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:70px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+        </svg>
+      </div>
+
+    </section>
+
+    <!-- ══ BÉŽOVÁ OBLAST 2 ════════════════════════════════ -->
+    <div class="gradient-bridge">
+
+      <img src="Obrazky/grafika/filigran/filigran-divider-2.png"
+        class="section-divider section-divider--between after-zena" alt="" aria-hidden="true" loading="lazy">
+
+      <section class="ref-page-section" aria-label="Další sdílení žen">
+        <div class="wrap">
+          <div class="ref-page-list ref-page-list--row">
+            <img src="Obrazky/grafika/bg-kvetiny-left.png" class="grid-flower grid-flower-left" alt=""
+              aria-hidden="true" loading="lazy">
+
+            <article class="ref-page-item ref-page-item--light rv">
+              <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt=""
+                aria-hidden="true" loading="lazy">
+              <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt=""
+                aria-hidden="true" loading="lazy">
+              <span class="ref-page-tag">Přijetí • pravdivost • ženský kruh</span>
+              <blockquote class="ref-page-quote">
+                <p>Odnáším si totální pocit bezpečí v&nbsp;sobě, pocit rodiny, která mě přijímá takovou, jaká jsem
+                  právě teď. Kde mohu být totálně sama sebou. Že mohu být zranitelná a&nbsp;pravdivá k&nbsp;sobě.
+                  Uviděla jsem mnoho bloků, se kterými jsem dříve bojovala.</p>
+                <p>Nejúžasnější uvědomění a&nbsp;prožitek jsem si odnesla z&nbsp;posvátného tantrického rituálu
+                  smyslů, kde jsem vnímala, jak krásné je dávat i&nbsp;přijímat. A&nbsp;jak moc mě obohatila praxe
+                  „umění doteku". Kolik předsudků jsem si nesla z&nbsp;rodiny ohledně sexuality.</p>
+                <p>Určitě se chci dál v&nbsp;životě věnovat channelování a&nbsp;rozvíjet svou intuici a&nbsp;schopnost
+                  meditace. Děkuji za&nbsp;krásu chrámu a&nbsp;lásku s&nbsp;ženami, nová přátelství. Těším se
+                  na&nbsp;pokračování mé cesty duše s&nbsp;vámi, milované ženy.</p>
+              </blockquote>
+              <span class="ref-page-author">— Věrka</span>
+            </article>
+
+            <article class="ref-page-item ref-page-item--light rv">
+              <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt=""
+                aria-hidden="true" loading="lazy">
+              <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt=""
+                aria-hidden="true" loading="lazy">
+              <span class="ref-page-tag">Bezpečí • uvolnění • sebeláska</span>
+              <blockquote class="ref-page-quote">
+                <p>Až nyní vidím, kolik napětí a&nbsp;strachu bylo uloženo v&nbsp;mém těle. Celý život jsem byla
+                  ve&nbsp;zvláštním stažení a&nbsp;nevěřila si. A&nbsp;jsem nesmírně vděčná, že jsem se uvolnila
+                  do&nbsp;takové hloubky sebe, kterou jsem nikdy nezažila. Neumím to úplně popsat slovy, ale
+                  v&nbsp;hloubce srdce cítím mír a&nbsp;mnohem více lásky k&nbsp;sobě, ale i&nbsp;k&nbsp;ostatním
+                  ženám. Cítím vůli žít v&nbsp;lehkosti bytí a&nbsp;tvořit podle svých představ. Miluju to tady,
+                  miluju tuhle školu.</p>
+                <p>A&nbsp;tobě Anjali děkuji za&nbsp;hloubku, laskavé vedení a&nbsp;moudrost, která mi pomohla se
+                  otevřít a&nbsp;také za&nbsp;nádherný posvátný prostor, který mi pomohl se tu cítit opravdu
+                  v&nbsp;bezpečí.</p>
+              </blockquote>
+              <span class="ref-page-author">— Jana</span>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /.gradient-bridge -->
+
+    <!-- ══ CTA SEKCE ═════════════════════════════════════ -->
+    <section class="cta-section" aria-labelledby="cta-h">
+      <div class="cta-bg ref-cta-bg" role="img" aria-label="Atmosféra ženského rituálu v Mysterijní škole ženství"></div>
+      <div class="cta-overlay"></div>
+      <div class="soft-wave--top" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:110px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:90px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:70px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+        </svg>
+      </div>
+      <div class="cta-body">
+        <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt=""
+          aria-hidden="true" loading="lazy">
+        <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt=""
+          aria-hidden="true" loading="lazy">
+        <span class="eyebrow eyebrow-lt rv">Stačí jen tvé vnitřní ANO</span>
+        <span class="cta-script rv rv-1">Tvůj příběh</span>
+        <span id="cta-h" class="cta-caps rv rv-1">může začít právě teď</span>
+        <p class="rv rv-2">Pokud v&nbsp;sobě cítíš volání, které tě přivedlo až sem, zvu tě udělat první krok
+          a&nbsp;otevřít vlastní kapitolu proměny v&nbsp;Mysterijní škole ženství.</p>
+        <div class="cta-deco rv rv-2" aria-hidden="true">
+          <span></span>
+          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L7 7L13 1" stroke="rgba(198,155,69,0.5)" stroke-width="1.5" />
+          </svg>
+        </div>
+        <div class="rv rv-3">
+          <a href="vstup.html" class="btn btn-gold">Vstoupit do školy</a>
+        </div>
+      </div>
+      <div class="soft-wave soft-wave--footer" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(42,0,8,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:90px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(42,0,8,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:70px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#2A0008" />
+        </svg>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER ═════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+
+      <div class="footer-cols">
+
+        <div class="footer-col footer-col-left">
+          <p class="footer-col-name">Martina Anjali Výborná</p>
+          <p class="footer-col-addr">Křižíkova 1873/16<br>430&nbsp;01 Chomutov</p>
+          <a href="mailto:anjali@martinavyborna.cz" class="footer-col-link footer-col-link--gold"
+            style="margin-top:.9rem">anjali@martinavyborna.cz</a>
+          <a href="tel:+420603529357" class="footer-col-link footer-col-link--gold"
+            style="margin-top:-.42rem">+420&nbsp;603&nbsp;529&nbsp;357</a>
+          <div class="footer-social" style="margin-top:.9rem">
+            <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col footer-col-center">
+          <h2 class="footer-statement-title">Mysterijní škola ženství</h2>
+          <a href="vstup.html" class="btn btn-ghost-lt" style="font-size:.76rem; padding:.7rem 1.8rem">Vstoupit do
+            školy</a>
+        </div>
+
+        <div class="footer-col footer-col-right">
+          <ul class="footer-col-links">
+            <li><a href="index.html">Úvod</a></li>
+            <li><a href="o-skole.html">O škole</a></li>
+            <li><a href="moduly.html">Moduly</a></li>
+            <li><a href="#">Speciál</a></li>
+            <li><a href="#">O mně</a></li>
+            <li><a href="reference.html" aria-current="page">Reference</a></li>
+            <li><a href="#">Galerie</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-mid">
+        <div class="footer-mid-legal">
+          <p>Fyzická osoba podnikající dle živnostenského zákona</p>
+          <p>IČO:&nbsp;68427212</p>
+        </div>
+        <div class="footer-mid-zprac">
+          <p><a href="/zpracovani-osobnich-udaju">Zpracování osobních údajů</a></p>
+          <p><a href="/cookies">Cookies</a></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2026 Mysterijní škola ženství. Všechna práva vyhrazena. Webdesign <a
+            href="https://harmonickyweb.cz" target="_blank" rel="noopener">harmonickyweb.cz</a></p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ══ COOKIE ══════════════════════════════════════ -->
+  <div class="cookie" id="cookie" role="dialog" aria-labelledby="ck-label">
+    <div class="wrap">
+      <div class="cookie-inner">
+        <p>
+          <span id="ck-label"
+            style="font-weight:600; color:rgba(247,243,236,.65); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; display:block; margin-bottom:.25rem">Soubory
+            cookie</span>
+          Tento web používá technické cookies nezbytné pro správné fungování stránek.
+          <a href="/zpracovani-osobnich-udaju">Více informací</a>
+        </p>
+        <div class="cookie-btns">
+          <button class="cookie-no" id="ck-no">Odmítnout</button>
+          <button class="cookie-ok" id="ck-ok">Přijmout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Zpět nahoru"><span>&#8593;</span></button>
+
+  <script>
+    /* ── Navigation ─────────────────────────────── */
+    const hdr = document.getElementById('hdr');
+    const scrollTopBtn = document.getElementById('scroll-top-btn');
+    const hbtn = document.getElementById('hamburger');
+    const mob = document.getElementById('nav-mob');
+
+    const setHeaderH = () => {
+      document.documentElement.style.setProperty('--header-h', Math.ceil(hdr.getBoundingClientRect().bottom) + 'px');
+    };
+    setHeaderH();
+    window.addEventListener('resize', setHeaderH, { passive: true });
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', setHeaderH);
+    }
+
+    const closeMenu = () => {
+      mob.classList.remove('open');
+      hbtn.classList.remove('open');
+      hbtn.setAttribute('aria-expanded', false);
+    };
+    window.addEventListener('scroll', () => {
+      hdr.classList.toggle('scrolled', scrollY > 60);
+      setHeaderH();
+      scrollTopBtn.classList.toggle('visible', scrollY > 300);
+      if (scrollY > 40 && !mob.classList.contains('open')) closeMenu();
+    }, { passive: true });
+    scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    hbtn.addEventListener('click', () => {
+      const o = hbtn.classList.toggle('open');
+      mob.classList.toggle('open', o);
+      hbtn.setAttribute('aria-expanded', o);
+    });
+
+    const deskDrop = document.getElementById('nav-dropdown-desk');
+    const deskTrigger = document.querySelector('.nav-drop-trigger');
+    const deskLi = document.querySelector('.nav-has-dropdown');
+    if (deskDrop && deskTrigger && deskLi) {
+      let deskCloseTimer;
+      const openDeskDrop = () => {
+        clearTimeout(deskCloseTimer);
+        deskDrop.classList.add('open');
+        deskLi.classList.add('nav-drop-active');
+        const r = deskTrigger.getBoundingClientRect();
+        const w = deskDrop.offsetWidth;
+        deskDrop.style.top = Math.ceil(r.bottom + 24) + 'px';
+        deskDrop.style.left = Math.max(0, Math.round(r.left + r.width / 2 - w / 2)) + 'px';
+      };
+      const closeDeskDrop = () => {
+        deskCloseTimer = setTimeout(() => {
+          deskDrop.classList.remove('open');
+          deskLi.classList.remove('nav-drop-active');
+        }, 120);
+      };
+      deskLi.addEventListener('mouseenter', openDeskDrop);
+      deskLi.addEventListener('mouseleave', closeDeskDrop);
+      deskDrop.addEventListener('mouseenter', () => clearTimeout(deskCloseTimer));
+      deskDrop.addEventListener('mouseleave', closeDeskDrop);
+    }
+
+    const modulyToggle = document.getElementById('nav-moduly-toggle');
+    const modulySubmenu = document.getElementById('nav-submenu-moduly');
+    modulyToggle.addEventListener('click', () => {
+      const o = modulyToggle.classList.toggle('open');
+      modulySubmenu.classList.toggle('open', o);
+      modulyToggle.setAttribute('aria-expanded', o);
+    });
+
+    /* ── Scroll reveal ──────────────────────────── */
+    const rv = document.querySelectorAll('.rv');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: .08 });
+    rv.forEach(el => io.observe(el));
+
+    /* ── Cookie ─────────────────────────────────── */
+    const ck = document.getElementById('cookie');
+    if (!localStorage.getItem('ck')) setTimeout(() => ck.classList.add('on'), 800);
+    document.getElementById('ck-ok').addEventListener('click', () => { localStorage.setItem('ck', 'ok'); ck.classList.remove('on'); });
+    document.getElementById('ck-no').addEventListener('click', () => { localStorage.setItem('ck', 'no'); ck.classList.remove('on'); });
+  </script>
+
+</body>
+
+</html>
