@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letní speciál – Chrám krásy Shakti | Mysterijní škola ženství</title>
+  <meta name="description"
+    content="Letní speciál Mysterijní školy ženství. Čtyři dny vědomé praxe, krásy a ženské vzájemnosti v Chrámu krásy Shakti. 21.–25. 7. 2028, Centrum Buchov.">
+  <link rel="canonical" href="https://zenskamystika.cz/special">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zenskamystika.cz/special">
+  <meta property="og:title" content="Letní speciál – Chrám krásy Shakti | Mysterijní škola ženství">
+  <meta property="og:description"
+    content="Čtyři dny vědomé praxe, krásy a ženské vzájemnosti. Vstup do prostoru, kde se krása stává modlitbou.">
+  <meta property="og:image" content="https://zenskamystika.cz/Obrazky/modul-4/IMG-20250720-WA0015.jpg">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='none' stroke='%23C69B45' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%23C69B45' stroke-width='1'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23C69B45'/%3E%3Cline x1='32' y1='4' x2='32' y2='14' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='32' y1='50' x2='32' y2='60' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='4' y1='32' x2='14' y2='32' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='50' y1='32' x2='60' y2='32' stroke='%23C69B45' stroke-width='1.5'/%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── SPECIÁL – stránkové styly ────────────────────────────── */
+
+    /* Hero pozadí */
+    .sp-hero-bg {
+      background-image: url('Obrazky/modul-4/IMG-20250720-WA0015.jpg');
+      background-position: center 30%;
+    }
+
+    /* Hero overlay – růžovo-vínové tónování (paleta z ceníku) */
+    .sp-hero-overlay {
+      background-color: transparent !important;
+      background-image:
+        radial-gradient(ellipse 50% 62% at center, rgba(26, 8, 15, .84) 0%, rgba(26, 8, 15, .40) 55%, rgba(26, 8, 15, 0) 100%) !important;
+    }
+
+    .sp-hero-datum {
+      display: inline-block;
+      font-family: var(--ff-sans);
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      color: #F5E7B2;
+      background: rgba(228, 217, 192, .14);
+      border-radius: 10px;
+      padding: .55rem 1.5rem;
+      margin: .75rem 0 .75rem;
+    }
+
+    /* Sekce 1 – první sekce po hero, potřebuje horní padding */
+    .sp-sekce1 {
+      padding-top: var(--pad);
+    }
+
+    /* Sekce 2 – výška fotky se odvíjí automaticky od textového sloupce (+10px přesah nahoře/dole) */
+    .sp-img-fixed {
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      min-height: 0;
+      margin-top: -10px;
+      margin-bottom: -10px;
+    }
+
+    .sp-img-fixed .main-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ── POSVÁTNOST KRÁSY – 3 karty s růžovo-vínovým gradientem ───── */
+    .posvatnost-section {
+      padding: 1px 0 calc(var(--pad) * 0.5);
+      background: transparent;
+    }
+
+    .posvatnost-card {
+      position: relative;
+      background:
+        linear-gradient(135deg, #5C2035 0%, #8E3A55 54%, #B05572 100%) padding-box,
+        linear-gradient(90deg, #9A6D2B 0%, #D7B85F 52%, #9A6D2B 100%) border-box;
+      border: 1px solid transparent;
+      border-radius: 14px;
+      box-shadow: 0 8px 40px rgba(26, 8, 15, .25), 0 2px 12px rgba(0, 0, 0, .15);
+      padding: 4.5rem 3rem;
+    }
+
+    .posvatnost-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .posvatnost-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .posvatnost-item {
+      text-align: center;
+      padding: 2.5rem 2rem;
+      position: relative;
+      background: rgba(255, 255, 255, .04);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .18);
+    }
+
+    .posvatnost-item::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 14px;
+      background: var(--gold-main);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      padding: 1px;
+      opacity: .28;
+      pointer-events: none;
+      transition: opacity var(--ease);
+    }
+
+    .posvatnost-item:hover::before {
+      opacity: .55;
+    }
+
+    .posvatnost-item-title {
+      font-family: var(--ff-serif);
+      font-size: clamp(1rem, 1.3vw, 1.2rem);
+      font-weight: 400;
+      text-transform: uppercase;
+      line-height: 1.4;
+      background: var(--gold-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1.75rem;
+    }
+
+    .posvatnost-header .hc-s-dk {
+      background: var(--gold-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .posvatnost-item p {
+      font-size: .95rem;
+      color: rgba(247, 243, 236, .78);
+      line-height: 1.88;
+    }
+
+    .posvatnost-item .fili-lh {
+      top: -5px;
+      left: -5px;
+    }
+
+    .posvatnost-item .fili-pd {
+      bottom: -5px;
+      right: -5px;
+    }
+
+    /* ── JEDINEČNÝ LETNÍ PROGRAM – tmavá sekce (jako temata-section), aby se sekce na webu
+       střídaly světlá/tmavá – foto + odrážky pak v běžném světlém recognition-gridu ── */
+    .program-section {
+      position: relative;
+      padding: 10rem 0 12rem;
+      overflow: hidden;
+      background: linear-gradient(135deg,
+        #1A080F 0%,
+        #3A101C 35%,
+        #5C2035 70%,
+        #8E3A55 100%);
+    }
+
+    .program-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .program-intro {
+      max-width: 760px;
+      margin: 0 auto 3.5rem;
+      text-align: center;
+      color: rgba(247, 243, 236, .82);
+      font-size: .95rem;
+      line-height: 1.85;
+    }
+
+    /* Hlavní obsah – vlevo 4 karty pod sebou, vpravo fotka (stejná logika jako recognition-grid) */
+    .program-main-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4rem;
+      align-items: stretch;
+      margin-bottom: 4rem;
+    }
+
+    .program-cards-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4rem;
+    }
+
+    /* Foto zarovnaná přesně s kartami nahoře i dole (bez 10px přesahu) */
+    .program-main-grid .sp-img-fixed {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .program-card {
+      text-align: left;
+      padding: 2.25rem 2rem;
+      position: relative;
+      background: rgba(255, 255, 255, .09);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 14px;
+      transition: background var(--ease);
+    }
+
+    .program-card .fili-corner {
+      width: 70px;
+    }
+
+    .program-card .fili-lh {
+      top: -4px;
+      left: -5px;
+    }
+
+    .program-card .fili-pd {
+      bottom: -4px;
+      right: -5px;
+    }
+
+    .program-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 14px;
+      background: var(--gold-main);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      padding: 1px;
+      opacity: .28;
+      pointer-events: none;
+      transition: opacity var(--ease);
+    }
+
+    .program-card:hover {
+      background: rgba(255, 255, 255, .14);
+    }
+
+    .program-card:hover::before {
+      opacity: .55;
+    }
+
+    .program-card-title {
+      font-family: var(--ff-serif);
+      font-size: .95rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      line-height: 1.35;
+      background: var(--gold-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: .9rem;
+    }
+
+    .program-header .hc-s-dk {
+      background: var(--gold-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .program-card p {
+      font-size: .95rem;
+      color: rgba(247, 243, 236, .78);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Odrážky – dva sloupce (4 + 3), pod hlavní mřížkou ve stejné sekci */
+    .program-extra-intro {
+      text-align: center;
+      color: rgba(247, 243, 236, .82);
+      font-size: .95rem;
+      margin-bottom: 2rem;
+    }
+
+    .program-list-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem 3rem;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .program-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .program-list li {
+      display: flex;
+      gap: .7rem;
+      align-items: baseline;
+      color: rgba(247, 243, 236, .85);
+      font-size: .95rem;
+      line-height: 1.7;
+      margin-bottom: .85rem;
+    }
+
+    .program-list li::before {
+      content: '❀';
+      font-size: .8rem;
+      color: #C69B45;
+      flex-shrink: 0;
+    }
+
+    /* ── MÍSTO KONÁNÍ ─────────────────────────────────────────── */
+    .misto-section {
+      padding: 1px 0 var(--pad);
+      background: transparent;
+      position: relative;
+    }
+
+    .misto-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4.5rem;
+      align-items: stretch;
+      position: relative;
+      z-index: 1;
+    }
+
+    .misto-img-frame {
+      height: 100%;
+      min-height: 420px;
+    }
+
+    .misto-img-frame .main-img {
+      height: 100%;
+      object-position: 40% center;
+    }
+
+    /* Dividery se specifickými mezerami */
+    .div-nad-kartou {
+      margin-top: 6rem;
+      margin-bottom: 8rem;
+    }
+
+    .div-nad-mistem {
+      margin-top: 5rem;
+    }
+
+    .div-pod-mistem {
+      margin-bottom: 6rem;
+    }
+
+    /* CTA pozadí */
+    .sp-cta-bg {
+      background-image: url('Obrazky/ilustracni/prostor-2.jpeg');
+      background-position: center center;
+    }
+
+    .sp-cta-bg~.cta-body {
+      background: rgba(92, 32, 53, .42);
+    }
+
+    .sp-cta-price {
+      margin: 2rem 0 2.5rem;
+    }
+
+    .sp-cta-price .vstup-price-table {
+      border-top: none;
+      border-bottom-color: rgba(198, 155, 69, .22);
+      max-width: 460px;
+      margin: 1.4rem auto 0;
+      gap: .8rem;
+    }
+
+    .sp-cta-price .vstup-price-label {
+      color: rgba(247, 243, 236, .82);
+      line-height: 1.25rem;
+    }
+
+    .sp-cta-price .vstup-price-val {
+      color: rgba(247, 243, 236, .92);
+      line-height: 1.25rem;
+    }
+
+    .sp-cta-price .vstup-price-row--total {
+      border-top: none;
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    .sp-cta-price .vstup-price-row--total .vstup-price-label,
+    .sp-cta-price .vstup-price-row--total .vstup-price-val {
+      color: #F5E7B2;
+    }
+
+    .sp-cta-price .vstup-price-row--total .vstup-price-label {
+      font-size: 1.15rem;
+    }
+
+    /* Formulář přihlášky – stejné jako na vstup.html, jen přebarvené pro tmavou kartu */
+    .sp-cta-form {
+      text-align: left;
+      max-width: 530px;
+      margin: 1.5rem auto 0;
+    }
+
+    .sp-cta-form .form-group {
+      margin-bottom: 1.4rem;
+    }
+
+    .sp-cta-form .form-label {
+      color: rgba(247, 243, 236, .78);
+    }
+
+    .sp-cta-form .form-input::placeholder {
+      color: rgba(44, 44, 44, .4);
+    }
+
+    .sp-cta-form .form-checkbox-mark,
+    .sp-cta-form .form-radio-dot {
+      border-color: rgba(247, 243, 236, .4);
+    }
+
+    .sp-cta-form .form-radio-text {
+      color: rgba(247, 243, 236, .82);
+    }
+
+    .sp-cta-form .form-radio:hover {
+      background: rgba(255, 255, 255, .05);
+    }
+
+    .sp-cta-form .form-checkbox-text {
+      color: rgba(247, 243, 236, .82);
+    }
+
+    .sp-cta-form .form-link {
+      color: #F5E7B2;
+    }
+
+    .sp-cta-form .form-actions {
+      flex-direction: column;
+      align-items: center;
+      gap: .75rem;
+    }
+
+    .sp-cta-form .form-actions-note {
+      font-size: .8rem;
+      color: rgba(247, 243, 236, .55);
+    }
+
+    #prihlaseni {
+      scroll-margin-top: calc(var(--header-h, 5.5rem) + 1rem);
+    }
+
+    .sp-form-heading {
+      text-align: center;
+      font-family: var(--ff-accent);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 400;
+      background: var(--gold-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 2.5rem 0 0;
+    }
+
+    /* Dotykové zařízení */
+    @media (hover: none),
+    (pointer: coarse) {
+      .sp-citat-sekce {
+        background-attachment: scroll;
+      }
+
+      .sp-cta-bg {
+        background-attachment: scroll;
+        background-position: center center;
+      }
+    }
+
+    /* ── Responsive ──────────────────────────────────────────── */
+    @media (max-width: 960px) {
+      .posvatnost-card {
+        padding: 3rem 1.5rem;
+      }
+
+      .posvatnost-grid {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+      }
+
+      .program-main-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .img-frame.recognition-img.sp-img-fixed {
+        height: 360px;
+      }
+
+      .misto-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .program-section {
+        padding: 5rem 0 6rem;
+      }
+
+      .program-cards-col {
+        grid-template-columns: 1fr;
+      }
+
+      .program-list-cols {
+        grid-template-columns: 1fr;
+      }
+
+      .posvatnost-section {
+        padding: 1px 0 4rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .sp-hero-bg {
+        background-position: 65% 30%;
+      }
+
+      .sp-hero-datum {
+        font-size: .82rem;
+      }
+
+      .div-nad-kartou {
+        margin-top: 2rem;
+        margin-bottom: 6rem;
+      }
+
+      .div-nad-mistem {
+        margin-top: 2.5rem;
+      }
+
+      .div-pod-mistem {
+        margin-bottom: 2.5rem;
+      }
+
+      .sp-citat-sekce {
+        background-attachment: scroll;
+      }
+
+      .sp-citat-sekce .citat {
+        max-width: none;
+      }
+
+      .sp-citat-sekce .wrap {
+        width: 100%;
+        padding-inline: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ══ NAVIGACE ════════════════════════════════════════ -->
+  <header class="site-header" id="hdr" role="banner">
+    <nav class="nav-bar" aria-label="Hlavní navigace">
+      <ul class="nav-left" role="list">
+        <li><a href="index.html">Úvod</a></li>
+        <li><a href="o-skole.html">O&nbsp;škole</a></li>
+        <li class="nav-has-dropdown">
+          <a href="moduly.html" class="nav-drop-trigger">Moduly <span class="nav-chevron-desk"></span></a>
+        </li>
+        <li><a href="special.html" aria-current="page">Speciál</a></li>
+      </ul>
+      <div class="nav-center">
+        <a href="index.html" aria-label="Mysterijní škola ženství – domů">
+          <div class="logo-wrap">
+            <img src="Obrazky/LOGO-zenska-mystika.png" alt="Logo Ženská Mystika" class="logo-img">
+          </div>
+        </a>
+      </div>
+      <ul class="nav-right" role="list">
+        <li class="desktop-only"><a href="#">O&nbsp;mně</a></li>
+        <li class="desktop-only"><a href="reference.html">Reference</a></li>
+        <li class="desktop-only"><a href="galerie.html">Galerie</a></li>
+        <li><button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-mob" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button></li>
+      </ul>
+      <a href="vstup.html" class="nav-cta-fixed desktop-only">Vstoupit do školy</a>
+    </nav>
+  </header>
+
+  <div class="nav-dropdown" id="nav-dropdown-desk">
+    <a href="odhaleni-krasy-zenstvi.html" class="nav-drop-item">Odhalení krásy ženství</a>
+    <a href="posvatny-eros.html" class="nav-drop-item">Posvátný Erós</a>
+    <a href="probuzena-zenska-intuice.html" class="nav-drop-item">Probuzená ženská intuice</a>
+    <a href="kosmicke-vedomi-zeny.html" class="nav-drop-item">Kosmické vědomí ženy</a>
+  </div>
+
+  <nav class="nav-mobile" id="nav-mob" aria-label="Mobilní navigace">
+    <a href="index.html">Úvod</a>
+    <a href="o-skole.html">O&nbsp;škole</a>
+    <button class="nav-mobile-parent" id="nav-moduly-toggle" aria-expanded="false">Moduly <span
+        class="nav-chevron"></span></button>
+    <div class="nav-submenu" id="nav-submenu-moduly">
+      <a href="odhaleni-krasy-zenstvi.html" class="nav-sub-item">Odhalení krásy ženství</a>
+      <a href="posvatny-eros.html" class="nav-sub-item">Posvátný Erós</a>
+      <a href="probuzena-zenska-intuice.html" class="nav-sub-item">Probuzená ženská intuice</a>
+      <a href="kosmicke-vedomi-zeny.html" class="nav-sub-item">Kosmické vědomí ženy</a>
+    </div>
+    <a href="special.html" aria-current="page">Speciál</a>
+    <a href="#">O&nbsp;mně</a>
+    <a href="reference.html">Reference</a>
+    <a href="galerie.html">Galerie</a>
+    <a href="vstup.html" class="nav-mobile-cta">Vstoupit do školy</a>
+  </nav>
+
+  <!-- ══ HERO ═══════════════════════════════════════════ -->
+  <section class="vstup-hero vstup-hero--modul" aria-label="Letní speciál – Chrám krásy Shakti">
+    <div class="vstup-hero-bg sp-hero-bg" role="img"
+      aria-label="Ženy v bílých šatech při společném letním setkání Mysterijní školy ženství"></div>
+    <div class="vstup-hero-overlay sp-hero-overlay"></div>
+    <div class="vstup-hero-body">
+      <span class="hero-eyebrow">Letní speciál</span>
+      <h1 class="hero-h1">
+        <span class="hero-script">Chrám krásy Shakti</span>
+      </h1>
+      <span class="sp-hero-datum rv">21.&nbsp;7.&nbsp;–&nbsp;25.&nbsp;7.&nbsp;2028 • Centrum Buchov</span>
+      <p class="hero-text">Vstup do&nbsp;prostoru, kde se krása stává modlitbou, pohyb meditací a&nbsp;vzájemná péče
+        cestou k&nbsp;hlubšímu spojení se&nbsp;sebou samou.</p>
+      <div class="hero-btns">
+        <a href="#prihlaseni" class="btn btn-gold">Přihlásit se na&nbsp;letní speciál</a>
+      </div>
+    </div>
+    <div class="soft-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;">
+        <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+      </svg>
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:90px;">
+        <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+      </svg>
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:70px;">
+        <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+      </svg>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- ══ BÉŽOVÁ OBLAST 1 ════════════════════════════════ -->
+    <div class="gradient-bridge">
+
+      <!-- ══ ZAŽIJ CHRÁM ŽENSKÉ KRÁSY ═══════════════════════ -->
+      <section class="recognition sp-sekce1" aria-labelledby="sp-sekce1-h2">
+        <div class="wrap">
+          <div class="recognition-grid">
+            <img src="Obrazky/grafika/bg-kvetiny-right.png" class="grid-flower grid-flower-right" alt=""
+              aria-hidden="true" loading="lazy">
+
+            <div class="recognition-content">
+              <span class="eyebrow rv">Letní chrámový retreat</span>
+              <h2 id="sp-sekce1-h2" class="hc rv rv-1">
+                <span class="hc-s">Zažij chrám ženské krásy</span>
+              </h2>
+              <p class="rv rv-2">Chrám krásy Shakti je dobrovolným letním speciálem Mysterijní školy ženství.
+                Je&nbsp;otevřený ženám, které uvažují o&nbsp;vstupu do&nbsp;školy a&nbsp;chtějí poznat její jedinečnou
+                atmosféru, i&nbsp;ženám, které již prošly její cestou a&nbsp;přejí si znovu prožít společný čas plný
+                krásy, tvořivosti, praxe a&nbsp;ženské vzájemnosti.</p>
+              <p class="rv rv-3">Setkání je&nbsp;příležitostí znovu se propojit, upevnit získané zkušenosti
+                a&nbsp;společně prohloubit praxi vědomého života.</p>
+              <p class="rv rv-3">Po&nbsp;čtyři dny společně vytvoříme prostor plný elegance, něhy, radosti, inspirace
+                a&nbsp;vzájemné výživy. Chrám ženské krásy, kde se každá žena může zastavit, vydechnout, spočinout
+                sama v&nbsp;sobě a&nbsp;znovu objevit svou přirozenou záři.</p>
+            </div>
+
+            <div class="img-frame recognition-img rv rv-2">
+              <img src="Obrazky/o-skole/o-skole-1.jpeg"
+                alt="Žena při vědomém dotyku a péči o tělo v duchu Chrámu krásy Shakti" class="main-img" loading="lazy"
+                width="1920" height="1080">
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <img src="Obrazky/grafika/filigran/filigran-divider-3.png" class="section-divider section-divider--between" alt=""
+        aria-hidden="true" loading="lazy">
+
+      <!-- ══ ČTYŘI DNY VĚDOMÉ PRAXE ══════════════════════════ -->
+      <section class="recognition" aria-labelledby="sp-sekce2-h2">
+        <div class="wrap">
+          <div class="recognition-grid">
+            <img src="Obrazky/grafika/bg-kvetiny-left.png" class="grid-flower grid-flower-left" alt=""
+              aria-hidden="true" loading="lazy">
+
+            <div class="img-frame recognition-img sp-img-fixed rv rv-2">
+              <img src="Obrazky/o-skole/o-skole-9.jpg"
+                alt="Ženy ve společném kruhu jako symbol radosti a ženské vzájemnosti na letním speciálu Chrám krásy Shakti"
+                class="main-img" loading="lazy" width="627" height="836">
+            </div>
+
+            <div class="recognition-content">
+              <span class="eyebrow rv">Co zažiješ</span>
+              <h2 id="sp-sekce2-h2" class="hc rv rv-1">
+                <span class="hc-s">Čtyři dny vědomé praxe a&nbsp;ženské vzájemnosti</span>
+              </h2>
+              <p class="rv rv-2">Dotkneme se archetypální podstaty ženského principu, který přirozeně probouzí
+                magnetismus, vnitřní klid, emocionální rovnováhu, zdraví, hojnost a&nbsp;naplnění ve&nbsp;vztazích
+                i&nbsp;v&nbsp;seberealizaci.</p>
+              <p class="rv rv-3">Každé ráno zahájíme spirituální integrální jógou, vědomým dechem a&nbsp;praxemi
+                sublimace životní a&nbsp;sexuální energie, které podporují vitalitu, tvořivost, harmonii a&nbsp;hlubší
+                propojení s&nbsp;vlastní božskou ženskou podstatou.</p>
+              <p class="rv rv-3">Čeká nás umění tantrického doteku, vědomého pohybu, smyslnosti a&nbsp;vzájemné péče.
+                Prostřednictvím meditace, kontemplace, tance, hravosti a&nbsp;sesterského sdílení budeme otevírat
+                posvátnost ženského těla jako chrámu života.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <img src="Obrazky/grafika/filigran/filigran-divider-2.png" class="section-divider section-divider--between" alt=""
+        aria-hidden="true" loading="lazy">
+
+    </div><!-- /.gradient-bridge -->
+
+    <!-- ══ CITÁT – posvátná geometrie v pozadí ══════════════ -->
+    <section class="citat-sekce sp-citat-sekce" aria-label="Citát o kráse jako modlitbě">
+      <div class="zl-wave-top" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:110px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:90px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:70px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+        </svg>
+      </div>
+      <div class="wrap">
+        <div class="zena-laska-inner rv">
+          <img src="Obrazky/grafika/flower-corner.png" class="zl-fili zl-fili-lh" alt="" aria-hidden="true"
+            loading="lazy">
+          <img src="Obrazky/grafika/flower-corner.png" class="zl-fili zl-fili-pd" alt="" aria-hidden="true"
+            loading="lazy">
+          <div class="citat-block">
+            <blockquote class="citat">Krása jako modlitba. Ženství jako umění. Život jako posvátné
+              tvoření.</blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="zl-wave-bot" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:90px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:70px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+        </svg>
+      </div>
+    </section>
+
+    <img src="Obrazky/grafika/filigran/filigran-divider-2.png"
+      class="section-divider section-divider--between div-nad-kartou" alt="" aria-hidden="true" loading="lazy">
+
+    <!-- ══ POSVÁTNOST KRÁSY – 3 karty ═══════════════════════ -->
+    <section class="posvatnost-section" aria-labelledby="posvatnost-h2">
+      <div class="wrap">
+        <div class="posvatnost-card rv">
+
+          <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt=""
+            aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/filigran/filigran-corner-PH.png" class="fili-corner fili-ph" alt=""
+            aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/filigran/filigran-corner-LD.png" class="fili-corner fili-ld" alt=""
+            aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt=""
+            aria-hidden="true" loading="lazy">
+
+          <div class="posvatnost-header">
+            <span class="eyebrow eyebrow-lt rv">Posvátnost krásy</span>
+            <h2 id="posvatnost-h2" class="hc rv rv-1" style="align-items:center">
+              <span class="hc-s hc-s-dk">Krása, která rozkvétá zevnitř</span>
+            </h2>
+          </div>
+
+          <div class="posvatnost-grid">
+
+            <div class="posvatnost-item rv">
+              <div class="pillar-flower-wrap">
+                <img src="Obrazky/grafika/kvetina-ruze-1.png" alt="" class="pillar-flower" loading="lazy">
+              </div>
+              <h3 class="posvatnost-item-title">Vnitřní krása</h3>
+              <p>Skutečná krása rozkvétá ve&nbsp;chvíli, kdy žena spočine sama v&nbsp;sobě. Když naslouchá svému
+                tělu, otevře své srdce a&nbsp;dovolí své přirozenosti svobodně zářit. Právě tehdy se její ženská
+                esence stává tím nejkrásnějším, co může světu nabídnout.</p>
+            </div>
+
+            <div class="posvatnost-item rv rv-1">
+              <div class="pillar-flower-wrap">
+                <img src="Obrazky/grafika/kvetina-lotos-2.png" alt="" class="pillar-flower" loading="lazy">
+              </div>
+              <h3 class="posvatnost-item-title">Energie Shakti</h3>
+              <p>Každá žena v&nbsp;sobě nese živou energii Shakti. Energii tvořivosti, intuice, lásky
+                a&nbsp;životní síly. Skrze vědomý pohyb, dech, meditaci a&nbsp;tanec jí společně vytvoříme prostor,
+                aby se mohla znovu probudit a&nbsp;přirozeně proudit.</p>
+            </div>
+
+            <div class="posvatnost-item rv rv-2">
+              <div class="pillar-flower-wrap">
+                <img src="Obrazky/grafika/kvetina-lilie-3.png" alt="" class="pillar-flower" loading="lazy">
+              </div>
+              <h3 class="posvatnost-item-title">Síla ženské vzájemnosti</h3>
+              <p>Když se ženy setkají v&nbsp;prostoru důvěry, vzniká něco jedinečného. Sdílení, podpora, inspirace
+                i&nbsp;společné tvoření vytvářejí živý chrám ženské energie, ve&nbsp;kterém může každá žena
+                rozkvétat svou vlastní cestou.</p>
+            </div>
+
+          </div>
+
+        </div><!-- /.posvatnost-card -->
+      </div><!-- /.wrap -->
+    </section>
+
+    <img src="Obrazky/grafika/filigran/filigran-divider-3.png"
+      class="section-divider section-divider--between div-nad-kartou" alt="" aria-hidden="true" loading="lazy">
+
+    <!-- ══ JEDINEČNÝ LETNÍ PROGRAM – tmavá sekce ══════════════ -->
+    <section class="program-section" aria-labelledby="program-h2">
+
+      <div class="zl-wave-top" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:110px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:90px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:70px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+        </svg>
+      </div>
+
+      <div class="wrap">
+
+        <div class="program-header">
+          <span class="eyebrow eyebrow-lt rv">Jedinečný letní program</span>
+          <h2 id="program-h2" class="hc rv rv-1" style="align-items:center">
+            <span class="hc-s hc-s-dk">Prožitky, které nikde jinde nezažiješ</span>
+          </h2>
+        </div>
+
+        <p class="program-intro rv rv-1">Letní speciál přináší jedinečné chrámové prožitky, které nejsou součástí
+          modulů Mysterijní školy ženství. Každý z&nbsp;nich vznikl jako pozvání k&nbsp;hlubšímu propojení
+          s&nbsp;krásou, tvořivostí a&nbsp;ženskou podstatou.</p>
+
+        <div class="program-main-grid">
+
+          <div class="img-frame recognition-img sp-img-fixed rv rv-2">
+            <img src="Obrazky/modul-4/IMG-20250720-WA0024.jpg"
+              alt="Ženy v bílých šatech při společném setkání Mysterijní školy ženství"
+              class="main-img" loading="lazy" width="1200" height="1600">
+          </div>
+
+          <div class="program-cards-col">
+
+            <div class="program-card rv">
+              <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt="" aria-hidden="true" loading="lazy">
+              <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt="" aria-hidden="true" loading="lazy">
+              <h3 class="program-card-title">Chrámový tanec Bohyně</h3>
+              <p>Posvátný tanec inspirovaný dávnými Mysterijními školami, ve&nbsp;kterém se pohyb stává modlitbou
+                lásky, harmonie a&nbsp;vděčnosti.</p>
+            </div>
+
+            <div class="program-card rv rv-1">
+              <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt="" aria-hidden="true" loading="lazy">
+              <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt="" aria-hidden="true" loading="lazy">
+              <h3 class="program-card-title">Tantrický rituál pro ženy</h3>
+              <p>Exkluzivní ženský rituál vědomého tantrického doteku, který přináší hluboké uvolnění, regeneraci
+                a&nbsp;návrat do&nbsp;těla.</p>
+            </div>
+
+            <div class="program-card rv rv-2">
+              <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt="" aria-hidden="true" loading="lazy">
+              <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt="" aria-hidden="true" loading="lazy">
+              <h3 class="program-card-title">Floristické umění</h3>
+              <p>Tvoření krásy prostřednictvím květin, harmonie linií a&nbsp;posvátné geometrie jako odrazu řádu,
+                který prostupuje celým životem.</p>
+            </div>
+
+            <div class="program-card rv rv-3">
+              <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt="" aria-hidden="true" loading="lazy">
+              <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt="" aria-hidden="true" loading="lazy">
+              <h3 class="program-card-title">Hlas jako cesta k&nbsp;sobě</h3>
+              <p>Hlasová dílna se živou hudbou a&nbsp;vzácnou hostkou, která otevře prostor pro svobodný hlasový
+                projev a&nbsp;radost z&nbsp;vlastního vyjádření.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <p class="program-extra-intro rv">A&nbsp;to je jen část toho, co společně během čtyř dnů prožijeme.
+          Těšit se můžeš také na:</p>
+
+        <div class="program-list-cols rv rv-1">
+          <ul class="program-list">
+            <li>Meditace, kontemplace a&nbsp;praxe přítomnosti.</li>
+            <li>Channeling jóni, dělohy a&nbsp;srdce.</li>
+            <li>Havajská meditace Ho'oponopono.</li>
+            <li>Léčivá zvuková lázeň křišťálových mís a&nbsp;gongu.</li>
+          </ul>
+          <ul class="program-list">
+            <li>Relaxace v&nbsp;přírodě, koupání a&nbsp;čas pro sebe.</li>
+            <li>Napojení na&nbsp;energii Velkého a&nbsp;Malého Blaníku.</li>
+            <li>Oslava ženskosti, tvořivosti a&nbsp;božské podstaty ženy.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="zl-wave-bot" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:90px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:70px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+        </svg>
+      </div>
+
+    </section>
+
+    <!-- ══ BÉŽOVÁ OBLAST 2 ════════════════════════════════ -->
+    <div class="gradient-bridge-2">
+
+      <img src="Obrazky/grafika/filigran/filigran-divider-2.png"
+        class="section-divider section-divider--between div-nad-mistem" alt="" aria-hidden="true" loading="lazy">
+
+      <!-- ══ MÍSTO KONÁNÍ ════════════════════════════════════ -->
+      <section class="misto-section" aria-labelledby="misto-h2">
+        <div class="wrap">
+          <div class="misto-grid">
+            <img src="Obrazky/grafika/bg-kvetiny-right.png" class="grid-flower grid-flower-right" alt=""
+              aria-hidden="true" loading="lazy">
+
+            <div class="recognition-content">
+              <span class="eyebrow rv">Místo konání</span>
+              <h2 id="misto-h2" class="hc rv rv-1">
+                <span class="hc-s">Centrum Buchov</span>
+              </h2>
+              <p class="rv rv-2">Celý program probíhá uprostřed přírody, v&nbsp;malebném a&nbsp;energií naplněném
+                prostředí centra Buchov. Prostor podporuje hluboké zklidnění, otevření ženského vnímání
+                i&nbsp;propojení s&nbsp;přírodními rytmy.</p>
+              <p class="rv rv-3">Centrum se nachází v&nbsp;romantické středočeské krajině na&nbsp;dohled
+                od&nbsp;bájné hory Blaník. Okolní louky, lesy a&nbsp;hluboký klid přírody přirozeně podporují
+                ztišení a&nbsp;jemné otevření se samé sobě.</p>
+              <p class="rv rv-4">Po&nbsp;celé setkání nás bude provázet lahodná vegetariánská a&nbsp;veganská
+                kuchyně připravovaná s&nbsp;láskou jako součást chrámové péče o&nbsp;tělo, srdce i&nbsp;duši.</p>
+              <div class="rv rv-5" style="margin-top:2rem">
+                <a href="https://www.centrum-buchov.cz/" class="btn btn-ghost" target="_blank" rel="noopener">Nahlédnout
+                  do&nbsp;prostoru</a>
+              </div>
+            </div>
+
+            <div class="img-frame misto-img-frame rv rv-2">
+              <img src="Obrazky/centrum-buchov/centrum-buchov-1.jpeg"
+                alt="Centrum Buchov – místo konání letního speciálu Chrám krásy Shakti obklopené přírodou středočeské krajiny"
+                class="main-img" loading="lazy" width="700" height="480">
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <img src="Obrazky/grafika/filigran/filigran-divider-3.png"
+        class="section-divider section-divider--between div-pod-mistem" alt="" aria-hidden="true" loading="lazy">
+
+    </div><!-- /.gradient-bridge-2 -->
+
+    <!-- ══ CTA SEKCE ═════════════════════════════════════ -->
+    <section class="cta-section" id="prihlaseni" aria-labelledby="cta-h">
+      <div class="cta-bg sp-cta-bg" role="img" aria-label="Atmosféra letního speciálu Chrám krásy Shakti"></div>
+      <div class="cta-overlay"></div>
+      <div class="soft-wave--top" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:110px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:90px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:70px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+        </svg>
+      </div>
+      <div class="cta-body">
+        <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt="" aria-hidden="true"
+          loading="lazy">
+        <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt="" aria-hidden="true"
+          loading="lazy">
+        <span class="eyebrow eyebrow-lt rv">Připoj se k&nbsp;nám</span>
+        <span class="cta-script rv rv-1">Staň se součástí</span>
+        <span id="cta-h" class="cta-caps rv rv-1">Chrámu krásy Shakti</span>
+        <p class="rv rv-2">Léto je&nbsp;časem rozkvětu, radosti a&nbsp;návratu k&nbsp;tomu, co vyživuje naši duši.
+          Pokud cítíš, že tě toto prožitkové setkání volá, srdečně tě zvu do&nbsp;letního chrámového prostoru
+          Mysterijní školy ženství.</p>
+        <span class="sp-hero-datum rv rv-2">21.&nbsp;7.&nbsp;–&nbsp;25.&nbsp;7.&nbsp;2028 • Centrum Buchov</span>
+
+        <div class="sp-cta-price rv rv-2">
+          <div class="vstup-price-table" role="table" aria-label="Ceník letního speciálu">
+            <div class="vstup-price-row vstup-price-row--total" role="row">
+              <span class="vstup-price-label" role="cell">Cena retreatu</span>
+              <span class="vstup-price-val" role="cell">8&nbsp;880&nbsp;Kč</span>
+            </div>
+            <div class="vstup-price-row vstup-price-row--sub" role="row">
+              <span class="vstup-price-label" role="cell">Ubytování a&nbsp;celodenní vegetariánská strava</span>
+              <span class="vstup-price-val" role="cell">5&nbsp;900&nbsp;Kč</span>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="sp-form-heading rv rv-3">Přihláška na&nbsp;letní speciál</h3>
+
+        <!-- !! PŘED SPUŠTĚNÍM: Nahraď FORMSPREE_ENDPOINT_ZDE svým endpointem z formspree.io !! -->
+        <form class="sp-cta-form rv rv-3" action="FORMSPREE_ENDPOINT_ZDE" method="POST" novalidate
+          id="special-form" aria-label="Přihláška na letní speciál Chrám krásy Shakti">
+
+          <input type="hidden" name="_subject" value="Nová přihláška – Letní speciál Chrám krásy Shakti">
+          <input type="hidden" name="_next" value="https://zenskamystika.cz/dekuji">
+          <input type="hidden" name="_language" value="cs">
+
+          <div class="vstup-honeypot" aria-hidden="true">
+            <label for="sp-hp-website">Webová stránka (nezasahuj)</label>
+            <input type="text" id="sp-hp-website" name="_gotcha" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="sp-f-jmeno">
+              Jméno a&nbsp;příjmení <span class="form-req" aria-label="povinné pole">*</span>
+            </label>
+            <input class="form-input" type="text" id="sp-f-jmeno" name="jmeno" required autocomplete="name"
+              placeholder="Tvé celé jméno">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="sp-f-email">
+              E-mail <span class="form-req" aria-label="povinné pole">*</span>
+            </label>
+            <input class="form-input" type="email" id="sp-f-email" name="email" required autocomplete="email"
+              placeholder="tvuj@email.cz">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="sp-f-telefon">
+              Telefon <span class="form-req" aria-label="povinné pole">*</span>
+            </label>
+            <input class="form-input" type="tel" id="sp-f-telefon" name="telefon" required autocomplete="tel"
+              placeholder="+420 XXX XXX XXX">
+          </div>
+
+          <div class="form-group" role="group" aria-labelledby="sp-zamer-label">
+            <span class="form-label" id="sp-zamer-label">
+              Záměr <span class="form-req" aria-label="povinné pole">*</span>
+            </span>
+            <div class="form-radios">
+              <label class="form-radio">
+                <input type="radio" name="zamer" value="prihlaska" required>
+                <span class="form-radio-dot" aria-hidden="true"></span>
+                <span class="form-radio-text">Mám zájem přihlásit se na&nbsp;letní speciál Chrám krásy
+                  Shakti.</span>
+              </label>
+              <label class="form-radio">
+                <input type="radio" name="zamer" value="dotaz">
+                <span class="form-radio-dot" aria-hidden="true"></span>
+                <span class="form-radio-text">Chci se jen na&nbsp;něco zeptat.</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="sp-f-zprava">
+              Zpráva <span class="form-req" aria-label="povinné pole">*</span>
+            </label>
+            <textarea class="form-input form-textarea" id="sp-f-zprava" name="zprava" required rows="4"
+              placeholder="Chceš se na něco zeptat a nebo mi něco vzkázat?" style="min-height:100px"></textarea>
+          </div>
+
+          <div class="form-group form-group-gdpr">
+            <label class="form-checkbox">
+              <input type="checkbox" name="gdpr" value="souhlas" required>
+              <span class="form-checkbox-mark" aria-hidden="true"></span>
+              <span class="form-checkbox-text">
+                Souhlasím se <a href="/zpracovani-osobnich-udaju" class="form-link" target="_blank"
+                  rel="noopener">zpracováním osobních údajů</a>.<span class="form-req" aria-label="povinné pole">
+                  *</span>
+              </span>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-gold form-submit-btn">
+              Odeslat zprávu
+            </button>
+            <p class="form-actions-note">
+              Pole označená <span class="form-req">*</span> jsou povinná.
+            </p>
+          </div>
+
+        </form>
+      </div>
+      <div class="soft-wave soft-wave--footer" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(42,0,8,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:90px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(42,0,8,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:70px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#2A0008" />
+        </svg>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ PATIČKA ════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+
+      <div class="footer-cols">
+
+        <div class="footer-col footer-col-left">
+          <p class="footer-col-name">Martina Anjali Výborná</p>
+          <p class="footer-col-addr">Křižíkova 1873/16<br>430&nbsp;01 Chomutov</p>
+          <a href="mailto:anjali@martinavyborna.cz" class="footer-col-link footer-col-link--gold"
+            style="margin-top:.9rem">anjali@martinavyborna.cz</a>
+          <a href="tel:+420603529357" class="footer-col-link footer-col-link--gold"
+            style="margin-top:-.42rem">+420&nbsp;603&nbsp;529&nbsp;357</a>
+          <div class="footer-social" style="margin-top:.9rem">
+            <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col footer-col-center">
+          <h2 class="footer-statement-title">Mysterijní škola ženství</h2>
+          <a href="vstup.html" class="btn btn-ghost-lt" style="font-size:.76rem; padding:.7rem 1.8rem">Vstoupit do
+            školy</a>
+        </div>
+
+        <div class="footer-col footer-col-right">
+          <ul class="footer-col-links">
+            <li><a href="index.html">Úvod</a></li>
+            <li><a href="o-skole.html">O&nbsp;škole</a></li>
+            <li><a href="moduly.html">Moduly</a></li>
+            <li><a href="special.html">Speciál</a></li>
+            <li><a href="#">O&nbsp;mně</a></li>
+            <li><a href="reference.html">Reference</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-mid">
+        <div class="footer-mid-legal">
+          <p>Fyzická osoba podnikající dle živnostenského zákona</p>
+          <p>IČO:&nbsp;68427212</p>
+        </div>
+        <div class="footer-mid-zprac">
+          <p><a href="/zpracovani-osobnich-udaju">Zpracování osobních údajů</a></p>
+          <p><a href="/cookies">Cookies</a></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2026 Mysterijní škola ženství. Všechna práva vyhrazena. Webdesign <a
+            href="https://harmonickyweb.cz" target="_blank" rel="noopener">harmonickyweb.cz</a></p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ══ COOKIE ════════════════════════════════════════ -->
+  <div class="cookie" id="cookie" role="dialog" aria-labelledby="ck-label">
+    <div class="wrap">
+      <div class="cookie-inner">
+        <p>
+          <span id="ck-label"
+            style="font-weight:600; color:rgba(247,243,236,.65); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; display:block; margin-bottom:.25rem">Soubory
+            cookie</span>
+          Tento web používá technické cookies nezbytné pro správné fungování stránek.
+          <a href="/zpracovani-osobnich-udaju">Více informací</a>
+        </p>
+        <div class="cookie-btns">
+          <button class="cookie-no" id="ck-no">Odmítnout</button>
+          <button class="cookie-ok" id="ck-ok">Přijmout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Zpět nahoru"><span>&#8593;</span></button>
+
+  <script>
+    /* ── Navigace ────────────────────────────────────── */
+    const hdr = document.getElementById('hdr');
+    const scrollTopBtn = document.getElementById('scroll-top-btn');
+    const hbtn = document.getElementById('hamburger');
+    const mob = document.getElementById('nav-mob');
+
+    const setHeaderH = () => {
+      document.documentElement.style.setProperty('--header-h', Math.ceil(hdr.getBoundingClientRect().bottom) + 'px');
+    };
+    setHeaderH();
+    window.addEventListener('resize', setHeaderH, { passive: true });
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', setHeaderH);
+    }
+
+    const closeMenu = () => {
+      mob.classList.remove('open');
+      hbtn.classList.remove('open');
+      hbtn.setAttribute('aria-expanded', false);
+    };
+    window.addEventListener('scroll', () => {
+      hdr.classList.toggle('scrolled', scrollY > 60);
+      setHeaderH();
+      scrollTopBtn.classList.toggle('visible', scrollY > 300);
+      if (scrollY > 40 && !mob.classList.contains('open')) closeMenu();
+    }, { passive: true });
+    scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    hbtn.addEventListener('click', () => {
+      const o = hbtn.classList.toggle('open');
+      mob.classList.toggle('open', o);
+      hbtn.setAttribute('aria-expanded', o);
+    });
+
+    const deskDrop = document.getElementById('nav-dropdown-desk');
+    const deskTrigger = document.querySelector('.nav-drop-trigger');
+    const deskLi = document.querySelector('.nav-has-dropdown');
+    if (deskDrop && deskTrigger && deskLi) {
+      let deskCloseTimer;
+      const openDeskDrop = () => {
+        clearTimeout(deskCloseTimer);
+        deskDrop.classList.add('open');
+        deskLi.classList.add('nav-drop-active');
+        const r = deskTrigger.getBoundingClientRect();
+        const w = deskDrop.offsetWidth;
+        deskDrop.style.top = Math.ceil(r.bottom + 24) + 'px';
+        deskDrop.style.left = Math.max(0, Math.round(r.left + r.width / 2 - w / 2)) + 'px';
+      };
+      const closeDeskDrop = () => {
+        deskCloseTimer = setTimeout(() => {
+          deskDrop.classList.remove('open');
+          deskLi.classList.remove('nav-drop-active');
+        }, 120);
+      };
+      deskLi.addEventListener('mouseenter', openDeskDrop);
+      deskLi.addEventListener('mouseleave', closeDeskDrop);
+      deskDrop.addEventListener('mouseenter', () => clearTimeout(deskCloseTimer));
+      deskDrop.addEventListener('mouseleave', closeDeskDrop);
+    }
+
+    const modulyToggle = document.getElementById('nav-moduly-toggle');
+    const modulySubmenu = document.getElementById('nav-submenu-moduly');
+    modulyToggle.addEventListener('click', () => {
+      const o = modulyToggle.classList.toggle('open');
+      modulySubmenu.classList.toggle('open', o);
+      modulyToggle.setAttribute('aria-expanded', o);
+    });
+
+    /* ── Scroll reveal ───────────────────────────────── */
+    const rv = document.querySelectorAll('.rv');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: .08 });
+    rv.forEach(el => io.observe(el));
+
+    /* ── Cookie ──────────────────────────────────────── */
+    const ck = document.getElementById('cookie');
+    if (!localStorage.getItem('ck')) setTimeout(() => ck.classList.add('on'), 800);
+    document.getElementById('ck-ok').addEventListener('click', () => { localStorage.setItem('ck', 'ok'); ck.classList.remove('on'); });
+    document.getElementById('ck-no').addEventListener('click', () => { localStorage.setItem('ck', 'no'); ck.classList.remove('on'); });
+  </script>
+</body>
+
+</html>
