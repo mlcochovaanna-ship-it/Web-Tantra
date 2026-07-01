@@ -631,7 +631,7 @@
 
       .div-nad-kartou {
         margin-top: 2rem;
-        margin-bottom: 6rem;
+        margin-bottom: 2.5rem;
       }
 
       .div-nad-mistem {
@@ -641,6 +641,13 @@
       .div-pod-mistem {
         margin-bottom: 2.5rem;
       }
+
+      /* Místo konání – fix přetékání na mobilu */
+      .misto-img-frame { height: auto; min-width: 0; }
+      .misto-img-frame .main-img { width: 100%; object-fit: cover; }
+
+      /* Co zažiješ – fotka jako 16:9 na mobilu místo fixní výšky */
+      .img-frame.recognition-img.sp-img-fixed { height: auto; aspect-ratio: 16 / 9; }
 
       .sp-citat-sekce {
         background-attachment: scroll;
@@ -700,14 +707,7 @@
   <nav class="nav-mobile" id="nav-mob" aria-label="Mobilní navigace">
     <a href="index.html">Úvod</a>
     <a href="o-skole.html">O&nbsp;škole</a>
-    <button class="nav-mobile-parent" id="nav-moduly-toggle" aria-expanded="false">Moduly <span
-        class="nav-chevron"></span></button>
-    <div class="nav-submenu" id="nav-submenu-moduly">
-      <a href="odhaleni-krasy-zenstvi.html" class="nav-sub-item">Odhalení krásy ženství</a>
-      <a href="posvatny-eros.html" class="nav-sub-item">Posvátný Erós</a>
-      <a href="probuzena-zenska-intuice.html" class="nav-sub-item">Probuzená ženská intuice</a>
-      <a href="kosmicke-vedomi-zeny.html" class="nav-sub-item">Kosmické vědomí ženy</a>
-    </div>
+    <a href="moduly.html" class="nav-mobile-link">Moduly</a>
     <a href="special.html" aria-current="page">Speciál</a>
     <a href="o-mne.html">O&nbsp;mně</a>
     <a href="reference.html">Reference</a>
