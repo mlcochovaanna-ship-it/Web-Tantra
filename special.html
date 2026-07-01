@@ -24,7 +24,7 @@
 
     /* Hero pozadí */
     .sp-hero-bg {
-      background-image: url('Obrazky/modul-4/IMG-20260601-WA0016.jpg');
+      background-image: url('Obrazky/ilustracni/lucni-kviti-3.jpg');
       background-position: center 40%;
     }
 
@@ -170,12 +170,34 @@
     .program-section {
       position: relative;
       padding: 10rem 0 12rem;
-      overflow: hidden;
+      background-color: #1A080F;
+      background-image: url('Obrazky/ilustracni/lucni-kviti-1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    @media (max-width: 768px) {
+      .program-section {
+        background-attachment: scroll;
+      }
+    }
+
+    .program-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
       background: linear-gradient(135deg,
-        #1A080F 0%,
-        #3A101C 35%,
-        #5C2035 70%,
-        #8E3A55 100%);
+        rgba(26, 8, 15, 0.80) 0%,
+        rgba(58, 16, 28, 0.72) 35%,
+        rgba(92, 32, 53, 0.62) 70%,
+        rgba(142, 58, 85, 0.55) 100%);
+    }
+
+    .program-section .wrap {
+      position: relative;
+      z-index: 2;
     }
 
     .program-header {
@@ -287,6 +309,40 @@
       color: rgba(247, 243, 236, .78);
       line-height: 1.7;
       margin: 0;
+    }
+
+    .program-glass-card {
+      position: relative;
+      background: rgba(255, 255, 255, .09);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 14px;
+      padding: clamp(2rem, 4vw, 3rem) clamp(2rem, 5vw, 4rem);
+      margin-top: 3.5rem;
+    }
+
+    .program-glass-card .fili-corner {
+      width: 70px;
+    }
+
+    .program-glass-card .fili-lh {
+      top: -4px;
+      left: -5px;
+    }
+
+    .program-glass-card .fili-ph {
+      top: -4px;
+      right: -5px;
+    }
+
+    .program-glass-card .fili-ld {
+      bottom: -4px;
+      left: -5px;
+    }
+
+    .program-glass-card .fili-pd {
+      bottom: -4px;
+      right: -5px;
     }
 
     /* Odrážky – dva sloupce (4 + 3), pod hlavní mřížkou ve stejné sekci */
@@ -480,6 +536,31 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       margin: 2.5rem 0 0;
+    }
+
+    .sp-citat-sekce {
+      background-image: url('Obrazky/ilustracni/lucni-kviti-2.jpg') !important;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .sp-citat-sekce::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: rgba(26, 8, 15, 0.62);
+    }
+
+    .sp-citat-sekce .zena-laska-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .sp-citat-sekce .zl-fili-lh,
+    .sp-citat-sekce .zl-fili-pd {
+      z-index: 1;
     }
 
     /* Dotykové zařízení */
@@ -713,9 +794,9 @@
               aria-hidden="true" loading="lazy">
 
             <div class="img-frame recognition-img sp-img-fixed rv rv-2">
-              <img src="Obrazky/o-skole/o-skole-9.jpg"
+              <img src="Obrazky/modul-2/IMG-20250628-WA0057.jpg"
                 alt="Ženy ve společném kruhu jako symbol radosti a ženské vzájemnosti na letním speciálu Chrám krásy Shakti"
-                class="main-img" loading="lazy" width="627" height="836">
+                class="main-img" loading="lazy" width="1200" height="1600">
             </div>
 
             <div class="recognition-content">
@@ -926,21 +1007,27 @@
 
         </div>
 
-        <p class="program-extra-intro rv">A&nbsp;to je jen část toho, co společně během čtyř dnů prožijeme.
-          Těšit se můžeš také na:</p>
+        <div class="program-glass-card rv">
+          <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt="" aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/filigran/filigran-corner-PH.png" class="fili-corner fili-ph" alt="" aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/filigran/filigran-corner-LD.png" class="fili-corner fili-ld" alt="" aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt="" aria-hidden="true" loading="lazy">
+          <p class="program-extra-intro" style="margin-bottom:2rem;">A&nbsp;to je jen část toho, co společně během čtyř dnů prožijeme.
+            Těšit se můžeš také na:</p>
 
-        <div class="program-list-cols rv rv-1">
-          <ul class="program-list">
-            <li>Meditace, kontemplace a&nbsp;praxe přítomnosti.</li>
-            <li>Channeling jóni, dělohy a&nbsp;srdce.</li>
-            <li>Havajská meditace Ho'oponopono.</li>
-            <li>Léčivá zvuková lázeň křišťálových mís a&nbsp;gongu.</li>
-          </ul>
-          <ul class="program-list">
-            <li>Relaxace v&nbsp;přírodě, koupání a&nbsp;čas pro sebe.</li>
-            <li>Napojení na&nbsp;energii Velkého a&nbsp;Malého Blaníku.</li>
-            <li>Oslava ženskosti, tvořivosti a&nbsp;božské podstaty ženy.</li>
-          </ul>
+          <div class="program-list-cols">
+            <ul class="program-list">
+              <li>Meditace, kontemplace a&nbsp;praxe přítomnosti.</li>
+              <li>Channeling jóni, dělohy a&nbsp;srdce.</li>
+              <li>Havajská meditace Ho'oponopono.</li>
+              <li>Léčivá zvuková lázeň křišťálových mís a&nbsp;gongu.</li>
+            </ul>
+            <ul class="program-list">
+              <li>Relaxace v&nbsp;přírodě, koupání a&nbsp;čas pro sebe.</li>
+              <li>Napojení na&nbsp;energii Velkého a&nbsp;Malého Blaníku.</li>
+              <li>Oslava ženskosti, tvořivosti a&nbsp;božské podstaty ženy.</li>
+            </ul>
+          </div>
         </div>
 
       </div>
@@ -992,7 +1079,7 @@
             </div>
 
             <div class="img-frame misto-img-frame rv rv-2">
-              <img src="Obrazky/centrum-buchov/centrum-buchov-1.jpeg"
+              <img src="Obrazky/centrum-buchov/centrum-buchov-2.jpeg"
                 alt="Centrum Buchov – místo konání letního speciálu Chrám krásy Shakti obklopené přírodou středočeské krajiny"
                 class="main-img" loading="lazy" width="700" height="480">
             </div>

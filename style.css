@@ -1872,7 +1872,7 @@ h3 {
 .ref-card:hover::before { opacity: .55; }
 
 .ref-tag {
-  font-size: .72rem;
+  font-size: .8rem;
   font-weight: 600;
   letter-spacing: .18em;
   text-transform: uppercase;
@@ -1885,22 +1885,26 @@ h3 {
 }
 
 .ref-card blockquote {
-  font-family: var(--ff-serif);
-  font-style: italic;
-  font-size: .95rem;
+  font-family: var(--ff-sans);
+  font-style: normal;
+  font-size: 1rem;
   color: rgba(247, 243, 236, .78);
   line-height: 1.8;
   quotes: none;
 }
 
 .ref-author {
-  font-size: .72rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: #E7CD80;
   display: block;
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
+  font-family: var(--ff-accent);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 1;
+  background: var(--gold-cta);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .ref-cta {
@@ -1910,7 +1914,7 @@ h3 {
 
 .ref-cta-text {
   color: rgba(247, 243, 236, .78);
-  font-size: .9rem;
+  font-size: 1rem;
   margin-bottom: 1.5rem;
 }
 

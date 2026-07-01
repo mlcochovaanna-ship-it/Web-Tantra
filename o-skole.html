@@ -394,18 +394,23 @@
     .cena-section {
       padding: 1px 0 var(--pad);
       position: relative;
-      min-height: min(56vw, 800px);
     }
 
-    .cena-flower {
+    /* Postranní květiny ceníku – full-width container, proto left:0/right:0 místo grid-flower formule */
+    .cena-side-flower {
       position: absolute;
-      top: calc(50% - var(--pad) / 2);
-      left: 0;
-      transform: translateY(-50%);
-      width: 100%;
-      height: auto;
+      top: 0;
+      height: calc(100% - var(--pad));
+      width: auto;
       pointer-events: none;
       z-index: 0;
+      display: none;
+    }
+    .cena-side-flower-left  { left: 0; }
+    .cena-side-flower-right { right: 0; }
+
+    @media (min-width: 769px) {
+      .cena-side-flower { display: block; }
     }
 
     .cena-card {
@@ -1271,8 +1276,9 @@
 
       <!-- ══ CENA ══════════════════════════════════════════ -->
       <section class="cena-section" aria-labelledby="cena-h2">
-        <img src="Obrazky/grafika/bg-kvetiny-obe.png" class="cena-flower" alt="" aria-hidden="true" loading="lazy">
-        <div class="wrap">
+          <img src="Obrazky/grafika/bg-kvetiny-left.png" class="cena-side-flower cena-side-flower-left" alt="" aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/bg-kvetiny-right.png" class="cena-side-flower cena-side-flower-right" alt="" aria-hidden="true" loading="lazy">
+          <div class="wrap">
           <div class="cena-card rv">
 
             <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt=""
@@ -1355,7 +1361,7 @@
             </div>
 
           </div>
-        </div>
+          </div><!-- /.wrap -->
       </section>
 
       <img src="Obrazky/grafika/filigran/filigran-divider-3.png" class="section-divider section-divider--between" alt=""
