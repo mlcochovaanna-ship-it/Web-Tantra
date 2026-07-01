@@ -63,7 +63,15 @@
   <nav class="nav-mobile" id="nav-mob" aria-label="Mobilní navigace">
     <a href="index.html">Úvod</a>
     <a href="o-skole.html">O škole</a>
-    <a href="moduly.html" class="nav-mobile-link">Moduly</a>
+    <button class="nav-mobile-parent" id="nav-moduly-toggle" aria-expanded="false">Moduly <span
+        class="nav-chevron"></span></button>
+    <div class="nav-submenu" id="nav-submenu-moduly">
+      <a href="moduly.html" class="nav-sub-item">Aktuální termíny</a>
+      <a href="odhaleni-krasy-zenstvi.html" class="nav-sub-item">Odhalení krásy ženství</a>
+      <a href="posvatny-eros.html" class="nav-sub-item">Posvátný Erós</a>
+      <a href="probuzena-zenska-intuice.html" class="nav-sub-item">Probuzená ženská intuice</a>
+      <a href="kosmicke-vedomi-zeny.html" class="nav-sub-item">Kosmické vědomí ženy</a>
+    </div>
     <a href="special.html">Speciál</a>
     <a href="o-mne.html">O mně</a>
     <a href="reference.html">Reference</a>
@@ -441,15 +449,19 @@
       deskDrop.addEventListener('mouseleave', closeDeskDrop);
     }
 
-    const modulyToggle = document.getElementById('nav-moduly-toggle');
-    const modulySubmenu = document.getElementById('nav-submenu-moduly');
-    modulyToggle.addEventListener('click', () => {
-      const o = modulyToggle.classList.toggle('open');
-      modulySubmenu.classList.toggle('open', o);
-      modulyToggle.setAttribute('aria-expanded', o);
-    });
+
 
     /* ── Scroll reveal ──────────────────────────── */
+    const modulyToggle = document.getElementById('nav-moduly-toggle');
+    const modulySubmenu = document.getElementById('nav-submenu-moduly');
+    if (modulyToggle) {
+      modulyToggle.addEventListener('click', () => {
+        const o = modulyToggle.classList.toggle('open');
+        modulySubmenu.classList.toggle('open', o);
+        modulyToggle.setAttribute('aria-expanded', o);
+      });
+    }
+
     const rv = document.querySelectorAll('.rv');
     const io = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
