@@ -2855,12 +2855,12 @@ h3 {
 
   .recognition {
     padding-top: calc(var(--pad) + 1rem);
-    padding-bottom: var(--pad);
+    padding-bottom: 2rem;
   }
 
   .zena-laska {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
     background-attachment: scroll;
   }
 
@@ -2874,8 +2874,12 @@ h3 {
   }
 
   .o-skole {
-    padding-top: calc(var(--pad) + 1rem);
+    padding-top: 2.5rem;
     padding-bottom: calc(var(--pad) + 1rem);
+  }
+
+  .o-skole.o-skole-home {
+    padding-bottom: 2rem;
   }
 
   .moduly-section {
@@ -2890,7 +2894,7 @@ h3 {
 
   .anjali {
     padding-top: calc(var(--pad) + 1rem);
-    padding-bottom: var(--pad);
+    padding-bottom: calc(var(--pad) - 1rem);
   }
 
   .reference {
@@ -2900,6 +2904,10 @@ h3 {
 
   .reference-inner {
     padding: 3rem 1.5rem;
+  }
+
+  .ref-author {
+    font-size: 1.8rem;
   }
 
   .gallery-section {
@@ -2926,7 +2934,6 @@ h3 {
 
   .zena-laska-inner {
     gap: 1.5rem;
-    padding: 0 1.25rem;
   }
 
   .zl-heading {
@@ -2962,6 +2969,10 @@ h3 {
 
   /* ── Filigránové rohy – zmenšit ── */
   .fili-corner { width: 70px; }
+  .fili-lh { top: -4px; left: -4px; }
+  .fili-ph { top: -4px; right: -4px; }
+  .fili-ld { bottom: -4px; left: -4px; }
+  .fili-pd { bottom: -4px; right: -4px; }
 
   /* ── CTA sekce – odsazení od vln ── */
   .cta-section {
@@ -3070,9 +3081,18 @@ h3 {
     width: clamp(160px, 60%, 280px);
   }
 
+  .section-divider--between.before-zena {
+    margin-top: 1rem;
+    margin-bottom: 4.5rem;
+  }
+
   .section-divider--between.after-zena {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .terminy-wrap {
+    padding-bottom: 4rem !important;
   }
 
   .section-divider--between.before-anjali {
@@ -3081,17 +3101,15 @@ h3 {
   }
 
   .section-divider--between.before-reference {
-    margin-top: 2rem;
     margin-bottom: 2rem;
   }
 
   .section-divider--between.before-gallery {
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-bottom: 1.5rem;
   }
 
   .section-divider--between.before-moduly {
-    margin-top: 1.25rem;
     margin-bottom: 1.25rem;
   }
 
@@ -3108,13 +3126,13 @@ h3 {
     top: 10px;
     right: 10px;
     width: 65px;
-    height: 65px;
+    height: auto;
   }
 
   .module-card.m3 .module-chakra {
     top: 5px;
     width: 85px;
-    height: 85px;
+    height: auto;
   }
 
   .ref-cards {
@@ -3139,6 +3157,10 @@ h3 {
     order: 1;
     text-align: center;
     grid-column: unset;
+  }
+
+  .footer-statement-title {
+    font-size: 2.4rem;
   }
 
   .footer-col-left {

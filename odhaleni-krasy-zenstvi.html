@@ -65,8 +65,13 @@
     }
 
     /* O modulu sekce */
-    .o-modulu-sekce { padding-top: var(--pad); }
-    .o-modulu-sekce .recognition-img .main-img { object-position: center 15%; }
+    .o-modulu-sekce {
+      padding-top: var(--pad);
+    }
+
+    .o-modulu-sekce .recognition-img .main-img {
+      object-position: center 15%;
+    }
 
     /* ── TÉMATA – tmavá sekce, rituální obraz v pozadí ─────────── */
     .temata-section {
@@ -126,8 +131,13 @@
       transition: opacity var(--ease);
     }
 
-    .temata-card:hover { background: rgba(255, 255, 255, .14); }
-    .temata-card:hover::before { opacity: .55; }
+    .temata-card:hover {
+      background: rgba(255, 255, 255, .14);
+    }
+
+    .temata-card:hover::before {
+      opacity: .55;
+    }
 
     .temata-card-icon {
       width: 52px;
@@ -197,7 +207,9 @@
       transition: opacity var(--ease);
     }
 
-    .prozivek-item:hover::before { opacity: .55; }
+    .prozivek-item:hover::before {
+      opacity: .55;
+    }
 
     .prozivek-item-title {
       font-family: var(--ff-serif);
@@ -218,14 +230,21 @@
       line-height: 1.88;
     }
 
-    .prozivek-item .fili-lh { top: -5px; left: -5px; }
-    .prozivek-item .fili-pd { bottom: -5px; right: -5px; }
+    .prozivek-item .fili-lh {
+      top: -5px;
+      left: -5px;
+    }
+
+    .prozivek-item .fili-pd {
+      bottom: -5px;
+      right: -5px;
+    }
 
     /* ── CITÁT – M1 gradient + shodná růže jako na homepage ────── */
     .m1-citat-sekce {
       background:
         linear-gradient(135deg,
-          rgba(87, 25, 45, .83)   0%,
+          rgba(87, 25, 45, .83) 0%,
           rgba(99, 28, 53, .80) 12%,
           rgba(111, 30, 60, .77) 24%,
           rgba(117, 32, 65, .74) 36%,
@@ -312,44 +331,101 @@
     }
 
     /* CTA – tónování modulu místo výchozí vínové */
-    .m1-cta-bg ~ .cta-body { background: rgba(87, 25, 45, .40); }
+    .m1-cta-bg~.cta-body {
+      background: rgba(87, 25, 45, .40);
+    }
 
     /* Dividery se specifickými mezerami */
-    .div-nad-mistem { margin-top: 5rem; }
-    .div-pod-galerií { margin-bottom: 6rem; }
-    .div-nad-kartou { margin-top: 6rem; margin-bottom: 8rem; }
-    .div-misto-galerie { margin-top: 2rem; margin-bottom: 6rem; }
+    .div-nad-mistem {
+      margin-top: 5rem;
+    }
+
+    .div-pod-galerií {
+      margin-bottom: 6rem;
+    }
+
+    .div-nad-kartou {
+      margin-top: 6rem;
+      margin-bottom: 8rem;
+    }
+
+    .div-misto-galerie {
+      margin-top: 2rem;
+      margin-bottom: 6rem;
+    }
 
     /* Dotykové zařízení */
-    @media (hover: none), (pointer: coarse) {
-      .temata-section { background-attachment: scroll; background-position: center top; }
-      .m1-citat-sekce { background-attachment: scroll; }
-      .m1-cta-bg { background-attachment: scroll; background-position: center center; }
+    @media (hover: none),
+    (pointer: coarse) {
+      .temata-section {
+        background-attachment: scroll;
+        background-position: center top;
+      }
+
+      .m1-citat-sekce {
+        background-attachment: scroll;
+      }
+
+      .m1-cta-bg {
+        background-attachment: scroll;
+        background-position: center center;
+      }
     }
 
     /* ── Responsive ──────────────────────────────────────────── */
     @media (max-width: 960px) {
-      .misto-section { padding-top: var(--pad); }
+      .misto-section {
+        padding-top: var(--pad);
+      }
 
-      .temata-grid { grid-template-columns: repeat(2, 1fr); }
+      .temata-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-      .prozivek-card { padding: 3rem 1.5rem; }
-      .prozivek-grid { grid-template-columns: 1fr; gap: 1.4rem; }
+      .prozivek-card {
+        padding: 3rem 1.5rem;
+      }
 
-      .misto-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .prozivek-grid {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+      }
 
-      .misto-img-frame { min-height: 360px; order: -1; }
+      .misto-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .misto-img-frame {
+        min-height: 360px;
+        order: -1;
+      }
     }
 
     @media (max-width: 600px) {
-      .temata-section { padding: 5rem 0 6rem; }
-      .temata-grid { grid-template-columns: 1fr; }
-      .prozivek-section { padding: 1px 0 4rem; }
-      .misto-grid { gap: 1.5rem; }
-      .misto-img-frame { min-height: 0; }
+      .temata-section {
+        padding: 5rem 0 6rem;
+      }
+
+      .temata-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .prozivek-section {
+        padding: 1px 0 4rem;
+      }
+
+      .misto-grid {
+        gap: 1.5rem;
+      }
+
+      .misto-img-frame {
+        min-height: 0;
+      }
     }
 
     @media (max-width: 768px) {
+
       /* Datum menším písmem */
       .m1-hero-datum {
         font-size: .82rem;
@@ -361,14 +437,33 @@
       }
 
       /* Dividery – jednotné mezery jako na homepage a o-skole */
-      .div-nad-mistem { margin-top: 2.5rem; }
-      .div-pod-galerií { margin-bottom: 2.5rem; }
-      .div-nad-kartou { margin-top: 2rem; margin-bottom: 2.5rem; }
-      .div-misto-galerie { margin-bottom: 2.5rem; }
+      .div-nad-mistem {
+        margin-top: 2.5rem;
+      }
+
+      .div-pod-galerií {
+        margin-bottom: 2.5rem;
+      }
+
+      .div-nad-kartou {
+        margin-top: 2rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .div-misto-galerie {
+        margin-bottom: 2.5rem;
+      }
 
       /* Místo konání – fix přetékání na mobilu */
-      .misto-img-frame { height: auto; min-width: 0; }
-      .misto-img-frame .main-img { width: 100%; object-fit: cover; }
+      .misto-img-frame {
+        height: auto;
+        min-width: 0;
+      }
+
+      .misto-img-frame .main-img {
+        width: 100%;
+        object-fit: cover;
+      }
 
       /* Rituální obraz – bez fixed na mobilu */
       .temata-section {
@@ -456,7 +551,9 @@
         <span class="hero-script">Odhalení krásy ženství</span>
       </h1>
       <span class="m1-hero-datum rv">15.&nbsp;4.&nbsp;–&nbsp;18.&nbsp;4.&nbsp;2027 • Centrum Buchov</span>
-      <p class="hero-text">Vstupujeme do vibrace srdce, ze&nbsp;kterého se rodí skutečné ženství. Skrze hluboký kontakt se&nbsp;svým tělem, ženskou esencí a&nbsp;vnitřní krásou začneme znovu objevovat úctu sama k&nbsp;sobě i&nbsp;ke svému ženství.</p>
+      <p class="hero-text">Vstupujeme do vibrace srdce, ze&nbsp;kterého se rodí skutečné ženství. Skrze hluboký kontakt
+        se&nbsp;svým tělem, ženskou esencí a&nbsp;vnitřní krásou začneme znovu objevovat úctu sama k&nbsp;sobě i&nbsp;ke
+        svému ženství.</p>
       <div class="hero-btns">
         <a href="vstup.html" class="btn btn-gold">Vstoupit do školy</a>
       </div>
@@ -483,16 +580,21 @@
       <section class="recognition o-modulu-sekce" aria-labelledby="o-modulu-h2">
         <div class="wrap">
           <div class="recognition-grid">
-            <img src="Obrazky/grafika/bg-kvetiny-right.png" class="grid-flower grid-flower-right" alt="" aria-hidden="true" loading="lazy">
+            <img src="Obrazky/grafika/bg-kvetiny-right.png" class="grid-flower grid-flower-right" alt=""
+              aria-hidden="true" loading="lazy">
 
             <div class="recognition-content">
               <span class="eyebrow rv">Objevování esence krásy</span>
               <h2 id="o-modulu-h2" class="hc rv rv-1">
                 <span class="hc-s">Návrat ženy k&nbsp;její přirozenosti</span>
               </h2>
-              <p class="rv rv-2">Brána srdce je prvotním portálem, ve&nbsp;kterém se otevírá skutečné ženství. V&nbsp;tomto modulu budeme rozvíjet schopnost vnímat svou krásu, jemnost a&nbsp;hlubší lásku k&nbsp;sobě samé.</p>
-              <p class="rv rv-3">Skrze vědomou práci s&nbsp;tělem, meditace, tantrické techniky a&nbsp;ženské rituály se začne postupně otevírat prostor pro hlubší propojení se&nbsp;svou ženskou podstatou.</p>
-              <p class="rv rv-4">Budeme uctívat a&nbsp;hýčkat své fyzické tělo, uvolňovat staré vrstvy nevědomí a&nbsp;znovu objevovat mnohdy ztracenou úctu ke svému tělu, cítění a&nbsp;ženské citlivosti.</p>
+              <p class="rv rv-2">Brána srdce je prvotním portálem, ve&nbsp;kterém se otevírá skutečné ženství.
+                V&nbsp;tomto modulu budeme rozvíjet schopnost vnímat svou krásu, jemnost a&nbsp;hlubší lásku k&nbsp;sobě
+                samé.</p>
+              <p class="rv rv-3">Skrze vědomou práci s&nbsp;tělem, meditace, tantrické techniky a&nbsp;ženské rituály se
+                začne postupně otevírat prostor pro hlubší propojení se&nbsp;svou ženskou podstatou.</p>
+              <p class="rv rv-4">Budeme uctívat a&nbsp;hýčkat své fyzické tělo, uvolňovat staré vrstvy nevědomí
+                a&nbsp;znovu objevovat mnohdy ztracenou úctu ke svému tělu, cítění a&nbsp;ženské citlivosti.</p>
               <div class="rv rv-5" style="margin-top:2rem">
                 <a href="vstup.html" class="btn btn-ghost">Vstoupit do&nbsp;školy</a>
               </div>
@@ -508,8 +610,8 @@
         </div>
       </section>
 
-      <img src="Obrazky/grafika/filigran/filigran-divider-3.png"
-        class="section-divider section-divider--between" alt="" aria-hidden="true" loading="lazy">
+      <img src="Obrazky/grafika/filigran/filigran-divider-3.png" class="section-divider section-divider--between" alt=""
+        aria-hidden="true" loading="lazy">
 
     </div><!-- /.gradient-bridge -->
 
@@ -541,7 +643,7 @@
 
         <div class="temata-card temata-card--chakra rv">
           <img src="Obrazky/chakra/heart.png" class="temata-card-icon" alt="" aria-hidden="true" loading="lazy">
-          <div class="temata-chakra-name">4.&nbsp;čakra – ANÁHÁTA – Srdce</div>
+          <div class="temata-chakra-name">4.&nbsp;čakra – ANÁHATA – Srdce</div>
           <div class="temata-chakra-qualities">Láska • Vztahy • Soucit</div>
         </div>
 
@@ -613,10 +715,14 @@
       <div class="wrap">
         <div class="prozivek-card rv">
 
-          <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt="" aria-hidden="true" loading="lazy">
-          <img src="Obrazky/grafika/filigran/filigran-corner-PH.png" class="fili-corner fili-ph" alt="" aria-hidden="true" loading="lazy">
-          <img src="Obrazky/grafika/filigran/filigran-corner-LD.png" class="fili-corner fili-ld" alt="" aria-hidden="true" loading="lazy">
-          <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt="" aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt=""
+            aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/filigran/filigran-corner-PH.png" class="fili-corner fili-ph" alt=""
+            aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/filigran/filigran-corner-LD.png" class="fili-corner fili-ld" alt=""
+            aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt=""
+            aria-hidden="true" loading="lazy">
 
           <div class="prozivek-header">
             <span class="eyebrow eyebrow-lt rv">Prožitek ženské cesty</span>
@@ -632,7 +738,8 @@
                 <img src="Obrazky/grafika/kvetina-ruze-1.png" alt="" class="pillar-flower" loading="lazy">
               </div>
               <h3 class="prozivek-item-title">Jemné vedení každého dne</h3>
-              <p>Každý den této cesty tě bude jemně vést hlouběji do&nbsp;prožívání vlastního těla, citlivosti, přítomnosti a&nbsp;ženského vnímání.</p>
+              <p>Každý den této cesty tě bude jemně vést hlouběji do&nbsp;prožívání vlastního těla, citlivosti,
+                přítomnosti a&nbsp;ženského vnímání.</p>
             </div>
 
             <div class="prozivek-item rv rv-1">
@@ -640,7 +747,9 @@
                 <img src="Obrazky/grafika/kvetina-lotos-2.png" alt="" class="pillar-flower" loading="lazy">
               </div>
               <h3 class="prozivek-item-title">Praxe vědomého těla</h3>
-              <p>Skrze dech, pohyb, meditaci, tanec, tantrické techniky, sdílení i&nbsp;vědomou práci s&nbsp;tělem budeš postupně vstupovat do&nbsp;větší jemnosti, důvěry a&nbsp;hlubšího uvolnění do&nbsp;své přirozené ženské podstaty.</p>
+              <p>Skrze dech, pohyb, meditaci, tanec, tantrické techniky, sdílení i&nbsp;vědomou práci s&nbsp;tělem budeš
+                postupně vstupovat do&nbsp;větší jemnosti, důvěry a&nbsp;hlubšího uvolnění do&nbsp;své přirozené ženské
+                podstaty.</p>
             </div>
 
             <div class="prozivek-item rv rv-2">
@@ -648,7 +757,8 @@
                 <img src="Obrazky/grafika/kvetina-lilie-3.png" alt="" class="pillar-flower" loading="lazy">
               </div>
               <h3 class="prozivek-item-title">Posvátný ženský kruh</h3>
-              <p>V&nbsp;bezpečném ženském kruhu vzniká prostor, ve&nbsp;kterém můžeš spočinout sama v&nbsp;sobě, uvolnit napětí a&nbsp;začít znovu vnímat krásu svého těla, emocí i&nbsp;vnitřního světa.</p>
+              <p>V&nbsp;bezpečném ženském kruhu vzniká prostor, ve&nbsp;kterém můžeš spočinout sama v&nbsp;sobě, uvolnit
+                napětí a&nbsp;začít znovu vnímat krásu svého těla, emocí i&nbsp;vnitřního světa.</p>
             </div>
 
           </div>
@@ -668,7 +778,8 @@
       <section class="misto-section" aria-labelledby="misto-h2">
         <div class="wrap">
           <div class="misto-grid">
-            <img src="Obrazky/grafika/bg-kvetiny-left.png" class="grid-flower grid-flower-left" alt="" aria-hidden="true" loading="lazy">
+            <img src="Obrazky/grafika/bg-kvetiny-left.png" class="grid-flower grid-flower-left" alt=""
+              aria-hidden="true" loading="lazy">
 
             <div class="img-frame misto-img-frame rv rv-2">
               <img src="Obrazky/centrum-buchov/centrum-buchov-4.jpeg"
@@ -681,9 +792,14 @@
               <h2 id="misto-h2" class="hc rv rv-1">
                 <span class="hc-s">Centrum Buchov</span>
               </h2>
-              <p class="rv rv-2">Celý program probíhá uprostřed přírody, v&nbsp;malebném a&nbsp;energií naplněném prostředí centra Buchov. Prostor podporuje hluboké zklidnění, otevření ženského vnímání i&nbsp;propojení s&nbsp;přírodními rytmy.</p>
-              <p class="rv rv-3">Centrum se nachází v&nbsp;romantické středočeské krajině na&nbsp;dohled od&nbsp;bájné hory Blaník. Okolní louky, lesy a&nbsp;hluboký klid přírody přirozeně podporují ztišení a&nbsp;jemné otevření se samé sobě.</p>
-              <p class="rv rv-4">Chceš zjistit více o&nbsp;průběhu školy, praktických informacích i&nbsp;místě konání školy?</p>
+              <p class="rv rv-2">Celý program probíhá uprostřed přírody, v&nbsp;malebném a&nbsp;energií naplněném
+                prostředí centra Buchov. Prostor podporuje hluboké zklidnění, otevření ženského vnímání i&nbsp;propojení
+                s&nbsp;přírodními rytmy.</p>
+              <p class="rv rv-3">Centrum se nachází v&nbsp;romantické středočeské krajině na&nbsp;dohled od&nbsp;bájné
+                hory Blaník. Okolní louky, lesy a&nbsp;hluboký klid přírody přirozeně podporují ztišení a&nbsp;jemné
+                otevření se samé sobě.</p>
+              <p class="rv rv-4">Chceš zjistit více o&nbsp;průběhu školy, praktických informacích i&nbsp;místě konání
+                školy?</p>
               <div class="rv rv-5" style="margin-top:2rem">
                 <a href="o-skole.html" class="btn btn-ghost">Více o&nbsp;škole</a>
               </div>
@@ -711,39 +827,45 @@
 
           <div class="g-item g-tall">
             <img src="Obrazky/modul-1/IMG-20260608-WA0074.jpg"
-              alt="Ženy leží v kruhu okolo mandaly z okvětních plátků a svíček – pohled shora při prvním modulu" loading="lazy" width="500" height="700">
+              alt="Ženy leží v kruhu okolo mandaly z okvětních plátků a svíček – pohled shora při prvním modulu"
+              loading="lazy" width="500" height="700">
           </div>
 
           <div class="g-item">
             <img src="Obrazky/modul-1/IMG-20260608-WA0070.jpg"
-              alt="Ženy venku u Centra Buchov při prvním iniciačním modulu Odhalení krásy ženství" loading="lazy" width="500" height="350">
+              alt="Ženy venku u Centra Buchov při prvním iniciačním modulu Odhalení krásy ženství" loading="lazy"
+              width="500" height="350">
           </div>
 
           <div class="g-item">
             <img src="Obrazky/modul-1/modul-1-1.jpg"
-              alt="Atmosféra a prostor prvního iniciačního modulu Odhalení krásy ženství" loading="lazy" width="500" height="350">
+              alt="Atmosféra a prostor prvního iniciačního modulu Odhalení krásy ženství" loading="lazy" width="500"
+              height="350">
           </div>
 
           <div class="g-item g-tall">
             <img src="Obrazky/modul-1/IMG-20260427-WA0014.jpg"
-              alt="Ženy sedí před lotosovou mandalou s věncem z růží a svíčkou při prvním modulu" loading="lazy" width="500" height="700" style="object-position: center 82%;">
+              alt="Ženy sedí před lotosovou mandalou s věncem z růží a svíčkou při prvním modulu" loading="lazy"
+              width="500" height="700" style="object-position: center 82%;">
           </div>
 
           <div class="g-item">
             <img src="Obrazky/modul-1/IMG-20260608-WA0073.jpg"
-              alt="Zlatý oltář s lotosovou mandalou a okvětním trojúhelníkem ze svíček při rituálu" loading="lazy" width="500" height="350" style="object-position: center 20%;">
+              alt="Zlatý oltář s lotosovou mandalou a okvětním trojúhelníkem ze svíček při rituálu" loading="lazy"
+              width="500" height="350" style="object-position: center 20%;">
           </div>
 
           <div class="g-item">
             <img src="Obrazky/modul-1/modul-1-6.JPG"
-              alt="Ženy při vědomé praxi a pohybu v prvním iniciačním modulu Odhalení krásy ženství" loading="lazy" width="500" height="350">
+              alt="Ženy při vědomé praxi a pohybu v prvním iniciačním modulu Odhalení krásy ženství" loading="lazy"
+              width="500" height="350">
           </div>
 
         </div>
       </section>
 
       <img src="Obrazky/grafika/filigran/filigran-divider-3.png"
-        class="section-divider section-divider--between div-pod-galerií" alt="" aria-hidden="true" loading="lazy">
+        class="section-divider section-divider--between div-pod-galerií before-zena" alt="" aria-hidden="true" loading="lazy">
 
     </div><!-- /.gradient-bridge-2 -->
 
@@ -765,10 +887,13 @@
       </div>
       <div class="wrap">
         <div class="zena-laska-inner rv">
-          <img src="Obrazky/grafika/flower-corner.png" class="zl-fili zl-fili-lh" alt="" aria-hidden="true" loading="lazy">
-          <img src="Obrazky/grafika/flower-corner.png" class="zl-fili zl-fili-pd" alt="" aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/flower-corner.png" class="zl-fili zl-fili-lh" alt="" aria-hidden="true"
+            loading="lazy">
+          <img src="Obrazky/grafika/flower-corner.png" class="zl-fili zl-fili-pd" alt="" aria-hidden="true"
+            loading="lazy">
           <div class="citat-block">
-            <blockquote class="citat">„Krása je věčností, pozorující samu sebe v&nbsp;zrcadle.<br>Ale&nbsp;Ty jsi tou věčností, i&nbsp;tím zrcadlem."</blockquote>
+            <blockquote class="citat">„Krása je věčností, pozorující samu sebe v&nbsp;zrcadle.<br>Ale&nbsp;Ty jsi tou
+              věčností, i&nbsp;tím zrcadlem."</blockquote>
             <cite class="citat-author">— Khalil Gibran</cite>
           </div>
         </div>
@@ -795,7 +920,8 @@
 
     <!-- ══ CTA SEKCE ═════════════════════════════════════ -->
     <section class="cta-section" aria-labelledby="cta-h">
-      <div class="cta-bg m1-cta-bg" role="img" aria-label="Atmosféra prvního iniciačního modulu Odhalení krásy ženství"></div>
+      <div class="cta-bg m1-cta-bg" role="img" aria-label="Atmosféra prvního iniciačního modulu Odhalení krásy ženství">
+      </div>
       <div class="cta-overlay"></div>
       <div class="soft-wave--top" aria-hidden="true">
         <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
@@ -812,14 +938,15 @@
         </svg>
       </div>
       <div class="cta-body">
-        <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt=""
-          aria-hidden="true" loading="lazy">
-        <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt=""
-          aria-hidden="true" loading="lazy">
+        <img src="Obrazky/grafika/filigran/filigran-corner-LH.png" class="fili-corner fili-lh" alt="" aria-hidden="true"
+          loading="lazy">
+        <img src="Obrazky/grafika/filigran/filigran-corner-PD.png" class="fili-corner fili-pd" alt="" aria-hidden="true"
+          loading="lazy">
         <span class="eyebrow eyebrow-lt rv">Stačí jen tvé vnitřní ANO</span>
         <span class="cta-script rv rv-1">Dovol si vstoupit</span>
         <span id="cta-h" class="cta-caps rv rv-1">hlouběji do svého ženství</span>
-        <p class="rv rv-2">Pokud cítíš, že tě tato cesta volá, zvu tě vstoupit do prostoru prvního iniciačního modulu a&nbsp;otevřít novou kapitolu vztahu sama k&nbsp;sobě, ke svému tělu i&nbsp;ke své ženské podstatě.</p>
+        <p class="rv rv-2">Pokud cítíš, že tě tato cesta volá, zvu tě vstoupit do prostoru prvního iniciačního modulu
+          a&nbsp;otevřít novou kapitolu vztahu sama k&nbsp;sobě, ke svému tělu i&nbsp;ke své ženské podstatě.</p>
         <div class="cta-deco rv rv-2" aria-hidden="true">
           <span></span>
           <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
