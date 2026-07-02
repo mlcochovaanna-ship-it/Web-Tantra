@@ -3069,6 +3069,13 @@ h3 {
     aspect-ratio: 16 / 9;
   }
 
+  .o-skole-img .main-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   .anjali-img {
     min-height: 0;
     width: 100%;
