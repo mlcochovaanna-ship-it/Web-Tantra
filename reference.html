@@ -212,15 +212,27 @@
       .ref-page-item .fili-corner {
         width: 70px;
       }
+
+      .ref-page-section {
+        padding-top: var(--pad);
+      }
+
+      .ref-page-section--first {
+        padding-top: calc(var(--pad) + 1rem);
+      }
+
+      .ref-page-section--last {
+        padding-bottom: calc(var(--pad) + 1rem);
+      }
+
+      .ref-dark-section {
+        padding: calc(var(--pad) + 3rem) 0;
+      }
     }
 
     @media (max-width: 600px) {
       .ref-page-item {
         padding: 2.25rem 1.5rem;
-      }
-
-      .ref-dark-section {
-        padding: 6rem 0 7rem;
       }
     }
   </style>
@@ -445,7 +457,7 @@
       <img src="Obrazky/grafika/filigran/filigran-divider-2.png"
         class="section-divider section-divider--between after-zena" alt="" aria-hidden="true" loading="lazy">
 
-      <section class="ref-page-section" aria-label="Další sdílení žen">
+      <section class="ref-page-section ref-page-section--last" aria-label="Další sdílení žen">
         <div class="wrap">
           <div class="ref-page-list ref-page-list--row">
             <img src="Obrazky/grafika/bg-kvetiny-left.png" class="grid-flower grid-flower-left" alt=""

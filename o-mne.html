@@ -53,12 +53,17 @@
     }
 
     /* Fotka na výšku – automatické dorovnání k textu (+10px přesah nahoře/dole) */
+    .om-pribeh-foto .main-img {
+      object-position: center 72%;
+    }
+
     .om-img-fixed {
       position: relative;
       overflow: hidden;
       border-radius: 10px;
       height: 100%;
       min-height: 0;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, .22);
     }
 
     .om-img-fixed .main-img {
@@ -247,6 +252,20 @@
     /* ── Responsive ──────────────────────────────────────────────── */
 
     @media (max-width: 768px) {
+      .om-cesta-foto .main-img {
+        object-position: center 15%;
+      }
+
+      .om-div-1,
+      .om-div-2,
+      .om-div-3 {
+        margin-top: 1rem;
+      }
+
+      .om-pribeh-foto .main-img {
+        object-position: center 55%;
+      }
+
       .om-hero-bg {
         background-position: 60% 30%;
       }
@@ -261,12 +280,41 @@
         margin-bottom: 6rem;
       }
 
+      .div-nad-kartou.before-zena {
+        margin-top: 0.25rem;
+        margin-bottom: 4.5rem;
+      }
+
+      .citat-author {
+        margin-bottom: 1.5rem;
+      }
+
+      .om-promena-foto .main-img {
+        object-position: center 35%;
+      }
+
+      .om-poznan-foto .main-img {
+        object-position: center top;
+      }
+
+      .om-prace-foto .main-img {
+        object-position: center 10%;
+      }
+
+      .om-rozhovory-section {
+        padding-top: calc(var(--pad) + 2rem);
+      }
+
       .div-nad-mistem {
         margin-top: 2.5rem;
       }
 
       .div-pod-mistem {
         margin-bottom: 2.5rem;
+      }
+
+      .div-pod-mistem.before-zena {
+        margin-top: 0.25rem;
       }
     }
   </style>
@@ -388,7 +436,7 @@
                 vědomé a&nbsp;naplňující vztahy.</p>
             </div>
 
-            <div class="img-frame recognition-img om-img-fixed rv rv-2">
+            <div class="img-frame recognition-img om-img-fixed om-cesta-foto rv rv-2">
               <img src="Obrazky/anjali/anjali-9.jpg"
                 alt="Martina Anjali Výborná při meditaci u posvátného oltáře se Šrí Jantrou" class="main-img"
                 loading="lazy" width="2932" height="3982">
@@ -398,7 +446,7 @@
         </div>
       </section>
 
-      <img src="Obrazky/grafika/filigran/filigran-divider-3.png" class="section-divider section-divider--between" alt=""
+      <img src="Obrazky/grafika/filigran/filigran-divider-3.png" class="section-divider section-divider--between om-div-1" alt=""
         aria-hidden="true" loading="lazy">
 
       <!-- ══ SEKCE 2 – MŮJ PŘÍBĚH ═══════════════════════════ -->
@@ -408,10 +456,10 @@
             <img src="Obrazky/grafika/bg-kvetiny-left.png" class="grid-flower grid-flower-left" alt=""
               aria-hidden="true" loading="lazy">
 
-            <div class="img-frame recognition-img om-img-fixed rv rv-2">
+            <div class="img-frame recognition-img om-img-fixed om-pribeh-foto rv rv-2">
               <img src="Obrazky/anjali/anjali-13.jpg"
                 alt="Martina Anjali Výborná opřená o strom v lese jako symbol zakořenění a duchovního hledání" class="main-img"
-                loading="lazy" width="1365" height="2048" style="object-position: center 72%;">
+                loading="lazy" width="1365" height="2048">
             </div>
 
             <div class="recognition-content">
@@ -434,7 +482,7 @@
         </div>
       </section>
 
-      <img src="Obrazky/grafika/filigran/filigran-divider-2.png" class="section-divider section-divider--between" alt=""
+      <img src="Obrazky/grafika/filigran/filigran-divider-2.png" class="section-divider section-divider--between om-div-2" alt=""
         aria-hidden="true" loading="lazy">
 
     </div><!-- /.gradient-bridge -->
@@ -470,8 +518,7 @@
     </section>
 
     <img src="Obrazky/grafika/filigran/filigran-divider-3.png"
-      class="section-divider section-divider--between div-nad-kartou before-zena" alt="" aria-hidden="true" loading="lazy"
-      style="margin-top:1.5rem">
+      class="section-divider section-divider--between div-nad-kartou before-zena" alt="" aria-hidden="true" loading="lazy">
 
     <!-- ══ CITÁT 1 ══════════════════════════════════════ -->
     <section class="citat-sekce" aria-label="Citát Anjali o duchovním životě">
@@ -553,7 +600,7 @@
         </div>
       </section>
 
-      <img src="Obrazky/grafika/filigran/filigran-divider-3.png" class="section-divider section-divider--between" alt=""
+      <img src="Obrazky/grafika/filigran/filigran-divider-3.png" class="section-divider section-divider--between om-div-3" alt=""
         aria-hidden="true" loading="lazy">
 
       <!-- ══ SEKCE 5 – PROMĚNA ═══════════════════════════════ -->
@@ -582,7 +629,7 @@
                 nás probudily, otevřely naše srdce a&nbsp;přivedly nás blíž k&nbsp;pravdě o&nbsp;nás samotných.</p>
             </div>
 
-            <div class="img-frame recognition-img om-img-fixed rv rv-2">
+            <div class="img-frame recognition-img om-img-fixed om-promena-foto rv rv-2">
               <img src="Obrazky/anjali/anjali-8.jpg"
                 alt="Martina Anjali Výborná v bílých šatech rozpažující ruce k nebi před květem lotosu" class="main-img"
                 loading="lazy" width="3024" height="4032">
@@ -649,7 +696,7 @@
           <img src="Obrazky/grafika/bg-kvetiny-left.png" class="grid-flower grid-flower-left" alt="" aria-hidden="true"
             loading="lazy">
 
-          <div class="img-frame recognition-img om-img-fixed rv rv-2">
+          <div class="img-frame recognition-img om-img-fixed om-poznan-foto rv rv-2">
             <img src="Obrazky/anjali/anjali-6.jpg"
               alt="Martina Anjali Výborná v radostném tanci jako symbol návratu k sobě samé" class="main-img"
               loading="lazy" width="1067" height="1600">
@@ -681,8 +728,7 @@
     </section>
 
     <img src="Obrazky/grafika/filigran/filigran-divider-2.png"
-      class="section-divider section-divider--between div-nad-kartou before-zena" alt="" aria-hidden="true" loading="lazy"
-      style="margin-top:1.5rem">
+      class="section-divider section-divider--between div-nad-kartou before-zena" alt="" aria-hidden="true" loading="lazy">
 
     <!-- ══ CITÁT 3 ══════════════════════════════════════ -->
     <section class="citat-sekce" aria-label="Citát o ženě a lásce">
@@ -773,7 +819,7 @@
             </div>
           </div>
 
-          <div class="img-frame recognition-img om-img-fixed om-img-mirror rv rv-2">
+          <div class="img-frame recognition-img om-img-fixed om-img-mirror om-prace-foto rv rv-2">
             <img src="Obrazky/anjali/anjali-10.jpg" alt="Martina Anjali Výborná s úsměvem a otevřeným gestem"
               class="main-img" loading="lazy" width="1600" height="1067">
           </div>
