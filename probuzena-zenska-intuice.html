@@ -363,6 +363,12 @@
         font-size: .85rem;
         background: rgba(50, 32, 64, 0.7);
         border: 1px solid rgba(245, 231, 178, 0.35);
+        margin-top: 1.75rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .vstup-hero-body {
+        padding-top: 2rem;
       }
 
       /* První fotka O modulu – posunout dolů */
@@ -398,6 +404,19 @@
 
       /* Fotka O modulu – zrušit max-height na mobilu */
       .o-modulu-sekce .recognition-img { max-height: none; }
+
+      /* Galerie – 4. fotka zobrazí horní část */
+      .gallery-fw .g-item:nth-child(4) img {
+        object-position: center 15%;
+      }
+
+      .prozivek-header {
+        margin-bottom: 2rem;
+      }
+
+      .misto-section {
+        padding-bottom: 2rem;
+      }
     }
   </style>
 </head>
@@ -527,7 +546,7 @@
       </section>
 
       <img src="Obrazky/grafika/filigran/filigran-divider-3.png"
-        class="section-divider section-divider--between" alt="" aria-hidden="true" loading="lazy">
+        class="section-divider section-divider--between before-zena" alt="" aria-hidden="true" loading="lazy">
 
     </div><!-- /.gradient-bridge -->
 
@@ -626,7 +645,7 @@
     <section class="prozivek-section" aria-labelledby="prozivek-h2">
 
       <img src="Obrazky/grafika/filigran/filigran-divider-2.png"
-        class="section-divider section-divider--between div-nad-kartou" alt="" aria-hidden="true" loading="lazy">
+        class="section-divider section-divider--between div-nad-kartou after-zena" alt="" aria-hidden="true" loading="lazy">
 
       <div class="wrap">
         <div class="prozivek-card rv">
@@ -712,7 +731,7 @@
       </section>
 
       <img src="Obrazky/grafika/filigran/filigran-divider-2.png"
-        class="section-divider section-divider--between div-misto-galerie" alt="" aria-hidden="true" loading="lazy">
+        class="section-divider section-divider--between div-misto-galerie before-gallery" alt="" aria-hidden="true" loading="lazy">
 
       <!-- ══ GALERIE MODULU ══════════════════════════════════ -->
       <section class="galerie-section" aria-labelledby="galerie-h2">
@@ -807,7 +826,7 @@
     <div class="gradient-bridge-3">
 
       <img src="Obrazky/grafika/filigran/filigran-divider-2.png"
-        class="section-divider section-divider--between after-zena" alt="" aria-hidden="true" loading="lazy">
+        class="section-divider section-divider--between after-zena before-cta" alt="" aria-hidden="true" loading="lazy">
 
     </div><!-- /.gradient-bridge-3 -->
 

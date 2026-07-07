@@ -1600,7 +1600,11 @@ h3 {
 }
 
 @media (max-width: 960px) {
-  .temata-card--chakra { width: 100%; max-width: 480px; }
+  .temata-card--chakra { width: 100%; max-width: 480px; margin-bottom: 1.5rem; }
+}
+
+@media (max-width: 768px) {
+  .temata-card--chakra { max-width: 320px; margin-inline: auto; }
 }
 
 .temata-chakra-name {
@@ -2916,8 +2920,8 @@ h3 {
   }
 
   .citat-sekce {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
     background-attachment: scroll;
   }
 
@@ -3098,6 +3102,10 @@ h3 {
     margin-bottom: 2.5rem;
   }
 
+  .section-divider--between.div-nad-kartou {
+    margin-bottom: 5rem;
+  }
+
   .terminy-wrap {
     padding-bottom: 4rem !important;
   }
@@ -3114,6 +3122,19 @@ h3 {
   .section-divider--between.before-gallery {
     margin-top: 3rem;
     margin-bottom: 1.5rem;
+  }
+
+  .section-divider--between.div-misto-galerie.before-gallery {
+    margin-top: 2.5rem;
+    margin-bottom: 6rem;
+  }
+
+  .section-divider--between.div-pod-galerií.before-zena {
+    margin-top: 2rem;
+  }
+
+  .section-divider--between.after-zena.before-cta {
+    margin-bottom: 5rem;
   }
 
   .section-divider--between.before-moduly {
