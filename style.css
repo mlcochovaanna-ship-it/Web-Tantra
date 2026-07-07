@@ -2927,6 +2927,33 @@ h3 {
     gap: 2rem;
   }
 
+  /* CTA sekce – větší nadpisy na tabletu */
+  .cta-script {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+  }
+
+  .cta-caps {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  /* Vstup – single column + bez bočních dekorací */
+  .vstup-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vstup-sidebar {
+    position: static;
+    max-width: 600px;
+  }
+
+  .vstup-sidebar-deco {
+    display: none;
+  }
+
+  .vstup-main::before {
+    display: none;
+  }
+
   /* Jak probíhá – mezera mezi dividerem a fotkou */
   .o-skole.o-skole-home {
     padding-top: 2rem;
@@ -4172,6 +4199,15 @@ h3 {
 
   .page-secondary .vstup-hero .hero-caps {
     font-size: clamp(2.6rem, 5.5vw, 4rem);
+  }
+
+  /* Vstup – skrýt boční dekorace na všech tabletech */
+  .vstup-sidebar-deco {
+    display: none;
+  }
+
+  .vstup-grid {
+    grid-template-columns: 1fr;
   }
 }
 

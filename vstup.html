@@ -20,19 +20,30 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    @media (max-width: 1100px) {
-      .vstup-sidebar-deco {
-        display: block;
+    @media (min-width: 769px) and (max-width: 1100px) {
+      .vstup-sidebar {
+        max-width: none;
+      }
+
+      .vstup-sidebar-deco img {
+        width: clamp(180px, 50%, 320px);
       }
 
       .vstup-sidebar-deco--top {
-        margin-top: 0.25rem;
-        margin-bottom: 5.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 6rem;
       }
 
       .vstup-sidebar-deco--bottom {
-        margin-top: 4rem;
-        margin-bottom: 3rem;
+        margin-top: 6rem;
+        margin-bottom: 4rem;
+      }
+    }
+
+    @media (max-width: 1100px) {
+
+      .vstup-sidebar-deco {
+        display: block;
       }
 
       .vstup-info-card {
