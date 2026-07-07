@@ -2831,6 +2831,125 @@ h3 {
   }
 }
 
+/* ── TABLET (769px–960px) – přechodové hodnoty mezi desktopm a mobilem ── */
+@media (max-width: 960px) {
+
+  /* Filigránové oddělovače – vyvážené mezery */
+  .section-divider--between {
+    margin: 2rem auto 5rem;
+    width: clamp(180px, 50%, 320px);
+  }
+
+  .section-divider--between.before-zena {
+    margin-top: 1.5rem;
+    margin-bottom: 5.5rem;
+  }
+
+  .section-divider--between.after-zena {
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+  }
+
+  .section-divider--between.div-nad-kartou {
+    margin-bottom: 6rem;
+  }
+
+  .section-divider--between.div-misto-galerie.before-gallery {
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .section-divider--between.div-pod-galerií.before-zena {
+    margin-top: 2.5rem;
+  }
+
+  .section-divider--between.after-zena.before-cta {
+    margin-bottom: 5.5rem;
+  }
+
+  .section-divider--between.before-anjali {
+    margin-top: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .section-divider--between.before-reference {
+    margin-bottom: 3rem;
+  }
+
+  .section-divider--between.before-gallery {
+    margin-top: 2rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .section-divider--between.before-moduly {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-divider--between.after-zena.before-moduly {
+    margin-bottom: 4rem;
+  }
+
+  /* Citáty – větší písmo na tabletu */
+  .citat,
+  .zl-playfair span {
+    font-size: clamp(3.2rem, 5.5vw, 4rem);
+    line-height: 1.3;
+  }
+
+  /* Boční květiny v citátech – skrýt jako na mobilu */
+  .zl-fili {
+    display: none;
+  }
+
+  /* CTA karta – stejná šířka jako tunel webu */
+  .cta-body {
+    width: 88%;
+  }
+
+
+  /* Průvodkyně – fotka plná šířka */
+  .anjali-img {
+    min-height: 0;
+    height: 480px;
+    width: 100%;
+    aspect-ratio: unset;
+  }
+
+  /* Termíny – mezera pod tlačítkem */
+  .terminy-wrap {
+    padding-bottom: 5rem !important;
+  }
+
+  /* Foto+text sekce – mezera mezi fotkou a eyebrow */
+  .recognition-grid,
+  .o-skole-grid,
+  .anjali-grid {
+    gap: 2rem;
+  }
+
+  /* Jak probíhá – mezera mezi dividerem a fotkou */
+  .o-skole.o-skole-home {
+    padding-top: 2rem;
+  }
+
+  /* Manifesto pillars – plná šířka na tabletu */
+  .manifesto-pillars {
+    max-width: none;
+  }
+
+  /* Termíny – pod sebe na tabletu */
+  .terminy-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Divider mezi termíny a moduly */
+  .moduly-page .section-divider--between {
+    margin-top: 4rem;
+    margin-bottom: 7rem;
+  }
+}
+
 @media (max-width:768px) {
   :root {
     --pad: clamp(56px, 10vw, 72px);
@@ -3469,11 +3588,20 @@ h3 {
 
 @media (min-width:769px) and (max-width:1100px) {
   .hero-script {
-    font-size: clamp(4.5rem, 8vw, 6rem);
+    font-size: clamp(6rem, 10vw, 7.5rem);
   }
 
   .hero-caps {
-    font-size: clamp(2.8rem, 6vw, 4rem);
+    font-size: clamp(3.5rem, 7vw, 5rem);
+  }
+
+  /* Vedlejší stránky – větší H1 na tabletu */
+  .page-secondary .hero-script {
+    font-size: clamp(5.5rem, 9vw, 7.5rem);
+  }
+
+  .page-secondary .hero-caps {
+    font-size: clamp(3.8rem, 7vw, 5.4rem);
   }
 }
 
@@ -4035,6 +4163,15 @@ h3 {
 
   .vstup-hero .hero-caps {
     font-size: clamp(2rem, 4vw, 2.8rem);
+  }
+
+  /* Vedlejší stránky – přepis výše */
+  .page-secondary .vstup-hero .hero-script {
+    font-size: clamp(4.2rem, 7.5vw, 5.8rem);
+  }
+
+  .page-secondary .vstup-hero .hero-caps {
+    font-size: clamp(2.6rem, 5.5vw, 4rem);
   }
 }
 

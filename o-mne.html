@@ -251,6 +251,75 @@
 
     /* ── Responsive ──────────────────────────────────────────────── */
 
+    @media (min-width: 769px) and (max-width: 960px) {
+      .vstup-hero-body .om-hero-caps {
+        white-space: normal;
+      }
+
+      .om-img-fixed {
+        height: 420px;
+      }
+
+      .om-cesta-foto .main-img {
+        object-position: center 15%;
+      }
+
+      .om-pribeh-foto .main-img {
+        object-position: center 55%;
+      }
+
+      .om-promena-foto .main-img {
+        object-position: center 35%;
+      }
+
+      .om-poznan-foto .main-img {
+        object-position: center top;
+      }
+
+      .om-prace-foto .main-img {
+        object-position: center 10%;
+      }
+
+      .om-div-1,
+      .om-div-2,
+      .om-div-3 {
+        margin-top: 0;
+        margin-bottom: 7.5rem;
+      }
+
+      .div-nad-kartou {
+        margin-top: 0.5rem;
+        margin-bottom: 8.5rem;
+      }
+
+      .div-nad-kartou.before-zena {
+        margin-top: 0.25rem;
+        margin-bottom: 7rem;
+      }
+
+      .div-nad-mistem {
+        margin-top: 1rem;
+        margin-bottom: 7.5rem;
+      }
+
+      .div-pod-mistem {
+        margin-bottom: 5rem;
+      }
+
+      .div-pod-mistem.before-zena {
+        margin-top: 0.25rem;
+        margin-bottom: 7.5rem;
+      }
+
+      .om-links-section {
+        padding-top: 3rem;
+      }
+
+      .om-rozhovory-section {
+        padding-top: calc(var(--pad) + 3rem);
+      }
+    }
+
     @media (max-width: 768px) {
       .om-cesta-foto .main-img {
         object-position: center 15%;
@@ -320,7 +389,7 @@
   </style>
 </head>
 
-<body>
+<body class="page-secondary">
 
   <!-- ══ NAVIGACE ════════════════════════════════════════ -->
   <header class="site-header" id="hdr" role="banner">
@@ -1051,12 +1120,12 @@
 
 
 
+
     /* ── Posun na rozhovory ──────────────────────────── */
     const rozhovoryToggle = document.getElementById('rozhovory-toggle');
-    const rozhovoryDetail = document.getElementById('rozhovory-detail');
     rozhovoryToggle.addEventListener('click', (e) => {
       e.preventDefault();
-      rozhovoryDetail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.scrollBy({ top: 600, behavior: 'smooth' });
     });
 
     /* ── Scroll reveal ───────────────────────────────── */

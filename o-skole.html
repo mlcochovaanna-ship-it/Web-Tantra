@@ -713,7 +713,7 @@
       .prakticke-section,
       .cena-section,
       .faq-section {
-        padding-top: var(--pad);
+        padding-top: 2.5rem;
       }
 
       .bezpeci-grid {
@@ -745,9 +745,20 @@
         grid-column: auto;
       }
 
+      .prakticke-card:nth-child(5) {
+        grid-column: 1 / -1;
+        max-width: calc(50% - 1.5rem);
+        margin-inline: auto;
+      }
+
+      .cena-steps {
+        max-width: none;
+      }
+
       .faq-grid {
         flex-direction: column;
         gap: 0;
+        align-items: stretch;
       }
     }
 
@@ -818,7 +829,7 @@
   </style>
 </head>
 
-<body>
+<body class="page-secondary">
 
   <!-- ══ NAVIGACE ════════════════════════════════════════ -->
   <header class="site-header" id="hdr" role="banner">
