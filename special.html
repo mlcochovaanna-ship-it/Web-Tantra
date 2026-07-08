@@ -616,6 +616,12 @@
         grid-template-columns: 1fr;
         gap: 1.5rem;
       }
+      .misto-img-frame {
+        order: -1;
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 16 / 9;
+      }
     }
 
     @media (max-width: 600px) {
@@ -729,6 +735,51 @@
 
       .sp-form-heading {
         font-size: 2.4rem;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1100px) {
+      .vstup-hero .hero-script {
+        font-size: clamp(4.2rem, 7.5vw, 5.8rem);
+      }
+      .vstup-hero .hero-caps {
+        font-size: clamp(2.6rem, 5.5vw, 4rem);
+      }
+      .sp-div-1 {
+        margin-top: 1rem;
+        margin-bottom: 11rem;
+      }
+      .section-divider--between.before-zena.sp-div-2 {
+        margin-top: 0.5rem;
+        margin-bottom: 6rem;
+      }
+      .program-main-grid .sp-img-fixed .main-img {
+        object-position: center 38%;
+      }
+      .program-main-grid {
+        gap: 3rem;
+        margin-bottom: 0;
+      }
+      .program-cards-col {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+      .program-glass-card {
+        margin-top: 1.5rem;
+      }
+      .sp-form-heading {
+        font-size: clamp(3rem, 5vw, 4rem);
+      }
+      .section-divider--between.div-nad-kartou.before-zena {
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+      }
+      .sp-hero-datum {
+        font-size: .85rem;
+        background: rgba(28, 80, 55, 0.7);
+        border: 1px solid rgba(245, 231, 178, 0.35);
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
       }
     }
   </style>
@@ -1305,10 +1356,10 @@
       </div>
       <div class="soft-wave soft-wave--footer" aria-hidden="true">
         <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;">
-          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(10,25,16,0.25)" />
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(42,0,8,0.25)" />
         </svg>
         <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:90px;">
-          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(10,25,16,0.5)" />
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(42,0,8,0.5)" />
         </svg>
         <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:70px;">
           <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#2A0008" />
