@@ -4,15 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stránka nenalezena | Mysterijní škola ženství</title>
+  <title>Zpracování osobních údajů | Mysterijní škola ženství</title>
   <meta name="description"
-    content="Stránka, kterou hledáš, neexistuje. Vrať se na úvodní stránku Mysterijní školy ženství.">
-  <meta name="robots" content="noindex, nofollow">
+    content="Informace o zpracování osobních údajů v Mysterijní škole ženství. Jaké údaje sbíráme, proč a jak je chráníme.">
+  <link rel="canonical" href="https://zenskamystika.cz/zpracovani-osobnich-udaju">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://zenskamystika.cz/404">
-  <meta property="og:title" content="Stránka nenalezena | Mysterijní škola ženství">
-  <meta property="og:description"
-    content="Stránka, kterou hledáš, neexistuje. Vrať se na úvodní stránku Mysterijní školy ženství.">
+  <meta property="og:url" content="https://zenskamystika.cz/zpracovani-osobnich-udaju">
+  <meta property="og:title" content="Zpracování osobních údajů | Mysterijní škola ženství">
   <meta property="og:image" content="https://zenskamystika.cz/Obrazky/o-skole/o-skole-12.webp">
   <link rel="icon" type="image/svg+xml"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='none' stroke='%23C69B45' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%23C69B45' stroke-width='1'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23C69B45'/%3E%3Cline x1='32' y1='4' x2='32' y2='14' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='32' y1='50' x2='32' y2='60' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='4' y1='32' x2='14' y2='32' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='50' y1='32' x2='60' y2='32' stroke='%23C69B45' stroke-width='1.5'/%3E%3C/svg%3E">
@@ -20,36 +18,101 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* ── 404 – stránkové styly ──────────────────────────────────── */
-
-    .notfound-hero-bg {
-      background-image: url('Obrazky/ilustracni/prostor-02.webp');
-      background-position: center 35%;
-    }
+    /* ── ZPRACOVÁNÍ OÚ – stránkové styly ──────────────────────────── */
 
     .gradient-bridge {
       position: relative;
+      overflow: visible;
     }
 
-    .recognition {
-      padding-top: var(--pad);
-      padding-bottom: calc(var(--pad) + 6rem);
+    .zprac-hero-bg {
+      background-image: url('Obrazky/ilustracni/prostor-02.webp');
+      background-position: center 40%;
     }
 
-    .recognition-img {
-      height: auto;
-      min-height: 0;
-      aspect-ratio: 3 / 2;
+    .zprac-section {
+      padding-top: calc(var(--pad) * 0.65);
+      padding-bottom: calc(var(--pad) + 4rem);
     }
 
-    .recognition-img .main-img {
-      object-position: center 45%;
-      transform: scaleX(-1);
+    .zprac-content {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .zprac-content h2 {
+      font-family: var(--ff-serif);
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      line-height: 1.2;
+      padding-top: 0.15em;
+      padding-bottom: 0.12em;
+      margin-top: 2.5rem;
+      margin-bottom: calc(-0.12em + 2rem);
+      background: linear-gradient(90deg, #8A652A 0%, #B8862A 52%, #8A652A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .zprac-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .zprac-content p,
+    .zprac-content li {
+      font-family: var(--ff-sans);
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #4A4A4A;
+    }
+
+    .zprac-content p+p {
+      margin-top: 0.9rem;
+    }
+
+    .zprac-content ul {
+      padding-left: 1.4rem;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .zprac-content li {
+      margin-bottom: 0.35rem;
+    }
+
+    .zprac-content a {
+      color: #7A5C20;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .zprac-content a:hover {
+      color: #9A6D2B;
+    }
+
+    .zprac-divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, #6B4A18, #C69B45 40%, transparent);
+      display: block;
+      margin: 2rem 0;
+    }
+
+    .zprac-contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 2rem;
+      margin: 1rem 0;
     }
 
     @media (max-width: 768px) {
-      .recognition {
+      .zprac-section {
         padding-bottom: calc(var(--pad) + 2rem);
+      }
+      .zprac-contact-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -114,17 +177,17 @@
   </nav>
 
   <!-- ══ HERO ═══════════════════════════════════════════ -->
-  <section class="vstup-hero" aria-label="Stránka nenalezena">
-    <div class="notfound-hero-bg vstup-hero-bg" role="img" aria-label="Klidný prostor Mysterijní školy ženství"></div>
+  <section class="vstup-hero" aria-label="Zpracování osobních údajů">
+    <div class="zprac-hero-bg vstup-hero-bg" role="img" aria-label="Klidný prostor Mysterijní školy ženství"></div>
     <div class="vstup-hero-overlay"></div>
     <div class="vstup-hero-body">
-      <span class="hero-eyebrow">Stránka neexistuje</span>
+      <span class="hero-eyebrow">Ochrana soukromí</span>
       <h1 class="hero-h1">
-        <span class="hero-script">Asi jsi zabloudila,</span>
-        <span class="hero-caps">nic se neděje</span>
+        <span class="hero-script">Zpracování</span>
+        <span class="hero-caps">osobních údajů</span>
       </h1>
-      <p class="hero-text">Stránka, kterou hledáš, už neexistuje nebo byla přesunuta. Správná cesta je blíž, než si
-        myslíš.</p>
+      <p class="hero-text">Tvoje důvěra je pro mě posvátná. Níže najdeš přehledné informace o&nbsp;tom, jaké údaje
+        sbírám, proč a&nbsp;jak je chráním.</p>
     </div>
     <div class="soft-wave" aria-hidden="true">
       <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;">
@@ -143,28 +206,136 @@
 
     <div class="gradient-bridge">
 
-      <!-- ══ 404 SEKCE ════════════════════════════════════ -->
-      <section class="recognition" aria-labelledby="notfound-h2">
-        <div class="wrap">
-          <div class="recognition-grid">
-            <img src="Obrazky/grafika/bg-kvetiny-left.webp" class="grid-flower grid-flower-left" alt=""
-              aria-hidden="true" loading="lazy">
+      <!-- ══ OBSAH ═══════════════════════════════════════ -->
+      <section class="zprac-section" aria-labelledby="zprac-h2">
+<div class="wrap">
+          <div class="zprac-content rv">
 
-            <div class="img-frame recognition-img rv">
-              <img src="Obrazky/anjali/anjali-07.webp" alt="Martina Anjali Výborná" class="main-img" loading="lazy"
-                width="600" height="500">
+            <h2 id="zprac-h2">1. Správce osobních údajů</h2>
+            <p>Správcem tvých osobních údajů je:</p>
+            <div class="zprac-contact-grid">
+              <p style="margin:0">
+                <strong>Jméno a příjmení:</strong> Martina Výborná<br>
+                <strong>Sídlo:</strong> Křižíkova 1873/16, 430&nbsp;01 Chomutov<br>
+                <strong>IČO:</strong> 68427212
+              </p>
+              <p style="margin:0">
+                <strong>E-mail:</strong> <a href="mailto:anjali@martinavyborna.cz">anjali@martinavyborna.cz</a><br>
+                <strong>Telefon:</strong> <a href="tel:+420603529357">+420&nbsp;603&nbsp;529&nbsp;357</a>
+              </p>
             </div>
+            <p>Jako správce zpracovávám osobní údaje v&nbsp;souladu s&nbsp;Nařízením Evropského parlamentu a&nbsp;Rady
+              (EU) 2016/679 (GDPR) a&nbsp;souvisejícími právními předpisy.</p>
 
-            <div class="recognition-content">
-              <span class="eyebrow rv">Zastav se</span>
-              <h2 id="notfound-h2" class="hc rv rv-1">
-                <span class="hc-s">Pojď, ukážu ti cestu zpátky</span>
-              </h2>
-              <p class="rv rv-1">Na úvodní stránce najdeš vše, co potřebuješ. Informace o&nbsp;škole, jednotlivých
-                modulech i&nbsp;letním speciálu.</p>
-              <div class="rv rv-3" style="margin-top:2rem">
-                <a href="/" class="btn btn-ghost">Zpět na úvodní stránku</a>
-              </div>
+            <div class="zprac-divider" aria-hidden="true"></div>
+
+            <h2>2. Jaké osobní údaje zpracovávám</h2>
+            <p>Prostřednictvím formulářů na těchto webových stránkách zpracovávám osobní údaje, které mi sama
+              poskytneš:</p>
+            <ul>
+              <li>jméno,</li>
+              <li>příjmení,</li>
+              <li>e-mailovou adresu,</li>
+              <li>telefonní číslo,</li>
+              <li>obsah zprávy.</li>
+            </ul>
+
+            <div class="zprac-divider" aria-hidden="true"></div>
+
+            <h2>3. Za jakým účelem osobní údaje zpracovávám</h2>
+            <p>Tvoje osobní údaje zpracovávám za účelem:</p>
+            <ul>
+              <li>vyřízení tvého dotazu,</li>
+              <li>komunikace ohledně Mysterijní školy ženství,</li>
+              <li>komunikace ohledně Letního speciálu Chrám krásy Shakti,</li>
+              <li>zpracování přihlášky na Mysterijní školu ženství,</li>
+              <li>zpracování přihlášky na Letní speciál Chrám krásy Shakti,</li>
+              <li>organizace tvé účasti na programu,</li>
+              <li>plnění vzájemných práv a&nbsp;povinností souvisejících s&nbsp;tvou účastí na programu.</li>
+            </ul>
+
+            <div class="zprac-divider" aria-hidden="true"></div>
+
+            <h2>4. Právní základ zpracování</h2>
+            <p>Osobní údaje zpracovávám na základě:</p>
+            <ul>
+              <li>provedení opatření přijatých před uzavřením smlouvy na tvou žádost,</li>
+              <li>plnění smlouvy, pokud se přihlašuješ na některý z&nbsp;nabízených programů,</li>
+              <li>plnění právních povinností, které mi ukládají právní předpisy.</li>
+            </ul>
+
+            <div class="zprac-divider" aria-hidden="true"></div>
+
+            <h2>5. Doba uchování osobních údajů</h2>
+            <p>Osobní údaje získané prostřednictvím kontaktních formulářů uchovávám po dobu nezbytnou k&nbsp;vyřízení
+              tvého dotazu a&nbsp;následné komunikaci, nejdéle však 5&nbsp;let od&nbsp;posledního kontaktu, pokud mezi
+              námi nevznikne smluvní vztah nebo právní předpisy nevyžadují dobu delší.</p>
+            <p>Osobní údaje související s&nbsp;přihláškou a&nbsp;účastí na Mysterijní škole ženství nebo Letním
+              speciálu Chrám krásy Shakti uchovávám po dobu nezbytnou ke splnění smluvních, účetních a&nbsp;dalších
+              zákonných povinností.</p>
+
+            <div class="zprac-divider" aria-hidden="true"></div>
+
+            <h2>6. Komu mohou být osobní údaje zpřístupněny</h2>
+            <p>Tvoje osobní údaje mohu zpřístupnit pouze osobám, které se podílejí na zajištění provozu webových
+              stránek, technického zázemí nebo organizaci jednotlivých programů.</p>
+            <p>Jedná se zejména o&nbsp;poskytovatele webhostingu, e-mailových služeb, správce webových technologií
+              nebo poskytovatele ubytování a&nbsp;stravování, pokud je předání osobních údajů nezbytné pro zajištění
+              tvé účasti na programu.</p>
+            <p>Tvoje osobní údaje nepředávám třetím osobám pro marketingové účely.</p>
+
+            <div class="zprac-divider" aria-hidden="true"></div>
+
+            <h2>7. Předávání osobních údajů mimo Evropskou unii</h2>
+            <p>Pokud při poskytování služeb využívám poskytovatele se sídlem mimo Evropskou unii, děje se tak pouze
+              za podmínek stanovených GDPR a&nbsp;při zajištění odpovídající úrovně ochrany osobních údajů.</p>
+
+            <div class="zprac-divider" aria-hidden="true"></div>
+
+            <h2>8. Tvá práva</h2>
+            <p>V&nbsp;souvislosti se zpracováním osobních údajů máš právo:</p>
+            <ul>
+              <li>požadovat přístup ke svým osobním údajům,</li>
+              <li>požadovat opravu nepřesných nebo neúplných údajů,</li>
+              <li>požadovat výmaz osobních údajů, pokud jsou splněny zákonné podmínky,</li>
+              <li>požadovat omezení zpracování,</li>
+              <li>vznést námitku proti zpracování,</li>
+              <li>požadovat přenositelnost osobních údajů,</li>
+              <li>podat stížnost u&nbsp;<a href="https://www.uoou.cz" target="_blank" rel="noopener">Úřadu pro ochranu
+                  osobních údajů</a>.</li>
+            </ul>
+
+            <div class="zprac-divider" aria-hidden="true"></div>
+
+            <h2>9. Jak můžeš svá práva uplatnit</h2>
+            <p>V&nbsp;případě jakýchkoliv dotazů nebo žádostí týkajících se zpracování osobních údajů mě můžeš
+              kontaktovat na&nbsp;<a href="mailto:anjali@martinavyborna.cz">anjali@martinavyborna.cz</a>.</p>
+            <p>Pokud se domníváš, že při zpracování tvých osobních údajů dochází k&nbsp;porušení právních předpisů,
+              máš právo podat stížnost u&nbsp;<a href="https://www.uoou.cz" target="_blank" rel="noopener">Úřadu pro
+                ochranu osobních údajů</a>.</p>
+
+            <div class="zprac-divider" aria-hidden="true"></div>
+
+            <h2>10. Zabezpečení osobních údajů</h2>
+            <p>Přijímám odpovídající technická a&nbsp;organizační opatření, která chrání osobní údaje před
+              neoprávněným přístupem, ztrátou, zneužitím nebo jiným neoprávněným zpracováním.</p>
+
+            <div class="zprac-divider" aria-hidden="true"></div>
+
+            <h2>11. Kontaktní formuláře</h2>
+            <p>Na těchto webových stránkách jsou k&nbsp;dispozici dva formuláře:</p>
+            <ul>
+              <li>přihlášení do Mysterijní školy ženství nebo zaslání dotazu,</li>
+              <li>přihlášení na Letní speciál Chrám krásy Shakti nebo zaslání dotazu.</li>
+            </ul>
+            <p>Odesláním formuláře potvrzuješ, že ses seznámila s&nbsp;těmito Zásadami zpracování osobních údajů.</p>
+
+            <div class="zprac-divider" aria-hidden="true"></div>
+
+            <p style="font-size:.9rem; color:#6B6B6B">Tyto zásady jsou účinné od 1.&nbsp;7.&nbsp;2026.</p>
+
+            <div style="margin-top:2.5rem">
+              <a href="/" class="btn btn-gold" style="text-decoration:none">Zpět na úvodní stránku</a>
             </div>
 
           </div>

@@ -827,6 +827,9 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0;
   line-height: 1.05;
+  padding-top: 0.15em;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
   background: var(--gold-cta);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

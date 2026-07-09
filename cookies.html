@@ -4,15 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stránka nenalezena | Mysterijní škola ženství</title>
+  <title>Zásady cookies | Mysterijní škola ženství</title>
   <meta name="description"
-    content="Stránka, kterou hledáš, neexistuje. Vrať se na úvodní stránku Mysterijní školy ženství.">
-  <meta name="robots" content="noindex, nofollow">
+    content="Informace o používání souborů cookie na webu Mysterijní školy ženství.">
+  <link rel="canonical" href="https://zenskamystika.cz/cookies">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://zenskamystika.cz/404">
-  <meta property="og:title" content="Stránka nenalezena | Mysterijní škola ženství">
-  <meta property="og:description"
-    content="Stránka, kterou hledáš, neexistuje. Vrať se na úvodní stránku Mysterijní školy ženství.">
+  <meta property="og:url" content="https://zenskamystika.cz/cookies">
+  <meta property="og:title" content="Zásady cookies | Mysterijní škola ženství">
   <meta property="og:image" content="https://zenskamystika.cz/Obrazky/o-skole/o-skole-12.webp">
   <link rel="icon" type="image/svg+xml"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='none' stroke='%23C69B45' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%23C69B45' stroke-width='1'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23C69B45'/%3E%3Cline x1='32' y1='4' x2='32' y2='14' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='32' y1='50' x2='32' y2='60' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='4' y1='32' x2='14' y2='32' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='50' y1='32' x2='60' y2='32' stroke='%23C69B45' stroke-width='1.5'/%3E%3C/svg%3E">
@@ -20,35 +18,90 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* ── 404 – stránkové styly ──────────────────────────────────── */
-
-    .notfound-hero-bg {
-      background-image: url('Obrazky/ilustracni/prostor-02.webp');
-      background-position: center 35%;
-    }
+    /* ── COOKIES – stránkové styly ──────────────────────────── */
 
     .gradient-bridge {
       position: relative;
+      overflow: visible;
     }
 
-    .recognition {
-      padding-top: var(--pad);
-      padding-bottom: calc(var(--pad) + 6rem);
+    .zprac-hero-bg {
+      background-image: url('Obrazky/ilustracni/prostor-02.webp');
+      background-position: center 40%;
     }
 
-    .recognition-img {
-      height: auto;
-      min-height: 0;
-      aspect-ratio: 3 / 2;
+    .zprac-section {
+      padding-top: calc(var(--pad) * 0.65);
+      padding-bottom: calc(var(--pad) + 4rem);
     }
 
-    .recognition-img .main-img {
-      object-position: center 45%;
-      transform: scaleX(-1);
+    .zprac-content {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .zprac-content h2 {
+      font-family: var(--ff-serif);
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      line-height: 1.2;
+      padding-top: 0.15em;
+      padding-bottom: 0.12em;
+      margin-top: 2.5rem;
+      margin-bottom: calc(-0.12em + 2rem);
+      background: linear-gradient(90deg, #8A652A 0%, #B8862A 52%, #8A652A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .zprac-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .zprac-content p,
+    .zprac-content li {
+      font-family: var(--ff-sans);
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #4A4A4A;
+    }
+
+    .zprac-content p+p {
+      margin-top: 0.9rem;
+    }
+
+    .zprac-content ul {
+      padding-left: 1.4rem;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .zprac-content li {
+      margin-bottom: 0.35rem;
+    }
+
+    .zprac-content a {
+      color: #7A5C20;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .zprac-content a:hover {
+      color: #9A6D2B;
+    }
+
+    .zprac-divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, #6B4A18, #C69B45 40%, transparent);
+      display: block;
+      margin: 2rem 0;
     }
 
     @media (max-width: 768px) {
-      .recognition {
+      .zprac-section {
         padding-bottom: calc(var(--pad) + 2rem);
       }
     }
@@ -114,17 +167,16 @@
   </nav>
 
   <!-- ══ HERO ═══════════════════════════════════════════ -->
-  <section class="vstup-hero" aria-label="Stránka nenalezena">
-    <div class="notfound-hero-bg vstup-hero-bg" role="img" aria-label="Klidný prostor Mysterijní školy ženství"></div>
+  <section class="vstup-hero" aria-label="Zásady cookies">
+    <div class="zprac-hero-bg vstup-hero-bg" role="img" aria-label="Klidný prostor Mysterijní školy ženství"></div>
     <div class="vstup-hero-overlay"></div>
     <div class="vstup-hero-body">
-      <span class="hero-eyebrow">Stránka neexistuje</span>
+      <span class="hero-eyebrow">Ochrana soukromí</span>
       <h1 class="hero-h1">
-        <span class="hero-script">Asi jsi zabloudila,</span>
-        <span class="hero-caps">nic se neděje</span>
+        <span class="hero-script">Zásady používání</span>
+        <span class="hero-caps">cookies</span>
       </h1>
-      <p class="hero-text">Stránka, kterou hledáš, už neexistuje nebo byla přesunuta. Správná cesta je blíž, než si
-        myslíš.</p>
+      <p class="hero-text">Informace o&nbsp;tom, jak tento web používá soubory cookie a&nbsp;jak je můžeš spravovat.</p>
     </div>
     <div class="soft-wave" aria-hidden="true">
       <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;">
@@ -143,28 +195,48 @@
 
     <div class="gradient-bridge">
 
-      <!-- ══ 404 SEKCE ════════════════════════════════════ -->
-      <section class="recognition" aria-labelledby="notfound-h2">
+      <!-- ══ OBSAH ═══════════════════════════════════════ -->
+      <section class="zprac-section" aria-labelledby="cookies-h2">
         <div class="wrap">
-          <div class="recognition-grid">
-            <img src="Obrazky/grafika/bg-kvetiny-left.webp" class="grid-flower grid-flower-left" alt=""
-              aria-hidden="true" loading="lazy">
+          <div class="zprac-content rv">
 
-            <div class="img-frame recognition-img rv">
-              <img src="Obrazky/anjali/anjali-07.webp" alt="Martina Anjali Výborná" class="main-img" loading="lazy"
-                width="600" height="500">
-            </div>
+            <h2 id="cookies-h2">1. Co jsou cookies</h2>
+            <p>Tyto webové stránky používají soubory cookies, které pomáhají zajistit jejich správné fungování.</p>
+            <p>Cookies jsou malé textové soubory, které se při návštěvě webových stránek ukládají do tvého zařízení.</p>
 
-            <div class="recognition-content">
-              <span class="eyebrow rv">Zastav se</span>
-              <h2 id="notfound-h2" class="hc rv rv-1">
-                <span class="hc-s">Pojď, ukážu ti cestu zpátky</span>
-              </h2>
-              <p class="rv rv-1">Na úvodní stránce najdeš vše, co potřebuješ. Informace o&nbsp;škole, jednotlivých
-                modulech i&nbsp;letním speciálu.</p>
-              <div class="rv rv-3" style="margin-top:2rem">
-                <a href="/" class="btn btn-ghost">Zpět na úvodní stránku</a>
-              </div>
+            <div class="zprac-divider" aria-hidden="true"></div>
+
+            <h2>2. Jaké cookies používám</h2>
+            <p>Na těchto webových stránkách používám:</p>
+            <ul>
+              <li><strong>Nezbytné cookies</strong>, které jsou potřebné pro správné fungování webových stránek.</li>
+              <li><strong>Cookies třetích stran</strong>, které mohou být používány při přehrávání vložených videí ze služby YouTube.</li>
+            </ul>
+            <p>Na těchto webových stránkách nepoužívám analytické ani marketingové cookies.</p>
+
+            <div class="zprac-divider" aria-hidden="true"></div>
+
+            <h2>3. Vložená videa YouTube</h2>
+            <p>Na některých stránkách mohou být vložena videa ze služby YouTube.</p>
+            <p>Při jejich přehrávání může společnost Google ukládat do tvého zařízení vlastní cookies a&nbsp;zpracovávat některé technické údaje v&nbsp;souladu se svými podmínkami a&nbsp;zásadami ochrany osobních údajů.</p>
+
+            <div class="zprac-divider" aria-hidden="true"></div>
+
+            <h2>4. Jak můžeš cookies spravovat</h2>
+            <p>Používání cookies můžeš kdykoliv upravit v&nbsp;nastavení svého internetového prohlížeče.</p>
+            <p>Většina prohlížečů umožňuje uložené cookies zobrazit, odstranit nebo jejich ukládání zcela zakázat. Omezení některých cookies však může ovlivnit správné fungování webových stránek.</p>
+
+            <div class="zprac-divider" aria-hidden="true"></div>
+
+            <h2>5. Kontakt</h2>
+            <p>Pokud máš jakékoliv dotazy týkající se používání cookies, můžeš mě kontaktovat na&nbsp;<a href="mailto:anjali@martinavyborna.cz">anjali@martinavyborna.cz</a>.</p>
+
+            <div class="zprac-divider" aria-hidden="true"></div>
+
+            <p style="font-size:.9rem; color:#6B6B6B">Tyto zásady jsou účinné od 1.&nbsp;7.&nbsp;2026.</p>
+
+            <div style="margin-top:2.5rem">
+              <a href="/" class="btn btn-gold" style="text-decoration:none">Zpět na úvodní stránku</a>
             </div>
 
           </div>
@@ -360,6 +432,7 @@
     document.getElementById('ck-ok').addEventListener('click', () => { localStorage.setItem('ck', 'ok'); ck.classList.remove('on'); });
     document.getElementById('ck-no').addEventListener('click', () => { localStorage.setItem('ck', 'no'); ck.classList.remove('on'); });
   </script>
+
 </body>
 
 </html>
