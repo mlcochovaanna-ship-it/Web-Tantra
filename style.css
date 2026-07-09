@@ -762,7 +762,7 @@ h3 {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('Obrazky/o-skole/skola-uvod.jpg');
+  background-image: url('Obrazky/o-skole/o-skole-14.webp');
   background-size: cover;
   background-position: center 50%;
 }
@@ -1254,7 +1254,7 @@ h3 {
       rgba(136, 0, 38, .60) 70%,
       rgba(145, 0, 43, .54) 84%,
       rgba(154, 0, 48, .48) 100%),
-    url('Obrazky/grafika/bg-anjali-rose-right.jpg') center / cover no-repeat fixed;
+    url('Obrazky/grafika/bg-anjali-rose-right.webp') center / cover no-repeat fixed;
   text-align: center;
   width: 100%;
 }
@@ -1332,7 +1332,7 @@ h3 {
       rgba(136, 0, 38, .60) 70%,
       rgba(145, 0, 43, .54) 84%,
       rgba(154, 0, 48, .48) 100%),
-    url('Obrazky/grafika/bg-anjali-rose-right.jpg') center / cover no-repeat fixed;
+    url('Obrazky/grafika/bg-anjali-rose-right.webp') center / cover no-repeat fixed;
   text-align: center;
   width: 100%;
 }
@@ -2094,7 +2094,7 @@ h3 {
 .cta-bg {
   position: absolute;
   inset: 0;
-  background-image: url('Obrazky/ilustracni/prostor-2.jpeg');
+  background-image: url('Obrazky/ilustracni/prostor-02.webp');
   background-size: cover;
   background-position: center center;
   background-attachment: scroll;
@@ -2291,7 +2291,7 @@ h3 {
   bottom: 0;
   left: 18%;
   right: 18%;
-  background: url('Obrazky/LOGO-zenska-mystika.png') center / contain no-repeat;
+  background: url('Obrazky/logo-zenska-mystika.webp') center / contain no-repeat;
   filter: brightness(0) invert(1);
   opacity: .11;
   pointer-events: none;
@@ -3479,7 +3479,7 @@ h3 {
   }
 
   .hero-bg {
-    background-image: url('Obrazky/o-skole/skola-6.jpg');
+    background-image: url('Obrazky/o-skole/o-skole-13.webp');
     background-position: center 60%;
   }
 
@@ -3635,7 +3635,7 @@ h3 {
 .vstup-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('Obrazky/ilustracni/prostor-2.jpeg');
+  background-image: url('Obrazky/ilustracni/prostor-02.webp');
   background-size: cover;
   background-position: center center;
 }
@@ -3695,7 +3695,7 @@ h3 {
   left: 0;
   right: 0;
   pointer-events: none;
-  background-image: url('Obrazky/grafika/bg-kvetiny-right.png');
+  background-image: url('Obrazky/grafika/bg-kvetiny-right.webp');
   background-repeat: no-repeat;
   background-size: auto 60%;
   background-position: right center;
