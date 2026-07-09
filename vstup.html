@@ -67,6 +67,7 @@
 </head>
 
 <body class="page-secondary">
+  <a class="skip-link" href="#main-content">Přeskočit na obsah</a>
 
   <!-- ══ NAVIGATION ══════════════════════════════════════ -->
   <header class="site-header" id="hdr" role="banner">
@@ -152,7 +153,7 @@
   </section>
 
   <!-- ══ FORMULÁŘ ══════════════════════════════════════ -->
-  <main class="vstup-main" id="formular" aria-label="Formulář vstupu do školy">
+  <main class="vstup-main" id="main-content" aria-label="Formulář vstupu do školy">
     <div class="wrap">
 
       <div class="vstup-grid">
@@ -168,6 +169,8 @@
             <p class="vstup-form-lead">Vyplň formulář níže. Záleží mi na každé ženě, proto tě prosím o&nbsp;upřímnost
               a&nbsp;otevřenost. Odpovím ti osobně, co nejdříve.</p>
           </div>
+
+          <div role="alert" aria-live="assertive" class="sr-only" id="form-alert"></div>
 
           <form class="vstup-form rv rv-1" action="https://formspree.io/f/xkolqdkg" method="POST" novalidate id="vstup-form"
             aria-label="Přihláška do Mysterijní školy ženství">
@@ -523,6 +526,8 @@
 
     /* ── Formulář – inline validace ─────────────── */
     const form = document.getElementById('vstup-form');
+    const formAlert = document.getElementById('form-alert');
+    function setAlert(msg) { if (formAlert) formAlert.textContent = msg; }
     if (form) {
       form.addEventListener('submit', function (e) {
         /* Honeypot check */
@@ -534,6 +539,7 @@
         const zamerOk = [...radios].some(r => r.checked);
         if (!zamerOk) {
           e.preventDefault();
+          setAlert('Prosím vyber záměr.');
           radios[0].focus();
           radios[0].setCustomValidity('Prosím vyber záměr.');
           radios[0].reportValidity();
@@ -546,6 +552,7 @@
         const gdpr = form.querySelector('input[name="gdpr"]');
         if (gdpr && !gdpr.checked) {
           e.preventDefault();
+          setAlert('Prosím potvrď souhlas se zpracováním osobních údajů.');
           gdpr.focus();
           gdpr.setCustomValidity('Prosím potvrď souhlas se zpracováním osobních údajů.');
           gdpr.reportValidity();
@@ -553,15 +560,19 @@
         } else if (gdpr) {
           gdpr.setCustomValidity('');
         }
+
+        setAlert('');
       });
 
       /* Vyčisti custom validity při změně */
       form.addEventListener('change', function (e) {
         if (e.target.name === 'zamer') {
           form.querySelectorAll('input[name="zamer"]').forEach(r => r.setCustomValidity(''));
+          setAlert('');
         }
         if (e.target.name === 'gdpr') {
           e.target.setCustomValidity('');
+          setAlert('');
         }
       });
     }

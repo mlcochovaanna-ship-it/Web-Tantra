@@ -91,6 +91,7 @@
 </head>
 
 <body class="page-secondary">
+  <a class="skip-link" href="#main-content">Přeskočit na obsah</a>
 
   <!-- ══ NAVIGATION ══════════════════════════════════════ -->
   <header class="site-header" id="hdr" role="banner">
@@ -175,7 +176,7 @@
     </div>
   </section>
 
-  <main>
+  <main id="main-content">
 
     <div class="wrap">
       <img src="Obrazky/grafika/filigran/filigran-divider-02.webp"
@@ -547,9 +548,14 @@
     const lb = document.getElementById('lb');
     const lbImg = document.getElementById('lb-img');
     const lbCounter = document.getElementById('lb-counter');
+    const lbClose_btn = document.getElementById('lb-close');
+    const lbPrev_btn = document.getElementById('lb-prev');
+    const lbNext_btn = document.getElementById('lb-next');
+    const lbFocusable = [lbClose_btn, lbPrev_btn, lbNext_btn];
     const galleryItems = [...document.querySelectorAll('.gallery-fw .g-item')];
     const imgs = galleryItems.map(el => ({ src: el.querySelector('img').src, alt: el.querySelector('img').alt }));
     let current = 0;
+    let lbTrigger = null;
 
     function lbShow(i) {
       current = (i + imgs.length) % imgs.length;
@@ -558,23 +564,33 @@
       lbCounter.textContent = `${current + 1} / ${imgs.length}`;
       lb.classList.add('open');
       document.body.style.overflow = 'hidden';
+      lbClose_btn.focus();
     }
 
     function lbClose() {
       lb.classList.remove('open');
       document.body.style.overflow = '';
+      if (lbTrigger) lbTrigger.focus();
     }
 
-    galleryItems.forEach((el, i) => el.addEventListener('click', () => lbShow(i)));
-    document.getElementById('lb-prev').addEventListener('click', e => { e.stopPropagation(); lbShow(current - 1); });
-    document.getElementById('lb-next').addEventListener('click', e => { e.stopPropagation(); lbShow(current + 1); });
-    document.getElementById('lb-close').addEventListener('click', lbClose);
+    galleryItems.forEach((el, i) => el.addEventListener('click', () => { lbTrigger = el; lbShow(i); }));
+    lbPrev_btn.addEventListener('click', e => { e.stopPropagation(); lbShow(current - 1); });
+    lbNext_btn.addEventListener('click', e => { e.stopPropagation(); lbShow(current + 1); });
+    lbClose_btn.addEventListener('click', lbClose);
     lb.addEventListener('click', e => { if (e.target === lb) lbClose(); });
     document.addEventListener('keydown', e => {
       if (!lb.classList.contains('open')) return;
       if (e.key === 'ArrowLeft') lbShow(current - 1);
       if (e.key === 'ArrowRight') lbShow(current + 1);
       if (e.key === 'Escape') lbClose();
+      if (e.key === 'Tab') {
+        e.preventDefault();
+        const idx = lbFocusable.indexOf(document.activeElement);
+        const next = e.shiftKey
+          ? (idx <= 0 ? lbFocusable.length - 1 : idx - 1)
+          : (idx >= lbFocusable.length - 1 ? 0 : idx + 1);
+        lbFocusable[next].focus();
+      }
     });
   </script>
 
