@@ -18,6 +18,36 @@
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='none' stroke='%23C69B45' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%23C69B45' stroke-width='1'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23C69B45'/%3E%3Cline x1='32' y1='4' x2='32' y2='14' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='32' y1='50' x2='32' y2='60' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='4' y1='32' x2='14' y2='32' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='50' y1='32' x2='60' y2='32' stroke='%23C69B45' stroke-width='1.5'/%3E%3C/svg%3E">
 
   <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Mysterijní škola ženství",
+    "description": "Dvouletá iniciační tantrická škola pro ženy skrze prožitek, tělo, tantrické umění lásky a ženské rituály.",
+    "url": "https://zenskamystika.cz",
+    "founder": {
+      "@type": "Person",
+      "name": "Martina Anjali Výborná"
+    },
+    "email": "anjali@martinavyborna.cz",
+    "telephone": "+420603529357",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Křižíkova 1873/16",
+      "addressLocality": "Chomutov",
+      "postalCode": "430 01",
+      "addressCountry": "CZ"
+    },
+    "location": {
+      "@type": "Place",
+      "name": "Centrum Buchov",
+      "url": "https://www.centrum-buchov.cz/"
+    },
+    "areaServed": ["CZ", "SK"],
+    "inLanguage": "cs"
+  }
+  </script>
 </head>
 
 <body>
@@ -26,56 +56,56 @@
   <header class="site-header" id="hdr" role="banner">
     <nav class="nav-bar" aria-label="Hlavní navigace">
       <ul class="nav-left" role="list">
-        <li><a href="index.html">Úvod</a></li>
-        <li><a href="o-skole.html">O škole</a></li>
+        <li><a href="/">Úvod</a></li>
+        <li><a href="/o-skole">O škole</a></li>
         <li class="nav-has-dropdown">
-          <a href="moduly.html" class="nav-drop-trigger">Moduly <span class="nav-chevron-desk"></span></a>
+          <a href="/moduly" class="nav-drop-trigger">Moduly <span class="nav-chevron-desk"></span></a>
         </li>
-        <li><a href="special.html">Speciál</a></li>
+        <li><a href="/special">Speciál</a></li>
       </ul>
       <div class="nav-center">
-        <a href="index.html" aria-label="Mysterijní škola ženství – domů">
+        <a href="/" aria-label="Mysterijní škola ženství – domů">
           <div class="logo-wrap">
             <img src="Obrazky/LOGO-zenska-mystika.png" alt="Logo Ženská Mystika" class="logo-img">
           </div>
         </a>
       </div>
       <ul class="nav-right" role="list">
-        <li class="desktop-only"><a href="o-mne.html">O mně</a></li>
-        <li class="desktop-only"><a href="reference.html">Reference</a></li>
-        <li class="desktop-only"><a href="galerie.html">Galerie</a></li>
+        <li class="desktop-only"><a href="/o-mne">O mně</a></li>
+        <li class="desktop-only"><a href="/reference">Reference</a></li>
+        <li class="desktop-only"><a href="/galerie">Galerie</a></li>
         <li><button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-mob" aria-label="Menu">
             <span></span><span></span><span></span>
           </button></li>
       </ul>
-      <a href="vstup.html" class="nav-cta-fixed desktop-only">Vstoupit do školy</a>
+      <a href="/vstup" class="nav-cta-fixed desktop-only">Vstoupit do školy</a>
     </nav>
   </header>
 
   <div class="nav-dropdown" id="nav-dropdown-desk">
-    <a href="odhaleni-krasy-zenstvi.html" class="nav-drop-item">Odhalení krásy ženství</a>
-    <a href="posvatny-eros.html" class="nav-drop-item">Posvátný Erós</a>
-    <a href="probuzena-zenska-intuice.html" class="nav-drop-item">Probuzená ženská intuice</a>
-    <a href="kosmicke-vedomi-zeny.html" class="nav-drop-item">Kosmické vědomí ženy</a>
+    <a href="/odhaleni-krasy-zenstvi" class="nav-drop-item">Odhalení krásy ženství</a>
+    <a href="/posvatny-eros" class="nav-drop-item">Posvátný Erós</a>
+    <a href="/probuzena-zenska-intuice" class="nav-drop-item">Probuzená ženská intuice</a>
+    <a href="/kosmicke-vedomi-zeny" class="nav-drop-item">Kosmické vědomí ženy</a>
   </div>
 
   <nav class="nav-mobile" id="nav-mob" aria-label="Mobilní navigace">
-    <a href="index.html">Úvod</a>
-    <a href="o-skole.html">O škole</a>
+    <a href="/">Úvod</a>
+    <a href="/o-skole">O škole</a>
     <button class="nav-mobile-parent" id="nav-moduly-toggle" aria-expanded="false">Moduly <span
         class="nav-chevron"></span></button>
     <div class="nav-submenu" id="nav-submenu-moduly">
-      <a href="moduly.html" class="nav-sub-item">Aktuální termíny</a>
-      <a href="odhaleni-krasy-zenstvi.html" class="nav-sub-item">Odhalení krásy ženství</a>
-      <a href="posvatny-eros.html" class="nav-sub-item">Posvátný Erós</a>
-      <a href="probuzena-zenska-intuice.html" class="nav-sub-item">Probuzená ženská intuice</a>
-      <a href="kosmicke-vedomi-zeny.html" class="nav-sub-item">Kosmické vědomí ženy</a>
+      <a href="/moduly" class="nav-sub-item">Aktuální termíny</a>
+      <a href="/odhaleni-krasy-zenstvi" class="nav-sub-item">Odhalení krásy ženství</a>
+      <a href="/posvatny-eros" class="nav-sub-item">Posvátný Erós</a>
+      <a href="/probuzena-zenska-intuice" class="nav-sub-item">Probuzená ženská intuice</a>
+      <a href="/kosmicke-vedomi-zeny" class="nav-sub-item">Kosmické vědomí ženy</a>
     </div>
-    <a href="special.html">Speciál</a>
-    <a href="o-mne.html">O mně</a>
-    <a href="reference.html">Reference</a>
-    <a href="galerie.html">Galerie</a>
-    <a href="vstup.html" class="nav-mobile-cta">Vstoupit do školy</a>
+    <a href="/special">Speciál</a>
+    <a href="/o-mne">O mně</a>
+    <a href="/reference">Reference</a>
+    <a href="/galerie">Galerie</a>
+    <a href="/vstup" class="nav-mobile-cta">Vstoupit do školy</a>
   </nav>
 
   <!-- ══ HERO ═══════════════════════════════════════════ -->
@@ -190,7 +220,7 @@
               Objevit intimní a&nbsp;pravdivý vztah sama se sebou, otevřít své vědomí, důvěru v&nbsp;intuici
               a&nbsp;moudrost srdce, která v&nbsp;tobě odjakživa přebývá. Uvolnění je klíč k&nbsp;ženské kráse.</p>
             <div class="rv rv-6" style="margin-top:2rem">
-              <a href="vstup.html" class="btn btn-ghost">Vstoupit do školy</a>
+              <a href="/vstup" class="btn btn-ghost">Vstoupit do školy</a>
             </div>
           </div>
         </div>
@@ -270,7 +300,7 @@
               a&nbsp;harmonie prostoru vytvářejí atmosféru hluboké důvěry a&nbsp;uvolnění, ve které se můžeš otevřít
               sama sobě a&nbsp;vrátit se ke&nbsp;své božské podstatě.</p>
             <div class="rv rv-5" style="margin-top:2rem">
-              <a href="o-skole.html#proc-tantra-h2" class="btn btn-ghost">Více o&nbsp;škole</a>
+              <a href="/o-skole#proc-tantra-h2" class="btn btn-ghost">Více o&nbsp;škole</a>
             </div>
           </div>
           <div class="img-frame img-frame-mirror o-skole-img rv rv-2">
@@ -380,7 +410,7 @@
                   <span>ženskost</span><span>srdce</span><span>jemnost</span><span>sebeláska</span><span>otevření</span>
                 </div>
                 <div class="rv rv-3">
-                  <a href="odhaleni-krasy-zenstvi.html" class="btn btn-ghost-lt"
+                  <a href="/odhaleni-krasy-zenstvi" class="btn btn-ghost-lt"
                     aria-label="Více o modulu Odhalení krásy ženství">Více o&nbsp;modulu</a>
                 </div>
               </div>
@@ -416,7 +446,7 @@
                     energie</span>
                 </div>
                 <div class="rv rv-3">
-                  <a href="posvatny-eros.html" class="btn btn-ghost-lt" aria-label="Více o modulu Posvátný Erós">Více o&nbsp;modulu</a>
+                  <a href="/posvatny-eros" class="btn btn-ghost-lt" aria-label="Více o modulu Posvátný Erós">Více o&nbsp;modulu</a>
                 </div>
               </div>
             </article>
@@ -449,7 +479,7 @@
                 <div class="module-tags rv rv-2"><span>Jasnozřivost</span><span>intuice</span><span>vnímání
                     energií</span><span>vnitřní vedení</span></div>
                 <div class="rv rv-3">
-                  <a href="probuzena-zenska-intuice.html" class="btn btn-ghost-lt"
+                  <a href="/probuzena-zenska-intuice" class="btn btn-ghost-lt"
                     aria-label="Více o modulu Probuzená ženská intuice">Více o modulu</a>
                 </div>
               </div>
@@ -480,7 +510,7 @@
                   <span>Jednota</span><span>vědomí</span><span>transcendence</span><span>propojení</span><span>světlo</span>
                 </div>
                 <div class="rv rv-3">
-                  <a href="kosmicke-vedomi-zeny.html" class="btn btn-ghost-lt"
+                  <a href="/kosmicke-vedomi-zeny" class="btn btn-ghost-lt"
                     aria-label="Více o modulu Kosmické vědomí ženy">Více o modulu</a>
                 </div>
               </div>
@@ -494,7 +524,7 @@
 
     <!-- ══ TERMÍNY – odkaz na stránku Moduly ═══════════════ -->
     <div class="wrap terminy-wrap" style="text-align:center; margin-top: calc(var(--pad) * -1 + 4rem); padding: 1px 0 8rem;">
-      <a href="moduly.html#terminy-h2" class="btn btn-gold rv">Přehled termínů školy</a>
+      <a href="/moduly#terminy-h2" class="btn btn-gold rv">Přehled termínů školy</a>
     </div>
 
     <img src="Obrazky/grafika/filigran/filigran-divider-2.png"
@@ -524,7 +554,7 @@
             <p class="rv rv-3">Tato cesta se pro mě stala hlubokým prostorem návratu k&nbsp;lásce, ženské přirozenosti
               a&nbsp;vědomému prožívání života, který dnes sdílím s&nbsp;dalšími ženami.</p>
             <div class="rv rv-4" style="margin-top:2rem">
-              <a href="o-mne.html" class="btn btn-gold">Více o mně</a>
+              <a href="/o-mne" class="btn btn-gold">Více o mně</a>
             </div>
           </div>
         </div>
@@ -622,7 +652,7 @@
         <div class="ref-cta rv rv-3">
           <p class="ref-cta-text">Další příběhy, prožitky a&nbsp;proměny žen,
             které prošly touto cestou, si můžeš přečíst tady.</p>
-          <a href="reference.html" class="btn btn-ghost">Další příběhy</a>
+          <a href="/reference" class="btn btn-ghost">Další příběhy</a>
         </div>
       </div>
     </section>
@@ -667,7 +697,7 @@
         </div>
       </div>
       <div class="gallery-more rv">
-        <a href="galerie.html" class="btn btn-ghost">Zobrazit celou galerii</a>
+        <a href="/galerie" class="btn btn-ghost">Zobrazit celou galerii</a>
       </div>
     </section>
 
@@ -709,7 +739,7 @@
         </svg>
       </div>
       <div class="rv rv-3">
-        <a href="vstup.html" class="btn btn-gold">Vstoupit do školy</a>
+        <a href="/vstup" class="btn btn-gold">Vstoupit do školy</a>
       </div>
     </div>
     <div class="soft-wave soft-wave--footer" aria-hidden="true">
@@ -760,19 +790,19 @@
         <!-- Střed: název + tlačítko -->
         <div class="footer-col footer-col-center">
           <h2 class="footer-statement-title">Mysterijní škola ženství</h2>
-          <a href="vstup.html" class="btn btn-ghost-lt" style="font-size:.76rem; padding:.7rem 1.8rem">Vstoupit do školy</a>
+          <a href="/vstup" class="btn btn-ghost-lt" style="font-size:.76rem; padding:.7rem 1.8rem">Vstoupit do školy</a>
         </div>
 
         <!-- Pravý sloupec: navigace (zarovnáno vpravo) -->
         <div class="footer-col footer-col-right">
           <ul class="footer-col-links">
-            <li><a href="index.html">Úvod</a></li>
-            <li><a href="o-skole.html">O škole</a></li>
-            <li><a href="moduly.html">Moduly</a></li>
-            <li><a href="special.html">Speciál</a></li>
-            <li><a href="o-mne.html">O mně</a></li>
-            <li><a href="reference.html">Reference</a></li>
-            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="/">Úvod</a></li>
+            <li><a href="/o-skole">O škole</a></li>
+            <li><a href="/moduly">Moduly</a></li>
+            <li><a href="/special">Speciál</a></li>
+            <li><a href="/o-mne">O mně</a></li>
+            <li><a href="/reference">Reference</a></li>
+            <li><a href="/galerie">Galerie</a></li>
           </ul>
         </div>
 

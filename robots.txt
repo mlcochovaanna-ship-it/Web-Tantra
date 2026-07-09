@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /dekuji
+Disallow: /404
+
+Sitemap: https://zenskamystika.cz/sitemap.xml
