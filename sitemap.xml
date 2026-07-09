@@ -3,86 +3,72 @@
 
   <url>
     <loc>https://zenskamystika.cz/</loc>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://zenskamystika.cz/o-skole</loc>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://zenskamystika.cz/vstup</loc>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://zenskamystika.cz/special</loc>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://zenskamystika.cz/moduly</loc>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://zenskamystika.cz/o-mne</loc>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://zenskamystika.cz/reference</loc>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://zenskamystika.cz/galerie</loc>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://zenskamystika.cz/odhaleni-krasy-zenstvi</loc>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://zenskamystika.cz/posvatny-eros</loc>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://zenskamystika.cz/probuzena-zenska-intuice</loc>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://zenskamystika.cz/kosmicke-vedomi-zeny</loc>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://zenskamystika.cz/zpracovani-osobnich-udaju</loc>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://zenskamystika.cz/cookies</loc>
+    <priority>0.3</priority>
   </url>
 
 </urlset>

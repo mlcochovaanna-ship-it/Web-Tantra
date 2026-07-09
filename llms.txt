@@ -16,6 +16,8 @@
 - [Galerie](https://zenskamystika.cz/galerie): Fotografie z modulů a prostoru školy
 - [Vstup do školy](https://zenskamystika.cz/vstup): Přihlašovací formulář do školy
 - [Letní speciál](https://zenskamystika.cz/special): Letní intenzivní víkend pro ženy
+- [Zpracování osobních údajů](https://zenskamystika.cz/zpracovani-osobnich-udaju): GDPR informace o zpracování dat
+- [Zásady cookies](https://zenskamystika.cz/cookies): Informace o používání cookies na webu
 
 ## O webu
 
