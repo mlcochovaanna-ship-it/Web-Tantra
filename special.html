@@ -784,6 +784,11 @@
         margin-bottom: 0.25rem;
       }
     }
+
+    .sp-cta-form .form-error-msg {
+      color: #ffaaaa;
+      font-size: 0.82rem;
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -1318,12 +1323,15 @@
             <input type="text" id="sp-hp-website" name="_gotcha" tabindex="-1" autocomplete="off">
           </div>
 
+          <div role="alert" aria-live="assertive" class="sr-only" id="sp-form-alert"></div>
+
           <div class="form-group">
             <label class="form-label" for="sp-f-jmeno">
               Jméno a&nbsp;příjmení <span class="form-req" aria-label="povinné pole">*</span>
             </label>
             <input class="form-input" type="text" id="sp-f-jmeno" name="jmeno" required autocomplete="name"
               placeholder="Tvé celé jméno">
+            <p class="form-error-msg" id="sp-jmeno-error">Prosím vyplň jméno a příjmení.</p>
           </div>
 
           <div class="form-group">
@@ -1332,6 +1340,7 @@
             </label>
             <input class="form-input" type="email" id="sp-f-email" name="email" required autocomplete="email"
               placeholder="tvuj@email.cz">
+            <p class="form-error-msg" id="sp-email-error">Prosím vyplň e-mailovou adresu.</p>
           </div>
 
           <div class="form-group">
@@ -1340,6 +1349,7 @@
             </label>
             <input class="form-input" type="tel" id="sp-f-telefon" name="telefon" required autocomplete="tel"
               placeholder="+420 XXX XXX XXX">
+            <p class="form-error-msg" id="sp-telefon-error">Prosím vyplň telefonní číslo.</p>
           </div>
 
           <div class="form-group" role="group" aria-labelledby="sp-zamer-label">
@@ -1359,6 +1369,7 @@
                 <span class="form-radio-text">Chci se jen na&nbsp;něco zeptat.</span>
               </label>
             </div>
+            <p class="form-error-msg" id="sp-zamer-error">Prosím vyber záměr.</p>
           </div>
 
           <div class="form-group">
@@ -1367,6 +1378,7 @@
             </label>
             <textarea class="form-input form-textarea" id="sp-f-zprava" name="zprava" required rows="4"
               placeholder="Chceš se na něco zeptat a nebo mi něco vzkázat?" style="min-height:100px"></textarea>
+            <p class="form-error-msg" id="sp-zprava-error">Prosím napiš zprávu.</p>
           </div>
 
           <div class="form-group form-group-gdpr">
@@ -1379,6 +1391,7 @@
                   *</span>
               </span>
             </label>
+            <p class="form-error-msg" id="sp-gdpr-error">Prosím potvrď souhlas se zpracováním osobních údajů.</p>
           </div>
 
           <div class="form-actions">
@@ -1581,6 +1594,61 @@
     if (!localStorage.getItem('ck')) setTimeout(() => ck.classList.add('on'), 800);
     document.getElementById('ck-ok').addEventListener('click', () => { localStorage.setItem('ck', 'ok'); ck.classList.remove('on'); });
     document.getElementById('ck-no').addEventListener('click', () => { localStorage.setItem('ck', 'no'); ck.classList.remove('on'); });
+
+    /* ── Formulář – validace ─────────────────────────── */
+    const spForm = document.getElementById('special-form');
+    const spAlert = document.getElementById('sp-form-alert');
+    function spShowErr(id) { const el = document.getElementById(id); if (el) el.classList.add('visible'); }
+    function spHideErr(id) { const el = document.getElementById(id); if (el) el.classList.remove('visible'); }
+    if (spForm) {
+      spForm.addEventListener('submit', function (e) {
+        const hp = spForm.querySelector('input[name="_gotcha"]');
+        if (hp && hp.value) { e.preventDefault(); return; }
+
+        let firstError = null;
+
+        const checks = [
+          { id: 'sp-f-jmeno',   errId: 'sp-jmeno-error',   ok: () => spForm.querySelector('#sp-f-jmeno').value.trim() !== '' },
+          { id: 'sp-f-email',   errId: 'sp-email-error',    ok: () => /\S+@\S+\.\S+/.test(spForm.querySelector('#sp-f-email').value) },
+          { id: 'sp-f-telefon', errId: 'sp-telefon-error',  ok: () => spForm.querySelector('#sp-f-telefon').value.trim() !== '' },
+          { id: 'sp-f-zprava',  errId: 'sp-zprava-error',   ok: () => spForm.querySelector('#sp-f-zprava').value.trim() !== '' },
+        ];
+
+        checks.forEach(({ errId, ok }) => {
+          if (!ok()) { spShowErr(errId); if (!firstError) firstError = document.getElementById(errId); }
+          else spHideErr(errId);
+        });
+
+        const radios = spForm.querySelectorAll('input[name="zamer"]');
+        if (![...radios].some(r => r.checked)) {
+          spShowErr('sp-zamer-error');
+          if (!firstError) firstError = document.getElementById('sp-zamer-error');
+        } else spHideErr('sp-zamer-error');
+
+        const gdpr = spForm.querySelector('input[name="gdpr"]');
+        if (gdpr && !gdpr.checked) {
+          spShowErr('sp-gdpr-error');
+          if (!firstError) firstError = document.getElementById('sp-gdpr-error');
+        } else if (gdpr) spHideErr('sp-gdpr-error');
+
+        if (firstError) {
+          e.preventDefault();
+          firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          if (spAlert) spAlert.textContent = 'Formulář obsahuje chyby. Prosím oprav označená pole.';
+        } else {
+          if (spAlert) spAlert.textContent = '';
+        }
+      });
+
+      spForm.addEventListener('input', function (e) {
+        const map = { 'jmeno': 'sp-jmeno-error', 'email': 'sp-email-error', 'telefon': 'sp-telefon-error', 'zprava': 'sp-zprava-error' };
+        if (map[e.target.name] && e.target.value.trim()) spHideErr(map[e.target.name]);
+      });
+      spForm.addEventListener('change', function (e) {
+        if (e.target.name === 'zamer') spHideErr('sp-zamer-error');
+        if (e.target.name === 'gdpr') spHideErr('sp-gdpr-error');
+      });
+    }
   </script>
 </body>
 

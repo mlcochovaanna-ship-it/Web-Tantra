@@ -3926,6 +3926,17 @@ h3 {
   line-height: 1.65;
 }
 
+/* ── Chybové hlášky formuláře ─────────────────── */
+.form-error-msg {
+  font-size: 0.82rem;
+  color: #8B1A1A;
+  margin-top: 0.4rem;
+  display: none;
+}
+.form-error-msg.visible {
+  display: block;
+}
+
 /* ── Checkbox – GDPR ──────────────────────────── */
 .form-group-gdpr {
   margin-top: .5rem;

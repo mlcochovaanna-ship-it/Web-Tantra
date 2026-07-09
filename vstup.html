@@ -193,6 +193,7 @@
               </label>
               <input class="form-input" type="text" id="f-jmeno" name="jmeno" required autocomplete="name"
                 placeholder="Tvé celé jméno">
+              <p class="form-error-msg" id="jmeno-error">Prosím vyplň jméno a příjmení.</p>
             </div>
 
             <!-- E-mail -->
@@ -202,6 +203,7 @@
               </label>
               <input class="form-input" type="email" id="f-email" name="email" required autocomplete="email"
                 placeholder="tvuj@email.cz">
+              <p class="form-error-msg" id="email-error">Prosím vyplň e-mailovou adresu.</p>
             </div>
 
             <!-- Telefon -->
@@ -211,6 +213,7 @@
               </label>
               <input class="form-input" type="tel" id="f-telefon" name="telefon" required autocomplete="tel"
                 placeholder="+420 XXX XXX XXX">
+              <p class="form-error-msg" id="telefon-error">Prosím vyplň telefonní číslo.</p>
             </div>
 
             <!-- Záměr -->
@@ -231,6 +234,7 @@
                   <span class="form-radio-text">Chci se jen na něco zeptat.</span>
                 </label>
               </div>
+              <p class="form-error-msg" id="zamer-error" aria-live="assertive">Prosím vyber záměr.</p>
             </div>
 
             <!-- Zpráva -->
@@ -240,6 +244,7 @@
               </label>
               <textarea class="form-input form-textarea" id="f-zprava" name="zprava" required rows="7"
                 placeholder="Napiš svůj dotaz, nebo několik slov o tom, proč tě tato cesta volá…"></textarea>
+              <p class="form-error-msg" id="zprava-error">Prosím napiš zprávu.</p>
             </div>
 
             <!-- GDPR souhlas -->
@@ -253,6 +258,7 @@
                     *</span>
                 </span>
               </label>
+              <p class="form-error-msg" id="gdpr-error" aria-live="assertive">Prosím potvrď souhlas se zpracováním osobních údajů.</p>
             </div>
 
             <!-- Odeslat -->
@@ -527,53 +533,70 @@
     /* ── Formulář – inline validace ─────────────── */
     const form = document.getElementById('vstup-form');
     const formAlert = document.getElementById('form-alert');
-    function setAlert(msg) { if (formAlert) formAlert.textContent = msg; }
+
+    function showErr(id) { const el = document.getElementById(id); if (el) el.classList.add('visible'); }
+    function hideErr(id) { const el = document.getElementById(id); if (el) el.classList.remove('visible'); }
+
     if (form) {
       form.addEventListener('submit', function (e) {
-        /* Honeypot check */
         const hp = form.querySelector('input[name="_gotcha"]');
         if (hp && hp.value) { e.preventDefault(); return; }
 
-        /* Zkontroluj, zda je vybraný záměr */
+        let firstError = null;
+
+        /* Textová pole */
+        const checks = [
+          { id: 'f-jmeno',   errId: 'jmeno-error',   ok: () => form.querySelector('#f-jmeno').value.trim() !== '' },
+          { id: 'f-email',   errId: 'email-error',    ok: () => /\S+@\S+\.\S+/.test(form.querySelector('#f-email').value) },
+          { id: 'f-telefon', errId: 'telefon-error',  ok: () => form.querySelector('#f-telefon').value.trim() !== '' },
+          { id: 'f-zprava',  errId: 'zprava-error',   ok: () => form.querySelector('#f-zprava').value.trim() !== '' },
+        ];
+
+        checks.forEach(({ errId, ok }) => {
+          if (!ok()) {
+            showErr(errId);
+            if (!firstError) firstError = document.getElementById(errId);
+          } else {
+            hideErr(errId);
+          }
+        });
+
+        /* Záměr */
         const radios = form.querySelectorAll('input[name="zamer"]');
         const zamerOk = [...radios].some(r => r.checked);
         if (!zamerOk) {
-          e.preventDefault();
-          setAlert('Prosím vyber záměr.');
-          radios[0].focus();
-          radios[0].setCustomValidity('Prosím vyber záměr.');
-          radios[0].reportValidity();
-          return;
+          showErr('zamer-error');
+          if (!firstError) firstError = document.getElementById('zamer-error');
         } else {
-          radios.forEach(r => r.setCustomValidity(''));
+          hideErr('zamer-error');
         }
 
-        /* Zkontroluj GDPR */
+        /* GDPR */
         const gdpr = form.querySelector('input[name="gdpr"]');
         if (gdpr && !gdpr.checked) {
-          e.preventDefault();
-          setAlert('Prosím potvrď souhlas se zpracováním osobních údajů.');
-          gdpr.focus();
-          gdpr.setCustomValidity('Prosím potvrď souhlas se zpracováním osobních údajů.');
-          gdpr.reportValidity();
-          return;
+          showErr('gdpr-error');
+          if (!firstError) firstError = document.getElementById('gdpr-error');
         } else if (gdpr) {
-          gdpr.setCustomValidity('');
+          hideErr('gdpr-error');
         }
 
-        setAlert('');
+        if (firstError) {
+          e.preventDefault();
+          firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          if (formAlert) formAlert.textContent = 'Formulář obsahuje chyby. Prosím oprav označená pole.';
+        } else {
+          if (formAlert) formAlert.textContent = '';
+        }
       });
 
-      /* Vyčisti custom validity při změně */
+      /* Vyčisti chybu při změně/psaní */
+      form.addEventListener('input', function (e) {
+        const map = { 'jmeno': 'jmeno-error', 'email': 'email-error', 'telefon': 'telefon-error', 'zprava': 'zprava-error' };
+        if (map[e.target.name] && e.target.value.trim()) hideErr(map[e.target.name]);
+      });
       form.addEventListener('change', function (e) {
-        if (e.target.name === 'zamer') {
-          form.querySelectorAll('input[name="zamer"]').forEach(r => r.setCustomValidity(''));
-          setAlert('');
-        }
-        if (e.target.name === 'gdpr') {
-          e.target.setCustomValidity('');
-          setAlert('');
-        }
+        if (e.target.name === 'zamer') hideErr('zamer-error');
+        if (e.target.name === 'gdpr') hideErr('gdpr-error');
       });
     }
   </script>
