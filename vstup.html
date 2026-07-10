@@ -369,12 +369,12 @@
           <a href="tel:+420603529357" class="footer-col-link footer-col-link--gold"
             style="margin-top:-.42rem">+420&nbsp;603&nbsp;529&nbsp;357</a>
           <div class="footer-social" style="margin-top:.9rem">
-            <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener">
+            <a href="https://www.facebook.com/martina.vyborna.71" aria-label="Facebook" target="_blank" rel="noopener">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
               </svg>
             </a>
-            <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener">
+            <a href="https://www.instagram.com/mapremanjali" aria-label="Instagram" target="_blank" rel="noopener">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -530,66 +530,68 @@
     document.getElementById('ck-ok').addEventListener('click', () => { localStorage.setItem('ck', 'ok'); ck.classList.remove('on'); });
     document.getElementById('ck-no').addEventListener('click', () => { localStorage.setItem('ck', 'no'); ck.classList.remove('on'); });
 
-    /* ── Formulář – inline validace ─────────────── */
+    /* ── Formulář – validace + AJAX odeslání ────── */
     const form = document.getElementById('vstup-form');
     const formAlert = document.getElementById('form-alert');
 
     function showErr(id) { const el = document.getElementById(id); if (el) el.classList.add('visible'); }
     function hideErr(id) { const el = document.getElementById(id); if (el) el.classList.remove('visible'); }
 
+    function validateForm() {
+      let firstError = null;
+      const checks = [
+        { errId: 'jmeno-error',   ok: () => form.querySelector('#f-jmeno').value.trim() !== '' },
+        { errId: 'email-error',   ok: () => /\S+@\S+\.\S+/.test(form.querySelector('#f-email').value) },
+        { errId: 'telefon-error', ok: () => form.querySelector('#f-telefon').value.trim() !== '' },
+        { errId: 'zprava-error',  ok: () => form.querySelector('#f-zprava').value.trim() !== '' },
+      ];
+      checks.forEach(({ errId, ok }) => {
+        if (!ok()) { showErr(errId); if (!firstError) firstError = document.getElementById(errId); }
+        else hideErr(errId);
+      });
+      const zamerOk = [...form.querySelectorAll('input[name="zamer"]')].some(r => r.checked);
+      if (!zamerOk) { showErr('zamer-error'); if (!firstError) firstError = document.getElementById('zamer-error'); }
+      else hideErr('zamer-error');
+      const gdpr = form.querySelector('input[name="gdpr"]');
+      if (gdpr && !gdpr.checked) { showErr('gdpr-error'); if (!firstError) firstError = document.getElementById('gdpr-error'); }
+      else if (gdpr) hideErr('gdpr-error');
+      return firstError;
+    }
+
     if (form) {
-      form.addEventListener('submit', function (e) {
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
         const hp = form.querySelector('input[name="_gotcha"]');
-        if (hp && hp.value) { e.preventDefault(); return; }
+        if (hp && hp.value) return;
 
-        let firstError = null;
-
-        /* Textová pole */
-        const checks = [
-          { id: 'f-jmeno',   errId: 'jmeno-error',   ok: () => form.querySelector('#f-jmeno').value.trim() !== '' },
-          { id: 'f-email',   errId: 'email-error',    ok: () => /\S+@\S+\.\S+/.test(form.querySelector('#f-email').value) },
-          { id: 'f-telefon', errId: 'telefon-error',  ok: () => form.querySelector('#f-telefon').value.trim() !== '' },
-          { id: 'f-zprava',  errId: 'zprava-error',   ok: () => form.querySelector('#f-zprava').value.trim() !== '' },
-        ];
-
-        checks.forEach(({ errId, ok }) => {
-          if (!ok()) {
-            showErr(errId);
-            if (!firstError) firstError = document.getElementById(errId);
-          } else {
-            hideErr(errId);
-          }
-        });
-
-        /* Záměr */
-        const radios = form.querySelectorAll('input[name="zamer"]');
-        const zamerOk = [...radios].some(r => r.checked);
-        if (!zamerOk) {
-          showErr('zamer-error');
-          if (!firstError) firstError = document.getElementById('zamer-error');
-        } else {
-          hideErr('zamer-error');
-        }
-
-        /* GDPR */
-        const gdpr = form.querySelector('input[name="gdpr"]');
-        if (gdpr && !gdpr.checked) {
-          showErr('gdpr-error');
-          if (!firstError) firstError = document.getElementById('gdpr-error');
-        } else if (gdpr) {
-          hideErr('gdpr-error');
-        }
-
+        const firstError = validateForm();
         if (firstError) {
-          e.preventDefault();
           firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
           if (formAlert) formAlert.textContent = 'Formulář obsahuje chyby. Prosím oprav označená pole.';
-        } else {
-          if (formAlert) formAlert.textContent = '';
+          return;
+        }
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) submitBtn.disabled = true;
+
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            window.location.href = '/dekuji';
+          } else {
+            if (formAlert) formAlert.textContent = 'Odeslání se nezdařilo. Zkuste to prosím znovu.';
+            if (submitBtn) submitBtn.disabled = false;
+          }
+        } catch {
+          if (formAlert) formAlert.textContent = 'Chyba připojení. Zkuste to prosím znovu.';
+          if (submitBtn) submitBtn.disabled = false;
         }
       });
 
-      /* Vyčisti chybu při změně/psaní */
       form.addEventListener('input', function (e) {
         const map = { 'jmeno': 'jmeno-error', 'email': 'email-error', 'telefon': 'telefon-error', 'zprava': 'zprava-error' };
         if (map[e.target.name] && e.target.value.trim()) hideErr(map[e.target.name]);
