@@ -581,13 +581,15 @@
     let lbTrigger = null;
 
     function lbShow(i) {
-      current = (i + imgs.length) % imgs.length;
+      current = Math.max(0, Math.min(i, imgs.length - 1));
       lbImg.src = imgs[current].src;
       lbImg.alt = imgs[current].alt;
       lbCounter.textContent = `${current + 1} / ${imgs.length}`;
       lb.classList.add('open');
       document.body.style.overflow = 'hidden';
       lbClose_btn.focus();
+      document.getElementById('lb-prev').classList.toggle('lb-hidden', current === 0);
+      document.getElementById('lb-next').classList.toggle('lb-hidden', current === imgs.length - 1);
     }
 
     function lbClose() {

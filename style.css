@@ -2082,6 +2082,10 @@ h3 {
 .lb-btn:hover {
   opacity: 1;
 }
+.lb-btn.lb-hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
 
 
 .lb-close {
