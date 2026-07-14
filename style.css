@@ -2476,6 +2476,29 @@ h3 {
   color: var(--gold-lt);
 }
 
+.footer-social-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 1.1rem 0.75rem;
+  background: rgba(198, 155, 69, 0.09);
+  border-radius: 8px;
+}
+
+.footer-social-group-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(199, 155, 69, .7);
+  line-height: 1;
+}
+
+.footer-social-group-icons {
+  display: flex;
+  gap: 1rem;
+}
+
 .footer-mid-zprac {
   text-align: right;
   font-size: .74rem;
@@ -3270,6 +3293,7 @@ h3 {
 
   .anjali-img {
     min-height: 0;
+    height: auto;
     width: 100%;
     aspect-ratio: 16 / 9;
   }
