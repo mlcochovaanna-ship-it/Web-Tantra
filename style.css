@@ -990,7 +990,11 @@ h3 {
   margin-bottom: calc(8rem - var(--pad));
 }
 .section-divider--between.before-gallery {
-  margin-bottom: 2rem;
+  margin-bottom: 0;
+}
+.section-divider--between.div-misto-galerie.before-gallery {
+  margin-top: 2rem;
+  margin-bottom: 7rem;
 }
 .section-divider--bottom {
   width: clamp(160px, 38%, 360px);
