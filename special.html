@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Letní speciál – Chrám krásy Shakti | Mysterijní škola ženství</title>
+  <title>Chrám ženské krásy, umění a doteku – Letní speciál | Mysterijní škola ženství</title>
   <meta name="description"
-    content="Letní speciál Mysterijní školy ženství. Čtyři dny vědomé praxe, krásy a ženské vzájemnosti v Chrámu krásy Shakti. 21.–25. 7. 2028, Centrum Buchov.">
+    content="Letní speciál Mysterijní školy ženství. Čtyři dny vědomého doteku, krásy, tance a ženských rituálů. 21.–25. 7. 2027, Centrum Buchov.">
   <link rel="canonical" href="https://zenskamystika.cz/special">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://zenskamystika.cz/special">
-  <meta property="og:title" content="Letní speciál – Chrám krásy Shakti | Mysterijní škola ženství">
+  <meta property="og:title" content="Chrám ženské krásy, umění a doteku – Letní speciál | Mysterijní škola ženství">
   <meta property="og:description"
-    content="Čtyři dny vědomé praxe, krásy a ženské vzájemnosti. Vstup do prostoru, kde se krása stává modlitbou.">
+    content="Čtyři dny vědomého doteku, krásy, tance a ženských rituálů. Letní speciál Mysterijní školy ženství. 21.–25. 7. 2027, Centrum Buchov.">
   <meta property="og:image" content="https://zenskamystika.cz/Obrazky/modul-4/modul-4-07.webp">
   <link rel="icon" type="image/svg+xml"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='none' stroke='%23C69B45' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%23C69B45' stroke-width='1'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23C69B45'/%3E%3Cline x1='32' y1='4' x2='32' y2='14' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='32' y1='50' x2='32' y2='60' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='4' y1='32' x2='14' y2='32' stroke='%23C69B45' stroke-width='1.5'/%3E%3Cline x1='50' y1='32' x2='60' y2='32' stroke='%23C69B45' stroke-width='1.5'/%3E%3C/svg%3E">
@@ -24,15 +24,45 @@
 
     /* Hero pozadí */
     .sp-hero-bg {
-      background-image: url('Obrazky/ilustracni/lucni-kviti-03.webp');
-      background-position: center 40%;
+      background-image: url('Obrazky/anjali/anjali-14.webp');
+      background-position: center 45%;
     }
 
     /* Hero overlay – růžovo-vínové tónování (paleta z ceníku) */
     .sp-hero-overlay {
       background-color: transparent !important;
       background-image:
-        radial-gradient(ellipse 50% 62% at center, rgba(10, 30, 20, .84) 0%, rgba(10, 30, 20, .40) 55%, rgba(10, 30, 20, 0) 100%) !important;
+        radial-gradient(ellipse 50% 62% at center, rgba(10, 30, 20, .65) 0%, rgba(10, 30, 20, .25) 55%, rgba(10, 30, 20, 0) 100%) !important;
+    }
+
+    .sp-hero-popis {
+      font-family: var(--ff-sans);
+      font-style: normal;
+      font-size: clamp(.95rem, 1.3vw, 1.05rem);
+      color: rgba(247, 243, 236, .82);
+      line-height: 1.7;
+      max-width: 560px;
+      margin: .75rem auto 0;
+    }
+
+    .sp-hero-tagline {
+      font-family: var(--ff-sans);
+      font-style: normal;
+      font-size: clamp(.75rem, 1.1vw, .85rem);
+      font-weight: 400;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin: 0 0 1.2rem;
+    }
+
+    .sp-hero-modul {
+      font-family: var(--ff-sans);
+      font-style: normal;
+      font-size: clamp(.95rem, 1.5vw, 1.1rem);
+      color: #ffffff;
+      letter-spacing: .04em;
+      margin: 0 0 1.2rem;
     }
 
     .sp-hero-datum {
@@ -45,11 +75,18 @@
       background: rgba(228, 217, 192, .14);
       border-radius: 10px;
       padding: .55rem 1.5rem;
-      margin: .75rem 0 .75rem;
+      margin: 0 0 1.2rem;
     }
 
     /* Sekce 1 – první sekce po hero, potřebuje horní padding */
     .sp-sekce1 {
+      padding-top: var(--pad);
+    }
+
+    .btn-short { display: none; }
+
+    /* Rituál – první sekce v gradient-bridge-3, min. 10px padding kvůli sp-img-fixed clip */
+    .sp-sekce-ritual {
       padding-top: var(--pad);
     }
 
@@ -180,7 +217,7 @@
     @media (max-width: 768px) {
       .program-section {
         background-attachment: scroll;
-        background-position: 20% center;
+        background-position: 95% center;
         padding: 6rem 0 7rem;
       }
     }
@@ -204,7 +241,7 @@
 
     .program-header {
       text-align: center;
-      margin-bottom: 3.5rem;
+      margin-bottom: 1.75rem;
     }
 
     .program-intro {
@@ -432,8 +469,12 @@
       margin-bottom: 8rem;
     }
 
-    .div-nad-mistem {
-      margin-top: 5rem;
+    .section-divider--between.after-zena.div-nad-mistem {
+      margin-top: 4rem;
+    }
+
+.section-divider--between.after-zena.sp-div-ritual {
+      margin-bottom: 3rem;
     }
 
     .div-pod-mistem {
@@ -555,7 +596,7 @@
     }
 
     .sp-citat-sekce {
-      background-image: url('Obrazky/ilustracni/lucni-kviti-02.webp') !important;
+      background-image: url('Obrazky/grafika/bg-anjali-leaf.png') !important;
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -566,7 +607,7 @@
       position: absolute;
       inset: 0;
       z-index: 0;
-      background: rgba(26, 8, 15, 0.62);
+      background: rgba(26, 85, 64, 0.72);
     }
 
     .sp-citat-sekce .zena-laska-inner {
@@ -645,7 +686,22 @@
 
     @media (max-width: 768px) {
       .sp-hero-bg {
-        background-position: 65% 30%;
+        background-position: 45% 30%;
+      }
+
+      .vstup-hero .hero-h1 .hero-script {
+        white-space: normal;
+      }
+
+      .btn-full { display: none; }
+      .btn-short { display: inline; }
+
+      .sp-sekce-ritual {
+        padding-bottom: 3rem;
+      }
+
+      .sp-div-ritual-flo {
+        margin-top: 0;
       }
 
       .sp-hero-datum {
@@ -654,17 +710,22 @@
         border: 1px solid rgba(245, 231, 178, 0.35);
       }
 
-      .div-nad-kartou {
+      .section-divider--between.after-zena.sp-div-pred-zaverem {
+        margin-bottom: 2rem;
+      }
+
+      .section-divider--between.after-zena.div-nad-mistem {
         margin-top: 2rem;
-        margin-bottom: 2.5rem;
       }
 
-      .div-nad-mistem {
-        margin-top: 2.5rem;
+      .section-divider--between.after-zena.sp-div-ritual {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
       }
 
-      .div-pod-mistem {
-        margin-bottom: 2.5rem;
+
+      .section-divider--between.before-zena.div-pod-mistem {
+        margin-bottom: 2rem;
       }
 
       /* Místo konání – fix přetékání na mobilu */
@@ -776,6 +837,13 @@
         margin-top: 6rem;
         margin-bottom: 6rem;
       }
+      .section-divider--between.after-zena.sp-div-ritual {
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+      }
+      .section-divider--between.after-zena.div-nad-mistem {
+        margin-top: 3rem;
+      }
       .sp-hero-datum {
         font-size: .85rem;
         background: rgba(28, 80, 55, 0.7);
@@ -789,16 +857,121 @@
       color: #ffaaaa;
       font-size: 0.82rem;
     }
+
+    /* ── DUCH FESTIVALU + POZVÁNÍ – tmavá sekce bez parallaxu ── */
+    .sp-duch-section {
+      background-color: #E4D9C0;
+    }
+
+    .sp-zaver-section {
+      background-color: #E4D9C0;
+    }
+
+    .sp-duch-text {
+      max-width: 760px;
+      margin: 2rem auto 0;
+      color: rgba(247, 243, 236, .82);
+      line-height: 1.88;
+      font-size: 1rem;
+    }
+
+    .sp-duch-text p {
+      margin-bottom: 1.25rem;
+    }
+
+    .sp-duch-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Citát – autor podpis */
+    .citat-author {
+      font-family: var(--ff-sans);
+      font-size: .76rem;
+      font-weight: 500;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(247, 243, 236, .52);
+      display: block;
+      margin-top: 1.75rem;
+      font-style: normal;
+    }
+
+    /* Výživa – centrovaný blok */
+    .sp-vyziva-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+      padding: calc(var(--pad) * .6) 0 var(--pad);
+    }
+
+    .sp-vyziva-wrap .eyebrow {
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .sp-vyziva-wrap p {
+      color: #4A4A4A;
+      line-height: 1.88;
+      margin-bottom: 1rem;
+    }
+
+
+    .gradient-bridge .recognition-content strong,
+    .gradient-bridge-3 .recognition-content strong,
+    .sp-zaver-section .recognition-content strong {
+      font-weight: 600;
+      color: #9A6D2B;
+    }
+
+    .sp-citacek {
+      font-family: var(--ff-serif);
+      font-style: italic;
+      color: #7A5C20;
+      font-size: clamp(.9rem, 1.2vw, 1.05rem);
+      line-height: 1.7;
+      margin: 1.5rem 0 0;
+      padding-left: 1.5rem;
+      border-left: 2px solid #9A6D2B;
+    }
+
+    .sp-list {
+      list-style: none;
+      padding: 0;
+      margin: .75rem 0 0;
+    }
+    .sp-list li {
+      padding-left: 1.75rem;
+      margin-bottom: .5rem;
+      position: relative;
+      color: #4A4A4A;
+      line-height: 1.65;
+      font-size: .97rem;
+    }
+    .sp-list li::before {
+      content: '✧';
+      position: absolute;
+      left: 0;
+      color: #9A6D2B;
+    }
+    .sp-list-title {
+      font-family: var(--ff-sans);
+      font-size: .82rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #7A5C20;
+      margin: 1.75rem 0 .6rem;
+    }
   </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Event",
-    "name": "Letní speciál – Chrám krásy Shakti",
-    "description": "Letní speciál Mysterijní školy ženství. Čtyři dny vědomé praxe, krásy a ženské vzájemnosti v Chrámu krásy Shakti.",
+    "name": "Chrám ženské krásy, umění a doteku – Letní speciál",
+    "description": "Letní speciál Mysterijní školy ženství. Čtyři dny vědomého doteku, krásy, tance a ženských rituálů. 21.–25. 7. 2027, Centrum Buchov.",
     "url": "https://zenskamystika.cz/special",
-    "startDate": "2028-07-21",
-    "endDate": "2028-07-25",
+    "startDate": "2027-07-21",
+    "endDate": "2027-07-25",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "inLanguage": "cs",
@@ -819,7 +992,7 @@
     },
     "offers": {
       "@type": "Offer",
-      "price": "8880",
+      "price": "7700",
       "priceCurrency": "CZK",
       "url": "https://zenskamystika.cz/vstup",
       "availability": "https://schema.org/InStock"
@@ -888,18 +1061,18 @@
   </nav>
 
   <!-- ══ HERO ═══════════════════════════════════════════ -->
-  <section class="vstup-hero vstup-hero--modul" aria-label="Letní speciál – Chrám krásy Shakti">
+  <section class="vstup-hero vstup-hero--modul" aria-label="Chrám ženské krásy, umění a doteku – Letní speciál">
     <div class="vstup-hero-bg sp-hero-bg" role="img"
-      aria-label="Ženy v bílých šatech při společném letním setkání Mysterijní školy ženství"></div>
+      aria-label="Martina Anjali Výborná – průvodkyně letním speciálem Chrám ženské krásy, umění a doteku"></div>
     <div class="vstup-hero-overlay sp-hero-overlay"></div>
     <div class="vstup-hero-body">
       <span class="hero-eyebrow">Letní speciál</span>
       <h1 class="hero-h1">
-        <span class="hero-script">Chrám krásy Shakti</span>
+        <span class="hero-script">Chrám ženské krásy, umění a doteku</span>
       </h1>
-      <span class="sp-hero-datum rv">21.&nbsp;7.&nbsp;–&nbsp;25.&nbsp;7.&nbsp;2028 • Centrum Buchov</span>
-      <p class="hero-text">Vstup do&nbsp;prostoru, kde se krása stává modlitbou, pohyb meditací a&nbsp;vzájemná péče
-        cestou k&nbsp;hlubšímu spojení se&nbsp;sebou samou.</p>
+      <p class="sp-hero-modul">Speciální čtyřdenní letní modul Mysterijní školy ženství.</p>
+      <span class="sp-hero-datum rv">21.&nbsp;7.&nbsp;–&nbsp;25.&nbsp;7.&nbsp;2027&nbsp;•&nbsp;Centrum Buchov</span>
+      <p class="sp-hero-tagline">Umění&nbsp;doteku • krásy • přítomnosti • radosti&nbsp;ze&nbsp;života</p>
       <div class="hero-btns">
         <a href="#prihlaseni" class="btn btn-gold">Přihlásit se na&nbsp;letní speciál</a>
       </div>
@@ -922,187 +1095,61 @@
     <!-- ══ BÉŽOVÁ OBLAST 1 ════════════════════════════════ -->
     <div class="gradient-bridge">
 
-      <!-- ══ ZAŽIJ CHRÁM ŽENSKÉ KRÁSY ═══════════════════════ -->
+      <!-- ══ ZAŽIJ CHRÁM ŽENSKÉHO UMĚNÍ ═════════════════════ -->
       <section class="recognition sp-sekce1" aria-labelledby="sp-sekce1-h2">
         <div class="wrap">
           <div class="recognition-grid">
             <img src="Obrazky/grafika/bg-kvetiny-right.webp" class="grid-flower grid-flower-right" alt=""
               aria-hidden="true" loading="lazy">
-
             <div class="recognition-content">
-              <span class="eyebrow rv">Letní chrámový retreat</span>
+              <span class="eyebrow rv">Letní chrámový speciál</span>
               <h2 id="sp-sekce1-h2" class="hc rv rv-1">
-                <span class="hc-s">Zažij chrám ženské krásy</span>
+                <span class="hc-s">Zažij chrám ženského umění</span>
               </h2>
-              <p class="rv rv-2">Chrám krásy Shakti je dobrovolným letním speciálem Mysterijní školy ženství.
-                Je&nbsp;otevřený ženám, které uvažují o&nbsp;vstupu do&nbsp;školy a&nbsp;chtějí poznat její jedinečnou
-                atmosféru, i&nbsp;ženám, které již prošly její cestou a&nbsp;přejí si znovu prožít společný čas plný
-                krásy, tvořivosti, praxe a&nbsp;ženské vzájemnosti.</p>
-              <p class="rv rv-3">Setkání je&nbsp;příležitostí znovu se propojit, upevnit získané zkušenosti
-                a&nbsp;společně prohloubit praxi vědomého života.</p>
-              <p class="rv rv-3">Po&nbsp;čtyři dny společně vytvoříme prostor plný elegance, něhy, radosti, inspirace
-                a&nbsp;vzájemné výživy. Chrám ženské krásy, kde se každá žena může zastavit, vydechnout, spočinout
-                sama v&nbsp;sobě a&nbsp;znovu objevit svou přirozenou záři.</p>
+              <p class="rv rv-2">Chrám ženské krásy, umění a doteku je jedinečný <strong>čtyřdenní letní modul</strong> Mysterijní školy ženství, kam tě srdečně zvu.</p>
+              <p class="rv rv-3">Je otevřen ženám, které <strong>touží poznat atmosféru školy</strong> a&nbsp;zažít ochutnávku její výuky i&nbsp;hloubky autentické tantrické cesty. Současně je srdečným setkáním žen, které školou již prošly a&nbsp;chtějí znovu spočinout v&nbsp;prostoru <strong>sesterství, sdílení a&nbsp;společné oslavy života</strong>.</p>
+              <p class="rv rv-4">Během čtyř dnů vytvoříme chrámový prostor plný <strong>krásy, vědomého doteku, tance, hudby, květin, tvořivosti</strong> a&nbsp;ženských rituálů.</p>
             </div>
-
             <div class="img-frame recognition-img rv rv-2">
-              <img src="Obrazky/o-skole/o-skole-03.webp"
-                alt="Žena při vědomém dotyku a péči o tělo v duchu Chrámu krásy Shakti" class="main-img" loading="lazy"
-                width="1920" height="1080">
+              <img src="Obrazky/special/internetzrozeni377.jpg"
+                alt="Atmosféra Chrámu ženské krásy, umění a doteku" class="main-img" loading="lazy">
             </div>
-
           </div>
         </div>
       </section>
 
-      <img src="Obrazky/grafika/filigran/filigran-divider-03.webp" class="section-divider section-divider--between sp-div-1" alt=""
+      <img src="Obrazky/grafika/filigran/filigran-divider-02.webp" class="section-divider section-divider--between sp-div-1" alt=""
         aria-hidden="true" loading="lazy">
 
-      <!-- ══ ČTYŘI DNY VĚDOMÉ PRAXE ══════════════════════════ -->
+      <!-- ══ OSLAVA ŽENSTVÍ ══════════════════════════════════ -->
       <section class="recognition" aria-labelledby="sp-sekce2-h2">
         <div class="wrap">
           <div class="recognition-grid">
             <img src="Obrazky/grafika/bg-kvetiny-left.webp" class="grid-flower grid-flower-left" alt=""
               aria-hidden="true" loading="lazy">
-
             <div class="img-frame recognition-img sp-img-fixed rv rv-2">
-              <img src="Obrazky/modul-2/modul-2-04.webp"
-                alt="Ženy ve společném kruhu jako symbol radosti a ženské vzájemnosti na letním speciálu Chrám krásy Shakti"
-                class="main-img" loading="lazy" width="1200" height="1600">
+              <img src="Obrazky/special/202.JPG"
+                alt="Ženy ve společném prostoru sesterství a oslavy ženství" class="main-img" loading="lazy" style="object-position: center bottom;">
             </div>
-
             <div class="recognition-content">
-              <span class="eyebrow rv">Co zažiješ</span>
+              <span class="eyebrow rv">Co společně vytvoříme</span>
               <h2 id="sp-sekce2-h2" class="hc rv rv-1">
-                <span class="hc-s">Čtyři dny vědomé praxe a&nbsp;ženské vzájemnosti</span>
+                <span class="hc-s">Oslava ženství, krásy a&nbsp;radosti ze&nbsp;života</span>
               </h2>
-              <p class="rv rv-2">Dotkneme se archetypální podstaty ženského principu, který přirozeně probouzí
-                magnetismus, vnitřní klid, emocionální rovnováhu, zdraví, hojnost a&nbsp;naplnění ve&nbsp;vztazích
-                i&nbsp;v&nbsp;seberealizaci.</p>
-              <p class="rv rv-3">Každé ráno zahájíme spirituální integrální jógou, vědomým dechem a&nbsp;praxemi
-                sublimace životní a&nbsp;sexuální energie, které podporují vitalitu, tvořivost, harmonii a&nbsp;hlubší
-                propojení s&nbsp;vlastní božskou ženskou podstatou.</p>
-              <p class="rv rv-3">Čeká nás umění tantrického doteku, vědomého pohybu, smyslnosti a&nbsp;vzájemné péče.
-                Prostřednictvím meditace, kontemplace, tance, hravosti a&nbsp;sesterského sdílení budeme otevírat
-                posvátnost ženského těla jako chrámu života.</p>
+              <p class="rv rv-2"><strong>Bude to oslava ženství.</strong> Oslava života. Oslava umění být ženou.</p>
+              <p class="rv rv-3">Čas, kdy můžeš <strong>zpomalit, odpočinout si</strong>, nechat se hýčkat a&nbsp;znovu objevit svou přirozenou záři.</p>
+              <p class="rv rv-4">V&nbsp;prostoru <strong>ženské vzájemnosti</strong> můžeš vydechnout, spočinout sama v&nbsp;sobě a&nbsp;věnovat se tomu, co právě potřebuješ. <strong>Celý program je nabídkou</strong> a&nbsp;ty si můžeš vybrat, co chceš během společných dnů prožít.</p>
             </div>
-
           </div>
         </div>
       </section>
 
-      <img src="Obrazky/grafika/filigran/filigran-divider-02.webp" class="section-divider section-divider--between before-zena sp-div-2" alt=""
+      <img src="Obrazky/grafika/filigran/filigran-divider-03.webp" class="section-divider section-divider--between before-zena sp-div-2" alt=""
         aria-hidden="true" loading="lazy">
 
     </div><!-- /.gradient-bridge -->
 
-    <!-- ══ CITÁT – posvátná geometrie v pozadí ══════════════ -->
-    <section class="citat-sekce sp-citat-sekce" aria-label="Citát o kráse jako modlitbě">
-      <div class="zl-wave-top" aria-hidden="true">
-        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
-          style="height:110px;transform:scale(-1,-1);">
-          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
-        </svg>
-        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
-          style="height:90px;transform:scale(-1,-1);">
-          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
-        </svg>
-        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
-          style="height:70px;transform:scale(-1,-1);">
-          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
-        </svg>
-      </div>
-      <div class="wrap">
-        <div class="zena-laska-inner rv">
-          <img src="Obrazky/grafika/flower-corner.webp" class="zl-fili zl-fili-lh" alt="" aria-hidden="true"
-            loading="lazy">
-          <img src="Obrazky/grafika/flower-corner.webp" class="zl-fili zl-fili-pd" alt="" aria-hidden="true"
-            loading="lazy">
-          <div class="citat-block">
-            <blockquote class="citat">Krása jako modlitba. Ženství jako umění. Život jako posvátné
-              tvoření.</blockquote>
-          </div>
-        </div>
-      </div>
-      <div class="zl-wave-bot" aria-hidden="true">
-        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;">
-          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
-        </svg>
-        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:90px;">
-          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
-        </svg>
-        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:70px;">
-          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
-        </svg>
-      </div>
-    </section>
-
-    <img src="Obrazky/grafika/filigran/filigran-divider-02.webp"
-      class="section-divider section-divider--between div-nad-kartou after-zena sp-div-3" alt="" aria-hidden="true" loading="lazy">
-
-    <!-- ══ POSVÁTNOST KRÁSY – 3 karty ═══════════════════════ -->
-    <section class="posvatnost-section" aria-labelledby="posvatnost-h2">
-      <div class="wrap">
-        <div class="posvatnost-card rv">
-
-          <img src="Obrazky/grafika/filigran/filigran-corner-lh.webp" class="fili-corner fili-lh" alt=""
-            aria-hidden="true" loading="lazy">
-          <img src="Obrazky/grafika/filigran/filigran-corner-ph.webp" class="fili-corner fili-ph" alt=""
-            aria-hidden="true" loading="lazy">
-          <img src="Obrazky/grafika/filigran/filigran-corner-ld.webp" class="fili-corner fili-ld" alt=""
-            aria-hidden="true" loading="lazy">
-          <img src="Obrazky/grafika/filigran/filigran-corner-pd.webp" class="fili-corner fili-pd" alt=""
-            aria-hidden="true" loading="lazy">
-
-          <div class="posvatnost-header">
-            <span class="eyebrow eyebrow-lt rv">Posvátnost krásy</span>
-            <h2 id="posvatnost-h2" class="hc rv rv-1" style="align-items:center">
-              <span class="hc-s hc-s-dk">Krása, která rozkvétá zevnitř</span>
-            </h2>
-          </div>
-
-          <div class="posvatnost-grid">
-
-            <div class="posvatnost-item rv">
-              <div class="pillar-flower-wrap">
-                <img src="Obrazky/grafika/kvetina-ruze.webp" alt="" class="pillar-flower" loading="lazy">
-              </div>
-              <h3 class="posvatnost-item-title">Vnitřní krása</h3>
-              <p>Skutečná krása rozkvétá ve&nbsp;chvíli, kdy žena spočine sama v&nbsp;sobě. Když naslouchá svému
-                tělu, otevře své srdce a&nbsp;dovolí své přirozenosti svobodně zářit. Právě tehdy se její ženská
-                esence stává tím nejkrásnějším, co může světu nabídnout.</p>
-            </div>
-
-            <div class="posvatnost-item rv rv-1">
-              <div class="pillar-flower-wrap">
-                <img src="Obrazky/grafika/kvetina-lotos.webp" alt="" class="pillar-flower" loading="lazy">
-              </div>
-              <h3 class="posvatnost-item-title">Energie Shakti</h3>
-              <p>Každá žena v&nbsp;sobě nese živou energii Shakti. Energii tvořivosti, intuice, lásky
-                a&nbsp;životní síly. Skrze vědomý pohyb, dech, meditaci a&nbsp;tanec jí společně vytvoříme prostor,
-                aby se mohla znovu probudit a&nbsp;přirozeně proudit.</p>
-            </div>
-
-            <div class="posvatnost-item rv rv-2">
-              <div class="pillar-flower-wrap">
-                <img src="Obrazky/grafika/kvetina-lilie.webp" alt="" class="pillar-flower" loading="lazy">
-              </div>
-              <h3 class="posvatnost-item-title">Síla ženské vzájemnosti</h3>
-              <p>Když se ženy setkají v&nbsp;prostoru důvěry, vzniká něco jedinečného. Sdílení, podpora, inspirace
-                i&nbsp;společné tvoření vytvářejí živý chrám ženské energie, ve&nbsp;kterém může každá žena
-                rozkvétat svou vlastní cestou.</p>
-            </div>
-
-          </div>
-
-        </div><!-- /.posvatnost-card -->
-      </div><!-- /.wrap -->
-    </section>
-
-    <img src="Obrazky/grafika/filigran/filigran-divider-03.webp"
-      class="section-divider section-divider--between div-nad-kartou before-zena" alt="" aria-hidden="true" loading="lazy">
-
-    <!-- ══ JEDINEČNÝ LETNÍ PROGRAM – tmavá sekce ══════════════ -->
+    <!-- ══ PROGRAM FESTIVALU – foto pozadí (parallax) ══════════ -->
     <section class="program-section" aria-labelledby="program-h2">
 
       <div class="zl-wave-top" aria-hidden="true">
@@ -1129,9 +1176,7 @@
           </h2>
         </div>
 
-        <p class="program-intro rv rv-1">Letní speciál přináší jedinečné chrámové prožitky, které nejsou součástí
-          modulů Mysterijní školy ženství. Každý z&nbsp;nich vznikl jako pozvání k&nbsp;hlubšímu propojení
-          s&nbsp;krásou, tvořivostí a&nbsp;ženskou podstatou.</p>
+        <p class="program-intro rv rv-1">Každý den přinese jedinečný prožitek. Čekají nás čtyři dny vědomého doteku, krásy, pohybu, tvořivosti a&nbsp;ženské vzájemnosti.</p>
 
         <div class="program-main-grid">
 
@@ -1146,33 +1191,29 @@
             <div class="program-card rv">
               <img src="Obrazky/grafika/filigran/filigran-corner-lh.webp" class="fili-corner fili-lh" alt="" aria-hidden="true" loading="lazy">
               <img src="Obrazky/grafika/filigran/filigran-corner-pd.webp" class="fili-corner fili-pd" alt="" aria-hidden="true" loading="lazy">
-              <h3 class="program-card-title">Chrámový tanec Bohyně</h3>
-              <p>Posvátný tanec inspirovaný dávnými Mysterijními školami, ve&nbsp;kterém se pohyb stává modlitbou
-                lásky, harmonie a&nbsp;vděčnosti.</p>
+              <h3 class="program-card-title">Rituál Umění tantrického doteku SHIVA–SHAKTI</h3>
+              <p>Vědomý dotek jako cesta k&nbsp;hlubšímu vnímání těla, citlivosti, důvěře a&nbsp;harmonii ženského a&nbsp;mužského principu.</p>
             </div>
 
             <div class="program-card rv rv-1">
               <img src="Obrazky/grafika/filigran/filigran-corner-lh.webp" class="fili-corner fili-lh" alt="" aria-hidden="true" loading="lazy">
               <img src="Obrazky/grafika/filigran/filigran-corner-pd.webp" class="fili-corner fili-pd" alt="" aria-hidden="true" loading="lazy">
-              <h3 class="program-card-title">Tantrický rituál pro ženy</h3>
-              <p>Exkluzivní ženský rituál vědomého tantrického doteku, který přináší hluboké uvolnění, regeneraci
-                a&nbsp;návrat do&nbsp;těla.</p>
+              <h3 class="program-card-title">Rituál ženské krásy</h3>
+              <p>Péče o&nbsp;pleť, dekolt a&nbsp;omlazující masáž obličeje, která probouzí přirozenou svěžest, jemnost a&nbsp;ženskou záři.</p>
             </div>
 
             <div class="program-card rv rv-2">
               <img src="Obrazky/grafika/filigran/filigran-corner-lh.webp" class="fili-corner fili-lh" alt="" aria-hidden="true" loading="lazy">
               <img src="Obrazky/grafika/filigran/filigran-corner-pd.webp" class="fili-corner fili-pd" alt="" aria-hidden="true" loading="lazy">
-              <h3 class="program-card-title">Floristické umění</h3>
-              <p>Tvoření krásy prostřednictvím květin, harmonie linií a&nbsp;posvátné geometrie jako odrazu řádu,
-                který prostupuje celým životem.</p>
+              <h3 class="program-card-title">Umění tance chrámových kněžek</h3>
+              <p>Tanec jako jazyk těla, meditace v&nbsp;pohybu a&nbsp;živoucí modlitba Nejvyšší Božské Existenci.</p>
             </div>
 
             <div class="program-card rv rv-3">
               <img src="Obrazky/grafika/filigran/filigran-corner-lh.webp" class="fili-corner fili-lh" alt="" aria-hidden="true" loading="lazy">
               <img src="Obrazky/grafika/filigran/filigran-corner-pd.webp" class="fili-corner fili-pd" alt="" aria-hidden="true" loading="lazy">
-              <h3 class="program-card-title">Hlas jako cesta k&nbsp;sobě</h3>
-              <p>Hlasová dílna se živou hudbou a&nbsp;vzácnou hostkou, která otevře prostor pro svobodný hlasový
-                projev a&nbsp;radost z&nbsp;vlastního vyjádření.</p>
+              <h3 class="program-card-title">Zvuková lázeň křišťálových mís a&nbsp;gongu</h3>
+              <p>Jana Teg Amrit a&nbsp;Muriel nás prostřednictvím léčivých vibrací pozvou do&nbsp;hluboké relaxace a&nbsp;rozšíří naše vědomí do&nbsp;kosmických i&nbsp;zemských světů.</p>
             </div>
 
           </div>
@@ -1184,20 +1225,20 @@
           <img src="Obrazky/grafika/filigran/filigran-corner-ph.webp" class="fili-corner fili-ph" alt="" aria-hidden="true" loading="lazy">
           <img src="Obrazky/grafika/filigran/filigran-corner-ld.webp" class="fili-corner fili-ld" alt="" aria-hidden="true" loading="lazy">
           <img src="Obrazky/grafika/filigran/filigran-corner-pd.webp" class="fili-corner fili-pd" alt="" aria-hidden="true" loading="lazy">
-          <p class="program-extra-intro" style="margin-bottom:2rem;">A&nbsp;to je jen část toho, co společně během čtyř dnů prožijeme.
-            Těšit se můžeš také na:</p>
+          <p class="program-extra-intro" style="margin-bottom:2rem;">A&nbsp;to je jen část toho, co společně prožijeme. Těšit se můžeš také na:</p>
 
           <div class="program-list-cols">
             <ul class="program-list">
-              <li>Meditace, kontemplace a&nbsp;praxe přítomnosti.</li>
-              <li>Channeling jóni, dělohy a&nbsp;srdce.</li>
-              <li>Havajská meditace Ho'oponopono.</li>
-              <li>Léčivá zvuková lázeň křišťálových mís a&nbsp;gongu.</li>
+              <li>Ochutnávku Mysterijní školy ženství pro nové ženy i&nbsp;radostné setkání absolventek.</li>
+              <li>Božské ráno s&nbsp;integrální Tantra jógou, probouzením těla, dechu a&nbsp;vědomí a&nbsp;jemným vnímáním subtilních kosmických energií proudících naším tělem.</li>
+              <li>Zpěvohraní a&nbsp;hru s&nbsp;hlasem, která probouzí autentický hlas, radost ze&nbsp;zpěvu a&nbsp;sílu vibrace.</li>
+              <li>Taneční cestu Divoké Shakti s&nbsp;DJkou Mirrou a&nbsp;živým hudebním doprovodem, večer plný extáze, svobody, spontánnosti a&nbsp;radosti ze&nbsp;života.</li>
             </ul>
             <ul class="program-list">
-              <li>Relaxace v&nbsp;přírodě, koupání a&nbsp;čas pro sebe.</li>
-              <li>Napojení na&nbsp;energii Velkého a&nbsp;Malého Blaníku.</li>
-              <li>Oslava ženskosti, tvořivosti a&nbsp;božské podstaty ženy.</li>
+              <li>Posvátný oheň Sesterství a&nbsp;Vděčnosti za&nbsp;dar života se&nbsp;zpěvem, bubny a&nbsp;sdílením pod hvězdnou oblohou.</li>
+              <li>Koupel v&nbsp;přírodním jezírku, hravost, osvěžení, uvolnění a&nbsp;hlubokou relaxaci v&nbsp;náruči přírody.</li>
+              <li>Inspirativního hosta jako krásné překvapení letošního ročníku.</li>
+              <li>Profesionální fotografování, díky kterému si odvezeš vzpomínku na&nbsp;svou vlastní záři.</li>
             </ul>
           </div>
         </div>
@@ -1218,10 +1259,161 @@
 
     </section>
 
+    <img src="Obrazky/grafika/filigran/filigran-divider-02.webp"
+      class="section-divider section-divider--between after-zena sp-div-ritual" alt="" aria-hidden="true" loading="lazy">
+
+    <!-- ══ BÉŽOVÁ OBLAST 3 ════════════════════════════════════ -->
+    <div class="gradient-bridge-3">
+
+      <!-- ══ RITUÁL DOTEKU ════════════════════════════════════ -->
+      <section class="recognition sp-sekce-ritual" aria-labelledby="ritual-h2">
+        <div class="wrap">
+          <div class="recognition-grid">
+            <img src="Obrazky/grafika/bg-kvetiny-right.webp" class="grid-flower grid-flower-right" alt=""
+              aria-hidden="true" loading="lazy">
+            <div class="recognition-content">
+              <span class="eyebrow rv">Posvátnost doteku</span>
+              <h2 id="ritual-h2" class="hc rv rv-1">
+                <span class="hc-s">Rituál&nbsp;Umění&nbsp;tantrického doteku</span>
+              </h2>
+              <p class="rv rv-2">Vědomý dotek je cestou k&nbsp;lásce, přítomnosti a&nbsp;<strong>posvátnému spojení</strong>. Tantrický dotek je stavem vědomí a&nbsp;uměním být plně přítomna druhému člověku s&nbsp;<strong>otevřeným srdcem a&nbsp;čistým záměrem</strong>.</p>
+              <p class="rv rv-3">Rituál vychází z&nbsp;autentického tantrického učení Ma Anandy Sarity a&nbsp;navrací doteku jeho původní posvátný význam. Dotek se stává <strong>meditací, modlitbou a&nbsp;tichým vyjádřením lásky</strong>.</p>
+              <p class="rv rv-3">Žena se učí probouzet svou vrozenou citlivost, vnímavost a&nbsp;schopnost naslouchat tělu. Skutečná síla doteku vychází z&nbsp;<strong>hluboké přítomnosti</strong>, otevřeného srdce a&nbsp;schopnosti skutečně vnímat druhého.</p>
+              <p class="rv rv-4">Když se mysl utiší a&nbsp;tělo se uvolní, dotek přirozeně plyne jako proud života. Otevírá vznešený Erós – posvátnou životní sílu, která propojuje člověka s&nbsp;jeho duší a&nbsp;přináší do&nbsp;vztahu více <strong>něhy, úcty, důvěry a&nbsp;vědomé lásky</strong>.</p>
+            </div>
+            <div class="img-frame recognition-img sp-img-fixed rv rv-2">
+              <img src="Obrazky/special/ritual-01.jpg"
+                alt="Rituál Umění tantrického doteku SHIVA–SHAKTI" class="main-img" loading="lazy" style="object-position: 65% 35%;">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <img src="Obrazky/grafika/filigran/filigran-divider-03.webp"
+        class="section-divider section-divider--between sp-div-ritual-flo" alt="" aria-hidden="true" loading="lazy">
+
+      <!-- ══ FLORISTIKA ═══════════════════════════════════════ -->
+      <section class="recognition sp-sekce-floristika" aria-labelledby="floristika-h2">
+        <div class="wrap">
+          <div class="recognition-grid">
+            <img src="Obrazky/grafika/bg-kvetiny-left.webp" class="grid-flower grid-flower-left" alt=""
+              aria-hidden="true" loading="lazy">
+            <div class="img-frame recognition-img sp-img-fixed rv rv-2">
+              <img src="Obrazky/special/floristika-03.jpg"
+                alt="Umění floristiky – tvoření s květinami" class="main-img" loading="lazy" style="transform: scaleX(-1); object-position: center 20%;">
+            </div>
+            <div class="recognition-content">
+              <span class="eyebrow rv">Řeč květin</span>
+              <h2 id="floristika-h2" class="hc rv rv-1">
+                <span class="hc-s">Umění floristiky jako cesta ke&nbsp;kráse a&nbsp;harmonii</span>
+              </h2>
+              <p class="rv rv-2">Každá žena v&nbsp;sobě nese <strong>vrozený dar tvořit krásu</strong>.</p>
+              <p class="rv rv-2">Umění floristiky probouzí cit pro <strong>harmonii, proporce, barvy, tvary a&nbsp;jemnou estetiku</strong>. Učí nás vidět krásu v&nbsp;květinách i&nbsp;v&nbsp;životě samotném.</p>
+              <p class="rv rv-3">Květiny miluji a&nbsp;cítím je. Byly mou profesí sedmnáct let a&nbsp;jsou pro mě dokonalým symbolem ženské krásy a&nbsp;Božské esence lásky. Naučím tě vytvořit <strong>elegantní kytici do&nbsp;vázy i&nbsp;jemnou kompozici</strong> inspirovanou japonským uměním ikebana.</p>
+              <p class="rv rv-4">Vytvořené kytice použijeme k&nbsp;výzdobě chrámového prostoru i&nbsp;osobních oltářů. Každá žena si odnese svou vazbu domů jako <strong>připomínku krásy, kterou v&nbsp;sobě probudila</strong>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /.gradient-bridge-3 -->
+
+    <img src="Obrazky/grafika/filigran/filigran-divider-03.webp"
+      class="section-divider section-divider--between before-zena" alt="" aria-hidden="true" loading="lazy">
+
+    <!-- ══ CITÁT – floristika ════════════════════════════════════ -->
+    <section class="citat-sekce sp-citat-sekce" aria-label="Citát o kráse a ženství">
+      <div class="zl-wave-top" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:110px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:90px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:70px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+        </svg>
+      </div>
+      <div class="wrap">
+        <div class="zena-laska-inner rv">
+          <img src="Obrazky/grafika/flower-corner.webp" class="zl-fili zl-fili-lh" alt="" aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/flower-corner.webp" class="zl-fili zl-fili-pd" alt="" aria-hidden="true" loading="lazy">
+          <div class="citat-block">
+            <blockquote class="citat">Krása je výživou pro duši. Květina i&nbsp;žena nám připomínají, že krása je přirozeným stavem bytí.</blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="zl-wave-bot" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:90px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:70px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+        </svg>
+      </div>
+    </section>
+
+    <img src="Obrazky/grafika/filigran/filigran-divider-02.webp"
+      class="section-divider section-divider--between div-nad-kartou after-zena" alt="" aria-hidden="true" loading="lazy">
+
+    <!-- ══ DUCH FESTIVALU – tmavá sekce (solid, bez parallaxu) ═══ -->
+    <section class="sp-duch-section posvatnost-section" aria-labelledby="duch-h2">
+      <div class="wrap">
+        <div class="posvatnost-card rv">
+
+          <img src="Obrazky/grafika/filigran/filigran-corner-lh.webp" class="fili-corner fili-lh" alt="" aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/filigran/filigran-corner-ph.webp" class="fili-corner fili-ph" alt="" aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/filigran/filigran-corner-ld.webp" class="fili-corner fili-ld" alt="" aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/filigran/filigran-corner-pd.webp" class="fili-corner fili-pd" alt="" aria-hidden="true" loading="lazy">
+
+          <div class="posvatnost-header">
+            <span class="eyebrow eyebrow-lt rv">Duch letního speciálu</span>
+            <h2 id="duch-h2" class="hc rv rv-1" style="align-items:center">
+              <span class="hc-s hc-s-dk">Vědomá přítomnost a&nbsp;energie Shakti</span>
+            </h2>
+          </div>
+
+          <div class="posvatnost-grid">
+
+            <div class="posvatnost-item rv">
+              <div class="pillar-flower-wrap">
+                <img src="Obrazky/grafika/kvetina-ruze.webp" alt="" class="pillar-flower" loading="lazy">
+              </div>
+              <h3 class="posvatnost-item-title">Umění přítomnosti</h3>
+              <p>Celým setkáním nás bude provázet kultivace Umění přítomného okamžiku. Budeme rozvíjet schopnost vědomého pozorování, laskavé bdělosti a&nbsp;hlubokého spojení se&nbsp;sebou samými.</p>
+            </div>
+
+            <div class="posvatnost-item rv rv-1">
+              <div class="pillar-flower-wrap">
+                <img src="Obrazky/grafika/kvetina-lotos.webp" alt="" class="pillar-flower" loading="lazy">
+              </div>
+              <h3 class="posvatnost-item-title">Energie Shakti</h3>
+              <p>V&nbsp;bezpečném prostoru sesterství budeme podporovat soucítění, vzájemné oceňování, autenticitu, hravost i&nbsp;radost ze&nbsp;života. Společně vytvoříme prostředí, ve&nbsp;kterém se může energie Shakti přirozeně projevit jako tvořivost, láska, vitalita, intuice, jemnost i&nbsp;síla.</p>
+            </div>
+
+            <div class="posvatnost-item rv rv-2">
+              <div class="pillar-flower-wrap">
+                <img src="Obrazky/grafika/kvetina-lilie.webp" alt="" class="pillar-flower" loading="lazy">
+              </div>
+              <h3 class="posvatnost-item-title">Posvátná životní síla</h3>
+              <p>V&nbsp;tantrické tradici je erotická energie posvátnou životní silou a&nbsp;Božským zdrojem tvoření. Když ji žena přijme s&nbsp;úctou a&nbsp;vědomím, stává se světlem, které vyzařuje do&nbsp;všech oblastí jejího života.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ══ BÉŽOVÁ OBLAST 2 ════════════════════════════════ -->
     <div class="gradient-bridge-2">
 
-      <img src="Obrazky/grafika/filigran/filigran-divider-02.webp"
+      <img src="Obrazky/grafika/filigran/filigran-divider-03.webp"
         class="section-divider section-divider--between div-nad-mistem after-zena sp-div-misto" alt="" aria-hidden="true" loading="lazy">
 
       <!-- ══ MÍSTO KONÁNÍ ════════════════════════════════════ -->
@@ -1236,15 +1428,9 @@
               <h2 id="misto-h2" class="hc rv rv-1">
                 <span class="hc-s">Centrum Buchov</span>
               </h2>
-              <p class="rv rv-2">Celý program probíhá uprostřed přírody, v&nbsp;malebném a&nbsp;energií naplněném
-                prostředí centra Buchov. Prostor podporuje hluboké zklidnění, otevření ženského vnímání
-                i&nbsp;propojení s&nbsp;přírodními rytmy.</p>
-              <p class="rv rv-3">Centrum se nachází v&nbsp;romantické středočeské krajině na&nbsp;dohled
-                od&nbsp;bájné hory Blaník. Okolní louky, lesy a&nbsp;hluboký klid přírody přirozeně podporují
-                ztišení a&nbsp;jemné otevření se samé sobě.</p>
-              <p class="rv rv-4">Po&nbsp;celé setkání nás bude provázet lahodná vegetariánská a&nbsp;veganská
-                kuchyně připravovaná s&nbsp;láskou jako součást chrámové péče o&nbsp;tělo, srdce i&nbsp;duši.</p>
-              <div class="rv rv-5" style="margin-top:2rem">
+              <p class="rv rv-2">Letní speciál se uskuteční v&nbsp;nádherném prostředí Centra Buchov, rozprostřeného mezi <strong>posvátnými vrchy Velký a&nbsp;Malý Blaník</strong>. Tato krajina je od&nbsp;pradávna spojována s&nbsp;mimořádnou silou země a&nbsp;symbolicky propojuje energie mužského a&nbsp;ženského principu.</p>
+              <p class="rv rv-3">Okolní louky, lesy, čistá příroda a&nbsp;elegantní anglický styl celého areálu vytvářejí harmonický prostor pro spočinutí, regeneraci a&nbsp;návrat k&nbsp;vlastní podstatě. Je to místo, kde se ženské srdce přirozeně <strong>otevírá tichu, kráse, vznešenosti a&nbsp;blaženosti</strong>.</p>
+              <div class="rv rv-4" style="margin-top:2rem">
                 <a href="https://www.centrum-buchov.cz/" class="btn btn-ghost" target="_blank" rel="noopener">Nahlédnout
                   do&nbsp;prostoru</a>
               </div>
@@ -1252,7 +1438,7 @@
 
             <div class="img-frame misto-img-frame rv rv-2">
               <img src="Obrazky/centrum-buchov/centrum-buchov-02.webp"
-                alt="Centrum Buchov – místo konání letního speciálu Chrám krásy Shakti obklopené přírodou středočeské krajiny"
+                alt="Centrum Buchov – místo konání letního speciálu Chrám ženské krásy, umění a doteku"
                 class="main-img" loading="lazy" width="700" height="480">
             </div>
 
@@ -1260,14 +1446,114 @@
         </div>
       </section>
 
-      <img src="Obrazky/grafika/filigran/filigran-divider-03.webp"
+      <img src="Obrazky/grafika/filigran/filigran-divider-02.webp"
         class="section-divider section-divider--between div-pod-mistem before-zena" alt="" aria-hidden="true" loading="lazy">
+
+      <!-- ══ VÝŽIVA ══════════════════════════════════════════ -->
+      <section class="recognition" aria-labelledby="vyziva-h2">
+        <div class="wrap">
+          <div class="recognition-grid">
+            <img src="Obrazky/grafika/bg-kvetiny-left.webp" class="grid-flower grid-flower-left" alt=""
+              aria-hidden="true" loading="lazy">
+            <div class="img-frame recognition-img sp-img-fixed rv rv-2">
+              <img src="Obrazky/special/jidlo-02.jpg"
+                alt="Výjimečná vegetariánská kuchyně pro tělo i duši" class="main-img" loading="lazy" style="object-position: center 30%;">
+            </div>
+            <div class="recognition-content">
+              <span class="eyebrow rv" id="vyziva-h2">Vegetariánská výživa</span>
+              <h2 class="hc rv rv-1">
+                <span class="hc-s">Hostina pro tělo i&nbsp;duši</span>
+              </h2>
+              <p class="rv rv-2">Stejně láskyplná péče bude věnována také <strong>našemu tělu</strong>.</p>
+              <p class="rv rv-3">Naše milovaná kuchařka nám bude po&nbsp;celý pobyt připravovat výjimečnou <strong>vegetariánskou a&nbsp;veganskou kuchyni</strong> plnou čerstvých surovin, barev, vůní a&nbsp;hojnosti.</p>
+              <p class="rv rv-4">Každé jídlo bude <strong>malým uměleckým dílem</strong> a&nbsp;hostinou pro oči, tělo i&nbsp;srdce.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <img src="Obrazky/grafika/filigran/filigran-divider-03.webp"
+        class="section-divider section-divider--between before-zena" alt="" aria-hidden="true" loading="lazy">
 
     </div><!-- /.gradient-bridge-2 -->
 
+    <!-- ══ CITÁT 2 – druhé motto (parallax) ═════════════════════ -->
+    <section class="citat-sekce sp-citat-sekce" aria-label="Citát Ma Ananda Sarita o Tantře">
+      <div class="zl-wave-top" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:110px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:90px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+          style="height:70px;transform:scale(-1,-1);">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+        </svg>
+      </div>
+      <div class="wrap">
+        <div class="zena-laska-inner rv">
+          <img src="Obrazky/grafika/flower-corner.webp" class="zl-fili zl-fili-lh" alt="" aria-hidden="true" loading="lazy">
+          <img src="Obrazky/grafika/flower-corner.webp" class="zl-fili zl-fili-pd" alt="" aria-hidden="true" loading="lazy">
+          <div class="citat-block">
+            <blockquote class="citat">Tantra je umění plně procitnout do&nbsp;toho, kým skutečně jsi.</blockquote>
+            <cite class="citat-author">— Ma Ananda Sarita</cite>
+          </div>
+        </div>
+      </div>
+      <div class="zl-wave-bot" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:110px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.25)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:90px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="rgba(228,217,192,0.5)" />
+        </svg>
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:70px;">
+          <path d="M0,35 C240,5 480,5 720,35 C960,65 1200,65 1440,35 L1440,70 L0,70 Z" fill="#E4D9C0" />
+        </svg>
+      </div>
+    </section>
+
+    <img src="Obrazky/grafika/filigran/filigran-divider-02.webp"
+      class="section-divider section-divider--between div-nad-kartou after-zena sp-div-pred-zaverem" alt="" aria-hidden="true" loading="lazy">
+
+    <!-- ══ NA ZÁVĚR FESTIVALU – béžová, recognition ══════════════ -->
+    <section class="recognition sp-zaver-section" aria-labelledby="pozvani-h2">
+      <div class="wrap">
+        <div class="recognition-grid">
+          <img src="Obrazky/grafika/bg-kvetiny-right.webp" class="grid-flower grid-flower-right" alt=""
+            aria-hidden="true" loading="lazy">
+
+          <div class="recognition-content">
+            <span class="eyebrow rv">Srdečné pozvání</span>
+            <h2 id="pozvani-h2" class="hc rv rv-1">
+              <span class="hc-s">Dovol své duši nadechnout se</span>
+            </h2>
+            <p class="rv rv-2">Přijeď na&nbsp;čtyři dny mezi ženy a&nbsp;odlož všechny své role. Nech se hýčkat. Tanči. Zpívej. Tvoř. Směj se. Spočiň v&nbsp;náruči přírody a&nbsp;<strong>dovol své duši nadechnout se</strong>.</p>
+            <p class="rv rv-3">Celý program je nabídkou a&nbsp;ty si můžeš vybrat, co chceš prožít. <strong>Uvolnění, plynutí, radost a&nbsp;přítomnost lásky</strong> jsou klíčem k&nbsp;ženské kráse. Na závěr si odvezeš profesionální fotografie a&nbsp;vzpomínku na&nbsp;<strong>ženu, kterou jsi ve&nbsp;svém nitru byla odjakživa</strong>.</p>
+            <p class="rv rv-4">Nesmírně se těším, milovaná ženo, že společně vytvoříme <strong>chrám plný ženské krásy, vědomí, lásky a&nbsp;radosti ze&nbsp;života</strong>.</p>
+            <div class="rv rv-5" style="margin-top:2rem">
+              <a href="#prihlaseni" class="btn btn-ghost"><span class="btn-full">Přihlásit se na&nbsp;letní speciál</span><span class="btn-short">Přihlásit se</span></a>
+            </div>
+          </div>
+
+          <div class="img-frame recognition-img rv rv-2">
+            <img src="Obrazky/special/190.JPG"
+              alt="Vzpomínka na ženu, kterou jsi odjakživa byla" class="main-img" loading="lazy">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <img src="Obrazky/grafika/filigran/filigran-divider-03.webp"
+      class="section-divider section-divider--between before-zena" alt="" aria-hidden="true" loading="lazy">
+
     <!-- ══ CTA SEKCE ═════════════════════════════════════ -->
     <section class="cta-section" id="prihlaseni" aria-labelledby="cta-h">
-      <div class="cta-bg sp-cta-bg" role="img" aria-label="Atmosféra letního speciálu Chrám krásy Shakti"></div>
+      <div class="cta-bg sp-cta-bg" role="img" aria-label="Atmosféra letního speciálu Chrám ženské krásy, umění a doteku"></div>
       <div class="cta-overlay"></div>
       <div class="soft-wave--top" aria-hidden="true">
         <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
@@ -1289,18 +1575,16 @@
         <img src="Obrazky/grafika/filigran/filigran-corner-pd.webp" class="fili-corner fili-pd" alt="" aria-hidden="true"
           loading="lazy">
         <span class="eyebrow eyebrow-lt rv">Připoj se k&nbsp;nám</span>
-        <span class="cta-script rv rv-1">Staň se součástí</span>
-        <span id="cta-h" class="cta-caps rv rv-1">Chrámu krásy Shakti</span>
-        <p class="rv rv-2">Léto je&nbsp;časem rozkvětu, radosti a&nbsp;návratu k&nbsp;tomu, co vyživuje naši duši.
-          Pokud cítíš, že tě toto prožitkové setkání volá, srdečně tě zvu do&nbsp;letního chrámového prostoru
-          Mysterijní školy ženství.</p>
-        <span class="sp-hero-datum rv rv-2">21.&nbsp;7.&nbsp;–&nbsp;25.&nbsp;7.&nbsp;2028 • Centrum Buchov</span>
+        <span class="cta-script rv rv-1">Přihláška na</span>
+        <span id="cta-h" class="cta-caps rv rv-1">Chrám ženské krásy, umění a doteku</span>
+        <p class="rv rv-2" style="max-width: 36em; margin-left: auto; margin-right: auto;">Pokud cítíš, že tě toto prožitkové setkání volá, srdečně tě zvu do&nbsp;letního chrámového prostoru Mysterijní školy ženství.</p>
+        <span class="sp-hero-datum rv rv-2">21.&nbsp;7.&nbsp;–&nbsp;25.&nbsp;7.&nbsp;2027 • Centrum Buchov</span>
 
         <div class="sp-cta-price rv rv-2">
           <div class="vstup-price-table" role="table" aria-label="Ceník letního speciálu">
             <div class="vstup-price-row vstup-price-row--total" role="row">
               <span class="vstup-price-label" role="cell">Cena retreatu</span>
-              <span class="vstup-price-val" role="cell">8&nbsp;880&nbsp;Kč</span>
+              <span class="vstup-price-val" role="cell">7&nbsp;700&nbsp;Kč</span>
             </div>
             <div class="vstup-price-row vstup-price-row--sub" role="row">
               <span class="vstup-price-label" role="cell">Ubytování a&nbsp;celodenní vegetariánská strava</span>
@@ -1312,9 +1596,9 @@
         <h3 class="sp-form-heading rv rv-3">Přihláška na&nbsp;letní speciál</h3>
 
         <form class="sp-cta-form rv rv-3" action="https://formspree.io/f/mqevgayn" method="POST" novalidate
-          id="special-form" aria-label="Přihláška na letní speciál Chrám krásy Shakti">
+          id="special-form" aria-label="Přihláška na letní speciál Chrám ženské krásy, umění a doteku">
 
-          <input type="hidden" name="_subject" value="Nová přihláška – Letní speciál Chrám krásy Shakti">
+          <input type="hidden" name="_subject" value="Nová přihláška – Letní speciál Chrám ženské krásy, umění a doteku">
           <input type="hidden" name="_next" value="https://zenskamystika.cz/dekuji">
           <input type="hidden" name="_language" value="cs">
 
@@ -1360,8 +1644,7 @@
               <label class="form-radio">
                 <input type="radio" name="zamer" value="prihlaska" required>
                 <span class="form-radio-dot" aria-hidden="true"></span>
-                <span class="form-radio-text">Mám zájem přihlásit se na&nbsp;letní speciál Chrám krásy
-                  Shakti.</span>
+                <span class="form-radio-text">Mám zájem přihlásit se na&nbsp;letní speciál Chrám ženské krásy, umění a doteku.</span>
               </label>
               <label class="form-radio">
                 <input type="radio" name="zamer" value="dotaz">

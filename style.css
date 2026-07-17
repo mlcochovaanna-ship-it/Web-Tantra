@@ -992,6 +992,25 @@ h3 {
 .section-divider--between.before-gallery {
   margin-bottom: 0;
 }
+
+/* ── Zvýraznění textu – tučná zlatá ── */
+.recognition-content strong,
+.o-skole-content strong,
+.anjali-content strong {
+  font-weight: 600;
+  color: #E7CD80;
+}
+.gradient-bridge .recognition-content strong,
+.gradient-bridge .o-skole-content strong,
+.gradient-bridge .anjali-content strong,
+.gradient-bridge-2 .recognition-content strong,
+.gradient-bridge-2 .o-skole-content strong,
+.gradient-bridge-2 .anjali-content strong,
+.gradient-bridge-3 .recognition-content strong,
+.gradient-bridge-3 .o-skole-content strong,
+.gradient-bridge-3 .anjali-content strong {
+  color: #9A6D2B;
+}
 .section-divider--between.div-misto-galerie.before-gallery {
   margin-top: 2rem;
   margin-bottom: 7rem;
@@ -1285,6 +1304,76 @@ h3 {
   margin-top: 0.5rem;
 }
 
+/* ── RECOGNITION EXTENSION (homepage) ────────────── */
+.rec-extension {
+  max-width: 740px;
+  margin: 3.5rem auto 0;
+}
+
+.rec-ext-lead,
+.recognition-content .rec-ext-lead {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #9A6D2B;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.rec-otazky {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.rec-otazky li {
+  font-style: italic;
+  color: #4A4A4A;
+  line-height: 1.65;
+  padding-left: 1.4rem;
+  position: relative;
+}
+
+.rec-otazky li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #9A6D2B;
+  font-style: normal;
+}
+
+.rec-vyvody {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rec-vyvody li {
+  display: flex;
+  gap: 0.7rem;
+  align-items: baseline;
+  color: #4A4A4A;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.rec-vyvody li::before {
+  content: '❀';
+  font-size: 0.8rem;
+  color: #9A6D2B;
+  flex-shrink: 0;
+}
+
+.rec-extension strong {
+  font-weight: 600;
+  color: #9A6D2B;
+}
+
 /* ── ŽENA JE LÁSKA ───────────────────────────── */
 .zena-laska {
   padding: 12rem 0 12rem;
@@ -1434,7 +1523,7 @@ h3 {
 }
 
 .tantra-esence-text {
-  font-size: .97rem;
+  font-size: 1rem;
   line-height: 1.88;
   color: rgba(247, 243, 236, .78);
   max-width: 680px;
@@ -1782,7 +1871,8 @@ h3 {
   margin-bottom: 1.5rem;
 }
 
-.anjali-quote {
+.anjali-quote,
+.rec-quote {
   font-family: var(--ff-serif);
   font-style: italic;
   font-size: 1.05rem;
@@ -1791,6 +1881,14 @@ h3 {
   border-left: 2px solid var(--gold-mid);
   padding-left: 1.25rem;
   margin-bottom: 1.5rem;
+}
+
+.rec-quote p {
+  margin: 0;
+}
+
+.rec-quote p + p {
+  margin-top: 0;
 }
 
 .anjali-content p {
