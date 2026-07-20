@@ -1374,6 +1374,78 @@ h3 {
   color: #9A6D2B;
 }
 
+/* ── HISTORIE ŠKOLY ──────────────────────────── */
+.sekce-historie {
+  padding: 1rem 0 var(--pad);
+}
+.sekce-historie-karta {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3rem 4rem 2.5rem;
+  text-align: center;
+  background: rgba(255, 250, 240, .55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(100, 50, 20, .07);
+}
+.sekce-historie-karta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 14px;
+  background: var(--gold-outline);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: .32;
+  transition: opacity var(--ease);
+}
+.sekce-historie-karta:hover::before {
+  opacity: .5;
+}
+.sekce-historie-karta .eyebrow {
+  background: var(--gold-outline);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  margin-top: 0;
+}
+.sekce-historie-karta .fili-corner {
+  width: 100px;
+}
+.sekce-historie-karta .fili-lh { top: -6px; left: -6px; }
+.sekce-historie-karta .fili-pd { bottom: -6px; right: -6px; }
+.sekce-historie-karta p {
+  font-size: .92rem;
+  color: #4A4A4A;
+  line-height: 1.9;
+  margin-bottom: .9rem;
+}
+.sekce-historie-karta p:last-child {
+  margin-bottom: 0;
+}
+.sekce-historie-karta strong {
+  font-weight: 600;
+  color: #9A6D2B;
+}
+@media (max-width: 768px) {
+  .sekce-historie {
+    padding: 1.5rem 0 var(--pad);
+  }
+  .sekce-historie-karta {
+    padding: 2.5rem 1.75rem 2rem;
+  }
+  .sekce-historie-karta .fili-corner {
+    width: 60px;
+  }
+}
+
 /* ── ŽENA JE LÁSKA ───────────────────────────── */
 .zena-laska {
   padding: 12rem 0 12rem;
@@ -4206,6 +4278,8 @@ h3 {
 .vstup-info-card .fili-corner {
   width: 80px;
 }
+.vstup-info-card .fili-lh { top: -4px; left: -4px; }
+.vstup-info-card .fili-pd { bottom: -4px; right: -4px; }
 
 .vstup-info-card::before {
   content: '';
