@@ -1799,6 +1799,11 @@ h3 {
   filter: drop-shadow(0 4px 16px rgba(0, 0, 0, .5)) drop-shadow(0 0 8px rgba(198, 155, 69, .3));
 }
 
+.temata-card p strong {
+  font-weight: 600;
+  color: rgba(247, 243, 236, 1);
+}
+
 /* ── Čakrová karta – samostatný řádek nad gridem Témata cesty ─── */
 .temata-card--chakra {
   width: calc((100% - 3 * 1.5rem) / 4 * 2 + 1.5rem);
