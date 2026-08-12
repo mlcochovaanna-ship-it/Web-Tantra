@@ -2779,6 +2779,7 @@ h3 {
   text-transform: uppercase;
   padding: .6rem 1.25rem;
   border: none;
+  border-radius: 10px;
   cursor: pointer;
 }
 
@@ -2792,6 +2793,7 @@ h3 {
   text-transform: uppercase;
   padding: .6rem 1rem;
   border: 1px solid rgba(247, 243, 236, .12);
+  border-radius: 10px;
   cursor: pointer;
   transition: border-color var(--ease), color var(--ease);
 }
