@@ -3681,6 +3681,10 @@ h3 {
   .lb-prev { left: 0; border-radius: 0 10px 10px 0; }
   .lb-next { right: 0; border-radius: 10px 0 0 10px; }
 
+  .cookie {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+
   .cookie-inner {
     flex-direction: column;
     align-items: flex-start;
@@ -3730,7 +3734,7 @@ h3 {
   }
 
   .sekce-historie-karta {
-    text-align: left;
+    text-align: center;
   }
 
   .gallery-fw .g-item:nth-child(4) img {
