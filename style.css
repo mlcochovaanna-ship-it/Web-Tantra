@@ -212,6 +212,7 @@ h3 {
 .hc {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   margin-bottom: 1.1rem;
 }
 
@@ -227,6 +228,17 @@ h3 {
   position: relative;
   z-index: 2;
   background: var(--gold-outline);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* hc-s on light/beige backgrounds */
+.recognition .hc-s,
+.gradient-bridge .recognition .hc-s,
+.gradient-bridge-2 .recognition .hc-s,
+.gradient-bridge-3 .recognition .hc-s {
+  background: linear-gradient(90deg, #9A6D2B 0%, #C8A845 52%, #9A6D2B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -298,7 +310,7 @@ h3 {
 }
 
 .btn-ghost {
-  background: var(--gold-outline);
+  background: linear-gradient(90deg, #9A6D2B 0%, #C8A845 52%, #9A6D2B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -311,7 +323,7 @@ h3 {
   position: absolute;
   inset: 0;
   padding: 1px;
-  background: var(--gold-outline);
+  background: linear-gradient(90deg, #9A6D2B 0%, #C8A845 52%, #9A6D2B 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
