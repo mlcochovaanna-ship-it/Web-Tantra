@@ -98,7 +98,6 @@ body {
   background-size: 100% calc(100% - 100svh);
   background-repeat: no-repeat;
   overflow-x: hidden;
-  position: relative;
 }
 
 
