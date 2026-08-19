@@ -8,7 +8,7 @@ Jsi zkušený webový vývojář a designér s expertízou v tvorbě moderních,
 Jde o web pro luxusní tantrickou školu pro ženy. Škola probíhá offline ve 4 modulech během 2 let. Každý modul je živá několikadenní akce. Každý rok probíhají 2 moduly. Cena celé školy je cca 40.000 Kč, proto musí web působit hodnotně, prémiově a důvěryhodně.
 
 Doména webu je:
-https://zenskamystika.cz/
+https://mysterijniskolazenstvi.cz/
 
 **Cíl**
 Dodej uživateli kompletní, profesionální mobile-first vícestránkový web, který je vizuálně atraktivní, funkční na všech zařízeních a připravený k okamžitému použití.
@@ -45,7 +45,7 @@ Vytvoř funkční vícestránkový web, který bude obsahovat:
 - Vytvoř strukturovaná data podle reálného obsahu webu, zejména tam, kde jsou relevantní. Použij například LocalBusiness, FAQ nebo jiný vhodný typ podle finální struktury a obsahu webu.
 - Blog na webu nebude, proto nevytvářej blogovou sekci ani Article strukturovaná data, pokud k tomu nebude dodán konkrétní článkový obsah.
 - Přidej do adresáře soubory sitemap.xml, robots.txt a llms.txt.
-- Kanonická doména webu je https://zenskamystika.cz/.
+- Kanonická doména webu je https://mysterijniskolazenstvi.cz/.
 - Web cílí primárně na Českou republiku, sekundárně může oslovovat také ženy ze Slovenska.
 - Obrázkům dej smysluplné alt popisky v češtině.
 - Propoj stránky vnitřními odkazy.
