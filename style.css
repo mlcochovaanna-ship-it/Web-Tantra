@@ -4044,15 +4044,11 @@ h3 {
 }
 
 /* ── Honeypot ──────────────────────────────────── */
+/* display:none brání prohlížečům automaticky vyplnit pole (na rozdíl od
+   pouhého odsunutí mimo obrazovku) – jinak si Formspree autofillnutou
+   hodnotu tiše vyloží jako spam a reálné odeslání zahodí. */
 .vstup-honeypot {
-  position: absolute;
-  left: -9999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  opacity: 0;
-  pointer-events: none;
+  display: none;
 }
 
 /* ── Formulář – pole ───────────────────────────── */
@@ -4196,6 +4192,22 @@ h3 {
 }
 .form-error-msg.visible {
   display: block;
+}
+
+/* ── Souhrnné upozornění formuláře (viditelné i mimo čtečky) ── */
+.form-alert-box {
+  display: none;
+}
+.form-alert-box:not(:empty) {
+  display: block;
+  margin: 0 0 1.5rem;
+  padding: .85rem 1.1rem;
+  border-radius: 8px;
+  background: rgba(139, 26, 26, 0.08);
+  border: 1px solid rgba(139, 26, 26, 0.3);
+  color: #8B1A1A;
+  font-size: .9rem;
+  line-height: 1.5;
 }
 
 /* ── Checkbox – GDPR ──────────────────────────── */

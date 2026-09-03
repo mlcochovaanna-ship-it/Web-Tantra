@@ -185,7 +185,7 @@
               a&nbsp;otevřenost. Odpovím ti osobně, co nejdříve.</p>
           </div>
 
-          <div role="alert" aria-live="assertive" class="sr-only" id="form-alert"></div>
+          <div role="alert" aria-live="assertive" class="form-alert-box" id="form-alert"></div>
 
           <form class="vstup-form rv rv-1" action="https://formspree.io/f/xkolqdkg" method="POST" novalidate id="vstup-form"
             aria-label="Přihláška do Mysterijní školy ženství">
@@ -598,8 +598,6 @@
     if (form) {
       form.addEventListener('submit', async function (e) {
         e.preventDefault();
-        const hp = form.querySelector('input[name="_gotcha"]');
-        if (hp && hp.value) return;
 
         const firstError = validateForm();
         if (firstError) {

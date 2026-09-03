@@ -1611,7 +1611,7 @@
             <input type="text" id="sp-hp-website" name="_gotcha" tabindex="-1" autocomplete="off">
           </div>
 
-          <div role="alert" aria-live="assertive" class="sr-only" id="sp-form-alert"></div>
+          <div role="alert" aria-live="assertive" class="form-alert-box" id="sp-form-alert"></div>
 
           <div class="form-group">
             <label class="form-label" for="sp-f-jmeno">
@@ -1934,8 +1934,6 @@
     if (spForm) {
       spForm.addEventListener('submit', async function (e) {
         e.preventDefault();
-        const hp = spForm.querySelector('input[name="_gotcha"]');
-        if (hp && hp.value) return;
 
         const firstError = spValidate();
         if (firstError) {
