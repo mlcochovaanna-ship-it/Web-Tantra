@@ -1653,7 +1653,7 @@
         const firstError = spValidate();
         if (firstError) {
           firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          if (spAlert) spAlert.textContent = 'Formulář obsahuje chyby. Prosím oprav označená pole.';
+          if (spAlert) spAlert.textContent = 'Formulář je nekompletní. Prosím doplň označená pole.';
           return;
         }
 
