@@ -3,6 +3,25 @@ Options -Indexes
 # Chybová stránka 404
 ErrorDocument 404 /404.html
 
+# Blokace interních souborů (podklady .md, systémové soubory macOS)
+<FilesMatch "(\.md|\.DS_Store)$">
+    Require all denied
+</FilesMatch>
+
+# Bezpečnostní hlavičky
+<IfModule mod_headers.c>
+    # Vždy otevírat přes HTTPS (1 rok)
+    Header always set Strict-Transport-Security "max-age=31536000"
+    # Zákaz odhadování typu souboru
+    Header always set X-Content-Type-Options "nosniff"
+    # Zákaz vložení webu do rámu na cizí stránce
+    Header always set X-Frame-Options "SAMEORIGIN"
+    # Cizím webům posílat jen doménu, ne celou adresu stránky
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    # Vypnutí nepoužívaných funkcí prohlížeče
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+</IfModule>
+
 # Čisté URL (bez přípony .html)
 RewriteEngine On
 RewriteBase /
