@@ -28,7 +28,7 @@ RewriteBase /
 
 # Přesměrování /stranka.html → /stranka (301 permanent)
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?#] [NC]
-RewriteRule ^ /%1 [R=301,L,NE]
+RewriteRule ^ https://%{HTTP_HOST}/%1 [R=301,L,NE]
 
 # Interní obsluha čistých URL → příslušný .html soubor
 RewriteCond %{REQUEST_FILENAME} !-d
