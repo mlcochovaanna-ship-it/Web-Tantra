@@ -3,8 +3,8 @@ Options -Indexes
 # Chybová stránka 404
 ErrorDocument 404 /404.html
 
-# Blokace interních souborů (podklady .md, systémové soubory macOS)
-<FilesMatch "(\.md|\.DS_Store)$">
+# Blokace interních souborů (podklady .md, systémové soubory macOS, git)
+<FilesMatch "(\.md|\.DS_Store|\.gitignore)$">
     Require all denied
 </FilesMatch>
 
@@ -21,8 +21,7 @@ ErrorDocument 404 /404.html
     # Vypnutí nepoužívaných funkcí prohlížeče
     Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
     # Povolené zdroje: vše z vlastní domény, formuláře na Formspree
-    # (zapne se až ve druhém deployi, po nahrání složky js/)
-    # Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
 </IfModule>
 
 RewriteEngine On
