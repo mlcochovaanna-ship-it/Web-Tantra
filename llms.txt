@@ -16,7 +16,6 @@
 - [Galerie](https://mysterijniskolazenstvi.cz/galerie): Fotografie z modulů a prostoru školy
 - [Vstup do školy](https://mysterijniskolazenstvi.cz/vstup): Přihlašovací formulář do školy
 - [Zpracování osobních údajů](https://mysterijniskolazenstvi.cz/zpracovani-osobnich-udaju): GDPR informace o zpracování dat
-- [Zásady cookies](https://mysterijniskolazenstvi.cz/cookies): Informace o používání cookies na webu
 
 ## O webu
 

@@ -90,7 +90,6 @@ function spValidate() {
   const checks = [
     { errId: 'sp-jmeno-error',   ok: () => spForm.querySelector('#sp-f-jmeno').value.trim() !== '' },
     { errId: 'sp-email-error',   ok: () => /\S+@\S+\.\S+/.test(spForm.querySelector('#sp-f-email').value) },
-    { errId: 'sp-telefon-error', ok: () => spForm.querySelector('#sp-f-telefon').value.trim() !== '' },
     { errId: 'sp-zprava-error',  ok: () => spForm.querySelector('#sp-f-zprava').value.trim() !== '' },
   ];
   checks.forEach(({ errId, ok }) => {
@@ -136,7 +135,7 @@ if (spForm) {
   });
 
   spForm.addEventListener('input', function (e) {
-    const map = { 'jmeno': 'sp-jmeno-error', 'email': 'sp-email-error', 'telefon': 'sp-telefon-error', 'zprava': 'sp-zprava-error' };
+    const map = { 'jmeno': 'sp-jmeno-error', 'email': 'sp-email-error', 'zprava': 'sp-zprava-error' };
     if (map[e.target.name] && e.target.value.trim()) spHideErr(map[e.target.name]);
   });
   spForm.addEventListener('change', function (e) {

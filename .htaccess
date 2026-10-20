@@ -31,6 +31,9 @@ RewriteBase /
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L,NE]
 
+# Zrušená stránka cookies → bod Cookies v zásadách (301 permanent)
+RewriteRule ^cookies(\.html)?/?$ https://%{HTTP_HOST}/zpracovani-osobnich-udaju#cookies [R=301,L,NE]
+
 # Čisté URL (bez přípony .html)
 
 # Přesměrování /stranka.html → /stranka (301 permanent)

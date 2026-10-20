@@ -91,7 +91,6 @@ function validateForm() {
   const checks = [
     { errId: 'jmeno-error',   ok: () => form.querySelector('#f-jmeno').value.trim() !== '' },
     { errId: 'email-error',   ok: () => /\S+@\S+\.\S+/.test(form.querySelector('#f-email').value) },
-    { errId: 'telefon-error', ok: () => form.querySelector('#f-telefon').value.trim() !== '' },
     { errId: 'zprava-error',  ok: () => form.querySelector('#f-zprava').value.trim() !== '' },
   ];
   checks.forEach(({ errId, ok }) => {
@@ -137,7 +136,7 @@ if (form) {
   });
 
   form.addEventListener('input', function (e) {
-    const map = { 'jmeno': 'jmeno-error', 'email': 'email-error', 'telefon': 'telefon-error', 'zprava': 'zprava-error' };
+    const map = { 'jmeno': 'jmeno-error', 'email': 'email-error', 'zprava': 'zprava-error' };
     if (map[e.target.name] && e.target.value.trim()) hideErr(map[e.target.name]);
   });
   form.addEventListener('change', function (e) {
