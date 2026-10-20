@@ -1,0 +1,6 @@
+# Systémové soubory macOS
+.DS_Store
+
+# Interní podklady – nepatří na web ani do veřejného repozitáře
+instrukce.md
+.claude/

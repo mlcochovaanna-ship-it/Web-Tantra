@@ -208,30 +208,27 @@
           <div class="zprac-content rv">
 
             <h2 id="cookies-h2">1. Co jsou cookies</h2>
-            <p>Tyto webové stránky používají soubory cookies, které pomáhají zajistit jejich správné fungování.</p>
             <p>Cookies jsou malé textové soubory, které se při návštěvě webových stránek ukládají do tvého zařízení.</p>
 
             <div class="zprac-divider" aria-hidden="true"></div>
 
-            <h2>2. Jaké cookies používám</h2>
-            <p>Na těchto webových stránkách používám:</p>
-            <ul>
-              <li><strong>Nezbytné cookies</strong>, které jsou potřebné pro správné fungování webových stránek.</li>
-              <li><strong>Cookies třetích stran</strong>, které mohou být používány při přehrávání vložených videí ze služby YouTube.</li>
-            </ul>
-            <p>Na těchto webových stránkách nepoužívám analytické ani marketingové cookies.</p>
+            <h2>2. Používám cookies?</h2>
+            <p>Ne. Tyto webové stránky nepoužívají žádné cookies ani jiné technologie, které by do&nbsp;tvého
+              zařízení cokoliv ukládaly. Nepoužívám analytické ani marketingové nástroje a&nbsp;stránky nenačítají
+              žádný obsah třetích stran.</p>
 
             <div class="zprac-divider" aria-hidden="true"></div>
 
-            <h2>3. Vložená videa YouTube</h2>
-            <p>Na některých stránkách mohou být vložena videa ze služby YouTube.</p>
-            <p>Při jejich přehrávání může společnost Google ukládat do tvého zařízení vlastní cookies a&nbsp;zpracovávat některé technické údaje v&nbsp;souladu se svými podmínkami a&nbsp;zásadami ochrany osobních údajů.</p>
+            <h2>3. Odkazy na jiné služby</h2>
+            <p>Na webu najdeš odkazy na videa na&nbsp;YouTube, na&nbsp;herohero a&nbsp;na sociální sítě Facebook
+              a&nbsp;Instagram. Teprve když na&nbsp;takový odkaz klikneš, otevře se stránka dané služby, která může
+              používat vlastní cookies podle svých zásad.</p>
 
             <div class="zprac-divider" aria-hidden="true"></div>
 
-            <h2>4. Jak můžeš cookies spravovat</h2>
-            <p>Používání cookies můžeš kdykoliv upravit v&nbsp;nastavení svého internetového prohlížeče.</p>
-            <p>Většina prohlížečů umožňuje uložené cookies zobrazit, odstranit nebo jejich ukládání zcela zakázat. Omezení některých cookies však může ovlivnit správné fungování webových stránek.</p>
+            <h2>4. Odeslání formuláře</h2>
+            <p>Když odešleš formulář, předají se tvé údaje službě Formspree. Více v&nbsp;<a
+                href="/zpracovani-osobnich-udaju">Zásadách zpracování osobních údajů</a>.</p>
 
             <div class="zprac-divider" aria-hidden="true"></div>
 
@@ -240,7 +237,7 @@
 
             <div class="zprac-divider" aria-hidden="true"></div>
 
-            <p style="font-size:.9rem; color:#6B6B6B">Tyto zásady jsou účinné od 1.&nbsp;7.&nbsp;2026.</p>
+            <p style="font-size:.9rem; color:#6B6B6B">Tyto zásady jsou účinné od 19.&nbsp;10.&nbsp;2026.</p>
 
             <div style="margin-top:2.5rem">
               <a href="/" class="btn btn-gold" style="text-decoration:none">Zpět na úvodní stránku</a>
@@ -357,110 +354,9 @@
     </div>
   </footer>
 
-  <!-- ══ COOKIE ════════════════════════════════════════ -->
-  <div class="cookie" id="cookie" role="dialog" aria-labelledby="ck-label">
-    <div class="wrap">
-      <div class="cookie-inner">
-        <p>
-          <span id="ck-label"
-            style="font-weight:600; color:rgba(247,243,236,.65); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; display:block; margin-bottom:.25rem">Soubory
-            cookie</span>
-          Tyto webové stránky používají cookies pro své správné fungování. Více informací najdeš v&nbsp;<a href="/cookies">Zásadách používání cookies</a>.
-        </p>
-        <div class="cookie-btns">
-          <button class="cookie-no" id="ck-no">Odmítnout</button>
-          <button class="cookie-ok" id="ck-ok">Přijmout</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Zpět nahoru"><span>&#8593;</span></button>
 
-  <script>
-    /* ── Navigace ────────────────────────────────────── */
-    const hdr = document.getElementById('hdr');
-    const scrollTopBtn = document.getElementById('scroll-top-btn');
-    const hbtn = document.getElementById('hamburger');
-    const mob = document.getElementById('nav-mob');
-
-    const setHeaderH = () => {
-      document.documentElement.style.setProperty('--header-h', Math.ceil(hdr.getBoundingClientRect().bottom) + 'px');
-    };
-    setHeaderH();
-    window.addEventListener('resize', setHeaderH, { passive: true });
-    if (window.visualViewport) {
-      window.visualViewport.addEventListener('resize', setHeaderH);
-    }
-
-    const closeMenu = () => {
-      mob.classList.remove('open');
-      hbtn.classList.remove('open');
-      hbtn.setAttribute('aria-expanded', false);
-    };
-    window.addEventListener('scroll', () => {
-      hdr.classList.toggle('scrolled', scrollY > 60);
-      setHeaderH();
-      scrollTopBtn.classList.toggle('visible', scrollY > 300);
-      if (scrollY > 40 && !mob.classList.contains('open')) closeMenu();
-    }, { passive: true });
-    scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-    hbtn.addEventListener('click', () => {
-      const o = hbtn.classList.toggle('open');
-      mob.classList.toggle('open', o);
-      hbtn.setAttribute('aria-expanded', o);
-    });
-
-    const deskDrop = document.getElementById('nav-dropdown-desk');
-    const deskTrigger = document.querySelector('.nav-drop-trigger');
-    const deskLi = document.querySelector('.nav-has-dropdown');
-    if (deskDrop && deskTrigger && deskLi) {
-      let deskCloseTimer;
-      const openDeskDrop = () => {
-        clearTimeout(deskCloseTimer);
-        deskDrop.classList.add('open');
-        deskLi.classList.add('nav-drop-active');
-        const r = deskTrigger.getBoundingClientRect();
-        const w = deskDrop.offsetWidth;
-        deskDrop.style.top = Math.ceil(r.bottom + 24) + 'px';
-        deskDrop.style.left = Math.max(0, Math.round(r.left + r.width / 2 - w / 2)) + 'px';
-      };
-      const closeDeskDrop = () => {
-        deskCloseTimer = setTimeout(() => {
-          deskDrop.classList.remove('open');
-          deskLi.classList.remove('nav-drop-active');
-        }, 120);
-      };
-      deskLi.addEventListener('mouseenter', openDeskDrop);
-      deskLi.addEventListener('mouseleave', closeDeskDrop);
-      deskDrop.addEventListener('mouseenter', () => clearTimeout(deskCloseTimer));
-      deskDrop.addEventListener('mouseleave', closeDeskDrop);
-    }
-
-    const modulyToggle = document.getElementById('nav-moduly-toggle');
-    const modulySubmenu = document.getElementById('nav-submenu-moduly');
-    if (modulyToggle) {
-      modulyToggle.addEventListener('click', () => {
-        const o = modulyToggle.classList.toggle('open');
-        modulySubmenu.classList.toggle('open', o);
-        modulyToggle.setAttribute('aria-expanded', o);
-      });
-    }
-
-    /* ── Scroll reveal ───────────────────────────────── */
-    const rv = document.querySelectorAll('.rv');
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: .08 });
-    rv.forEach(el => io.observe(el));
-
-    /* ── Cookie ──────────────────────────────────────── */
-    const ck = document.getElementById('cookie');
-    if (!localStorage.getItem('ck')) setTimeout(() => ck.classList.add('on'), 800);
-    document.getElementById('ck-ok').addEventListener('click', () => { localStorage.setItem('ck', 'ok'); ck.classList.remove('on'); });
-    document.getElementById('ck-no').addEventListener('click', () => { localStorage.setItem('ck', 'no'); ck.classList.remove('on'); });
-  </script>
+  <script src="js/cookies.js"></script>
 
 </body>
 

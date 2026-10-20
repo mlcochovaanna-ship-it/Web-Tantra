@@ -2740,85 +2740,6 @@ h3 {
   color: rgba(231, 205, 128, 1);
 }
 
-/* ── COOKIE ───────────────────────────────────── */
-.cookie {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 200;
-  background: rgba(9, 19, 21, .96);
-  backdrop-filter: blur(16px);
-  border-top: 1px solid rgba(198, 155, 69, .12);
-  padding: 1rem 0;
-  transform: translateY(100%);
-  transition: transform .5s cubic-bezier(.25, .46, .45, .94);
-}
-
-.cookie.on {
-  transform: translateY(0);
-}
-
-.cookie-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.cookie-inner p {
-  font-size: .8rem;
-  color: rgba(247, 243, 236, .55);
-  flex: 1;
-  min-width: 220px;
-}
-
-.cookie-inner a {
-  color: rgba(199, 155, 69, .65);
-  text-decoration: underline;
-}
-
-.cookie-btns {
-  display: flex;
-  gap: .75rem;
-  flex-shrink: 0;
-}
-
-.cookie-ok {
-  background: var(--gold-cta);
-  color: #0C1B1D !important;
-  font-family: var(--ff-sans);
-  font-size: .7rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  padding: .6rem 1.25rem;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.cookie-no {
-  background: transparent;
-  color: rgba(247, 243, 236, .38);
-  font-family: var(--ff-sans);
-  font-size: .7rem;
-  font-weight: 500;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  padding: .6rem 1rem;
-  border: 1px solid rgba(247, 243, 236, .12);
-  border-radius: 10px;
-  cursor: pointer;
-  transition: border-color var(--ease), color var(--ease);
-}
-
-.cookie-no:hover {
-  border-color: rgba(247, 243, 236, .25);
-  color: rgba(247, 243, 236, .6);
-}
-
 /* ── SCROLL REVEAL ────────────────────────────── */
 .rv {
   opacity: 0;
@@ -3680,15 +3601,6 @@ h3 {
   .lb-prev { left: 0; border-radius: 0 10px 10px 0; }
   .lb-next { right: 0; border-radius: 10px 0 0 10px; }
 
-  .cookie {
-    padding-bottom: max(1rem, env(safe-area-inset-bottom));
-  }
-
-  .cookie-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .gf-bl,
   .gf-br {
     width: 190px;
@@ -4304,6 +4216,14 @@ h3 {
 }
 
 .form-actions-note {
+  font-size: .8rem;
+  color: #4A4A4A;
+  line-height: 1.5;
+}
+
+/* Poznámka pod polem formuláře */
+.form-hint {
+  margin-top: .5rem;
   font-size: .8rem;
   color: #4A4A4A;
   line-height: 1.5;

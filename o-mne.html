@@ -1034,38 +1034,38 @@
         <div class="om-rozhovory-grid">
           <a class="om-rozhovor-card rv" target="_blank" rel="noopener"
             href="https://www.youtube.com/watch?v=f5t6WPnx8yo&list=PLteAW_2RWt9k4ULdmhR0Gu_AwTYmldK0c&index=1">
-            <img class="om-rozhovor-thumb" src="https://img.youtube.com/vi/f5t6WPnx8yo/hqdefault.jpg" alt=""
+            <img class="om-rozhovor-thumb" src="Obrazky/rozhovory/po-cem-zeny-touzi.webp" alt=""
               loading="lazy" width="480" height="360">
             <span class="om-rozhovor-card-title">Po&nbsp;čem ženy touží</span>
           </a>
           <a class="om-rozhovor-card rv rv-1" target="_blank" rel="noopener"
             href="https://herohero.co/wolfica/post/wxqbjmmtbtbbegrakuzrurfvuhpixtiq">
             <img class="om-rozhovor-thumb"
-              src="https://assets.herohero.co/prod/images/post/wxqbjmmtbtbbe/1776255310-90872317-1731.png" alt=""
-              loading="lazy" width="1200" height="630">
+              src="Obrazky/rozhovory/odtajneni-yoni.webp" alt=""
+              loading="lazy" width="960" height="540">
             <span class="om-rozhovor-card-title">Odtajnění Yóni – co&nbsp;nám o&nbsp;ní neřekli?</span>
           </a>
           <a class="om-rozhovor-card rv rv-2" target="_blank" rel="noopener"
             href="https://www.youtube.com/watch?v=uE6FFkJAeq4&list=PLteAW_2RWt9k4ULdmhR0Gu_AwTYmldK0c&index=3">
-            <img class="om-rozhovor-thumb" src="https://img.youtube.com/vi/uE6FFkJAeq4/hqdefault.jpg" alt=""
+            <img class="om-rozhovor-thumb" src="Obrazky/rozhovory/zeny-budme-orgasmicke.webp" alt=""
               loading="lazy" width="480" height="360">
             <span class="om-rozhovor-card-title">Ženy, buďme orgasmické!</span>
           </a>
           <a class="om-rozhovor-card rv rv-3" target="_blank" rel="noopener"
             href="https://www.youtube.com/watch?v=bveEdXaX_iI&list=PLteAW_2RWt9k4ULdmhR0Gu_AwTYmldK0c&index=10">
-            <img class="om-rozhovor-thumb" src="https://img.youtube.com/vi/bveEdXaX_iI/hqdefault.jpg" alt=""
+            <img class="om-rozhovor-thumb" src="Obrazky/rozhovory/v-cem-spociva-krasa-zeny.webp" alt=""
               loading="lazy" width="480" height="360">
             <span class="om-rozhovor-card-title">V&nbsp;čem spočívá krása ženy?</span>
           </a>
           <a class="om-rozhovor-card rv" target="_blank" rel="noopener"
             href="https://www.youtube.com/watch?v=cYCqvvHDBks&list=PLteAW_2RWt9k4ULdmhR0Gu_AwTYmldK0c&index=11">
-            <img class="om-rozhovor-thumb" src="https://img.youtube.com/vi/cYCqvvHDBks/hqdefault.jpg" alt=""
+            <img class="om-rozhovor-thumb" src="Obrazky/rozhovory/tantra-umeni-milovat.webp" alt=""
               loading="lazy" width="480" height="360">
             <span class="om-rozhovor-card-title">Tantra – umění milovat</span>
           </a>
           <a class="om-rozhovor-card rv rv-1" target="_blank" rel="noopener"
             href="https://www.youtube.com/watch?v=QJKNc6_4uxE">
-            <img class="om-rozhovor-thumb" src="https://img.youtube.com/vi/QJKNc6_4uxE/hqdefault.jpg" alt=""
+            <img class="om-rozhovor-thumb" src="Obrazky/rozhovory/proc-zeny-neveri-zenam.webp" alt=""
               loading="lazy" width="480" height="360">
             <span class="om-rozhovor-card-title">Proč ženy nevěří ženám?</span>
           </a>
@@ -1187,121 +1187,9 @@
     </div>
   </footer>
 
-  <!-- ══ COOKIE ════════════════════════════════════════ -->
-  <div class="cookie" id="cookie" role="dialog" aria-labelledby="ck-label">
-    <div class="wrap">
-      <div class="cookie-inner">
-        <p>
-          <span id="ck-label"
-            style="font-weight:600; color:rgba(247,243,236,.65); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; display:block; margin-bottom:.25rem">Soubory
-            cookie</span>
-          Tyto webové stránky používají cookies pro své správné fungování. Více informací najdeš v&nbsp;<a
-            href="/cookies">Zásadách používání cookies</a>.
-        </p>
-        <div class="cookie-btns">
-          <button class="cookie-no" id="ck-no">Odmítnout</button>
-          <button class="cookie-ok" id="ck-ok">Přijmout</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Zpět nahoru"><span>&#8593;</span></button>
 
-  <script>
-    /* ── Navigace ────────────────────────────────────── */
-    const hdr = document.getElementById('hdr');
-    const scrollTopBtn = document.getElementById('scroll-top-btn');
-    const hbtn = document.getElementById('hamburger');
-    const mob = document.getElementById('nav-mob');
-
-    const setHeaderH = () => {
-      document.documentElement.style.setProperty('--header-h', Math.ceil(hdr.getBoundingClientRect().bottom) + 'px');
-    };
-    setHeaderH();
-    window.addEventListener('resize', setHeaderH, { passive: true });
-    if (window.visualViewport) {
-      window.visualViewport.addEventListener('resize', setHeaderH);
-    }
-
-    const closeMenu = () => {
-      mob.classList.remove('open');
-      hbtn.classList.remove('open');
-      hbtn.setAttribute('aria-expanded', false);
-    };
-    window.addEventListener('scroll', () => {
-      hdr.classList.toggle('scrolled', scrollY > 60);
-      setHeaderH();
-      scrollTopBtn.classList.toggle('visible', scrollY > 300);
-      if (scrollY > 40 && !mob.classList.contains('open')) closeMenu();
-    }, { passive: true });
-    scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-    hbtn.addEventListener('click', () => {
-      const o = hbtn.classList.toggle('open');
-      mob.classList.toggle('open', o);
-      hbtn.setAttribute('aria-expanded', o);
-    });
-
-    const deskDrop = document.getElementById('nav-dropdown-desk');
-    const deskTrigger = document.querySelector('.nav-drop-trigger');
-    const deskLi = document.querySelector('.nav-has-dropdown');
-    if (deskDrop && deskTrigger && deskLi) {
-      let deskCloseTimer;
-      const openDeskDrop = () => {
-        clearTimeout(deskCloseTimer);
-        deskDrop.classList.add('open');
-        deskLi.classList.add('nav-drop-active');
-        const r = deskTrigger.getBoundingClientRect();
-        const w = deskDrop.offsetWidth;
-        deskDrop.style.top = Math.ceil(r.bottom + 24) + 'px';
-        deskDrop.style.left = Math.max(0, Math.round(r.left + r.width / 2 - w / 2)) + 'px';
-      };
-      const closeDeskDrop = () => {
-        deskCloseTimer = setTimeout(() => {
-          deskDrop.classList.remove('open');
-          deskLi.classList.remove('nav-drop-active');
-        }, 120);
-      };
-      deskLi.addEventListener('mouseenter', openDeskDrop);
-      deskLi.addEventListener('mouseleave', closeDeskDrop);
-      deskDrop.addEventListener('mouseenter', () => clearTimeout(deskCloseTimer));
-      deskDrop.addEventListener('mouseleave', closeDeskDrop);
-    }
-
-
-
-
-    /* ── Posun na rozhovory ──────────────────────────── */
-    const rozhovoryToggle = document.getElementById('rozhovory-toggle');
-    rozhovoryToggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollBy({ top: 600, behavior: 'smooth' });
-    });
-
-    /* ── Scroll reveal ───────────────────────────────── */
-    const modulyToggle = document.getElementById('nav-moduly-toggle');
-    const modulySubmenu = document.getElementById('nav-submenu-moduly');
-    if (modulyToggle) {
-      modulyToggle.addEventListener('click', () => {
-        const o = modulyToggle.classList.toggle('open');
-        modulySubmenu.classList.toggle('open', o);
-        modulyToggle.setAttribute('aria-expanded', o);
-      });
-    }
-
-    const rv = document.querySelectorAll('.rv');
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: .08 });
-    rv.forEach(el => io.observe(el));
-
-    /* ── Cookie ──────────────────────────────────────── */
-    const ck = document.getElementById('cookie');
-    if (!localStorage.getItem('ck')) setTimeout(() => ck.classList.add('on'), 800);
-    document.getElementById('ck-ok').addEventListener('click', () => { localStorage.setItem('ck', 'ok'); ck.classList.remove('on'); });
-    document.getElementById('ck-no').addEventListener('click', () => { localStorage.setItem('ck', 'no'); ck.classList.remove('on'); });
-  </script>
+  <script src="js/o-mne.js"></script>
 </body>
 
 </html>
