@@ -4221,6 +4221,12 @@ h3 {
   line-height: 1.5;
 }
 
+/* Informace o zásadách – vždy samostatný řádek nad tlačítkem */
+.form-privacy-note {
+  flex-basis: 100%;
+  order: -2;
+}
+
 /* Poznámka pod polem formuláře */
 .form-hint {
   margin-top: .5rem;
