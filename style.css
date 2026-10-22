@@ -4122,8 +4122,8 @@ h3 {
   line-height: 1.5;
 }
 
-/* ── Checkbox – GDPR ──────────────────────────── */
-.form-group-gdpr {
+/* ── Checkbox – odběr novinek ─────────────────── */
+.form-group-check {
   margin-top: .5rem;
 }
 
