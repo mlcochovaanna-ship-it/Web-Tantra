@@ -11,12 +11,12 @@ var POPUP = {
   do: '2026-12-11T17:00:00+01:00',     // do kdy (začátek akce) – potom se sám vypne
   zpozdeni: 3,                // za kolik sekund se objeví
 
-  foto: 'Obrazky/modul-2/modul-2-13.webp',
-  fotoPozice: '50% 20%',      // výřez fotky (object-position)
+  foto: 'Obrazky/o-skole/o-skole-15.webp',
+  fotoPozice: '40% 18%',      // výřez fotky (object-position)
   uvod: 'Přijď na ochutnávku',
   nadpis: 'Mysterijní školy ženství',
   text: 'Prožij atmosféru Školy, nahlédni do jejího obsahu, poznej způsob vedení a nech se inspirovat na své ženské cestě.',
-  datum: '11. prosince',
+  datum: '11. prosince 2026',
   tlacitko: 'Přihlásit se na ochutnávku',
   odkaz: 'https://www.martinavyborna.cz/ochutnavka-skoly/'
 };
